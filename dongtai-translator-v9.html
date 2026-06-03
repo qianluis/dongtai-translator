@@ -334,45 +334,54 @@ function showToast(msg) {
 }
 
 // ============ 语音朗读（核心改进）============
+let _currentAudio = null;
+
 function speakText(elId) {
   const el = document.getElementById(elId);
   const text = el.textContent || el.innerText;
   if(!text || text.includes('将显示在这里')) return;
   
-  // 取消之前的朗读
+  // 停止之前的朗读
+  if(_currentAudio) { _currentAudio.pause(); _currentAudio = null; }
   speechSynthesis.cancel();
   
-  const utterance = new SpeechSynthesisUtterance(text);
+  showToast('🔊 正在朗读...');
   
-  // 选择中文语音
+  // 方案1: 百度TTS（最可靠，移动端可用）
+  const baiduUrl = 'https://tts.baidu.com/text2audio?lan=zh&text=' + 
+    encodeURIComponent(text) + '&spd=5&pit=5&vol=9&per=4';
+  
+  const audio = new Audio(baiduUrl);
+  audio.onerror = function() {
+    // 方案2: Web Speech API备用
+    trySpeechAPI(text);
+  };
+  audio.oncanplaythrough = function() {
+    _currentAudio = audio;
+    audio.play().catch(() => trySpeechAPI(text));
+  };
+  audio.onended = function() { _currentAudio = null; showToast('✅ 朗读完毕'); };
+  audio.load();
+}
+
+function trySpeechAPI(text) {
+  if(!('speechSynthesis' in window)) { showToast('⚠️ 朗读不可用'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
   const voices = speechSynthesis.getVoices();
   const zhVoice = voices.find(v => v.lang.includes('zh') && v.localService) 
-               || voices.find(v => v.lang.includes('zh'))
-               || voices[0];
-  if(zhVoice) utterance.voice = zhVoice;
-  
-  utterance.lang = 'zh-CN';
-  utterance.rate = 0.85;   // 稍慢，更像方言节奏
-  utterance.pitch = 1.1;   // 稍高，更接近东台口音
-  utterance.volume = 1.0;
-  
-  utterance.onstart = () => showToast('🔊 正在朗读...');
-  utterance.onerror = (e) => {
-    console.error('TTS错误:', e);
-    // 备用方案：用AudioContext生成提示音
-    fallbackSpeak(text);
-  };
-  
-  speechSynthesis.speak(utterance);
+               || voices.find(v => v.lang.includes('zh'));
+  if(zhVoice) u.voice = zhVoice;
+  u.lang = 'zh-CN'; u.rate = 0.85; u.pitch = 1.1; u.volume = 1.0;
+  u.onend = () => showToast('✅ 朗读完毕');
+  u.onerror = () => showToast('⚠️ 朗读不可用');
+  speechSynthesis.speak(u);
 }
 
 // 确保语音列表加载
 speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
 
-// 备用朗读方案
-function fallbackSpeak(text) {
-  showToast('⚠️ 浏览器TTS不可用，请使用Chrome浏览器');
-}
+
 
 // ============ 语音识别（核心改进）============
 let recognition = null;
