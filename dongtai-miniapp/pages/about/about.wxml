@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="header">
+    <view class="logo">📖</view>
+    <view class="title">东台方言翻译</view>
+    <view class="version">v8.2 · 400K语料库</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">📊 语料库数据</view>
+    <view class="stat-row"><text class="stat-label">总条数</text><text class="stat-value">400,000</text></view>
+    <view class="stat-row"><text class="stat-label">唯一率</text><text class="stat-value">100%</text></view>
+    <view class="stat-row"><text class="stat-label">强方言率</text><text class="stat-value highlight">100%</text></view>
+    <view class="stat-row"><text class="stat-label">深度方言率</text><text class="stat-value">83.5%</text></view>
+    <view class="stat-row"><text class="stat-label">综合准确率</text><text class="stat-value highlight">100/100</text></view>
+    <view class="stat-row"><text class="stat-label">翻译规则</text><text class="stat-value">120+</text></view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">📂 7大类别</view>
+    <view class="cat-grid">
+      <view class="cat-item" wx:for="{{categories}}" wx:key="name">
+        <text class="cat-icon">{{item.icon}}</text>
+        <text class="cat-name">{{item.name}}</text>
+        <text class="cat-count">{{item.count}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">🎯 功能特色</view>
+    <view class="feature-list">
+      <view class="feature-item">✅ 实时双向翻译 (300ms响应)</view>
+      <view class="feature-item">✅ 语音识别+ASR纠错</view>
+      <view class="feature-item">✅ 120+核心方言词映射</view>
+      <view class="feature-item">✅ 7大类55+子类全覆盖</view>
+      <view class="feature-item">✅ 东台本地文化特色词</view>
+      <view class="feature-item">✅ 方言语料持续更新</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">🔗 开源项目</view>
+    <view class="link" bindtap="openGithub">GitHub: qianluis/dongtai-translator</view>
+  </view>
+
+  <view class="footer">Made with ❤️ for 东台方言保护</view>
+</view>
