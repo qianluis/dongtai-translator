@@ -2,25 +2,25 @@
   <view class="header">
     <view class="logo">🗣️</view>
     <view class="title">东台方言翻译</view>
-    <view class="subtitle">400K语料 · 120+规则 · 语音纠错</view>
+    <view class="subtitle">400K语料 · 120+规则 · ASR纠错</view>
   </view>
 
   <!-- 输入区 -->
   <view class="input-card card">
     <view class="input-header">
       <text class="input-label">{{inputLabel}}</text>
-      <view class="switch-btn" bindtap="switchDirection">
-        <text>⇄ 切换</text>
-      </view>
     </view>
     <textarea class="input-area" placeholder="{{inputPlaceholder}}" 
       value="{{inputText}}" bindinput="onInput" maxlength="200" auto-height />
     <view class="input-actions">
-      <view class="action-btn" bindtap="startVoice">
-        <text>🎤 语音输入</text>
+      <view class="action-btn speak-btn" bindtap="speakInput">
+        <text>🔊 朗读原文</text>
       </view>
       <view class="action-btn primary" bindtap="doTranslate">
         <text>翻译</text>
+      </view>
+      <view class="action-btn" bindtap="clearAll">
+        <text>清空</text>
       </view>
     </view>
   </view>
@@ -29,25 +29,25 @@
   <view class="result-card card" wx:if="{{result}}">
     <view class="result-header">
       <text class="result-label">{{outputLabel}}</text>
-      <text class="confidence">置信度 {{confidence}}%</text>
+      <text class="confidence" wx:if="{{confidence}}">置信度 {{confidence}}%</text>
     </view>
-    <view class="result-text">{{result}}</text>
+    <view class="result-text">{{result}}</view>
     <view class="result-actions">
+      <view class="action-btn speak-btn-large {{isSpeaking ? 'speaking' : ''}}" bindtap="speakResult">
+        <text>{{isSpeaking ? '🔊 朗读中...' : '🔊 朗读译文'}}</text>
+      </view>
       <view class="action-btn" bindtap="copyResult">
         <text>📋 复制</text>
       </view>
-      <view class="action-btn" bindtap="speakResult">
-        <text>🔊 朗读</text>
-      </view>
     </view>
     <view class="asr-note" wx:if="{{asrCorrected}}">
-      ℹ️ 已自动纠正语音识别错误
+      ✅ 已自动纠正语音识别错误
     </view>
   </view>
 
   <!-- 快捷短语 -->
   <view class="quick-card card">
-    <view class="section-title">常用短语</view>
+    <view class="section-title">💬 点击即翻译+朗读</view>
     <view class="quick-grid">
       <view class="quick-item" wx:for="{{quickPhrases}}" wx:key="index" 
         bindtap="usePhrase" data-text="{{item}}">
