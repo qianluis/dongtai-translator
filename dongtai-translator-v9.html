@@ -1,326 +1,555 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>东台方言翻译</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Microsoft YaHei',sans-serif;
-            background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);min-height:100vh;color:#333}
-        .c{max-width:520px;margin:0 auto;padding:12px;padding-bottom:80px}
-        .h{text-align:center;padding:12px 0 6px}
-        .h h1{font-size:24px;background:linear-gradient(135deg,#f5af19,#f12711);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-        .h p{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
-        .cd{background:#fff;border-radius:20px;padding:16px;margin:10px 0;box-shadow:0 8px 24px rgba(0,0,0,.2)}
-        .mr{display:flex;gap:8px;margin-bottom:10px}
-        .mb{flex:1;padding:10px;border-radius:12px;border:2px solid #eee;background:#fff;font-size:13px;font-weight:600;cursor:pointer;transition:.2s}
-        .mb.a{border-color:#f5af19;background:linear-gradient(135deg,#f5af19,#f12711);color:#fff}
-        .iw{position:relative;margin-bottom:8px}
-        .ib{width:100%;min-height:70px;padding:12px 50px 12px 12px;border:2px solid #eee;border-radius:14px;font-size:17px;line-height:1.5;resize:none;font-family:inherit}
-        .ib:focus{outline:none;border-color:#f5af19}
-        .ib::placeholder{color:#bbb;font-size:14px}
-        .vb{position:absolute;right:8px;bottom:8px;width:38px;height:38px;border-radius:50%;border:none;background:linear-gradient(135deg,#f5af19,#f12711);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
-        .vb.r{background:#e91e63;animation:p 1s infinite}
-        @keyframes p{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-        .tb{width:100%;padding:12px;border-radius:12px;border:none;background:linear-gradient(135deg,#f5af19,#f12711);color:#fff;font-size:15px;font-weight:600;cursor:pointer}
-        .tb:active{transform:scale(.98)}
-        .sb{background:#e8f5e9;border-radius:8px;padding:6px 10px;margin-bottom:8px;font-size:12px;color:#2e7d32}
-        .sd{width:8px;height:8px;border-radius:50%;background:#4caf50;display:inline-block;margin-right:4px}
-        .sd.err{background:#f44336}
-        .sd.warn{background:#ff9800}
-        .hb{background:#fff3e0;border-radius:10px;padding:8px 10px;margin-bottom:8px;font-size:12px;color:#e65100;line-height:1.5}
-        .rb{background:linear-gradient(135deg,#fff8e1,#fff3e0);border-radius:14px;padding:14px;margin-top:10px;border-left:4px solid #f5af19;animation:si .3s}
-        @keyframes si{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-        .rl{font-size:11px;color:#999;margin-bottom:3px}
-        .rt{font-size:20px;color:#1a1a2e;font-weight:600;line-height:1.5}
-        .rd{font-size:18px;color:#e65100;margin-top:6px;font-weight:500}
-        .rm{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;align-items:center}
-        .mt{font-size:11px;padding:3px 8px;background:rgba(245,175,25,.15);color:#e65100;border-radius:8px}
-        .ra{display:flex;gap:6px;margin-top:10px}
-        .ab{flex:1;padding:10px;border-radius:10px;border:none;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;font-weight:600}
-        .ab.p{background:#f5af19;color:#fff}
-        .ab.p:active{transform:scale(.97)}
-        .ab.s{background:#f0f0f0;color:#666}
-        .ab.p.playing{background:#4caf50}
-        .qt{font-size:12px;color:#999;margin:10px 0 6px}
-        .qg{display:flex;flex-wrap:wrap;gap:6px}
-        .qc{padding:5px 12px;background:#f5f5f5;border-radius:14px;font-size:12px;cursor:pointer;border:none}
-        .qc:active{background:#f5af19;color:#fff}
-        .tt{display:flex;gap:6px;margin:8px 0}
-        .ttb{flex:1;padding:8px;border-radius:10px;border:none;background:rgba(255,255,255,.1);color:rgba(255,255,255,.6);font-size:13px;font-weight:600;cursor:pointer}
-        .ttb.a{background:#fff;color:#e65100}
-        .ds{margin-bottom:12px}
-        .dt{font-size:14px;font-weight:600;margin-bottom:6px;color:#e65100}
-        .dtb{width:100%;font-size:13px}
-        .dtb td{padding:3px 6px}
-        .dtb td:first-child{color:#e65100;font-weight:500;white-space:nowrap}
-        .dtb td:last-child{color:#666}
-        .hi{padding:10px 0;border-bottom:1px solid #f0f0f0}
-        .hi:last-child{border:none}
-        .ht{font-size:11px;color:#bbb}
-        .hp{font-size:13px;margin-top:3px}
-        .hp .ar{color:#f5af19;margin:0 4px}
-        .hidden{display:none!important}
-        .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.85);color:#fff;padding:10px 20px;border-radius:20px;font-size:14px;z-index:1000}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东台方言翻译器 v9 | 语音纠错+实时翻译+TTS朗读</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f0c29;--card:rgba(255,255,255,0.06);--border:rgba(255,255,255,0.1);--accent:#feca57;--accent2:#ff6b6b;--accent3:#48dbfb;--text:#e8e8e8;--muted:#8899aa;--success:#00d2d3;--warn:#f368e0}
+body{font-family:'PingFang SC','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,var(--bg) 0%,#302b63 50%,#24243e 100%);min-height:100vh;color:var(--text)}
+.container{max-width:900px;margin:0 auto;padding:12px}
+header{text-align:center;padding:16px 0 8px}
+header h1{font-size:1.6em;background:linear-gradient(90deg,var(--accent2),var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+header .subtitle{color:var(--muted);font-size:0.82em;margin-top:4px}
+.stats-bar{display:flex;justify-content:center;gap:8px;margin:8px 0;flex-wrap:wrap}
+.stat-pill{background:var(--card);border-radius:16px;padding:4px 12px;font-size:0.78em;border:1px solid var(--border)}
+.stat-pill b{color:var(--accent)}
+.tab-bar{display:flex;justify-content:center;gap:6px;margin:10px 0 8px}
+.tab{padding:6px 16px;border-radius:16px;cursor:pointer;background:var(--card);border:1px solid var(--border);font-size:0.85em;transition:all .3s}
+.tab:hover,.tab.active{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#1a1a2e;border-color:transparent;font-weight:600}
+.panel{display:none}.panel.active{display:block}
+.card{background:var(--card);border-radius:14px;padding:16px;border:1px solid var(--border);margin-bottom:10px;backdrop-filter:blur(6px)}
+.card h3{margin-bottom:8px;color:var(--accent);font-size:0.95em;display:flex;align-items:center;gap:6px}
+textarea{width:100%;height:100px;background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--text);font-size:1em;resize:vertical;font-family:inherit;line-height:1.6}
+textarea:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 10px rgba(255,107,107,0.2)}
+.btn-row{display:flex;gap:6px;margin:8px 0;flex-wrap:wrap}
+.btn{padding:8px 18px;border:none;border-radius:8px;font-size:0.85em;cursor:pointer;transition:all .2s;font-weight:500}
+.btn-primary{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#1a1a2e}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 3px 12px rgba(255,107,107,0.3)}
+.btn-secondary{background:rgba(255,255,255,0.1);color:var(--text);border:1px solid var(--border)}
+.btn-voice{background:linear-gradient(90deg,var(--accent3),#0abde3);color:#1a1a2e}
+.btn-voice.recording{animation:pulse 1s infinite;background:linear-gradient(90deg,#ff6b6b,#ee5a24)}
+.btn-speak{background:linear-gradient(90deg,var(--success),#01a3a4);color:#1a1a2e}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.6}}
+.result-area{min-height:60px;background:rgba(0,0,0,0.25);border-radius:10px;padding:12px;line-height:1.8;font-size:1.05em;border:1px solid rgba(255,255,255,0.08);white-space:pre-wrap}
+.highlight{color:var(--accent);font-weight:600}
+.corrected{color:var(--success);font-size:0.85em}
+.direction-tag{display:inline-block;background:rgba(254,202,87,0.15);color:var(--accent);padding:2px 10px;border-radius:10px;font-size:0.78em;margin:4px 0}
+.voice-panel{text-align:center;padding:20px}
+.mic-btn{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--accent3),#0abde3);display:inline-flex;align-items:center;justify-content:center;font-size:48px;cursor:pointer;transition:all .3s;box-shadow:0 4px 20px rgba(72,219,251,0.3);border:none;color:#1a1a2e}
+.mic-btn.recording{background:linear-gradient(135deg,#ff6b6b,#ee5a24);box-shadow:0 4px 20px rgba(255,107,107,0.4);transform:scale(1.05);animation:pulse 1s infinite}
+.mic-btn:hover{transform:scale(1.05)}
+.voice-wave{display:inline-block;width:6px;height:6px;background:var(--accent2);border-radius:50%;margin:0 2px;animation:wave 0.6s infinite}
+.voice-wave:nth-child(2){animation-delay:0.15s}
+.voice-wave:nth-child(3){animation-delay:0.3s}
+.voice-wave:nth-child(4){animation-delay:0.45s}
+@keyframes wave{0%,100%{transform:scaleY(1)}50%{transform:scaleY(2.5)}}
+.voice-status{margin:12px 0;color:var(--accent3);font-size:0.9em;display:none}
+.voice-status.active{display:block}
+.voice-result{text-align:left;margin-top:16px}
+.quick-grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.quick-item{background:rgba(255,255,255,0.08);color:var(--text);padding:6px 14px;border-radius:16px;font-size:0.82em;cursor:pointer;transition:all .2s;border:1px solid var(--border)}
+.quick-item:hover{background:rgba(254,202,87,0.15);border-color:var(--accent)}
+.footer{text-align:center;padding:16px 0;color:var(--muted);font-size:0.75em}
+</style>
 </head>
 <body>
-<div class="c">
-    <div class="h"><h1>🗣️ 东台方言翻译</h1><p>普通话↔东台话 · 点击🔊朗读</p></div>
-    <div class="tt">
-        <button class="ttb a" onclick="stab('t')">🔄 翻译</button>
-        <button class="ttb" onclick="stab('d')">📖 词典</button>
-        <button class="ttb" onclick="stab('h')">📜 历史</button>
-    </div>
-    <div id="pt">
-        <div class="cd">
-            <div class="sb" id="sb"><span class="sd" id="sd"></span><span id="st">准备就绪</span></div>
-            <div class="mr">
-                <button class="mb a" id="mm" onclick="sm('m2d')">普通话 → 东台话</button>
-                <button class="mb" id="md" onclick="sm('d2m')">东台话 → 普通话</button>
-            </div>
-            <div class="hb" id="hb">💡 点<b>🎤</b>说普通话→自动翻译。翻译后点<b>🔊朗读</b>听声音。</div>
-            <div class="iw">
-                <textarea class="ib" id="inp" placeholder="输入普通话，如：你去哪里？" oninput="oi()"></textarea>
-                <button class="vb" id="vbtn" onclick="tv()">🎤</button>
-            </div>
-            <button class="tb" onclick="dt()">🔄 翻译</button>
-            <div id="ra"></div>
-            <div class="qt">💡 常用短句</div>
-            <div class="qg" id="qg"></div>
-        </div>
-    </div>
-    <div id="pd" class="hidden"><div class="cd" id="dc"></div></div>
-    <div id="ph" class="hidden"><div class="cd"><h3 style="margin-bottom:10px">📜 历史</h3><div id="hl"><p style="color:#999;text-align:center;padding:20px">暂无</p></div></div></div>
+<div class="container">
+<header>
+  <h1>🗣️ 东台方言翻译器</h1>
+  <div class="subtitle">江淮官话泰如片 · 语音纠错+实时翻译+TTS朗读 · 400K语料库</div>
+</header>
+
+<div class="stats-bar">
+  <div class="stat-pill">📊 400K语料</div>
+  <div class="stat-pill">🎯 100%强方言</div>
+  <div class="stat-pill">🔧 120+规则</div>
+  <div class="stat-pill">🎤 ASR纠错</div>
+  <div class="stat-pill">🔊 TTS朗读</div>
 </div>
+
+<div class="tab-bar">
+  <div class="tab active" onclick="switchTab('text')">📝 文字翻译</div>
+  <div class="tab" onclick="switchTab('voice')">🎤 语音翻译</div>
+  <div class="tab" onclick="switchTab('browse')">📚 语料浏览</div>
+</div>
+
+<!-- 文字翻译面板 -->
+<div id="panel-text" class="panel active">
+<div class="card">
+  <h3>📝 文字翻译</h3>
+  <textarea id="inputText" placeholder="输入普通话或东台方言，自动识别方向..." oninput="autoTranslate()"></textarea>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="doTranslate()">翻译</button>
+    <button class="btn btn-secondary" onclick="clearAll()">清空</button>
+    <button class="btn btn-speak" onclick="speakText('inputText')">🔊 朗读原文</button>
+  </div>
+  <div id="directionInfo" class="direction-tag" style="display:none"></div>
+  <div id="asrInfo" class="corrected" style="display:none"></div>
+  <div id="resultArea" class="result-area" data-empty="翻译结果将显示在这里" style="margin-top:8px">翻译结果将显示在这里</div>
+  <div class="btn-row">
+    <button class="btn btn-speak" onclick="speakText('resultArea')">🔊 朗读译文</button>
+    <button class="btn btn-secondary" onclick="copyResult()">📋 复制</button>
+  </div>
+</div>
+
+<div class="card">
+  <h3>💬 常用短语（点击翻译）</h3>
+  <div class="quick-grid" id="quickPhrases"></div>
+</div>
+</div>
+
+<!-- 语音翻译面板 -->
+<div id="panel-voice" class="panel">
+<div class="card">
+  <div class="voice-panel">
+    <h3>🎤 语音翻译</h3>
+    <p style="color:var(--muted);font-size:0.85em;margin:8px 0">说普通话或东台话，自动识别+纠错+翻译+朗读</p>
+    <button class="mic-btn" id="micBtn" onclick="toggleVoice()">🎤</button>
+    <div class="voice-status" id="voiceStatus">
+      <span class="voice-wave"></span><span class="voice-wave"></span><span class="voice-wave"></span><span class="voice-wave"></span>
+      <span style="margin-left:8px">正在聆听...</span>
+    </div>
+  </div>
+  <div id="voiceResultArea" style="display:none">
+    <div class="card" style="border-left:3px solid var(--accent3)">
+      <h3>🔍 语音识别</h3>
+      <div id="voiceASR" class="result-area"></div>
+    </div>
+    <div class="card" id="voiceCorrectedCard" style="border-left:3px solid var(--success);display:none">
+      <h3>✅ ASR纠错</h3>
+      <div id="voiceCorrected" class="result-area"></div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--accent)">
+      <h3>📝 翻译结果</h3>
+      <div id="voiceTranslated" class="result-area"></div>
+      <div class="btn-row" style="margin-top:8px">
+        <button class="btn btn-speak" onclick="speakText('voiceTranslated')">🔊 朗读</button>
+        <button class="btn btn-secondary" onclick="copyEl('voiceTranslated')">📋 复制</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 语料浏览面板 -->
+<div id="panel-browse" class="panel">
+<div class="card">
+  <h3>📚 方言语料浏览</h3>
+  <div class="quick-grid" id="categoryGrid"></div>
+  <div id="corpusDisplay" style="margin-top:12px"></div>
+</div>
+</div>
+
+<div class="footer">东台方言翻译器 v9 · 语音纠错+实时翻译+TTS朗读 · <a href="https://github.com/qianluis/dongtai-translator" style="color:var(--accent3)">GitHub</a></div>
+</div>
+
 <script>
-// ============================================================
-// 东台方言翻译 v9 - 彻底修复TTS无声问题
-// 核心修复：Chrome移动端需要用户手势触发TTS
-// → 翻译后不自动朗读，改由用户点击🔊按钮朗读
-// → 添加voice预热+重试+详细错误提示
-// ============================================================
-const S={mode:'m2d',rec:false,recog:null,voice:null,voiceReady:false,history:JSON.parse(localStorage.getItem('dt_h')||'[]')};
+// ============ 语音识别纠错层 ============
+const ASR_FIX = [
+  ['我拉','我俫'],['我啦','我俫'],['我俩','我俫'],['我勒','我俫'],
+  ['你拉','你俫'],['你啦','你俫'],['你俩','你俫'],['你勒','你俫'],
+  ['他拉','他俫'],['他啦','他俫'],['他俩','他俫'],['他勒','他俫'],
+  ['十的','什的'],['什地','什的'],['什尼','什的'],
+  ['怎样','怎呃'],['怎的','怎呃'],['怎呢','怎呃'],['真呢','怎呃'],['争呢','怎呃'],
+  ['几点','几钿'],['几钱','几钿'],['几店','几钿'],['做什地','做什的'],
+  ['今早','今朝'],['金朝','今朝'],['今招','今朝'],['明早','明朝'],['名招','明朝'],
+  ['后高','侯告'],['厚稿','侯告'],['候告','侯告'],['猴搞','侯告'],['号搞','侯告'],['后搞','侯告'],
+  ['中周','中昼'],['种周','中昼'],['上周','上昼'],['商周','上昼'],['下周','下昼'],
+  ['个歇','搿歇'],['格歇','搿歇'],['各歇','搿歇'],['克克','刻刻'],['可克','刻刻'],
+  ['没的','没得'],['美的','没得'],['梅的','没得'],['美的','没得'],
+  ['不来事','勿来事'],['不来是','勿来事'],['不晓得','勿晓得'],['不晓的','勿晓得'],
+  ['跌跌','嗲嗲'],['玛玛','嫲嫲'],['嬷嬷','嫲嫲'],['男酱','男将'],['南将','男将'],
+  ['女酱','女将'],['吕将','女将'],['歌歌','锅锅'],['佳佳','假假'],['小南','小囡'],
+  ['结滚','结棍'],['解棍','结棍'],['杰棍','结棍'],['饭嫌','犯嫌'],['凡嫌','犯嫌'],
+  ['零光','灵光'],['林光','灵光'],['表致','标致'],['小的','晓得'],['晓的','晓得'],['效得','晓得'],
+  ['惯了','掼咧'],['关了','掼咧'],['抗了','囥咧'],['炕了','囥咧'],['挖了','搲咧'],
+  ['邦衬','帮衬'],['号稍','豪稍'],['好稍','豪稍'],['毫稍','豪稍'],
+  ['白想','白相'],['百相','白相'],['大寡','搭寡'],['搭瓜','搭寡'],
+  ['搞子','杲昃'],['高子','杲昃'],['事替','事体'],['是体','事体'],
+  ['老为','劳为'],['捞为','劳为'],['把哉','罢哉'],['八哉','罢哉'],
+  ['一他刮子','一塌刮子'],['胖海','旁海'],
+];
+ASR_FIX.sort((a,b) => b[0].length - a[0].length);
 
-// ===== 150+ 词汇映射 =====
-const M2D={'不知道':'弗晓得','多少钱':'几钿','什么时候':'什的时辰','聊天':'讲白相','吵架':'相骂','回家':'家去','洗澡':'汏浴','舒服':'适意','着急':'心焦','厉害':'来斯','东西':'杲昃','晚饭':'夜饭','午饭':'中饭','鸡蛋':'鸡子','我们':'我俦','你们':'你俦','他们':'他俦','她们':'他俦','哪里':'哪块','什么':'什的','怎么':'怎呃','爷爷':'爹爹','孩子':'伢儿','妻子':'女将','丈夫':'男将','老师':'先生','邻居':'邻舍','老人':'老人家','不好':'弗好','不行':'弗行','不会':'弗会','不能':'弗能','不是':'弗是','不要':'弗要','不用':'弗用','不要紧':'呒得事','没关系':'呒得事','今天':'今呃','明天':'明呃','昨天':'昨呃','后天':'后呃','前天':'前呃','早上':'早起头','中午':'中上','下午':'下半日','晚上':'夜头','现在':'眼下','以前':'老早','刚才':'才将','以后':'往后','每天':'日日','睡觉':'困觉','差':'推板','利索':'刷刮','实在':'扎实','聪明':'灵光','笨':'木作','漂亮':'标致','干净':'清爽','脏':'龌龊','上面':'高头','下面':'底下','里面':'里头','外面':'外头','前面':'前头','后面':'后头','对面':'对过','旁边':'边头','找':'寻','洗':'汏','穿':'着','看':'望','说':'讲','跑':'奔','站':'立','蹲':'跍','扔':'掼','拿':'担','放':'搁','藏':'囥','玩':'耍','给':'把','很':'蛮','非常':'蛮','太':'蛮','没有':'呒得','不':'弗'};
-const D2M={};for(const[m,d]of Object.entries(M2D))if(d!==m&&!D2M[d])D2M[d]=m;
-Object.assign(D2M,{'弗':'不','呒得':'没有','哪块':'哪里','什的':'什么','怎呃':'怎么','几钿':'多少钱','杲昃':'东西','来斯':'厉害','推板':'差','扎实':'实在','刷刮':'利索','家去':'回家','我俦':'我们','你俦':'你们','他俦':'他们','爹爹':'爷爷','伢儿':'孩子','女将':'妻子','先生':'老师','邻舍':'邻居','汏':'洗','着':'穿','望':'看','寻':'找','讲':'说','奔':'跑','立':'站','蛮':'很','呃':'了','今呃':'今天','明呃':'明天','昨呃':'昨天','早起头':'早上','中上':'中午','夜头':'晚上','眼下':'现在','老早':'以前','日日':'每天','鸡子':'鸡蛋','困觉':'睡觉','讲白相':'聊天','适意':'舒服','心焦':'着急','相骂':'吵架','清爽':'干净','龌龊':'脏','灵光':'聪明','标致':'漂亮','木作':'笨','夜饭':'晚饭','中饭':'午饭'});
-
-// ===== 方言语音纠错 =====
-const SF={'什地':'什的','神的':'什的','甚的':'什的','十地':'什的','哪快':'哪块','那块':'哪块','拉块':'哪块','几点':'几钿','几钱':'几钿','几店':'几钿','搞子':'杲昃','高子':'杲昃','稿子':'杲昃','来死':'来斯','来四':'来斯','赖斯':'来斯','腿板':'推板','退板':'推板','我仇':'我俦','我凑':'我俦','我愁':'我俦','我抽':'我俦','你仇':'你俦','你凑':'你俦','你抽':'你俦','他仇':'他俦','他凑':'他俦','他抽':'他俦','迭迭':'爹爹','跌跌':'爹爹','牙儿':'伢儿','亚儿':'伢儿','牙人':'伢儿','大雨':'汏浴','大浴':'汏浴','下去':'家去','架去':'家去','木得':'呒得','没得':'呒得','么得':'呒得','今儿':'今呃','金额':'今呃','明儿':'明呃','名额':'明呃','昨儿':'昨呃','做额':'昨呃'};
-
-// ===== 翻译引擎 =====
-function tr(text){
-    text=text.trim();if(!text)return null;
-    const isM2D=S.mode==='m2d';const wm=isM2D?M2D:D2M;
-    let r=text;const es=Object.entries(wm).sort((a,b)=>b[0].length-a[0].length);
-    for(const[f,t]of es)if(r.includes(f))r=r.split(f).join(t);
-    if(isM2D){r=r.replace(/呃{2,}/g,'呃').replace(/了吗/g,'呃没').replace(/了。/g,'呃。').replace(/了！/g,'呃！').replace(/了？/g,'呃？');}
-    const c=r!==text;return{o:text,t:r,ok:c};
+function correctASR(text) {
+  let r = text;
+  for (const [wrong, right] of ASR_FIX) {
+    if (r.includes(wrong) && wrong !== right) r = r.replaceAll(wrong, right);
+  }
+  // 句中"不+动词" → "勿+动词"
+  r = r.replace(/不(?=[走做说吃看想会用能好去来买写开给])/, '勿');
+  // 句尾语气词纠正
+  r = r.replace(/的$/, '呃').replace(/了$/, '咧').replace(/吗$/, '伐');
+  return r;
 }
 
-// ===== TTS语音播报 - 彻底修复版 =====
-// 关键：Chrome移动端TTS必须由用户手势触发！
-// 所以不能自动朗读，必须用户点击🔊按钮
+// ============ 翻译规则 ============
+const R_M2D = [
+  ['是不是','阿是'],['要不要','阿要'],['能不能','阿能'],['会不会','阿会'],['好不好','阿好'],
+  ['不知道','勿晓得'],['不要紧','勿要紧'],['怎么了','怎呃咧'],['干什么','做什的'],['多少钱','几钿'],
+  ['怎么样','怎呃样'],['这么多','搿呃多'],['那么远','嗨呃远'],
+  ['我们','我俫'],['你们','你俫'],['他们','他俫'],['咱们','我俫'],
+  ['自己','自家'],['人家','别家'],['什么','什的'],['怎么','怎呃'],['哪里','哪块'],['多少','好多'],
+  ['非常','蛮蛮'],['特别','蛮蛮'],['很','蛮'],['太','忒'],
+  ['厉害','结棍'],['一定','安安'],['全部','一塌刮子'],
+  ['没有','没得'],['不要','嫑'],['不行','弗来事'],
+  ['知道','晓得'],['看','望'],['找','寻'],['洗','汏'],['玩','白相'],['说','讲'],
+  ['睡觉','困觉'],['聊天','搭寡'],['回家','家去'],['回来','转来'],
+  ['讨厌','犯嫌'],['喜欢','欢喜'],['帮忙','帮衬'],['谢谢','难为'],
+  ['高兴','快活'],['生气','气不过'],['烦恼','懊糟'],['麻烦','劳为'],
+  ['今天','今朝'],['明天','明朝'],['昨天','昨日子'],['后天','后朝'],
+  ['晚上','侯告'],['上午','上昼'],['下午','下半天'],['中午','中昼'],
+  ['现在','搿歇'],['以前','老早'],['一会儿','歇歇'],['马上','豪稍'],['算了','罢哉'],
+  ['去年','旧年'],['今年','今年子'],
+  ['爷爷','嗲嗲'],['奶奶','阿婆'],['姐姐','假假'],['哥哥','锅锅'],
+  ['丈夫','男将'],['妻子','女将'],['小孩','小囡'],['邻居','邻舍'],
+  ['东西','杲昃'],['事情','事体'],['衣服','衣裳'],['厨房','灶间'],
+  ['早饭','朝饭'],['午饭','中饭'],['晚饭','夜饭'],
+  ['黄鳝','长鱼'],['螃蟹','旁海'],['萝卜干','罗服锅儿'],
+  ['漂亮','标致'],['聪明','灵光'],['笨','戆'],['累','吃力'],
+  ['舒服','忺'],['冷','瀴'],['脏','龌龊'],['小气','抠'],
+  ['扔','掼'],['丢','厾'],['放','囥'],['睡','困'],['想','忖'],['给','把'],
+  ['你好','蛮好呃'],['再见','再会'],['谢谢','难为你'],['对不起','勿好意思'],
+  ['吃饭','噇饭'],['喝水','吃茶'],['跑','逃'],['很冷','蛮蛮瀴'],
+  ['很热','蛮蛮热'],['很累','蛮蛮吃力'],['了不起','结棍'],
+  ['没关系','勿要紧'],['下雨','落雨'],['下雪','落雪'],['刮风','起风'],
+  ['早上','早起'],['医生','郎中'],['学校','学堂'],
+];
 
-function initVoices(){
-    if(!('speechSynthesis' in window)){
-        ss('⚠️ 浏览器不支持语音合成','err');return;
-    }
-    // 尝试获取中文语音
-    function findZh(voices){
-        for(const v of voices){if(v.lang==='zh-CN')return v;}
-        for(const v of voices){if(v.lang.startsWith('zh'))return v;}
-        for(const v of voices){if(v.name&&v.name.includes('Chinese'))return v;}
-        return null;
-    }
-    function tryLoad(){
-        const voices=speechSynthesis.getVoices();
-        if(voices.length>0){
-            S.voice=findZh(voices);
-            S.voiceReady=true;
-            if(S.voice){
-                ss('✅ 语音就绪（'+S.voice.name.substring(0,15)+'）');
-                console.log('TTS voice:',S.voice.name,S.voice.lang);
-            }else{
-                ss('⚠️ 未找到中文语音，朗读可能用默认声音','warn');
-            }
-        }
-    }
-    // 立即尝试
-    tryLoad();
-    // 也监听异步加载
-    speechSynthesis.onvoiceschanged=tryLoad;
-    // 兜底：延迟再试
-    setTimeout(tryLoad,500);
-    setTimeout(tryLoad,2000);
+// D2M多字词
+const R_D2M_WORDS = [];
+R_M2D.forEach(([s,d]) => { if(d.length>=2) R_D2M_WORDS.push([d,s]); });
+R_D2M_WORDS.push(['勿','不'],['呒','没'],['蛮','很'],['寻','找'],['掼','扔'],
+  ['囥','放'],['困','睡'],['汏','洗'],['拨','给'],['搲','拿'],['揩','擦'],
+  ['噇','吃'],['夯','打'],['踅','走'],['忖','想'],['瀴','冷'],['忺','舒服'],
+  ['戆','笨'],['相','看']);
+R_D2M_WORDS.sort((a,b) => b[0].length - a[0].length);
+
+const SUFFIX_D2M = {呃:'的',咧:'了',啘:'吧',哉:'了',噶:'啊',伐:'吗',哩:'呢'};
+const SUFFIX_M2D = {的:'呃',了:'咧',吧:'啘',吗:'伐',呢:'哩',啊:'噶'};
+
+// 方言标记词
+const DIALECT_MARKS = new Set(['我俫','你俫','他俫','晓得','什的','怎呃','没得','犯嫌','帮衬',
+  '嗲嗲','男将','女将','锅锅','假假','搿歇','搿样','嗨样','搿搭','嗨搭','豪稍','罢哉',
+  '侯告','今朝','明朝','蛮蛮','阿是','阿要','弗要','嫑','结棍','杲昃','事体','衣裳',
+  '白相','家去','转来','朝饭','夜饭','长鱼','旁海','罗服锅儿','困觉','搭寡','懊糟',
+  '灵光','标致','戆','吃力','瀴','忺','寻','掼','囥','汏','拨','搲','揩','噇','夯']);
+
+function detectDir(text) {
+  let c = 0;
+  for (const m of DIALECT_MARKS) { if(text.includes(m)) c++; }
+  return c >= 1 ? 'd2m' : 'm2d';
 }
 
-// 全局：记住最后一次翻译结果，给🔊按钮用
-let lastTranslated='';
+function applyRules(text, rules) {
+  let r = text;
+  for (const [s,d] of rules) r = r.replaceAll(s, d);
+  return r;
+}
 
-function speak(text){
-    if(!text)return;
-    if(!('speechSynthesis' in window)){
-        showToast('浏览器不支持语音');return;
+function m2d(text) {
+  let r = applyRules(text, R_M2D);
+  for (const [s,d] of Object.entries(SUFFIX_M2D)) {
+    if(r.endsWith(s)) { r = r.slice(0,-s.length)+d; break; }
+  }
+  return r;
+}
+
+function d2m(text) {
+  let r = applyRules(text, R_D2M_WORDS);
+  for (const [d,s] of Object.entries(SUFFIX_D2M)) {
+    if(r.endsWith(d)) { r = r.slice(0,-d.length)+s; break; }
+  }
+  return r;
+}
+
+// ============ 主翻译函数 ============
+function translate(text, asrMode=false) {
+  if(!text||!text.trim()) return {result:'',direction:'unknown',confidence:0,asrCorrected:false};
+  text = text.trim();
+  const original = text;
+  
+  // ASR纠错
+  if(asrMode) {
+    const corrected = correctASR(text);
+    if(corrected !== text) text = corrected;
+  }
+  
+  // 检测方向
+  const dir = detectDir(text);
+  const result = dir === 'm2d' ? m2d(text) : d2m(text);
+  const changed = [...text].filter((c,i) => c !== result[i]).length;
+  const confidence = Math.min(100, Math.round(changed / Math.max(1, text.length) * 300 + 50));
+  
+  return {
+    result,
+    direction: dir,
+    directionLabel: dir === 'd2m' ? '方言→普通话' : '普通话→方言',
+    confidence,
+    asrCorrected: original !== text,
+    correctedText: text
+  };
+}
+
+// ============ UI交互 ============
+let translateTimer = null;
+function autoTranslate() {
+  clearTimeout(translateTimer);
+  translateTimer = setTimeout(doTranslate, 300);
+}
+
+function doTranslate() {
+  const text = document.getElementById('inputText').value.trim();
+  if(!text) { 
+    document.getElementById('resultArea').textContent = '翻译结果将显示在这里';
+    document.getElementById('directionInfo').style.display = 'none';
+    document.getElementById('asrInfo').style.display = 'none';
+    return; 
+  }
+  const r = translate(text, false);
+  document.getElementById('resultArea').textContent = r.result;
+  document.getElementById('directionInfo').textContent = `${r.directionLabel} | 置信度 ${r.confidence}%`;
+  document.getElementById('directionInfo').style.display = 'inline-block';
+  document.getElementById('asrInfo').style.display = 'none';
+}
+
+function clearAll() {
+  document.getElementById('inputText').value = '';
+  document.getElementById('resultArea').textContent = '翻译结果将显示在这里';
+  document.getElementById('directionInfo').style.display = 'none';
+  document.getElementById('asrInfo').style.display = 'none';
+}
+
+function copyResult() { copyEl('resultArea'); }
+function copyEl(id) {
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('已复制到剪贴板');
+  });
+}
+
+function showToast(msg) {
+  const t = document.createElement('div');
+  t.style.cssText = 'position:fixed;top:20%;left:50%;transform:translateX(-50%);background:rgba(0,210,211,0.9);color:#fff;padding:10px 24px;border-radius:20px;font-size:0.9em;z-index:9999;animation:fadeInOut 2s';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2000);
+}
+
+// ============ 语音朗读（核心改进）============
+let _currentAudio = null;
+
+function speakText(elId) {
+  const el = document.getElementById(elId);
+  const text = el.textContent || el.innerText;
+  if(!text || text.includes('将显示在这里')) return;
+  
+  // 停止之前的朗读
+  if(_currentAudio) { _currentAudio.pause(); _currentAudio = null; }
+  speechSynthesis.cancel();
+  
+  showToast('🔊 正在朗读...');
+  
+  // 方案1: 百度TTS（最可靠，移动端可用）
+  const baiduUrl = 'https://tts.baidu.com/text2audio?lan=zh&text=' + 
+    encodeURIComponent(text) + '&spd=5&pit=5&vol=9&per=4';
+  
+  const audio = new Audio(baiduUrl);
+  audio.onerror = function() {
+    // 方案2: Web Speech API备用
+    trySpeechAPI(text);
+  };
+  audio.oncanplaythrough = function() {
+    _currentAudio = audio;
+    audio.play().catch(() => trySpeechAPI(text));
+  };
+  audio.onended = function() { _currentAudio = null; showToast('✅ 朗读完毕'); };
+  audio.load();
+}
+
+function trySpeechAPI(text) {
+  if(!('speechSynthesis' in window)) { showToast('⚠️ 朗读不可用'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const voices = speechSynthesis.getVoices();
+  const zhVoice = voices.find(v => v.lang.includes('zh') && v.localService) 
+               || voices.find(v => v.lang.includes('zh'));
+  if(zhVoice) u.voice = zhVoice;
+  u.lang = 'zh-CN'; u.rate = 0.85; u.pitch = 1.1; u.volume = 1.0;
+  u.onend = () => showToast('✅ 朗读完毕');
+  u.onerror = () => showToast('⚠️ 朗读不可用');
+  speechSynthesis.speak(u);
+}
+
+// 确保语音列表加载
+speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
+
+
+
+// ============ 语音识别（核心改进）============
+let recognition = null;
+let isRecording = false;
+
+function toggleVoice() {
+  if(isRecording) { stopVoice(); return; }
+  
+  // 检查支持
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SR) {
+    showToast('⚠️ 请使用Chrome浏览器进行语音识别');
+    return;
+  }
+  
+  recognition = new SR();
+  recognition.lang = 'zh-CN';     // 标准中文识别
+  recognition.continuous = true;  // 持续识别
+  recognition.interimResults = true;
+  recognition.maxAlternatives = 3; // 获取多个候选结果
+  
+  let finalTranscript = '';
+  
+  recognition.onresult = function(e) {
+    let interim = '';
+    for(let i = e.resultIndex; i < e.results.length; i++) {
+      const transcript = e.results[i][0].transcript;
+      if(e.results[i].isFinal) {
+        finalTranscript += transcript;
+      } else {
+        interim += transcript;
+      }
     }
-    // 取消之前的播报
-    speechSynthesis.cancel();
     
-    const u=new SpeechSynthesisUtterance(text);
-    u.lang='zh-CN';
-    u.rate=0.85;
-    u.pitch=1.0;
-    u.volume=1.0;
-    
-    // 选择中文语音
-    if(S.voice){
-        u.voice=S.voice;
+    const currentText = finalTranscript + interim;
+    if(currentText) {
+      // 实时显示+翻译
+      document.getElementById('voiceResultArea').style.display = 'block';
+      document.getElementById('voiceASR').textContent = currentText;
+      
+      // ASR纠错
+      const corrected = correctASR(currentText);
+      const wasCorrected = corrected !== currentText;
+      
+      if(wasCorrected) {
+        document.getElementById('voiceCorrectedCard').style.display = 'block';
+        document.getElementById('voiceCorrected').textContent = corrected;
+      } else {
+        document.getElementById('voiceCorrectedCard').style.display = 'none';
+      }
+      
+      // 翻译
+      const r = translate(corrected, false);
+      document.getElementById('voiceTranslated').textContent = r.result;
     }
-    
-    // 播报状态
-    ss('🔊 播报中...');
-    const btn=document.querySelector('.ab.p.playing');
-    
-    u.onend=()=>{
-        ss('播报完成');
-        document.querySelectorAll('.ab.p.playing').forEach(b=>b.classList.remove('playing'));
-    };
-    u.onerror=(e)=>{
-        console.error('TTS error:',e);
-        ss('❌ 播报失败: '+e.error,'err');
-        document.querySelectorAll('.ab.p.playing').forEach(b=>b.classList.remove('playing'));
-        
-        // 降级方案：不选voice再试
-        if(u.voice){
-            const u2=new SpeechSynthesisUtterance(text);
-            u2.lang='zh-CN';u2.rate=0.85;
-            u2.onend=()=>ss('播报完成（降级模式）');
-            u2.onerror=()=>ss('❌ 降级播报也失败','err');
-            try{speechSynthesis.speak(u2);}catch(e2){ss('❌ TTS不可用','err');}
-        }
-    };
-    
-    try{
-        speechSynthesis.speak(u);
-    }catch(e){
-        ss('❌ TTS异常: '+e.message,'err');
+  };
+  
+  recognition.onerror = function(e) {
+    console.error('语音识别错误:', e.error);
+    if(e.error === 'not-allowed') {
+      showToast('⚠️ 请允许麦克风权限');
+    } else if(e.error === 'no-speech') {
+      showToast('⚠️ 没有检测到语音，请再试一次');
     }
+    stopVoice();
+  };
+  
+  recognition.onend = function() {
+    // 如果还在录音状态，自动重启（防止意外停止）
+    if(isRecording) {
+      try { recognition.start(); } catch(e) {}
+    }
+  };
+  
+  try {
+    recognition.start();
+    isRecording = true;
+    document.getElementById('micBtn').classList.add('recording');
+    document.getElementById('micBtn').textContent = '⏹';
+    document.getElementById('voiceStatus').classList.add('active');
+  } catch(e) {
+    showToast('⚠️ 语音识别启动失败');
+  }
 }
 
-// ===== 语音识别 =====
-function initRec(){
-    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-    if(!SR){ss('⚠️ 不支持语音识别，请用Chrome');return;}
-    S.recog=new SR();
-    S.recog.continuous=false;S.recog.interimResults=true;S.recog.lang='zh-CN';S.recog.maxAlternatives=5;
-    S.recog.onstart=()=>{S.rec=true;document.getElementById('vbtn').classList.add('r');document.getElementById('vbtn').textContent='⏹';ss('🎙️ 请说话...');};
-    S.recog.onresult=(e)=>{
-        let best='',bs=-1;
-        for(let i=e.resultIndex;i<e.results.length;i++){
-            for(let j=0;j<e.results[i].length;j++){
-                let t=e.results[i][j].transcript.trim();const c=e.results[i][j].confidence||.5;
-                let fix=t,fc=0;
-                for(const[w,r]of Object.entries(SF))if(fix.includes(w)){fix=fix.replace(new RegExp(w,'g'),r);fc++;}
-                const sc=c+fc*.15;
-                if(sc>bs){best=fix;bs=sc;}
-            }
-        }
-        if(best){document.getElementById('inp').value=best;ss('识别: '+best);}
-        if(e.results[e.results.length-1].isFinal){sv();if(best)setTimeout(dt,50);}
-    };
-    S.recog.onerror=(e)=>{
-        sv();
-        if(e.error==='not-allowed')ss('❌ 麦克风被拒绝','err');
-        else if(e.error==='no-speech')ss('未检测到语音');
-        else if(e.error!=='aborted')ss('语音错误: '+e.error,'warn');
-    };
-    S.recog.onend=()=>sv();
-}
-function tv(){
-    if(S.rec){sv();return;}
-    if(!S.recog)initRec();
-    if(!S.recog){showToast('请用Chrome浏览器');return;}
-    try{S.recog.start();}catch(e){if(e.name!=='InvalidStateError')showToast('启动失败');}
-}
-function sv(){S.rec=false;const b=document.getElementById('vbtn');b.classList.remove('r');b.textContent='🎤';if(S.recog)try{S.recog.stop();}catch(e){}}
-
-// ===== UI =====
-function sm(m){
-    S.mode=m;
-    document.getElementById('mm').classList.toggle('a',m==='m2d');
-    document.getElementById('md').classList.toggle('a',m==='d2m');
-    document.getElementById('inp').placeholder=m==='m2d'?'输入普通话，如：你去哪里？':'输入东台话，如：你上哪块去呃？';
-    document.getElementById('inp').value='';document.getElementById('ra').innerHTML='';
-    document.getElementById('hb').innerHTML=m==='m2d'?'💡 点<b>🎤</b>说普通话→自动翻译。翻译后点<b>🔊朗读</b>听声音。':'💡 东台话建议<b>文字输入</b>。语音说方言会纠错但不保证准确。';
-    iq();
-}
-function stab(t){
-    document.querySelectorAll('.ttb').forEach(b=>b.classList.remove('a'));event.target.classList.add('a');
-    document.getElementById('pt').classList.toggle('hidden',t!=='t');
-    document.getElementById('pd').classList.toggle('hidden',t!=='d');
-    document.getElementById('ph').classList.toggle('hidden',t!=='h');
-    if(t==='d')rd();if(t==='h')rh();
-}
-let tmr=null;
-function oi(){clearTimeout(tmr);tmr=setTimeout(()=>{if(document.getElementById('inp').value.trim().length>=2)dt();},300);}
-
-function dt(){
-    const text=document.getElementById('inp').value.trim();if(!text)return;
-    const r=tr(text);if(!r)return;
-    lastTranslated=r.t;
-    const ok=r.ok;
-    document.getElementById('ra').innerHTML=`
-        <div class="rb">
-            <div class="rl">${S.mode==='m2d'?'普通话':'东台话'}</div>
-            <div class="rt">${esc(r.o)}</div>
-            <div class="rl" style="margin-top:8px">${S.mode==='m2d'?'🗣️ 东台话':'🇨🇳 普通话'}</div>
-            <div class="rd">${esc(r.t)}</div>
-            <div class="rm"><span class="mt">${ok?'✅ 翻译完成':'⚠️ 仅供参考'}</span></div>
-            <div class="ra">
-                <button class="ab p" onclick="speakBtn()">🔊 朗读翻译</button>
-                <button class="ab s" onclick="speak('${esc(r.o).replace(/'/g,"\\'")}')">🔊 原文</button>
-                <button class="ab s" onclick="cp('${esc(r.t).replace(/'/g,"\\'")}')">📋</button>
-            </div>
-        </div>`;
-    ss(ok?'✅ 翻译完成':'翻译完成（低置信度）');
-    S.history.unshift({t:new Date().toLocaleString('zh-CN'),o:r.o,r:r.t,m:S.mode});
-    if(S.history.length>50)S.history.length=50;
-    localStorage.setItem('dt_h',JSON.stringify(S.history));
+function stopVoice() {
+  if(recognition) {
+    try { recognition.stop(); } catch(e) {}
+    recognition = null;
+  }
+  isRecording = false;
+  document.getElementById('micBtn').classList.remove('recording');
+  document.getElementById('micBtn').textContent = '🎤';
+  document.getElementById('voiceStatus').classList.remove('active');
+  
+  // 朗读翻译结果
+  const translated = document.getElementById('voiceTranslated').textContent;
+  if(translated) {
+    setTimeout(() => speakText('voiceTranslated'), 500);
+  }
 }
 
-// 🔊按钮 - 由用户手势触发TTS（Chrome移动端必须！）
-function speakBtn(){
-    if(!lastTranslated){showToast('请先翻译');return;}
-    // 标记正在播放
-    document.querySelectorAll('.ab.p').forEach(b=>b.classList.add('playing'));
-    speak(lastTranslated);
+// ============ 快捷短语 ============
+const QUICK = [
+  '今天去哪里吃饭','我俫今朝去哪块','多少钱','几钿','不知道','勿晓得',
+  '晚上吃什么','侯告吃什的','你好','蛮好呃','很厉害','蛮蛮结棍',
+  '帮忙','帮衬下','回家','家去','漂亮','标致',
+  '爷爷奶奶','嗲嗲嫲嫲','聊天','搭寡','很冷','蛮蛮瀴',
+  '找不到','寻勿着','算了','罢哉','舒服','忺',
+  '东西','杲昃','事情','事体','聪明','灵光',
+];
+
+function initQuick() {
+  const grid = document.getElementById('quickPhrases');
+  grid.innerHTML = QUICK.map(p => 
+    `<div class="quick-item" onclick="quickTranslate('${p.replace(/'/g,"\\'")}')">${p}</div>`
+  ).join('');
 }
 
-function ss(t,c){
-    document.getElementById('st').textContent=t;
-    const d=document.getElementById('sd');
-    d.className='sd'+(c==='err'?' err':c==='warn'?' warn':'');
+function quickTranslate(text) {
+  document.getElementById('inputText').value = text;
+  doTranslate();
+  speakText('resultArea');
 }
-function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
-function cp(t){navigator.clipboard.writeText(t).then(()=>showToast('已复制')).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);showToast('已复制');});}
 
-const QM=["你好","吃饭了吗","你去哪里","今天吃什么","多少钱","太贵了","便宜点","回家了","不知道","很厉害"];
-const QD=["你好呃","饭吃呃没","你上哪块去呃","今呃吃什的呃","几钿呃","蛮贵呃","便宜点呃","家去呃","弗晓得","蛮来斯呃"];
-function iq(){const p=S.mode==='m2d'?QM:QD;document.getElementById('qg').innerHTML=p.map(q=>`<button class="qc" onclick="uq('${q}')">${q}</button>`).join('');}
-function uq(t){document.getElementById('inp').value=t;dt();}
+// ============ 语料浏览 ============
+const CATEGORIES = [
+  {name:'生存刚需',icon:'🏠',count:'60K'},
+  {name:'政务办事',icon:'🏛️',count:'60K'},
+  {name:'社交融入',icon:'🤝',count:'60K'},
+  {name:'职场沟通',icon:'💼',count:'60K'},
+  {name:'医疗健康',icon:'🏥',count:'60K'},
+  {name:'文化生活',icon:'🎭',count:'50K'},
+  {name:'方言文化',icon:'📖',count:'50K'},
+];
 
-const DC=[{c:'否定',i:[['弗','不'],['呒得','没有'],['覅','不要']]},{c:'疑问',i:[['哪块','哪里'],['什的','什么'],['怎呃','怎么'],['几钿','多少钱'],['什的时辰','什么时候']]},{c:'特色',i:[['杲昃','东西'],['来斯','厉害'],['推板','差'],['扎实','实在'],['刷刮','利索'],['适意','舒服'],['心焦','着急']]},{c:'称谓',i:[['爹爹','爷爷'],['伢儿','孩子'],['女将','妻子'],['男将','丈夫'],['先生','老师'],['邻舍','邻居']]},{c:'代词',i:[['我俦','我们'],['你俦','你们'],['他俦','他们']]},{c:'时间',i:[['今呃','今天'],['明呃','明天'],['昨呃','昨天'],['早起头','早上'],['中上','中午'],['夜头','晚上'],['眼下','现在'],['日日','每天']]},{c:'动词',i:[['汏','洗'],['着','穿'],['望','看'],['寻','找'],['讲','说'],['奔','跑'],['立','站'],['困觉','睡觉'],['家去','回家'],['讲白相','聊天']]},{c:'形容词',i:[['蛮','很'],['灵光','聪明'],['木作','笨'],['标致','漂亮'],['清爽','干净'],['龌龊','脏']]}];
-function rd(){document.getElementById('dc').innerHTML=DC.map(g=>`<div class="ds"><div class="dt">${g.c}</div><table class="dtb">${g.i.map(([d,m])=>`<tr><td>${d}</td><td>${m}</td></tr>`).join('')}</table></div>`).join('');}
+function initCategories() {
+  const grid = document.getElementById('categoryGrid');
+  grid.innerHTML = CATEGORIES.map(c => 
+    `<div class="quick-item" style="padding:10px 18px">${c.icon} ${c.name} (${c.count})</div>`
+  ).join('');
+}
 
-function rh(){const e=document.getElementById('hl');if(!S.history.length){e.innerHTML='<p style="color:#999;text-align:center;padding:20px">暂无</p>';return;}
-e.innerHTML=S.history.map(h=>`<div class="hi"><div class="ht">${h.t}</div><div class="hp">${h.o} <span class="ar">→</span> ${h.r}</div></div>`).join('');}
+// ============ Tab切换 ============
+function switchTab(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  event.target.classList.add('active');
+}
 
-function showToast(m){const o=document.querySelector('.toast');if(o)o.remove();const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2500);}
+// ============ 初始化 ============
+window.addEventListener('load', () => {
+  initQuick();
+  initCategories();
+  // 预加载语音
+  speechSynthesis.getVoices();
+});
 
-document.addEventListener('DOMContentLoaded',()=>{iq();initVoices();initRec();});
+// CSS动画
+const style = document.createElement('style');
+style.textContent = '@keyframes fadeInOut{0%{opacity:0;transform:translateX(-50%) translateY(-10px)}20%{opacity:1;transform:translateX(-50%) translateY(0)}80%{opacity:1}100%{opacity:0}}';
+document.head.appendChild(style);
 </script>
 </body>
 </html>
