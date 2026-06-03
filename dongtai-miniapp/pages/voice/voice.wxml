@@ -1,44 +1,46 @@
 <view class="container">
   <view class="header">
-    <view class="title">语音翻译</view>
-    <view class="subtitle">说东台话，自动翻译成普通话</view>
+    <view class="title">🎤 语音翻译</view>
+    <view class="subtitle">说普通话或东台话，自动识别+翻译+朗读</view>
   </view>
 
-  <view class="mic-area" bindtap="toggleRecord">
-    <view class="mic-btn {{isListening ? 'listening' : ''}}">
-      <text class="mic-icon">{{isListening ? '⏹️' : '🎤'}}</text>
+  <!-- 大按钮 -->
+  <view class="mic-area">
+    <view class="mic-btn {{isListening ? 'recording' : ''}}" bindtap="toggleRecord">
+      <text class="mic-icon">{{isListening ? '⏹' : '🎤'}}</text>
     </view>
-    <text class="mic-text">{{isListening ? '点击停止' : '点击说话'}}</text>
-  </view>
-
-  <view class="wave" wx:if="{{isListening}}">
-    <view class="wave-bar" wx:for="{{5}}" wx:key="index" style="animation-delay: {{index*0.15}}s"></view>
+    <text class="mic-hint">{{isListening ? '点击停止' : '点击开始说话'}}</text>
   </view>
 
   <!-- 识别结果 -->
-  <view class="card" wx:if="{{recognized}}">
-    <view class="card-label">🔍 语音识别</view>
-    <view class="card-text">{{recognized}}</view>
-    <view class="asr-note" wx:if="{{asrCorrected}}">✅ 已纠正: {{corrected}}</view>
-  </view>
-
-  <!-- 翻译结果 -->
-  <view class="card result-card" wx:if="{{translated}}">
-    <view class="card-label">📝 翻译结果</view>
-    <view class="card-text big">{{translated}}</view>
-    <view class="card-actions">
-      <view class="action-btn" bindtap="copyText"><text>📋复制</text></view>
-      <view class="action-btn" bindtap="speakText"><text>🔊朗读</text></view>
+  <view class="result-card card" wx:if="{{recognized}}">
+    <view class="result-section">
+      <text class="section-label">🔍 语音识别</text>
+      <text class="section-text">{{recognized}}</text>
+    </view>
+    <view class="result-section" wx:if="{{asrCorrected}}">
+      <text class="section-label success">✅ ASR纠错</text>
+      <text class="section-text">{{corrected}}</text>
+    </view>
+    <view class="result-section">
+      <text class="section-label accent">📝 翻译结果</text>
+      <text class="section-text highlight">{{translated}}</text>
+    </view>
+    <view class="speak-row">
+      <view class="speak-btn {{isSpeaking ? 'speaking' : ''}}" bindtap="speakText">
+        {{isSpeaking ? '🔊 朗读中...' : '🔊 朗读翻译结果'}}
+      </view>
+      <view class="copy-btn" bindtap="copyText">📋 复制</view>
     </view>
   </view>
 
   <!-- 历史 -->
-  <view class="history" wx:if="{{history.length}}">
-    <view class="section-title">翻译历史</view>
+  <view class="history-card card" wx:if="{{history.length > 0}}">
+    <text class="section-title">📜 历史记录</text>
     <view class="history-item" wx:for="{{history}}" wx:key="index">
-      <view class="hist-from">{{item.from}}</view>
-      <view class="hist-arrow">→</view>
-      <view class="hist-to">{{item.to}}</view>
+      <view class="history-from">{{item.from}}</view>
+      <view class="history-arrow">→</view>
+      <view class="history-to">{{item.to}}</view>
     </view>
   </view>
 </view>
