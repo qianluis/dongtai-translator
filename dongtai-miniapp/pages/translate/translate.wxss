@@ -1,0 +1,24 @@
+.container { padding: 24rpx; background: #f0f4f8; min-height: 100vh; }
+.header { text-align: center; padding: 40rpx 0 30rpx; }
+.logo { font-size: 80rpx; }
+.title { font-size: 40rpx; font-weight: 700; color: #1a73e8; margin-top: 10rpx; }
+.subtitle { font-size: 24rpx; color: #999; margin-top: 8rpx; }
+.card { background: #fff; border-radius: 24rpx; padding: 30rpx; margin-bottom: 24rpx; box-shadow: 0 2rpx 16rpx rgba(0,0,0,0.06); }
+.input-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20rpx; }
+.input-label { font-size: 28rpx; font-weight: 600; color: #1a73e8; }
+.switch-btn { background: #e8f0fe; color: #1a73e8; padding: 10rpx 24rpx; border-radius: 30rpx; font-size: 24rpx; }
+.input-area { width: 100%; min-height: 160rpx; font-size: 32rpx; line-height: 1.6; padding: 20rpx; background: #f8f9fa; border-radius: 16rpx; border: 2rpx solid #e0e0e0; }
+.input-actions { display: flex; gap: 20rpx; margin-top: 20rpx; }
+.action-btn { flex: 1; text-align: center; padding: 20rpx 0; border-radius: 40rpx; font-size: 28rpx; background: #f0f4f8; color: #555; }
+.action-btn.primary { background: linear-gradient(135deg, #1a73e8, #4285f4); color: #fff; font-weight: 500; }
+.result-card { border-left: 6rpx solid #1a73e8; }
+.result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16rpx; }
+.result-label { font-size: 28rpx; font-weight: 600; color: #34a853; }
+.confidence { font-size: 22rpx; color: #999; background: #f0f4f8; padding: 4rpx 16rpx; border-radius: 20rpx; }
+.result-text { font-size: 36rpx; font-weight: 600; line-height: 1.6; color: #333; padding: 16rpx 0; }
+.result-actions { display: flex; gap: 20rpx; margin-top: 12rpx; }
+.asr-note { font-size: 22rpx; color: #1a73e8; background: #e8f0fe; padding: 8rpx 16rpx; border-radius: 12rpx; margin-top: 16rpx; }
+.quick-card { }
+.section-title { font-size: 28rpx; font-weight: 600; color: #333; margin-bottom: 20rpx; }
+.quick-grid { display: flex; flex-wrap: wrap; gap: 16rpx; }
+.quick-item { background: #f0f4f8; color: #555; padding: 12rpx 24rpx; border-radius: 24rpx; font-size: 24rpx; }
