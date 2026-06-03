@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/translator/translator",
+    "pages/dictionary/dictionary",
+    "pages/corpus/corpus"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#302b63",
+    "navigationBarTitleText": "东台方言翻译",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0f0c29"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#667eea",
+    "backgroundColor": "#1a1a2e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/translator/translator",
+        "text": "翻译"
+      },
+      {
+        "pagePath": "pages/dictionary/dictionary",
+        "text": "词典"
+      },
+      {
+        "pagePath": "pages/corpus/corpus",
+        "text": "语料"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

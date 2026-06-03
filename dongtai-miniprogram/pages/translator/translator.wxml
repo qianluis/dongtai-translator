@@ -1,0 +1,93 @@
+<view class="container">
+  <!-- 标题 -->
+  <view class="card" style="text-align:center;padding:24rpx 16rpx">
+    <view class="gradient-text" style="font-size:40rpx;font-weight:700">东台方言实时翻译</view>
+    <view style="font-size:22rpx;color:rgba(255,255,255,.4);margin-top:8rpx">400K语料 · 双向翻译 · 语音输入</view>
+    <view class="stats-bar" style="margin-top:12rpx">
+      <text class="stat-pill">v8.0</text>
+      <text class="stat-pill">150+规则</text>
+      <text class="stat-pill">500+词汇</text>
+      <text class="stat-pill">语音双向</text>
+    </view>
+  </view>
+
+  <!-- 模式选择 -->
+  <view class="mode-row">
+    <view class="mode-btn {{mode==='d'?'active':''}}" bindtap="setModeD">普通话 → 东台话</view>
+    <view class="mode-btn {{mode==='m'?'active':''}}" bindtap="setModeM">东台话 → 普通话</view>
+  </view>
+
+  <!-- 输入区 -->
+  <view class="card">
+    <textarea class="input-area" placeholder="请输入要翻译的文字..." value="{{inputText}}" bindinput="onInput" maxlength="500" />
+    
+    <!-- 语音输入按钮 -->
+    <view style="text-align:center;margin-top:20rpx">
+      <button class="voice-btn {{recording?'recording':''}}" bindtap="toggleVoice" bindtouchstart="startVoice" bindtouchend="endVoice">
+        {{recording?'⏹️':'🎙️'}}
+      </button>
+      <view style="font-size:20rpx;color:rgba(255,255,255,.3);margin-top:8rpx">
+        {{recording?'松开结束录音':'点击语音输入'}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 翻译结果 -->
+  <view class="card">
+    <view style="font-size:22rpx;color:rgba(255,255,255,.35);margin-bottom:8rpx">
+      {{mode==='d'?'东台话翻译结果':'普通话翻译结果'}}
+    </view>
+    <view class="result-area">
+      <view class="result-text">{{resultText || '—'}}</view>
+    </view>
+    <!-- 操作按钮 -->
+    <view style="display:flex;gap:12rpx;margin-top:16rpx;justify-content:flex-end">
+      <button class="btn-ghost" size="mini" bindtap="copyResult">📋 复制</button>
+      <button class="btn-ghost" size="mini" bindtap="speakResult">🔊 朗读</button>
+      <button class="btn-ghost" size="mini" bindtap="clearInput">🗑️ 清除</button>
+    </view>
+  </view>
+
+  <!-- 语音实时翻译 -->
+  <view class="card" style="padding:20rpx">
+    <view style="font-size:26rpx;font-weight:600;color:#667eea;margin-bottom:16rpx">🎙️ 实时语音翻译</view>
+    <view style="display:flex;gap:12rpx;align-items:center;margin-bottom:12rpx">
+      <view style="font-size:20rpx;color:rgba(255,255,255,.3);min-width:80rpx">识别:</view>
+      <view style="flex:1;font-size:26rpx;color:#87ceeb;min-height:36rpx">{{voiceText || '点击下方按钮开始'}}</view>
+    </view>
+    <view style="display:flex;gap:12rpx;align-items:center">
+      <view style="font-size:20rpx;color:rgba(255,255,255,.3);min-width:80rpx">翻译:</view>
+      <view style="flex:1;font-size:26rpx;color:#f093fb;min-height:36rpx">{{voiceResult || '—'}}</view>
+    </view>
+    <view style="text-align:center;margin-top:16rpx">
+      <button class="voice-btn {{rtRecording?'recording':''}}" bindtap="toggleRealtimeVoice" style="width:120rpx;height:120rpx;font-size:48rpx">
+        {{rtRecording?'⏹️':'🎙️'}}
+      </button>
+      <view style="font-size:20rpx;color:rgba(255,255,255,.3);margin-top:6rpx">
+        {{rtRecording?'正在实时识别翻译中...':'点击开始实时翻译'}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 常用短语 -->
+  <view class="card">
+    <view style="font-size:24rpx;color:rgba(255,255,255,.4);margin-bottom:12rpx">💬 常用短语</view>
+    <view style="display:flex;flex-wrap:wrap;gap:8rpx">
+      <view wx:for="{{quickPhrases}}" wx:key="index" 
+            class="filter-pill" style="font-size:24rpx" 
+            bindtap="usePhrase" data-text="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 翻译历史 -->
+  <view class="card" wx:if="{{history.length}}">
+    <view style="font-size:24rpx;color:rgba(255,255,255,.4);margin-bottom:12rpx">📜 翻译历史</view>
+    <view wx:for="{{history}}" wx:key="index" class="corpus-item">
+      <view style="font-size:22rpx;color:rgba(255,255,255,.4)">{{item.from}}</view>
+      <view style="font-size:26rpx;color:#f093fb;margin-top:4rpx">{{item.to}}</view>
+      <view style="font-size:18rpx;color:rgba(255,255,255,.2);margin-top:4rpx;text-align:right">{{item.time}}</view>
+    </view>
+  </view>
+</view>
