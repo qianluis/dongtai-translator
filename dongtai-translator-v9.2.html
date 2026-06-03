@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>东台方言翻译 v9.2</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);min-height:100vh;color:#e0e0e0}
+.ctn{max-width:520px;margin:0 auto;padding:12px;padding-bottom:80px}
+.h1{font-size:20px;background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center;margin-bottom:2px}
+.sub{text-align:center;font-size:9px;color:rgba(255,255,255,.4);margin-bottom:6px}
+.c{background:rgba(255,255,255,.06);border-radius:14px;padding:12px;margin-bottom:6px;border:1px solid rgba(255,255,255,.08)}
+.mrow{display:flex;gap:4px;margin-bottom:8px}
+.mb{flex:1;padding:7px;border-radius:8px;border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:rgba(255,255,255,.5);font-size:11px;font-weight:600;cursor:pointer;text-align:center}
+.mb.on{border-color:#667eea;background:rgba(102,126,234,.15);color:#fff}
+.ipt{width:100%;min-height:56px;padding:8px;border-radius:8px;border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#fff;font-size:15px;resize:none;outline:none;font-family:inherit}
+.ipt:focus{border-color:#667eea}
+.ra{background:rgba(102,126,234,.08);border-radius:10px;padding:10px;min-height:36px;border:1px solid rgba(102,126,234,.12)}
+.rt{font-size:16px;color:#fff;line-height:1.5;word-break:break-all}
+.acts{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap}
+.a{padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);font-size:10px;cursor:pointer}
+.a:active{background:rgba(255,255,255,.15);color:#fff}
+.a.speaking{background:#667eea;color:#fff;border-color:#667eea}
+.vb{width:60px;height:60px;border-radius:50%;border:none;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 3px 12px rgba(102,126,234,.3)}
+.vb:active{transform:scale(.92)}.vb.rec{background:linear-gradient(135deg,#e74c3c,#c0392b);animation:pu 1s infinite}
+@keyframes pu{0%,100%{box-shadow:0 0 0 0 rgba(231,76,60,.4)}50%{box-shadow:0 0 0 10px rgba(231,76,60,0)}}
+.tip{background:rgba(255,193,7,.08);border:1px solid rgba(255,193,7,.15);border-radius:6px;padding:4px 6px;font-size:8px;color:#ffc107;margin-top:4px;line-height:1.3}
+.tts-bar{background:rgba(0,0,0,.2);border-radius:6px;padding:4px 8px;margin-top:4px;font-size:8px}
+.tts-ok{color:#81c784}.tts-err{color:#e74c3c}.tts-warn{color:#ffc107}.tts-info{color:rgba(255,255,255,.4)}
+.diag{background:rgba(0,0,0,.4);border-radius:8px;padding:8px;margin-top:6px;font-family:monospace;font-size:8px;color:rgba(255,255,255,.5);max-height:120px;overflow-y:auto}
+.diag-title{color:#f093fb;font-size:9px;font-weight:600;margin-bottom:4px}
+.qr{display:flex;flex-wrap:wrap;gap:2px;margin-top:4px}
+.qb{background:rgba(255,255,255,.06);border-radius:4px;padding:3px 6px;font-size:9px;color:rgba(255,255,255,.5);cursor:pointer;border:none}
+.tab-nav{display:flex;gap:2px;margin:6px 0;background:rgba(255,255,255,.06);border-radius:10px;padding:2px}
+.tbtn{flex:1;padding:6px 1px;border:none;border-radius:8px;background:transparent;color:rgba(255,255,255,.45);font-size:10px;font-weight:600;cursor:pointer}
+.tbtn.on{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff}
+.tc{display:none}.tc.on{display:block}
+</style>
+</head>
+<body>
+<div class="ctn">
+<div class="h1">东台方言翻译</div>
+<div class="sub">v9.2 · TTS终极修复 · 语音即时翻译</div>
+
+<div class="tab-nav">
+<button class="tbtn on" onclick="swTab('main',this)">🔄翻译</button>
+<button class="tbtn" onclick="swTab('voice',this)">🎙️语音</button>
+<button class="tbtn" onclick="swTab('debug',this)">🔧诊断</button>
+</div>
+
+<div id="p-main" class="tc on">
+<div class="c">
+<div class="mrow">
+<button class="mb on" onclick="setM('d',this)">普通话→东台话</button>
+<button class="mb" onclick="setM('m',this)">东台话→普通话</button>
+</div>
+<textarea class="ipt" id="inp" placeholder="输入文字或点🎤语音..." oninput="onI()"></textarea>
+<div style="text-align:center;margin-top:6px">
+<button class="vb" id="vb" onclick="togV()">🎙️</button>
+<div style="font-size:8px;color:rgba(255,255,255,.3);margin-top:2px" id="vh">点击语音输入</div>
+</div>
+<div class="tip">💡 说普通话→自动翻译→点🔊朗读 | 说东台话放慢语速</div>
+</div>
+
+<div class="c">
+<div style="font-size:8px;color:rgba(255,255,255,.3);margin-bottom:2px" id="rl">东台话翻译结果</div>
+<div class="ra"><div class="rt" id="rt">—</div></div>
+<div class="acts">
+<button class="a" onclick="cpR()">📋复制</button>
+<button class="a" id="spkBtn" onclick="doSpeak('rt')">🔊朗读结果</button>
+<button class="a" onclick="doSpeak('inp')">🔊朗读原文</button>
+<button class="a" onclick="clr()">🗑️</button>
+</div>
+<div class="tts-bar" id="ttsBar">
+<span class="tts-info">🔊 点击上方朗读按钮测试声音</span>
+</div>
+</div>
+
+<div class="c">
+<div style="font-size:9px;color:rgba(255,255,255,.3);margin-bottom:3px">💬 快捷短语</div>
+<div class="qr">
+<button class="qb" onclick="qp('我们今天去哪里玩')">我们今天去哪</button>
+<button class="qb" onclick="qp('这个东西多少钱')">这个东西多少钱</button>
+<button class="qb" onclick="qp('你知道吗')">你知道吗</button>
+<button class="qb" onclick="qp('怎么走')">怎么走</button>
+<button class="qb" onclick="qp('我俫今朝去咯块白相')">我俫今朝去白相</button>
+<button class="qb" onclick="qp('咯个杲昃好多钱呃')">咯个杲昃好多钱</button>
+</div>
+</div>
+</div>
+
+<div id="p-voice" class="tc">
+<div class="c">
+<div style="font-size:11px;font-weight:600;color:#667eea;margin-bottom:4px">🎙️ 实时语音翻译</div>
+<div class="tip" style="margin-bottom:6px">点麦克风→说普通话→自动翻译→点🔊朗读</div>
+<div style="display:flex;gap:4px;align-items:center;margin-bottom:4px">
+<div style="font-size:8px;color:rgba(255,255,255,.3);min-width:36px">🗣️识别:</div>
+<div style="flex:1;font-size:13px;color:#87ceeb;min-height:16px" id="vRecog">—</div>
+</div>
+<div style="display:flex;gap:4px;align-items:center;margin-bottom:4px">
+<div style="font-size:8px;color:rgba(255,255,255,.3);min-width:36px">🔄东台话:</div>
+<div style="flex:1;font-size:13px;color:#f093fb;min-height:16px" id="vDT">—</div>
+</div>
+<div class="acts">
+<button class="a" onclick="doSpeak('vDT')">🔊读东台话</button>
+<button class="a" onclick="doSpeak('vRecog')">🔊读原文</button>
+</div>
+<div style="text-align:center;margin-top:8px">
+<button class="vb" id="rvb" onclick="togRT()">🎙️</button>
+<div style="font-size:8px;color:rgba(255,255,255,.3);margin-top:2px" id="rvh">点击开始</div>
+</div>
+</div>
+</div>
+
+<div id="p-debug" class="tc">
+<div class="c">
+<div class="diag-title">🔧 TTS诊断面板</div>
+<div id="diagLog">初始化中...</div>
+</div>
+<div class="c">
+<div style="font-size:10px;font-weight:600;color:#667eea;margin-bottom:4px">🔊 朗读测试</div>
+<div style="font-size:8px;color:rgba(255,255,255,.4);margin-bottom:6px">点击按钮测试朗读是否正常（必须在用户点击时触发）</div>
+<button class="a" onclick="testTTS('你好')">🔊 测试"你好"</button>
+<button class="a" onclick="testTTS('我俫今朝去咯块白相')">🔊 测试"我俫今朝"</button>
+<button class="a" onclick="testTTS('咯个杲昃好多钱呃')">🔊 测试方言句</button>
+<div class="tip" style="margin-top:6px">如果测试按钮也发不出声音，说明你的浏览器不支持语音朗读。请：<br>1. 换用Chrome浏览器打开<br>2. 确保手机未静音<br>3. 在手机设置中允许浏览器使用扬声器</div>
+</div>
+<div class="c">
+<div style="font-size:10px;font-weight:600;color:#f093fb;margin-bottom:4px">📋 设备信息</div>
+<div id="devInfo" style="font-size:8px;color:rgba(255,255,255,.5);line-height:1.6"></div>
+</div>
+</div>
+</div>
+
+<script>
+const DW={'我们':'我俫','你们':'你俫','他们':'他俫','自己':'自家','这里':'咯块','那里':'嗰块','这个':'咯个','那个':'嗰个','什么':'什的','怎么':'怎呃','哪里':'哪块','多少':'好多','谁':'哪个','知道':'晓得','看':'望','找':'寻','洗':'汏','玩':'白相','说':'讲','回家':'家去','走':'跑','拿':'捏','放':'囥','扔':'掼','想':'忖','喝':'吃','给':'把','丢':'厾','帮':'帮衬','今天':'今朝','明天':'明朝','昨天':'昨日子','晚上':'侯告','早上':'早起','中午':'中昼','现在':'搿歇','以前':'老早','经常':'刻刻','休息':'歇歇','赶紧':'豪稍','爷爷':'嗲嗲','奶奶':'嫲嫲','哥哥':'锅锅','丈夫':'男将','老婆':'女将','小孩':'霞子','东西':'杲昃','厉害':'结棍','差劲':'推板','干净':'清爽','舒服':'适意','聪明':'灵光','讨厌':'犯嫌','不行':'勿来事','高兴':'忺','烦':'懊糟','累':'吃力','很':'蛮蛮','没有':'没得','不':'弗','太阳':'日头','下雨':'落雨'};
+const GR=[[/[吗嘛]([？！?])$/,'呃$1'],[/[吗嘛]$/,'呃'],[/了([，。！？])/,'呃$1'],[/了$/,'呃'],[/[呢呐]$/,'哩'],[/[吧罢]$/,'啘'],[/是不是/,'阿是'],[/要不要/,'阿要'],[/好不好/,'阿好'],[/有没有/,'阿有'],[/行不行/,'来事弗来事'],[/在这里/,'勒咯块'],[/在那里/,'勒嗰块'],[/的([，。！？])/,'个$1'],[/的$/,'个'],[/能(.+?)吗/,'好$1弗'],[/挺(.+?)的/,'蛮蛮$1个'],[/一定/,'肯定']];
+const RW={};for(const[m,d]of Object.entries(DW))if(!RW[d])RW[d]=m;RW['呃']='了/吗';RW['哩']='呢';RW['个']='的';RW['勒']='在';RW['弗']='不';
+const RGR=[[/呃([？！?])$/,'吗$1'],[/呃$/,'了'],[/阿是/,'是不是'],[/阿要/,'要不要'],[/阿有/,'有没有'],[/个([，。！？])/,'的$1'],[/个$/,'的'],[/蛮蛮(.+?)个/,'挺$1的']];
+const AC={'我拉':'我俫','我赖':'我俫','我来':'我俫','你拉':'你俫','你来':'你俫','他拉':'他俫','他来':'他俫','个块':'咯块','哥块':'咯块','搁块':'咯块','什地':'什的','十地':'什的','怎额':'怎呃','真额':'怎呃','搞责':'杲昃','搞子':'杲昃','高泽':'杲昃','个小':'搿歇','隔歇':'搿歇','今早':'今朝','金朝':'今朝','明早':'明朝','民朝':'明朝','后高':'侯告','候告':'侯告','中周':'中昼','满满':'蛮蛮','没德':'没得','美得':'没得','翻闲':'犯嫌','凡闲':'犯嫌','结滚':'结棍','杰滚':'结棍','白象':'白相','百相':'白相','豪烧':'豪稍','好烧':'豪稍','爹爹':'嗲嗲','跌跌':'嗲嗲','玛玛':'嫲嫲','麻麻':'嫲嫲','男匠':'男将','女匠':'女将','郭锅':'锅锅','额':'呃','俄':'呃','哦':'呃','服':'弗','福':'弗','表':'嫑','翻闲':'犯嫌','噶':'呃','嘎':'呃'};
+function er(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\\\$&')}
+function tr(t,m){if(!t.trim())return'';let r=t;if(m==='d'){for(const[k,v]of Object.entries(DW).sort((a,b)=>b[0].length-a[0].length))if(r.includes(k))r=r.replace(new RegExp(er(k),'g'),v);for(const[p,rp]of GR)r=r.replace(new RegExp(p.source,p.flags),rp);}else{for(const[k,v]of Object.entries(RW).sort((a,b)=>b[0].length-a[0].length))if(r.includes(k))r=r.replace(new RegExp(er(k),'g'),v);for(const[p,rp]of RGR)r=r.replace(new RegExp(p.source,p.flags),rp);}return r;}
+function corr(t){let r=t;for(const[w,c]of Object.entries(AC).sort((a,b)=>b[0].length-a[0].length))if(r.includes(w))r=r.replace(new RegExp(er(w),'g'),c);return r;}
+
+// ========== TTS 核心修复 ==========
+// 根本问题: speechSynthesis在移动端不可靠
+// 方案: 
+// 1. 优先使用speechSynthesis (桌面Chrome可靠)
+// 2. 检测是否真的在播放，如果2秒后还没声音则报告失败
+// 3. 诊断面板让用户看到每一步发生了什么
+// 4. 提供明确的失败原因和解决方案
+
+let diagLines = [];
+function diag(msg, type) {
+  const t = new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const cls = type==='ok'?'tts-ok':type==='err'?'tts-err':type==='warn'?'tts-warn':'tts-info';
+  diagLines.push(`<span class="${cls}">[${t}] ${msg}</span>`);
+  if(diagLines.length > 30) diagLines.shift();
+  const el = document.getElementById('diagLog');
+  if(el) el.innerHTML = diagLines.join('<br>');
+  console.log('[TTS]['+type+'] '+msg);
+}
+
+let voicesLoaded = [];
+let zhVoice = null;
+let ttsAvailable = false;
+
+function initTTS() {
+  if(!window.speechSynthesis) {
+    diag('❌ 此浏览器不支持speechSynthesis','err');
+    diag('请换用Chrome浏览器或使用微信小程序版','warn');
+    showTTSBar('❌ 浏览器不支持朗读，请换Chrome','err');
+    return;
+  }
+  
+  diag('检测到speechSynthesis API...','ok');
+  
+  // 尝试加载语音
+  function tryLoad() {
+    voicesLoaded = speechSynthesis.getVoices();
+    if(voicesLoaded.length > 0) {
+      diag('语音列表加载成功: '+voicesLoaded.length+'个','ok');
+      // 找中文语音
+      zhVoice = voicesLoaded.find(v => v.lang === 'zh-CN' && v.localService) ||
+                voicesLoaded.find(v => v.lang === 'zh-CN') ||
+                voicesLoaded.find(v => v.lang.startsWith('zh-CN')) ||
+                voicesLoaded.find(v => v.lang.startsWith('zh')) ||
+                null;
+      if(zhVoice) {
+        diag('选中语音: '+zhVoice.name+' ('+zhVoice.lang+')','ok');
+        showTTSBar('✅ 朗读就绪: '+zhVoice.name,'ok');
+      } else {
+        diag('未找到中文语音，将使用默认语音','warn');
+        showTTSBar('⚠️ 未找到中文语音，朗读可能不正常','warn');
+      }
+      // 列出所有语音
+      const zhVoices = voicesLoaded.filter(v => v.lang.startsWith('zh'));
+      diag('中文语音: '+zhVoices.map(v=>v.name).join(', '),'info');
+      ttsAvailable = true;
+    } else {
+      diag('语音列表为空，等待加载...','warn');
+    }
+  }
+  
+  tryLoad();
+  speechSynthesis.onvoiceschanged = tryLoad;
+  setTimeout(tryLoad, 500);
+  setTimeout(tryLoad, 1000);
+  setTimeout(tryLoad, 3000);
+  
+  // 设备信息
+  const di = document.getElementById('devInfo');
+  if(di) {
+    const ua = navigator.userAgent;
+    let browser = '未知';
+    if(ua.includes('MicroMessenger')) browser = '微信内置浏览器 ⚠️不支持TTS';
+    else if(ua.includes('Chrome')) browser = 'Chrome ✅';
+    else if(ua.includes('Safari') && !ua.includes('Chrome')) browser = 'Safari ⚠️TTS受限';
+    else if(ua.includes('Firefox')) browser = 'Firefox ❌TTS不可靠';
+    
+    di.innerHTML = 
+      '浏览器: '+browser+'<br>'+
+      'speechSynthesis: '+(window.speechSynthesis?'✅存在':'❌不存在')+'<br>'+
+      'SpeechRecognition: '+(('webkitSpeechRecognition'in window||'SpeechRecognition'in window)?'✅存在':'❌不存在')+'<br>'+
+      'UserAgent: '+ua.substring(0,60)+'...';
+  }
+}
+
+function showTTSBar(msg, type) {
+  const el = document.getElementById('ttsBar');
+  if(!el) return;
+  const cls = type==='ok'?'tts-ok':type==='err'?'tts-err':type==='warn'?'tts-warn':'tts-info';
+  el.innerHTML = '<span class="'+cls+'">'+msg+'</span>';
+}
+
+// 朗读函数 - 关键：必须由用户点击直接调用
+function doSpeak(sourceId) {
+  const el = document.getElementById(sourceId);
+  if(!el) return;
+  const text = el.textContent || el.value || '';
+  if(!text || text === '—') {
+    showTTSBar('⚠️ 没有可朗读的文本','warn');
+    return;
+  }
+  
+  if(!window.speechSynthesis) {
+    showTTSBar('❌ 浏览器不支持朗读','err');
+    diag('speechSynthesis不存在','err');
+    return;
+  }
+  
+  // 取消之前的
+  speechSynthesis.cancel();
+  
+  diag('开始朗读: "'+text.substring(0,30)+(text.length>30?'...':'')+'"','info');
+  
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'zh-CN';
+  u.rate = 0.75;
+  u.pitch = 1;
+  u.volume = 1;
+  if(zhVoice) u.voice = zhVoice;
+  
+  let started = false;
+  const btn = document.getElementById('spkBtn');
+  
+  u.onstart = () => {
+    started = true;
+    diag('✅ 朗读已开始','ok');
+    showTTSBar('🔊 正在朗读...','ok');
+    if(btn) btn.classList.add('speaking');
+  };
+  
+  u.onend = () => {
+    diag('✅ 朗读完成','ok');
+    showTTSBar('✅ 朗读完成','ok');
+    if(btn) btn.classList.remove('speaking');
+  };
+  
+  u.onerror = (e) => {
+    diag('❌ 朗读错误: '+e.error+(e.error==='network'?' - 网络问题':''),'err');
+    showTTSBar('❌ 朗读失败: '+e.error,'err');
+    if(btn) btn.classList.remove('speaking');
+    
+    // 降级：不选voice重试
+    if(e.error !== 'canceled' && e.error !== 'interrupted') {
+      diag('尝试降级朗读（不指定voice）...','warn');
+      const u2 = new SpeechSynthesisUtterance(text);
+      u2.lang = 'zh-CN';
+      u2.rate = 0.75;
+      u2.volume = 1;
+      // 不设voice
+      u2.onstart = () => { diag('✅ 降级朗读开始','ok'); showTTSBar('🔊 降级朗读中...','warn'); };
+      u2.onend = () => { diag('✅ 降级朗读完成','ok'); showTTSBar('✅ 朗读完成','ok'); };
+      u2.onerror = (e2) => { diag('❌ 降级也失败: '+e2.error,'err'); showTTSBar('❌ 朗读不可用，请换Chrome浏览器','err'); };
+      speechSynthesis.speak(u2);
+    }
+  };
+  
+  try {
+    speechSynthesis.speak(u);
+    diag('speak()已调用，等待onstart...','info');
+    
+    // Chrome bug: 长文本可能卡住，需要pause/resume
+    setTimeout(() => {
+      if(!started && speechSynthesis.pending) {
+        diag('2秒未触发onstart，尝试pause/resume...','warn');
+        speechSynthesis.pause();
+        speechSynthesis.resume();
+      }
+    }, 2000);
+    
+    setTimeout(() => {
+      if(!started) {
+        diag('❌ 5秒仍未开始朗读，TTS可能不可用','err');
+        showTTSBar('❌ 朗读超时，请用Chrome或小程序版','err');
+        if(btn) btn.classList.remove('speaking');
+      }
+    }, 5000);
+    
+  } catch(e) {
+    diag('❌ speak()异常: '+e.message,'err');
+    showTTSBar('❌ 朗读异常: '+e.message,'err');
+  }
+}
+
+// 测试TTS
+function testTTS(text) {
+  diag('用户点击测试: "'+text+'"','info');
+  // 直接用text，不走翻译
+  if(!window.speechSynthesis) {
+    diag('❌ speechSynthesis不存在','err');
+    showTTSBar('❌ 浏览器不支持朗读','err');
+    return;
+  }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'zh-CN';
+  u.rate = 0.8;
+  u.volume = 1;
+  if(zhVoice) u.voice = zhVoice;
+  u.onstart = () => { diag('✅ 测试朗读开始！','ok'); showTTSBar('✅ 测试朗读中...','ok'); };
+  u.onend = () => { diag('✅ 测试朗读完成！','ok'); showTTSBar('✅ 朗读正常！','ok'); };
+  u.onerror = (e) => { diag('❌ 测试失败: '+e.error,'err'); showTTSBar('❌ 朗读不可用: '+e.error,'err'); };
+  speechSynthesis.speak(u);
+}
+
+// ========== UI ==========
+let mode='d',dtm=null;
+function swTab(t,b){document.querySelectorAll('.tbtn').forEach(x=>x.classList.remove('on'));document.querySelectorAll('.tc').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('p-'+t).classList.add('on');}
+function setM(m,b){mode=m;document.querySelectorAll('.mb').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('rl').textContent=m==='d'?'东台话翻译结果':'普通话翻译结果';onI();}
+function onI(){clearTimeout(dtm);dtm=setTimeout(()=>{const t=document.getElementById('inp').value;document.getElementById('rt').textContent=t.trim()?tr(t,mode):'—';},80);}
+function qp(t){document.getElementById('inp').value=t;onI();}
+function cpR(){const t=document.getElementById('rt').textContent;if(t&&t!=='—')navigator.clipboard.writeText(t).then(()=>{showTTSBar('📋 已复制','ok');});}
+function clr(){document.getElementById('inp').value='';document.getElementById('rt').textContent='—';}
+
+// ========== 语音识别 ==========
+let vOn=false,vR=null;
+function togV(){
+  if(!('webkitSpeechRecognition'in window)&&!('SpeechRecognition'in window)){showTTSBar('❌ 请用Chrome浏览器','err');return;}
+  if(vOn){stopV();return;}
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vR=new SR();vR.lang='zh-CN';vR.continuous=false;vR.interimResults=true;
+  vR.onstart=()=>{vOn=true;document.getElementById('vb').classList.add('rec');document.getElementById('vb').textContent='⏹️';document.getElementById('vh').textContent='正在听...请说话';diag('语音识别开始','ok');};
+  vR.onresult=e=>{
+    let f='',i='';for(let x=e.resultIndex;x<e.results.length;x++){const t=e.results[x][0].transcript;if(e.results[x].isFinal)f+=t;else i+=t;}
+    const txt=f||i;
+    if(txt.trim()){
+      document.getElementById('inp').value=txt;
+      const result=tr(txt,mode);
+      document.getElementById('rt').textContent=result;
+      diag('识别: "'+txt+'" → 翻译: "'+result.substring(0,30)+'"','ok');
+      showTTSBar('✅ 翻译完成，点🔊朗读','ok');
+    }
+  };
+  vR.onerror=e=>{diag('语音错误: '+e.error,'err');if(e.error==='not-allowed')showTTSBar('❌ 请允许麦克风','err');stopV();};
+  vR.onend=()=>stopV();
+  try{vR.start();}catch(e){diag('语音启动失败','err');}
+}
+function stopV(){vOn=false;try{if(vR)vR.stop();}catch(e){}vR=null;const b=document.getElementById('vb');if(b){b.classList.remove('rec');b.textContent='🎙️';}const h=document.getElementById('vh');if(h)h.textContent='点击语音输入';}
+
+let rtOn=false,rtR=null,rtN=0;
+function togRT(){
+  if(!('webkitSpeechRecognition'in window)&&!('SpeechRecognition'in window)){showTTSBar('❌ 请用Chrome','err');return;}
+  if(rtOn){stopRT();return;}
+  rtN=0;startRT();
+}
+function startRT(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  rtR=new SR();rtR.lang='zh-CN';rtR.continuous=false;rtR.interimResults=true;
+  rtR.onstart=()=>{rtOn=true;document.getElementById('rvb').classList.add('rec');document.getElementById('rvb').textContent='⏹️';document.getElementById('rvh').textContent='正在听...';};
+  rtR.onresult=e=>{
+    let f='',i='';for(let x=e.resultIndex;x<e.results.length;x++){const t=e.results[x][0].transcript;if(e.results[x].isFinal)f+=t;else i+=t;}
+    const txt=f||i;
+    if(txt.trim()){
+      document.getElementById('vRecog').textContent=txt;
+      const c=corr(txt);
+      const d=tr(c,'d');
+      document.getElementById('vDT').textContent=d;
+      if(f){diag('实时识别: "'+f+'" → "'+d.substring(0,20)+'"','ok');showTTSBar('✅ 翻译完成，点🔊朗读','ok');}
+    }
+  };
+  rtR.onerror=e=>{if(e.error==='not-allowed'){diag('麦克风被拒绝','err');stopRT();return;}if(e.error!=='aborted'&&rtOn&&rtN<80){rtN++;setTimeout(()=>{if(rtOn)startRT();},300);}};
+  rtR.onend=()=>{if(rtOn&&rtN<80){rtN++;setTimeout(()=>{if(rtOn)startRT();},100);}};
+  try{rtR.start();}catch(e){diag('实时语音启动失败','err');stopRT();}
+}
+function stopRT(){rtOn=false;rtN=99;try{if(rtR)rtR.stop();}catch(e){}rtR=null;const b=document.getElementById('rvb');if(b){b.classList.remove('rec');b.textContent='🎙️';}const h=document.getElementById('rvh');if(h)h.textContent='点击开始';}
+
+// 初始化
+document.addEventListener('DOMContentLoaded',()=>{initTTS();});
+</script>
+</body>
+</html>
