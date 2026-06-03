@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/translate/translate",
+    "pages/voice/voice",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarTitleText": "东台方言翻译",
+    "navigationBarBackgroundColor": "#1a73e8",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f0f4f8"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#1a73e8",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/translate/translate",
+        "text": "翻译"
+      },
+      {
+        "pagePath": "pages/voice/voice",
+        "text": "语音"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
