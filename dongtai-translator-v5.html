@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>东台方言实时翻译 - 语音版</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .container { max-width: 480px; margin: 0 auto; padding: 20px; }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header p { font-size: 13px; color: rgba(255,255,255,0.7); }
+
+        /* Voice Card */
+        .voice-card {
+            background: white;
+            border-radius: 32px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        /* Dialect Pills */
+        .dialect-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .dialect-pill {
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .dialect-pill.active {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        /* Mode Toggle */
+        .mode-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        .mode-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .mode-btn.active {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        /* Voice Button */
+        .voice-btn-wrap {
+            position: relative;
+            margin: 30px 0;
+        }
+        .voice-btn {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 40px rgba(102,126,234,0.4);
+            transition: all 0.15s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            user-select: none;
+        }
+        .voice-btn:active, .voice-btn.recording {
+            transform: scale(0.95);
+            background: linear-gradient(135deg, #f44336, #e91e63);
+            box-shadow: 0 10px 40px rgba(244,67,54,0.4);
+        }
+        .voice-btn .icon { font-size: 48px; }
+        .voice-btn .text { font-size: 14px; }
+
+        /* Sound Waves Animation */
+        .waves {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .wave {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #667eea;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        .wave.active {
+            animation: wave 1.5s ease-out infinite;
+        }
+        .wave:nth-child(2) { animation-delay: 0.5s; }
+        .wave:nth-child(3) { animation-delay: 1s; }
+
+        @keyframes wave {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+            100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+        }
+
+        /* Status */
+        .status {
+            padding: 12px 20px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            font-size: 14px;
+            color: #666;
+            display: inline-block;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        .status.listening {
+            background: linear-gradient(135deg, #ffebee, #fce4ec);
+            color: #e91e63;
+        }
+        .status.thinking {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #1976d2;
+        }
+
+        /* Transcript */
+        .transcript {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 16px;
+            margin: 20px 0;
+            min-height: 60px;
+        }
+        .transcript-label {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 6px;
+        }
+        .transcript-text {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .transcript-text.empty { color: #aaa; font-style: italic; }
+
+        /* Result */
+        .result {
+            background: linear-gradient(135deg, #e8f0fe, #f3e5f5);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #667eea;
+            animation: slideUp 0.3s ease;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .result-label { font-size: 11px; color: #888; margin-bottom: 6px; }
+        .result-text { font-size: 20px; color: #1a1a2e; font-weight: 600; }
+        .result-translation {
+            font-size: 16px;
+            color: #667eea;
+            margin-top: 10px;
+        }
+        .result-meta {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            background: rgba(102,126,234,0.1);
+            color: #667eea;
+            border-radius: 12px;
+        }
+
+        /* Action Buttons */
+        .action-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .action-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        .action-btn.primary:active { transform: scale(0.97); }
+        .action-btn.secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        .action-btn.speaking {
+            background: #4caf50;
+            color: white;
+        }
+
+        /* Text Mode */
+        .text-input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 16px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+        .text-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* Quick Phrases */
+        .quick-phrases {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 10px 0;
+            -webkit-overflow-scrolling: touch;
+        }
+        .quick-phrase {
+            padding: 8px 16px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 13px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .quick-phrase:active {
+            background: #667eea;
+            color: white;
+        }
+
+        /* History */
+        .history-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .history-item:last-child { border-bottom: none; }
+        .history-time { font-size: 11px; color: #888; }
+        .history-content { font-size: 14px; color: #333; margin: 5px 0; }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            padding: 0 10px;
+        }
+        .tab {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .tab.active {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 14px;
+            z-index: 1000;
+            animation: toastIn 0.3s ease;
+        }
+        @keyframes toastIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        /* Hidden */
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎙️ 东台方言翻译</h1>
+            <p>按住说话 · 实时翻译 · 语音播报</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('voice')">🎤 语音</button>
+            <button class="tab" onclick="switchTab('text')">⌨️ 文本</button>
+            <button class="tab" onclick="switchTab('history')">📜 历史</button>
+        </div>
+
+        <!-- Voice Tab -->
+        <div id="tab-voice" class="voice-card">
+            <div class="dialect-row">
+                <button class="dialect-pill active" onclick="setDialect('dongtai', this)">🏠 东台</button>
+                <button class="dialect-pill" onclick="setDialect('funing', this)">📍 阜宁</button>
+                <button class="dialect-pill" onclick="setDialect('dafeng', this)">📍 大丰</button>
+            </div>
+
+            <div class="mode-row">
+                <button class="mode-btn active" onclick="setMode('d2m', this)">东台话 → 普通话</button>
+                <button class="mode-btn" onclick="setMode('m2d', this)">普通话 → 东台话</button>
+            </div>
+
+            <div class="voice-btn-wrap">
+                <div class="waves">
+                    <div class="wave" id="wave1"></div>
+                    <div class="wave" id="wave2"></div>
+                    <div class="wave" id="wave3"></div>
+                </div>
+                <button class="voice-btn" id="voiceBtn" onmousedown="startVoice()" onmouseup="endVoice()" ontouchstart="startVoice()" ontouchend="endVoice()">
+                    <span class="icon" id="voiceIcon">🎤</span>
+                    <span class="text" id="voiceText">按住说话</span>
+                </button>
+            </div>
+
+            <div class="status" id="status">准备就绪，请按住按钮说话</div>
+
+            <div class="transcript">
+                <div class="transcript-label" id="transcriptLabel">识别内容</div>
+                <div class="transcript-text empty" id="transcriptText">等待语音输入...</div>
+            </div>
+
+            <div id="resultArea"></div>
+        </div>
+
+        <!-- Text Tab -->
+        <div id="tab-text" class="voice-card hidden">
+            <div class="dialect-row">
+                <button class="dialect-pill active" onclick="setDialect('dongtai', this)">🏠 东台</button>
+                <button class="dialect-pill" onclick="setDialect('funing', this)">📍 阜宁</button>
+                <button class="dialect-pill" onclick="setDialect('dafeng', this)">📍 大丰</button>
+            </div>
+
+            <div class="mode-row">
+                <button class="mode-btn active" onclick="setMode('d2m', this)">东台话 → 普通话</button>
+                <button class="mode-btn" onclick="setMode('m2d', this)">普通话 → 东台话</button>
+            </div>
+
+            <input type="text" class="text-input" id="textInput" placeholder="输入东台话或普通话，如：你上哪块去呃？" oninput="translateText()">
+
+            <div class="quick-phrases" id="quickPhrases"></div>
+
+            <div id="textResult"></div>
+        </div>
+
+        <!-- History Tab -->
+        <div id="tab-history" class="voice-card hidden">
+            <h3 style="margin-bottom:15px;">📜 翻译历史</h3>
+            <div id="historyList">
+                <p style="color:#888;text-align:center;padding:40px;">暂无历史记录</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // ====== State ======
+    const state = {
+        mode: 'd2m',        // d2m: 东台话→普通话, m2d: 普通话→东台话
+        dialect: 'dongtai',
+        isRecording: false,
+        isSpeaking: false,
+        recognition: null,
+        history: JSON.parse(localStorage.getItem('dt_history') || '[]')
+    };
+
+    // ====== Corpus (500句精选) ======
+    const CORPUS = [
+        // 1.1 日常问候
+        {d:"你上哪块去呃？",m:"你去哪里？",c:"日常问候"},
+        {d:"你好呃！",m:"你好！",c:"日常问候"},
+        {d:"早呃！",m:"早上好！",c:"日常问候"},
+        {d:"晚呃！",m:"晚上好！",c:"日常问候"},
+        {d:"饭吃了呃？",m:"吃饭了吗？",c:"日常问候"},
+        {d:"在做什的呃？",m:"在做什么呀？",c:"日常问候"},
+        {d:"最近怎呃？",m:"最近怎么样？",c:"日常问候"},
+        {d:"身体怎呃？",m:"身体怎么样？",c:"日常问候"},
+        {d:"工作怎呃？",m:"工作怎么样？",c:"日常问候"},
+        {d:"家去呃！",m:"回家啦！",c:"日常问候"},
+        {d:"走呃！",m:"走啦！",c:"日常问候"},
+        {d:"回头见！",m:"回头见！",c:"日常问候"},
+        {d:"什的时辰呃？",m:"什么时候呀？",c:"日常问候"},
+        {d:"过年好！",m:"过年好！",c:"日常问候"},
+        {d:"欢迎欢迎！",m:"欢迎欢迎！",c:"日常问候"},
+        {d:"你叫什的呃？",m:"你叫什么呀？",c:"日常问候"},
+        {d:"哪块人呃？",m:"哪里人呀？",c:"日常问候"},
+        {d:"多大了呃？",m:"多大了？",c:"日常问候"},
+        {d:"上什的班呃？",m:"做什么工作呀？",c:"日常问候"},
+        {d:"住哪块呃？",m:"住在哪里呀？",c:"日常问候"},
+        // 1.2 问路出行
+        {d:"请问，东台汽车站怎呃走呃？",m:"请问，东台汽车站怎么走？",c:"问路出行"},
+        {d:"这路车到不到市政府呃？",m:"这路车到不到市政府？",c:"问路出行"},
+        {d:"到火车站远呃？",m:"到火车站远吗？",c:"问路出行"},
+        {d:"有没有公交到人民医院呃？",m:"有没有公交车到人民医院？",c:"问路出行"},
+        {d:"打车要多少钱呃？",m:"打车要多少钱？",c:"问路出行"},
+        {d:"步行要多长时间呃？",m:"步行要多长时间？",c:"问路出行"},
+        {d:"左拐还右拐呃？",m:"左拐还是右拐？",c:"问路出行"},
+        {d:"直走多长远呃？",m:"直走多远呀？",c:"问路出行"},
+        {d:"在哪个路口呃？",m:"在哪个路口？",c:"问路出行"},
+        {d:"认不得路了，帮帮忙呃？",m:"迷路了，能帮帮忙吗？",c:"问路出行"},
+        // 1.3 饮食餐饮
+        {d:"今呃吃什的呃？",m:"今天吃什么呀？",c:"饮食餐饮"},
+        {d:"这菜怎呃烧呃？",m:"这菜怎么烧的？",c:"饮食餐饮"},
+        {d:"东台有什的好吃呃？",m:"东台有什么好吃的？",c:"饮食餐饮"},
+        {d:"鱼汤面在哪儿呃？",m:"鱼汤面在哪里？",c:"饮食餐饮"},
+        {d:"来碗鱼汤面！",m:"来碗鱼汤面！",c:"饮食餐饮"},
+        {d:"这菜新不新鲜呃？",m:"这菜新不新鲜？",c:"饮食餐饮"},
+        {d:"多放点辣呃！",m:"多放点辣！",c:"饮食餐饮"},
+        {d:"少放盐呃！",m:"少放盐！",c:"饮食餐饮"},
+        {d:"这饭怎呃这呃香呃？",m:"这饭怎么这么香？",c:"饮食餐饮"},
+        {d:"吃饱呃！",m:"吃饱了！",c:"饮食餐饮"},
+        // 1.4 住宿租房
+        {d:"这房子一个月多少钱呃？",m:"这房子一个月多少钱？",c:"住宿租房"},
+        {d:"水、电、气多少钱呃？",m:"水、电、气多少钱？",c:"住宿租房"},
+        {d:"有空调呃？",m:"有空调吗？",c:"住宿租房"},
+        {d:"可以短租呃？",m:"可以短租吗？",c:"住宿租房"},
+        {d:"押金多少呃？",m:"押金多少？",c:"住宿租房"},
+        {d:"什的时候可以入住呃？",m:"什么时候可以入住？",c:"住宿租房"},
+        {d:"这小区安全呃？",m:"这小区安全吗？",c:"住宿租房"},
+        {d:"附近有超市呃？",m:"附近有超市吗？",c:"住宿租房"},
+        {d:"可以养宠物呃？",m:"可以养宠物吗？",c:"住宿租房"},
+        {d:"这房子隔音怎呃呃？",m:"这房子隔音怎么样？",c:"住宿租房"},
+        // 1.5 购物消费
+        {d:"这什的多少钱呃？",m:"这个多少钱？",c:"购物消费"},
+        {d:"便宜点呃！",m:"便宜点！",c:"购物消费"},
+        {d:"太贵呃！",m:"太贵了！",c:"购物消费"},
+        {d:"可以试穿呃？",m:"可以试穿吗？",c:"购物消费"},
+        {d:"有没有别的颜色呃？",m:"有没有别的颜色？",c:"购物消费"},
+        {d:"包邮呃？",m:"包邮吗？",c:"购物消费"},
+        {d:"可以退换呃？",m:"可以退换吗？",c:"购物消费"},
+        {d:"支持扫码付呃？",m:"支持扫码付吗？",c:"购物消费"},
+        {d:"积分可有用呃？",m:"积分有用吗？",c:"购物消费"},
+        {d:"这质量怎呃呃？",m:"这质量怎么样？",c:"购物消费"},
+        // 1.6 数字时间
+        {d:"现在几点呃？",m:"现在几点？",c:"数字时间"},
+        {d:"今儿个几号呃？",m:"今天几号？",c:"数字时间"},
+        {d:"这向是夏天呃？",m:"现在是夏天吗？",c:"数字时间"},
+        {d:"等一下下！",m:"等一下！",c:"数字时间"},
+        {d:"等了一刻钟呃！",m:"等了一刻钟了！",c:"数字时间"},
+        {d:"还有五分钟呃！",m:"还有五分钟！",c:"数字时间"},
+        {d:"提前十分钟呃！",m:"提前十分钟！",c:"数字时间"},
+        {d:"过呃三天呃！",m:"过了三天了！",c:"数字时间"},
+        {d:"一个零两个月的！",m:"一个月两个月的！",c:"数字时间"},
+        {d:"一年又一年呃！",m:"一年又一年！",c:"数字时间"},
+        // 1.7 天气气象
+        {d:"今呃天气怎呃呃？",m:"今天天气怎么样？",c:"天气气象"},
+        {d:"要落雨呃？",m:"要下雨吗？",c:"天气气象"},
+        {d:"好热呃！",m:"好热啊！",c:"天气气象"},
+        {d:"好冷呃！",m:"好冷啊！",c:"天气气象"},
+        {d:"来斯呃！",m:"厉害呀！",c:"天气气象"},
+        {d:"风大呃！",m:"风大呀！",c:"天气气象"},
+        {d:"雾太大了！",m:"雾太大了！",c:"天气气象"},
+        {d:"雪好大呃！",m:"雪好大呀！",c:"天气气象"},
+        {d:"什的时辰出太阳呃？",m:"什么时候出太阳？",c:"天气气象"},
+        {d:"明呃可能升温呃！",m:"明天可能会升温！",c:"天气气象"},
+        // 1.8 方位地址
+        {d:"东台汽车站往哪块呃？",m:"东台汽车站往哪边？",c:"方位地址"},
+        {d:"人民医院在哪个块呃？",m:"人民医院在哪个位置？",c:"方位地址"},
+        {d:"这路车经过市政府呃？",m:"这路车经过市政府吗？",c:"方位地址"},
+        {d:"学校在街的东边呃？",m:"学校在街的东边吗？",c:"方位地址"},
+        {d:"我家住三楼呃！",m:"我家住三楼！",c:"方位地址"},
+        {d:"往前直走左拐呃！",m:"往前直走左拐！",c:"方位地址"},
+        {d:"斜对过有个超市呃！",m:"斜对面有个超市！",c:"方位地址"},
+        {d:"巷子最里头呃！",m:"巷子最里面！",c:"方位地址"},
+        {d:"十字路口往北呃！",m:"十字路口往北！",c:"方位地址"},
+        {d:"地下室有停车场呃！",m:"地下室有停车场！",c:"方位地址"},
+        // 1.9 通讯联络
+        {d:"喂！是哪位呃？",m:"喂！是哪位？",c:"通讯联络"},
+        {d:"信号不好呃！",m:"信号不好！",c:"通讯联络"},
+        {d:"微信通过了呃！",m:"微信通过了！",c:"通讯联络"},
+        {d:"发个定位给我呃！",m:"发个定位给我！",c:"通讯联络"},
+        {d:"视频通话呃？",m:"视频通话吗？",c:"通讯联络"},
+        {d:"消息收到了呃？",m:"消息收到了吗？",c:"通讯联络"},
+        {d:"什的时辰回呃？",m:"什么时候回？",c:"通讯联络"},
+        {d:"稍等呃！",m:"稍等！",c:"通讯联络"},
+        {d:"打错了呃！",m:"打错了！",c:"通讯联络"},
+        {d:"电话费没钱呃！",m:"电话费没钱了！",c:"通讯联络"},
+        // 1.10 紧急求助
+        {d:"来人呃！救命呃！",m:"来人啊！救命啊！",c:"紧急求助"},
+        {d:"打110呃！",m:"打110！",c:"紧急求助"},
+        {d:"叫120呃！",m:"叫120！",c:"紧急求助"},
+        {d:"火呃！救火呃！",m:"着火了！救火啊！",c:"紧急求助"},
+        {d:"有人受伤呃！",m:"有人受伤了！",c:"紧急求助"},
+        {d:"小偷呃！抓小偷呃！",m:"有小偷！抓小偷！",c:"紧急求助"},
+        {d:"摔倒了呃！帮帮忙呃！",m:"摔倒了！帮帮忙！",c:"紧急求助"},
+        {d:"迷路了呃！怎呃办呃？",m:"迷路了怎么办？",c:"紧急求助"},
+        {d:"被狗咬了呃！",m:"被狗咬了！",c:"紧急求助"},
+        {d:"触电了呃！",m:"触电了！",c:"紧急求助"},
+        // 1.11 生活服务
+        {d:"理发多少钱呃？",m:"理发多少钱？",c:"生活服务"},
+        {d:"洗个车呃！",m:"洗个车！",c:"生活服务"},
+        {d:"快递寄一下呃！",m:"寄个快递！",c:"生活服务"},
+        {d:"通下水道呃！",m:"通下水道！",c:"生活服务"},
+        {d:"开锁呃！",m:"开锁！",c:"生活服务"},
+        {d:"修手机呃！",m:"修手机！",c:"生活服务"},
+        {d:"干洗衣服呃！",m:"干洗衣服！",c:"生活服务"},
+        {d:"健身房在哪块呃？",m:"健身房在哪里？",c:"生活服务"},
+        {d:"瑜伽课怎呃上呃？",m:"瑜伽课怎么上？",c:"生活服务"},
+        {d:"空调不制冷了呃！",m:"空调不制冷了！",c:"生活服务"},
+        // 2.1 政务办事
+        {d:"办身份证要什的手续呃？",m:"办身份证要什么手续？",c:"政务办事"},
+        {d:"迁户口要多少天呃？",m:"迁户口要多少天？",c:"政务办事"},
+        {d:"出生登记要带什的呃？",m:"出生登记要带什么？",c:"政务办事"},
+        {d:"结婚登记在哪块呃？",m:"结婚登记在哪里？",c:"政务办事"},
+        {d:"护照办理要多久呃？",m:"护照办理要多久？",c:"政务办事"},
+        // 3.1 医疗健康
+        {d:"我要挂内科，怎呃挂呃？",m:"我要挂内科，怎么挂？",c:"医疗健康"},
+        {d:"挂号要带什的呃？",m:"挂号要带什么？",c:"医疗健康"},
+        {d:"专家号要多少钱呃？",m:"专家号要多少钱？",c:"医疗健康"},
+        {d:"可以用医保卡呃？",m:"可以用医保卡吗？",c:"医疗健康"},
+        {d:"哪块科室呃？",m:"哪个科室？",c:"医疗健康"},
+        // 4.1 社交融入
+        {d:"你家住哪块呃？",m:"你家住哪里呀？",c:"社交融入"},
+        {d:"今呃有空呃？",m:"今天有空吗？",c:"社交融入"},
+        {d:"一快来耍呃！",m:"一起来玩呀！",c:"社交融入"},
+        {d:"哪块坐坐呃？",m:"哪里坐坐呀？",c:"社交融入"},
+        {d:"茶可喝呃？",m:"茶喝不喝？",c:"社交融入"},
+        // 5.1 职场沟通
+        {d:"简历怎呃写呃？",m:"简历怎么写？",c:"职场沟通"},
+        {d:"面试要注注什的呃？",m:"面试要注意什么？",c:"职场沟通"},
+        {d:"工资多少呃？",m:"工资多少？",c:"职场沟通"},
+        {d:"五险一金有呃？",m:"五险一金有吗？",c:"职场沟通"},
+        {d:"年终奖有呃？",m:"年终奖有吗？",c:"职场沟通"},
+        // 6.1 文化生活
+        {d:"东台发绣是什的呃？",m:"东台发绣是什么？",c:"文化生活"},
+        {d:"东台有什的特产呃？",m:"东台有什么特产？",c:"文化生活"},
+        {d:"东台鱼汤面怎呃做呃？",m:"东台鱼汤面怎么做？",c:"文化生活"},
+        {d:"东台有什的旅游景点呃？",m:"东台有什么旅游景点？",c:"文化生活"},
+        {d:"东台话有什的特色呃？",m:"东台话有什么特色？",c:"文化生活"},
+        // 7.1 方言成语
+        {d:"'家去'是什的意思呃？",m:"'家去'是什么意思？",c:"方言成语"},
+        {d:"'来斯'是什的意思呃？",m:"'来斯'是什么意思？",c:"方言成语"},
+        {d:"'推板'是什的意思呃？",m:"'推板'是什么意思？",c:"方言成语"},
+        {d:"'扎实'是什的意思呃？",m:"'扎实'是什么意思？",c:"方言成语"},
+        {d:"'刷刮'是什的意思呃？",m:"'刷刮'是什么意思？",c:"方言成语"},
+        // 8.1 银行金融
+        {d:"我要存钱怎呃存呃？",m:"我要存钱怎么存？",c:"银行金融"},
+        {d:"我要取钱怎呃取呃？",m:"我要取钱怎么取？",c:"银行金融"},
+        {d:"我要转账怎呃转呃？",m:"我要转账怎么转？",c:"银行金融"},
+        {d:"我要开户怎呃开呃？",m:"我要开户怎么开？",c:"银行金融"},
+        {d:"我要挂失怎呃挂呃？",m:"我要挂失怎么挂？",c:"银行金融"},
+        // 9.1 新词新语
+        {d:"'内卷'用东台话怎呃说呃？",m:"'内卷'用东台话怎么说？",c:"新词新语"},
+        {d:"'躺平'用东台话怎呃说呃？",m:"'躺平'用东台话怎么说？",c:"新词新语"},
+        {d:"'社恐'用东台话怎呃说呃？",m:"'社恐'用东台话怎么说？",c:"新词新语"},
+        {d:"'社牛'用东台话怎呃说呃？",m:"'社牛'用东台话怎么说？",c:"新词新语"},
+        {d:"'刷屏'用东台话怎呃说呃？",m:"'刷屏'用东台话怎么说？",c:"新词新语"},
+        // 10.1 经典场景
+        {d:"老板，这菜新鲜呃？",m:"老板，这菜新鲜吗？",c:"经典场景"},
+        {d:"便宜点呃！",m:"便宜点！",c:"经典场景"},
+        {d:"给我来二斤！",m:"给我来二斤！",c:"经典场景"},
+        {d:"再添点呃！",m:"再添点！",c:"经典场景"},
+        {d:"可以扫码付呃？",m:"可以扫码付吗？",c:"经典场景"}
+    ];
+
+    // Quick phrases for text mode
+    const QUICK_PHRASES = [
+        "你上哪块去呃？", "饭吃了呃？", "你好呃！", "家去呃！",
+        "今呃吃什的呃？", "便宜点呃！", "太贵呃！", "鱼汤面在哪儿呃？",
+        "信号不好呃！", "什的时候呃？", "好热呃！", "好冷呃！"
+    ];
+
+    // ====== Init ======
+    document.addEventListener('DOMContentLoaded', () => {
+        initSpeechRecognition();
+        initQuickPhrases();
+        renderHistory();
+    });
+
+    // ====== Tab Switching ======
+    function switchTab(tab) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        event.target.classList.add('active');
+
+        document.getElementById('tab-voice').classList.add('hidden');
+        document.getElementById('tab-text').classList.add('hidden');
+        document.getElementById('tab-history').classList.add('hidden');
+        document.getElementById('tab-' + tab).classList.remove('hidden');
+
+        if (tab === 'history') renderHistory();
+    }
+
+    // ====== Dialect Selection ======
+    function setDialect(d, btn) {
+        state.dialect = d;
+        btn.parentElement.querySelectorAll('.dialect-pill').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    // ====== Mode Selection ======
+    function setMode(mode, btn) {
+        state.mode = mode;
+        btn.parentElement.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    // ====== Speech Recognition ======
+    function initSpeechRecognition() {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRecognition) {
+            showToast('当前浏览器不支持语音识别，请使用Chrome');
+            document.getElementById('voiceBtn').style.opacity = 0.5;
+            return;
+        }
+
+        state.recognition = new SpeechRecognition();
+        state.recognition.continuous = false;
+        state.recognition.interimResults = true;
+        state.recognition.lang = 'zh-CN';
+        state.recognition.maxAlternatives = 1;
+
+        state.recognition.onstart = () => {
+            state.isRecording = true;
+            updateVoiceUI(true);
+            updateStatus('正在聆听...', 'listening');
+        };
+
+        state.recognition.onresult = (event) => {
+            let transcript = '';
+            for (let i = event.resultIndex; i < event.results.length; i++) {
+                transcript += event.results[i][0].transcript;
+            }
+            updateTranscript(transcript, !event.results[i-1].isFinal);
+
+            if (event.results[i-1].isFinal) {
+                processTranslation(transcript.trim());
+            }
+        };
+
+        state.recognition.onerror = (event) => {
+            console.error('Speech error:', event.error);
+            stopRecording();
+            if (event.error === 'no-speech') {
+                updateStatus('未检测到语音，请重试', '');
+            } else if (event.error === 'not-allowed') {
+                updateStatus('请授权麦克风权限', '');
+                showToast('请允许使用麦克风');
+            } else {
+                updateStatus('识别出错: ' + event.error, '');
+            }
+        };
+
+        state.recognition.onend = () => {
+            stopRecording();
+        };
+    }
+
+    function startVoice() {
+        if (!state.recognition) {
+            initSpeechRecognition();
+        }
+        if (state.recognition && !state.isRecording) {
+            try {
+                state.recognition.start();
+            } catch(e) {
+                console.error('Recognition start error:', e);
+            }
+        }
+    }
+
+    function endVoice() {
+        if (state.recognition && state.isRecording) {
+            state.recognition.stop();
+        }
+    }
+
+    function stopRecording() {
+        state.isRecording = false;
+        updateVoiceUI(false);
+    }
+
+    // ====== UI Updates ======
+    function updateVoiceUI(recording) {
+        const btn = document.getElementById('voiceBtn');
+        const icon = document.getElementById('voiceIcon');
+        const text = document.getElementById('voiceText');
+        const waves = document.querySelectorAll('.wave');
+
+        if (recording) {
+            btn.classList.add('recording');
+            icon.textContent = '🎙️';
+            text.textContent = '录音中...';
+            waves.forEach(w => w.classList.add('active'));
+        } else {
+            btn.classList.remove('recording');
+            icon.textContent = '🎤';
+            text.textContent = '按住说话';
+            waves.forEach(w => w.classList.remove('active'));
+        }
+    }
+
+    function updateStatus(text, type) {
+        const el = document.getElementById('status');
+        el.textContent = text;
+        el.className = 'status' + (type ? ' ' + type : '');
+    }
+
+    function updateTranscript(text, interim) {
+        const el = document.getElementById('transcriptText');
+        el.textContent = text || '等待语音输入...';
+        el.className = 'transcript-text' + (text ? '' : ' empty');
+        document.getElementById('transcriptLabel').textContent = interim ? '识别中...' : '识别内容';
+    }
+
+    function showResult(result) {
+        const area = document.getElementById('resultArea');
+        area.innerHTML = `
+            <div class="result">
+                <div class="result-label">${state.mode === 'd2m' ? '东台话' : '普通话'}</div>
+                <div class="result-text">${result.original}</div>
+                <div class="result-label" style="margin-top:10px;">${state.mode === 'd2m' ? '普通话' : '东台话'}</div>
+                <div class="result-translation">${result.translated}</div>
+                <div class="result-meta">
+                    <span class="meta-tag">${result.category}</span>
+                </div>
+                <div class="action-row">
+                    <button class="action-btn primary" onclick="speakText('${(state.mode === 'd2m' ? result.translated : result.original).replace(/'/g, "\\'")}')">
+                        🔊 播放
+                    </button>
+                    <button class="action-btn secondary" onclick="copyResult('${(state.mode === 'd2m' ? result.translated : result.original).replace(/'/g, "\\'")}')">
+                        📋 复制
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+
+    // ====== Translation Engine ======
+    function processTranslation(text) {
+        if (!text) {
+            updateStatus('无法识别，请重试', '');
+            return;
+        }
+
+        updateStatus('正在翻译...', 'thinking');
+
+        // Simulate slight delay for natural feel
+        setTimeout(() => {
+            const result = findBestMatch(text);
+            showResult(result);
+            addToHistory(result);
+            updateStatus('翻译完成', '');
+
+            // Auto speak
+            speakText(state.mode === 'd2m' ? result.translated : result.original);
+        }, 100);
+    }
+
+    function findBestMatch(text) {
+        const searchField = state.mode === 'd2m' ? 'd' : 'm';
+        const matchField = state.mode === 'd2m' ? 'm' : 'd';
+        const lower = text.toLowerCase().trim();
+
+        // 1. Exact match
+        for (const item of CORPUS) {
+            if (item[searchField].toLowerCase() === lower) {
+                return { original: item.d, translated: item.m, category: item.c };
+            }
+        }
+
+        // 2. Contains match (highest score)
+        let best = null;
+        let bestScore = 0;
+
+        for (const item of CORPUS) {
+            const target = item[searchField].toLowerCase();
+            let score = 0;
+            let matchCount = 0;
+
+            for (const char of lower) {
+                if (target.includes(char)) matchCount++;
+            }
+
+            if (matchCount > 0) {
+                score = matchCount / Math.max(target.length, lower.length);
+
+                // Bonus for matching words
+                if (target.includes(lower)) score += 0.3;
+
+                // Bonus for similar length
+                if (Math.abs(target.length - lower.length) < 3) score += 0.2;
+
+                if (score > bestScore) {
+                    bestScore = score;
+                    best = { original: item.d, translated: item.m, category: item.c };
+                }
+            }
+        }
+
+        if (best && bestScore > 0.3) {
+            return best;
+        }
+
+        // 3. Return input with best guess
+        return {
+            original: text,
+            translated: text, // Return as-is if no match
+            category: '未分类'
+        };
+    }
+
+    // ====== Text Translation ======
+    function translateText() {
+        const text = document.getElementById('textInput').value.trim();
+        if (!text) {
+            document.getElementById('textResult').innerHTML = '';
+            return;
+        }
+
+        const result = findBestMatch(text);
+        document.getElementById('textResult').innerHTML = `
+            <div class="result">
+                <div class="result-label">${state.mode === 'd2m' ? '东台话' : '普通话'}</div>
+                <div class="result-text">${result.original}</div>
+                <div class="result-label" style="margin-top:10px;">${state.mode === 'd2m' ? '普通话' : '东台话'}</div>
+                <div class="result-translation">${result.translated}</div>
+                <div class="result-meta">
+                    <span class="meta-tag">${result.category}</span>
+                </div>
+                <div class="action-row">
+                    <button class="action-btn primary" onclick="speakText('${(state.mode === 'd2m' ? result.translated : result.original).replace(/'/g, "\\'")}')">
+                        🔊 播放
+                    </button>
+                </div>
+            </div>
+        `;
+
+        addToHistory(result);
+    }
+
+    // ====== Quick Phrases ======
+    function initQuickPhrases() {
+        const container = document.getElementById('quickPhrases');
+        container.innerHTML = QUICK_PHRASES.map(p =>
+            `<button class="quick-phrase" onclick="usePhrase('${p}')">${p}</button>`
+        ).join('');
+    }
+
+    function usePhrase(text) {
+        document.getElementById('textInput').value = text;
+        translateText();
+    }
+
+    // ====== Text to Speech ======
+    function speakText(text) {
+        if (!text || !('speechSynthesis' in window)) return;
+
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'zh-CN';
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+
+        const btn = document.querySelector('.action-btn.speaking');
+        if (btn) btn.classList.add('speaking');
+
+        utterance.onend = () => {
+            const btns = document.querySelectorAll('.action-btn');
+            btns.forEach(b => b.classList.remove('speaking'));
+        };
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function copyResult(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast('已复制到剪贴板');
+        }).catch(() => {
+            showToast('复制失败');
+        });
+    }
+
+    // ====== History ======
+    function addToHistory(result) {
+        state.history.unshift({
+            time: new Date().toLocaleTimeString(),
+            ...result
+        });
+        if (state.history.length > 50) state.history.pop();
+        localStorage.setItem('dt_history', JSON.stringify(state.history));
+    }
+
+    function renderHistory() {
+        const list = document.getElementById('historyList');
+        if (state.history.length === 0) {
+            list.innerHTML = '<p style="color:#888;text-align:center;padding:40px;">暂无历史记录</p>';
+            return;
+        }
+        list.innerHTML = state.history.map(h => `
+            <div class="history-item">
+                <div class="history-time">${h.time}</div>
+                <div class="history-content">${h.original} → ${h.translated}</div>
+                <span class="meta-tag">${h.category}</span>
+            </div>
+        `).join('');
+    }
+
+    // ====== Toast ======
+    function showToast(msg) {
+        const existing = document.querySelector('.toast');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = msg;
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.remove(), 2500);
+    }
+    </script>
+</body>
+</html>
