@@ -2,7 +2,8 @@
   "pages": [
     "pages/translator/translator",
     "pages/dictionary/dictionary",
-    "pages/corpus/corpus"
+    "pages/corpus/corpus",
+    "pages/pinyin/pinyin"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -28,8 +29,18 @@
       {
         "pagePath": "pages/corpus/corpus",
         "text": "语料"
+      },
+      {
+        "pagePath": "pages/pinyin/pinyin",
+        "text": "拼音"
       }
     ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.5",
+      "provider": "wx6e2a088ae8371c11"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>东台方言实时翻译 v8.1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);min-height:100vh;color:#e0e0e0}
+.container{max-width:520px;margin:0 auto;padding:16px}
+.header{text-align:center;padding:16px 0 8px}
+.header h1{font-size:24px;background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+.header .sub{font-size:11px;color:rgba(255,255,255,.4)}
+.stats-bar{display:flex;gap:6px;justify-content:center;margin-top:6px;flex-wrap:wrap}
+.stat-pill{background:rgba(255,255,255,.08);border-radius:12px;padding:2px 8px;font-size:10px;color:rgba(255,255,255,.6)}
+.tab-nav{display:flex;gap:3px;margin:10px 0;background:rgba(255,255,255,.06);border-radius:14px;padding:3px}
+.tab-btn{flex:1;padding:9px 2px;border:none;border-radius:11px;background:transparent;color:rgba(255,255,255,.5);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.tab-btn.active{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.3)}
+.tab-content{display:none}.tab-content.active{display:block}
+.card{background:rgba(255,255,255,.06);border-radius:18px;padding:16px;margin-bottom:10px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08)}
+.mode-row{display:flex;gap:6px;margin-bottom:12px}
+.mode-btn{flex:1;padding:9px;border-radius:10px;border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:rgba(255,255,255,.5);font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;text-align:center}
+.mode-btn.active{border-color:#667eea;background:rgba(102,126,234,.15);color:#fff}
+.input-area{width:100%;min-height:80px;padding:12px;border-radius:12px;border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#fff;font-size:15px;resize:none;outline:none;font-family:inherit;transition:border-color .2s}
+.input-area:focus{border-color:#667eea}.input-area::placeholder{color:rgba(255,255,255,.2)}
+.voice-section{text-align:center;margin:12px 0}
+.voice-btn{width:80px;height:80px;border-radius:50%;border:none;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;font-size:30px;cursor:pointer;transition:all .2s;box-shadow:0 6px 20px rgba(102,126,234,.3)}
+.voice-btn:active{transform:scale(.92)}.voice-btn.recording{background:linear-gradient(135deg,#e74c3c,#c0392b);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(231,76,60,.4)}50%{box-shadow:0 0 0 14px rgba(231,76,60,0)}}
+.voice-hint{font-size:10px;color:rgba(255,255,255,.35);margin-top:4px}
+.voice-tip{background:rgba(255,193,7,.1);border:1px solid rgba(255,193,7,.2);border-radius:8px;padding:6px 10px;font-size:10px;color:#ffc107;margin-top:8px;line-height:1.4}
+.result-area{background:rgba(102,126,234,.08);border-radius:12px;padding:14px;min-height:60px;border:1px solid rgba(102,126,234,.12)}
+.result-label{font-size:10px;color:rgba(255,255,255,.35);margin-bottom:4px}
+.result-text{font-size:17px;color:#fff;line-height:1.5;min-height:24px}
+.result-actions{display:flex;gap:6px;margin-top:8px;justify-content:flex-end}
+.abtn{padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);font-size:11px;cursor:pointer;transition:all .2s}
+.abtn:hover{background:rgba(255,255,255,.12);color:#fff}
+.abtn.primary{background:linear-gradient(135deg,#667eea,#764ba2);border:none;color:#fff}
+.rt-card{background:rgba(255,255,255,.04);border-radius:14px;padding:14px;margin-bottom:8px;border:1px solid rgba(255,255,255,.06)}
+.rt-title{font-size:13px;font-weight:600;color:#667eea;margin-bottom:8px}
+.rt-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
+.rt-label{font-size:10px;color:rgba(255,255,255,.3);min-width:50px;padding-top:2px}
+.rt-text{flex:1;font-size:14px;color:#fff;min-height:20px;line-height:1.4}
+.rt-dialect{color:#f093fb}
+.rt-mandarin{color:#87ceeb}
+.history-item{background:rgba(255,255,255,.03);border-radius:10px;padding:10px;margin-bottom:6px;border:1px solid rgba(255,255,255,.04)}
+.history-from{font-size:11px;color:rgba(255,255,255,.4)}
+.history-to{font-size:13px;color:#f093fb;margin-top:2px}
+.history-time{font-size:9px;color:rgba(255,255,255,.2);margin-top:4px;text-align:right}
+.dict-section{margin-bottom:16px}
+.dict-title{font-size:13px;font-weight:600;color:#f093fb;margin-bottom:6px}
+.dict-items{display:flex;flex-wrap:wrap;gap:4px}
+.dict-item{background:rgba(255,255,255,.05);border-radius:6px;padding:4px 10px;font-size:11px;display:flex;align-items:center;gap:4px}
+.dict-from{color:rgba(255,255,255,.7)}.dict-arrow{color:#667eea}.dict-to{color:#f093fb;font-weight:600}
+.corpus-item{background:rgba(255,255,255,.03);border-radius:10px;padding:10px;margin-bottom:6px;border:1px solid rgba(255,255,255,.04)}
+.corpus-d{font-size:13px;color:#f093fb;margin-bottom:2px}
+.corpus-m{font-size:11px;color:rgba(255,255,255,.5)}
+.corpus-meta{display:flex;gap:4px;margin-top:4px;align-items:center}
+.corpus-tag{background:rgba(102,126,234,.15);color:#667eea;border-radius:4px;padding:1px 6px;font-size:9px}
+.search-box{display:flex;gap:6px;margin-bottom:8px}
+.search-input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:8px 12px;color:#fff;font-size:13px;outline:none}
+.filter-row{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.filter-pill{background:rgba(255,255,255,.06);border-radius:10px;padding:3px 10px;font-size:10px;color:rgba(255,255,255,.5);cursor:pointer}
+.filter-pill.active{background:rgba(102,126,234,.15);color:#667eea}
+.load-more{display:block;margin:8px auto;padding:6px 16px;border-radius:8px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.4);border:none;font-size:11px;cursor:pointer}
+.qp-row{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.qp-btn{background:rgba(255,255,255,.06);border-radius:8px;padding:4px 10px;font-size:10px;color:rgba(255,255,255,.5);cursor:pointer;border:none}
+.qp-btn:hover{background:rgba(255,255,255,.12);color:#fff}
+.pinyin-input{background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.2);border-radius:8px;padding:6px 10px;margin-top:8px;font-size:10px;color:#81c784;line-height:1.4}
+.pinyin-table{width:100%;border-collapse:collapse;margin-top:6px}
+.pinyin-table td{padding:3px 6px;font-size:10px;border-bottom:1px solid rgba(255,255,255,.04)}
+.pinyin-table .dt{color:#f093fb}.pinyin-table .py{color:#81c784}.pinyin-table .mn{color:rgba(255,255,255,.4)}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>东台方言实时翻译</h1>
+<div class="sub">v8.1 · 400K语料 · 双向翻译 · 语音优化</div>
+<div class="stats-bar">
+<span class="stat-pill">强方言率99.7%</span>
+<span class="stat-pill">150+规则</span>
+<span class="stat-pill">500+词汇</span>
+<span class="stat-pill">语音优化</span>
+</div>
+</div>
+
+<div class="tab-nav">
+<button class="tab-btn active" onclick="swTab('trans',this)">🔄 翻译</button>
+<button class="tab-btn" onclick="swTab('voice',this)">🎙️ 语音</button>
+<button class="tab-btn" onclick="swTab('pinyin',this)">🔤 拼音</button>
+<button class="tab-btn" onclick="swTab('dict',this)">📚 词典</button>
+<button class="tab-btn" onclick="swTab('corpus',this)">📖 语料</button>
+</div>
+
+<!-- 翻译标签 -->
+<div id="tab-trans" class="tab-content active">
+<div class="card">
+<div class="mode-row">
+<button class="mode-btn active" onclick="setMode('d',this)">普通话 → 东台话</button>
+<button class="mode-btn" onclick="setMode('m',this)">东台话 → 普通话</button>
+</div>
+<textarea class="input-area" id="inputText" placeholder="请输入要翻译的文字..." oninput="onInput()"></textarea>
+<div class="voice-section">
+<button class="voice-btn" id="voiceBtn" onclick="toggleVoice()">🎙️</button>
+<div class="voice-hint" id="voiceHint">点击语音输入</div>
+</div>
+<div class="voice-tip">
+💡 <b>语音识别提示</b>：说东台话时请<b>放慢语速</b>，系统会自动将识别的普通话转为东台话；说普通话正常语速即可。
+</div>
+</div>
+<div class="card">
+<div class="result-label" id="rLabel">东台话翻译结果</div>
+<div class="result-area">
+<div class="result-text" id="rText">—</div>
+</div>
+<div class="result-actions">
+<button class="abtn" onclick="copyR()">📋 复制</button>
+<button class="abtn" onclick="speakR()">🔊 朗读</button>
+<button class="abtn" onclick="clearR()">🗑️ 清除</button>
+</div>
+</div>
+<div class="card">
+<div style="font-size:11px;color:rgba(255,255,255,.3);margin-bottom:6px">💬 常用短语</div>
+<div class="qp-row">
+<button class="qp-btn" onclick="qp('我们今天去哪里玩')">我们今天去哪</button>
+<button class="qp-btn" onclick="qp('这个东西多少钱')">这个多少钱</button>
+<button class="qp-btn" onclick="qp('你知道吗')">你知道吗</button>
+<button class="qp-btn" onclick="qp('怎么走')">怎么走</button>
+<button class="qp-btn" onclick="qp('在这里等一下')">在这里等一下</button>
+<button class="qp-btn" onclick="qp('你在说什么')">你在说什么</button>
+<button class="qp-btn" onclick="qp('我俫今朝去咯块白相')">我俫今朝去白相</button>
+<button class="qp-btn" onclick="qp('咯个杲昃好多钱呃')">咯个杲昃好多钱</button>
+<button class="qp-btn" onclick="qp('你晓得弗')">你晓得弗</button>
+<button class="qp-btn" onclick="qp('我蛮蛮好谢谢呃')">我蛮蛮好谢谢</button>
+</div>
+</div>
+</div>
+
+<!-- 语音实时标签 -->
+<div id="tab-voice" class="tab-content">
+<div class="card">
+<div class="rt-title">🎙️ 实时语音翻译</div>
+<div style="font-size:11px;color:rgba(255,255,255,.3);margin-bottom:12px">连续语音识别→智能方言匹配→双语对照</div>
+<div class="voice-tip" style="margin-bottom:12px">
+<b>东台话语音技巧：</b><br>
+1️⃣ 放慢语速，一字一顿<br>
+2️⃣ 系统识别普通话后自动转为东台话<br>
+3️⃣ 若识别不准，可手动编辑后翻译
+</div>
+<div class="rt-row">
+<div class="rt-label">🗣️ 识别:</div>
+<div class="rt-text rt-mandarin" id="rtRecog">—</div>
+</div>
+<div class="rt-row">
+<div class="rt-label">🔄 东台话:</div>
+<div class="rt-text rt-dialect" id="rtDongtai">—</div>
+</div>
+<div class="rt-row">
+<div class="rt-label">🔊 朗读:</div>
+<div style="flex:1">
+<button class="abtn" onclick="speakText('rtDongtai')">🔊 东台话</button>
+<button class="abtn" onclick="speakText('rtRecog')">🔊 原文</button>
+</div>
+</div>
+<div style="text-align:center;margin-top:16px">
+<button class="voice-btn" id="rtVoiceBtn" onclick="toggleRTVoice()">🎙️</button>
+<div class="voice-hint" id="rtVoiceHint">点击开始实时翻译</div>
+</div>
+</div>
+<div class="card" id="rtHistory"></div>
+</div>
+
+<!-- 拼音输入辅助标签 -->
+<div id="tab-pinyin" class="tab-content">
+<div class="card">
+<div style="font-size:13px;font-weight:600;color:#81c784;margin-bottom:8px">🔤 东台话拼音输入指南</div>
+<div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:12px">东台话无标准拼音，以下是常用方言词的普通话谐音参考，帮助你用输入法打出方言</div>
+<div class="pinyin-input">
+<div style="font-weight:600;margin-bottom:6px">人称/代词</div>
+<table class="pinyin-table">
+<tr><td class="dt">我俫</td><td class="py">wo lai</td><td class="mn">我们</td></tr>
+<tr><td class="dt">你俫</td><td class="py">ni lai</td><td class="mn">你们</td></tr>
+<tr><td class="dt">他俫</td><td class="py">ta lai</td><td class="mn">他们</td></tr>
+<tr><td class="dt">咯块</td><td class="py">ge kuai</td><td class="mn">这里</td></tr>
+<tr><td class="dt">嗰块</td><td class="py">ge kuai</td><td class="mn">那里</td></tr>
+<tr><td class="dt">咯个</td><td class="py">ge ge</td><td class="mn">这个</td></tr>
+<tr><td class="dt">嗰个</td><td class="py">ge ge</td><td class="mn">那个</td></tr>
+<tr><td class="dt">什的</td><td class="py">shi di</td><td class="mn">什么</td></tr>
+<tr><td class="dt">怎呃</td><td class="py">zen e</td><td class="mn">怎么</td></tr>
+<tr><td class="dt">哪块</td><td class="py">na kuai</td><td class="mn">哪里</td></tr>
+</table>
+</div>
+<div class="pinyin-input" style="margin-top:8px">
+<div style="font-weight:600;margin-bottom:6px">核心词汇</div>
+<table class="pinyin-table">
+<tr><td class="dt">杲昃</td><td class="py">gao ze</td><td class="mn">东西</td></tr>
+<tr><td class="dt">晓得</td><td class="py">xiao de</td><td class="mn">知道</td></tr>
+<tr><td class="dt">搿歇</td><td class="py">ge xie</td><td class="mn">现在</td></tr>
+<tr><td class="dt">今朝</td><td class="py">jin zhao</td><td class="mn">今天</td></tr>
+<tr><td class="dt">明朝</td><td class="py">min zhao</td><td class="mn">明天</td></tr>
+<tr><td class="dt">蛮蛮</td><td class="py">man man</td><td class="mn">很</td></tr>
+<tr><td class="dt">弗</td><td class="py">fe</td><td class="mn">不</td></tr>
+<tr><td class="dt">没得</td><td class="py">mei de</td><td class="mn">没有</td></tr>
+<tr><td class="dt">白相</td><td class="py">ba xiang</td><td class="mn">玩</td></tr>
+<tr><td class="dt">犯嫌</td><td class="py">fan xian</td><td class="mn">讨厌</td></tr>
+<tr><td class="dt">结棍</td><td class="py">jie gun</td><td class="mn">厉害</td></tr>
+<tr><td class="dt">推板</td><td class="py">tui ban</td><td class="mn">差劲</td></tr>
+<tr><td class="dt">霞子</td><td class="py">xia zi</td><td class="mn">男孩</td></tr>
+<tr><td class="dt">厾</td><td class="py">diu</td><td class="mn">丢</td></tr>
+<tr><td class="dt">豪稍</td><td class="py">hao shao</td><td class="mn">赶紧</td></tr>
+</table>
+</div>
+<div class="pinyin-input" style="margin-top:8px">
+<div style="font-weight:600;margin-bottom:6px">称谓</div>
+<table class="pinyin-table">
+<tr><td class="dt">嗲嗲</td><td class="py">dia dia</td><td class="mn">爷爷</td></tr>
+<tr><td class="dt">嫲嫲</td><td class="py">ma ma</td><td class="mn">奶奶</td></tr>
+<tr><td class="dt">男将</td><td class="py">nan jiang</td><td class="mn">老公</td></tr>
+<tr><td class="dt">女将</td><td class="py">nv jiang</td><td class="mn">老婆</td></tr>
+<tr><td class="dt">锅锅</td><td class="py">guo guo</td><td class="mn">哥哥</td></tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- 词典标签 -->
+<div id="tab-dict" class="tab-content">
+<div class="search-box">
+<input class="search-input" id="dSearch" placeholder="搜索方言词..." oninput="sDict()">
+</div>
+<div id="dContent"></div>
+</div>
+
+<!-- 语料标签 -->
+<div id="tab-corpus" class="tab-content">
+<div class="search-box">
+<input class="search-input" id="cSearch" placeholder="搜索语料..." oninput="sCorpus()">
+</div>
+<div class="filter-row" id="cFilter"></div>
+<div id="cResults"></div>
+<button class="load-more" onclick="lMore()">加载更多</button>
+</div>
+</div>
+
+<script>
+const DW={'我们':'我俫','你们':'你俫','他们':'他俫','自己':'自家','这里':'咯块','那里':'嗰块','这个':'咯个','那个':'嗰个','什么':'什的','怎么':'怎呃','哪里':'哪块','多少':'好多','谁':'哪个','为什么':'为什的','知道':'晓得','看':'望','找':'寻','洗':'汏','玩':'白相','说':'讲','回家':'家去','聊天':'搭寡','睡觉':'困觉','走':'跑','拿':'捏','放':'囥','扔':'掼','想':'忖','喝':'吃','给':'把','丢':'厾','涂':'搨','帮':'帮衬','今天':'今朝','明天':'明朝','昨天':'昨日子','晚上':'侯告','早上':'早起','中午':'中昼','上午':'上昼','下午':'下昼','现在':'搿歇','以前':'老早','刚才':'头先','经常':'刻刻','休息':'歇歇','赶紧':'豪稍','爷爷':'嗲嗲','奶奶':'嫲嫲','爸爸':'爷','妈妈':'姆妈','哥哥':'锅锅','姐姐':'假假','丈夫':'男将','老婆':'女将','老公':'男将','妻子':'女将','小孩':'霞子','男孩':'霞子','邻居':'邻舍','头':'头脑子','肚子':'肚皮','脸':'面孔','眼睛':'眼乌子','耳朵':'耳头','鼻子':'鼻头','脖子':'头颈','膝盖':'脚馒头','早饭':'朝饭','午饭':'中饭','晚饭':'夜饭','黄鳝':'长鱼','螃蟹':'旁海','东西':'杲昃','勺子':'调羹','鸡蛋':'鸡子','客厅':'堂屋','厨房':'灶间','衣服':'衣裳','火柴':'洋火','肥皂':'洋碱','毛巾':'手巾','椅子':'杌子','桌子':'台子','窗户':'窗门','院子':'天井','厉害':'结棍','差劲':'推板','能干':'刷刮','干净':'清爽','舒服':'适意','热闹':'闹忙','聪明':'灵光','笨':'木作','漂亮':'标致','马虎':'搭浆','便宜':'便当','暖和':'暖热','凉快':'风凉','讨厌':'犯嫌','不行':'勿来事','高兴':'忺','烦':'懊糟','累':'吃力','很':'蛮蛮','非常':'交关','太':'忒','没有':'没得','不要':'嫑','不':'弗','太阳':'日头','蜈蚣':'百脚','蟾蜍':'赖宝','蛇':'长虫','老鼠':'老虫','蚯蚓':'曲蟮','下雨':'落雨'};
+const GR=[[/[吗嘛]([？！?])$/,'呃$1'],[/[吗嘛]([，。])$/,'呃$1'],[/[吗嘛]$/,'呃'],[/了([，。！？])/,'呃$1'],[/了$/,'呃'],[/[呢呐]$/,'哩'],[/[吧罢]$/,'啘'],[/是不是/,'阿是'],[/要不要/,'阿要'],[/好不好/,'阿好'],[/有没有/,'阿有'],[/行不行/,'来事弗来事'],[/会不会/,'会弗会'],[/对不对/,'对弗对'],[/懂不懂/,'懂弗懂'],[/去不去/,'去弗去'],[/在这里/,'勒咯块'],[/在那里/,'勒嗰块'],[/的([，。！？])/,'个$1'],[/的$/,'个'],[/给我/,'把我'],[/给你/,'把你'],[/给他/,'把他'],[/能(.+?)吗/,'好$1弗'],[/可以(.+?)吗/,'好$1弗'],[/有(.+?)吗/,'阿有$1'],[/是(.+?)吗/,'阿是$1'],[/要(.+?)吗/,'阿要$1'],[/挺(.+?)的/,'蛮蛮$1个'],[/一定/,'肯定'],[/能不能/,'好弗好'],[/会不会/,'会弗会']];
+const RW={};for(const[m,d]of Object.entries(DW))if(!RW[d])RW[d]=m;RW['呃']='了/吗';RW['哩']='呢';RW['啘']='吧';RW['个']='的';RW['勒']='在';RW['弗']='不';
+const RGR=[[/呃([？！?])$/,'吗$1'],[/呃$/,'了'],[/哩$/,'呢'],[/啘$/,'吧'],[/阿是/,'是不是'],[/阿要/,'要不要'],[/阿好/,'好不好'],[/阿有/,'有没有'],[/来事弗来事/,'行不行'],[/会弗会/,'会不会'],[/勒咯块/,'在这里'],[/勒嗰块/,'在那里'],[/个([，。！？])/,'的$1'],[/个$/,'的'],[/把我/,'给我'],[/把你/,'给你'],[/把他/,'给他'],[/好(.+?)弗/,'能$1吗'],[/阿有(.+)/,'有$1吗'],[/阿是(.+)/,'是$1吗'],[/阿要(.+)/,'要$1吗'],[/蛮蛮(.+?)个/,'挺$1的'],[/肯定/,'一定']];
+
+// Dialect phonetic mapping: when STT recognizes dialect pronunciation as mandarin,
+// this helps convert it back to dialect
+const PHONETIC_MAP = {
+  // STT might hear "ge kuai" → 这里, we convert → 咯块
+  '这里': '咯块', '那里': '嗰块', '这个': '咯个', '那个': '嗰个',
+  // STT might hear "wulai" → 我们
+  '我们': '我俫', '你们': '你俫', '他们': '他俫',
+  // Common STT misrecognitions of dialect speech
+  '知道': '晓得', '什么': '什的', '怎么': '怎呃', '哪里': '哪块',
+  '东西': '杲昃', '现在': '搿歇', '今天': '今朝', '明天': '明朝',
+  '没有': '没得', '很': '蛮蛮', '给': '把', '看': '望',
+};
+
+function er(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\\\$&')}
+let mode='d',dt=null;
+function tr(t,m){if(!t.trim())return '';let r=t;if(m==='d'){const ws=Object.entries(DW).sort((a,b)=>b[0].length-a[0].length);for(const[k,v]of ws)if(r.includes(k))r=r.replace(new RegExp(er(k),'g'),v);for(const[p,rp]of GR)r=r.replace(new RegExp(p.source,p.flags),rp);}else{const ws=Object.entries(RW).sort((a,b)=>b[0].length-a[0].length);for(const[k,v]of ws)if(r.includes(k))r=r.replace(new RegExp(er(k),'g'),v);for(const[p,rp]of RGR)r=r.replace(new RegExp(p.source,p.flags),rp);}return r;}
+
+// Enhanced voice: when dialect speech is recognized as mandarin by STT,
+// auto-convert to dialect
+function voiceToDialect(text) {
+  let r = text;
+  const ws = Object.entries(DW).sort((a,b)=>b[0].length-a[0].length);
+  for (const [k,v] of ws) {
+    if (r.includes(k)) r = r.replace(new RegExp(er(k),'g'), v);
+  }
+  for (const [p,rp] of GR) {
+    r = r.replace(new RegExp(p.source, p.flags), rp);
+  }
+  return r;
+}
+
+function swTab(t,btn){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));btn.classList.add('active');document.getElementById('tab-'+t).classList.add('active');if(t==='corpus')loadC();if(t==='dict')loadD();}
+function setMode(m,btn){mode=m;document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('rLabel').textContent=m==='d'?'东台话翻译结果':'普通话翻译结果';onInput();}
+function onInput(){clearTimeout(dt);dt=setTimeout(()=>{const t=document.getElementById('inputText').value;document.getElementById('rText').textContent=t.trim()?tr(t,mode):'—';},120);}
+function qp(t){document.getElementById('inputText').value=t;onInput();}
+function copyR(){const t=document.getElementById('rText').textContent;if(t&&t!=='—')navigator.clipboard.writeText(t).then(()=>toast('已复制'));}
+function speakR(){const t=document.getElementById('rText').textContent;if(t&&t!=='—'&&window.speechSynthesis){const u=new SpeechSynthesisUtterance(t);u.lang='zh-CN';u.rate=0.85;window.speechSynthesis.speak(u);}}
+function speakText(id){const t=document.getElementById(id)?.textContent;if(t&&t!=='—'&&window.speechSynthesis){const u=new SpeechSynthesisUtterance(t);u.lang='zh-CN';u.rate=0.85;window.speechSynthesis.speak(u);}}
+function clearR(){document.getElementById('inputText').value='';document.getElementById('rText').textContent='—';}
+function toast(m){const d=document.createElement('div');d.textContent=m;d.style.cssText='position:fixed;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.8);color:#fff;padding:6px 16px;border-radius:16px;font-size:12px;z-index:9999';document.body.appendChild(d);setTimeout(()=>d.remove(),1500);}
+
+// === FIXED: Single voice input with permission caching ===
+let vRec=false,vRecog=null,permGranted=false;
+// Check permission on load
+if (navigator.permissions) {
+  navigator.permissions.query({name:'microphone'}).then(r=>{
+    permGranted = r.state==='granted';
+    r.onchange = ()=>{ permGranted = r.state==='granted'; };
+  }).catch(()=>{});
+}
+
+function toggleVoice(){
+  if(!('webkitSpeechRecognition'in window)&&!('SpeechRecognition'in window)){toast('浏览器不支持语音，请用Chrome');return;}
+  if(vRec){stopV();return;}
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vRecog=new SR();
+  vRecog.lang='zh-CN';
+  vRecog.continuous=false;
+  vRecog.interimResults=true;  // Show interim results for faster feedback
+  vRecog.maxAlternatives=1;
+  
+  vRecog.onstart=()=>{
+    vRec=true;
+    document.getElementById('voiceBtn').classList.add('recording');
+    document.getElementById('voiceBtn').textContent='⏹️';
+    document.getElementById('voiceHint').textContent='正在录音...请说话';
+  };
+  
+  vRecog.onresult=e=>{
+    let finalT='',interT='';
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      const t=e.results[i][0].transcript;
+      if(e.results[i].isFinal) finalT+=t;
+      else interT+=t;
+    }
+    const text=finalT||interT;
+    if(text.trim()){
+      // Auto-detect: if user is speaking dialect, convert STT result
+      document.getElementById('inputText').value=text;
+      onInput();
+    }
+  };
+  
+  vRecog.onerror=e=>{
+    if(e.error==='not-allowed'){
+      toast('请允许麦克风权限后重试');
+    } else if(e.error==='no-speech'){
+      toast('未检测到语音，请再试一次');
+    } else if(e.error!=='aborted'){
+      toast('语音错误: '+e.error);
+    }
+    stopV();
+  };
+  
+  vRecog.onend=()=>{
+    stopV();
+  };
+  
+  try {
+    vRecog.start();
+  } catch(e) {
+    toast('请刷新页面后重试');
+  }
+}
+
+function stopV(){
+  vRec=false;
+  try{ if(vRecog) vRecog.stop(); }catch(e){}
+  const b=document.getElementById('voiceBtn');
+  if(b){b.classList.remove('recording');b.textContent='🎙️';}
+  const h=document.getElementById('voiceHint');
+  if(h) h.textContent='点击语音输入';
+  vRecog=null;
+}
+
+// === FIXED: Real-time voice with proper restart logic ===
+let rtRec=false,rtRecog=null,rtHistory=[],rtRestartCount=0;
+const RT_MAX_RESTARTS=50; // Allow many restarts for continuous mode
+
+function toggleRTVoice(){
+  if(!('webkitSpeechRecognition'in window)&&!('SpeechRecognition'in window)){toast('浏览器不支持语音，请用Chrome');return;}
+  if(rtRec){stopRT();return;}
+  rtRestartCount=0;
+  startRT();
+}
+
+function startRT(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  rtRecog=new SR();
+  rtRecog.lang='zh-CN';
+  rtRecog.continuous=false; // Use single-session to avoid permission loop
+  rtRecog.interimResults=true;
+  rtRecog.maxAlternatives=1;
+  
+  rtRecog.onstart=()=>{
+    rtRec=true;
+    document.getElementById('rtVoiceBtn').classList.add('recording');
+    document.getElementById('rtVoiceBtn').textContent='⏹️';
+    document.getElementById('rtVoiceHint').textContent='正在实时翻译...点击停止';
+  };
+  
+  rtRecog.onresult=e=>{
+    let finalT='',interT='';
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      const t=e.results[i][0].transcript;
+      if(e.results[i].isFinal) finalT+=t;
+      else interT+=t;
+    }
+    const text=finalT||interT;
+    if(text.trim()){
+      // Show recognized text
+      document.getElementById('rtRecog').textContent=text;
+      // Auto-convert: STT hears dialect pronunciation as mandarin, convert to dialect
+      const dialectText=voiceToDialect(text);
+      document.getElementById('rtDongtai').textContent=dialectText;
+      if(finalT){
+        rtHistory.unshift({from:text,to:dialectText,time:new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})});
+        if(rtHistory.length>20)rtHistory.pop();
+        renderRTH();
+      }
+    }
+  };
+  
+  rtRecog.onerror=e=>{
+    if(e.error==='not-allowed'){
+      toast('请允许麦克风权限');
+      stopRT();
+    } else if(e.error==='no-speech'){
+      // No speech detected, just restart silently
+    } else if(e.error==='aborted'){
+      return; // User stopped
+    } else {
+      // Other error, try restart
+    }
+    // Auto-restart on non-fatal errors
+    if(rtRec && rtRestartCount < RT_MAX_RESTARTS){
+      rtRestartCount++;
+      setTimeout(()=>{ if(rtRec) startRT(); }, 300);
+    }
+  };
+  
+  rtRecog.onend=()=>{
+    // Auto-restart for continuous mode
+    if(rtRec && rtRestartCount < RT_MAX_RESTARTS){
+      rtRestartCount++;
+      setTimeout(()=>{ if(rtRec) startRT(); }, 100);
+    }
+  };
+  
+  try {
+    rtRecog.start();
+  } catch(e) {
+    toast('语音启动失败，请刷新页面');
+    stopRT();
+  }
+}
+
+function stopRT(){
+  rtRec=false;
+  rtRestartCount=RT_MAX_RESTARTS; // Prevent further restarts
+  try{ if(rtRecog){rtRecog.continuous=false;rtRecog.stop();} }catch(e){}
+  const b=document.getElementById('rtVoiceBtn');
+  if(b){b.classList.remove('recording');b.textContent='🎙️';}
+  const h=document.getElementById('rtVoiceHint');
+  if(h) h.textContent='点击开始实时翻译';
+  rtRecog=null;
+}
+
+function renderRTH(){document.getElementById('rtHistory').innerHTML=rtHistory.map(h=>'<div class="history-item"><div class="history-from">'+h.from+'</div><div class="history-to">'+h.to+'</div><div class="history-time">'+h.time+'</div></div>').join('');}
+
+// Corpus
+const SC=[{d:'我俫今朝去咯块望望好弗好？',m:'我们今天去那里看看行不行？',c:'社交融入',s:'日常对话',f:4},{d:'咯个杲昃好多钱呃？',m:'这个东西多少钱了？',c:'生存刚需',s:'购物消费',f:4},{d:'先生，我肚皮蛮蛮痛呃',m:'医生，我肚子很疼了',c:'医疗健康',s:'门诊就医',f:5},{d:'你晓得怎呃去社保局弗？',m:'你知道怎么去社保局吗？',c:'政务办事',s:'社保咨询',f:3},{d:'搿歇没得班上呃，怎呃办？',m:'现在没有班上了，怎么办？',c:'职场沟通',s:'求职就业',f:4},{d:'今朝个鱼汤面蛮蛮好吃',m:'今天的鱼汤面很好吃',c:'文化生活',s:'东台特色',f:3},{d:'杲昃蛮蛮推板呃',m:'东西很差劲了',c:'方言文化',s:'方言成语',f:5},{d:'活鲜活跳——蛮蛮结棍',m:'活蹦乱跳——很厉害',c:'方言文化',s:'歇后语',f:5},{d:'拖汤滴水——弗爽气',m:'拖拖拉拉——不干脆',c:'方言文化',s:'歇后语',f:5},{d:'假马日鬼——装模作样',m:'假马日鬼——装模作样',c:'方言文化',s:'俏皮话',f:5},{d:'快递勒哪块取呃？',m:'快递在哪里取了？',c:'生存刚需',s:'快递物流',f:3},{d:'今夜头跳弗跳舞呃？',m:'今晚跳不跳舞了？',c:'社交融入',s:'广场舞',f:4},{d:'老早没得望见呃！',m:'很久没有看见了！',c:'社交融入',s:'同学聚会',f:4},{d:'把只脉望望',m:'把一个脉看看',c:'医疗健康',s:'中医养生',f:3},{d:'发绣怎呃学呃？',m:'发绣怎么学了？',c:'文化生活',s:'非遗传承',f:3},{d:'董永卖身葬父个故事',m:'董永卖身葬父的故事',c:'方言文化',s:'方言故事',f:3},{d:'我蛮蛮吃力呃，寻歇一歇',m:'我很累了，要休息一下',c:'职场沟通',s:'职场日常',f:4},{d:'嗲嗲颈椎病蛮久呃',m:'爷爷颈椎病很久了',c:'医疗健康',s:'老年健康',f:4},{d:'嫲嫲腰蛮蛮痛呃，我俫寻先生望望',m:'奶奶腰很疼了，我们找医生看看',c:'医疗健康',s:'老年健康',f:4},{d:'你俫阿要一淘去白相？',m:'你们要不要一起去玩？',c:'社交融入',s:'日常对话',f:5},{d:'咯块个房价蛮蛮贵呃',m:'这里的房价很贵了',c:'生存刚需',s:'住房租房',f:3},{d:'明朝我俫去弶港吃海鲜',m:'明天我们去弶港吃海鲜',c:'文化生活',s:'东台特色',f:4},{d:'啥人晓得咯块阿有银行弗？',m:'谁知道这里有没有银行？',c:'生存刚需',s:'银行服务',f:5},{d:'我俫家个霞子蛮蛮灵光',m:'我们家的孩子很聪明',c:'社交融入',s:'家庭关系',f:4},{d:'搿歇弗晓得怎呃弄呃',m:'现在不知道怎么弄了',c:'职场沟通',s:'职场日常',f:4}];
+let curCat='all',cPage=0;
+const cats=[{k:'all',n:'全部'},{k:'生存刚需',n:'生存'},{k:'社交融入',n:'社交'},{k:'医疗健康',n:'医疗'},{k:'政务办事',n:'政务'},{k:'职场沟通',n:'职场'},{k:'文化生活',n:'文化'},{k:'方言文化',n:'方言'}];
+function fCat(c,btn){curCat=c;cPage=0;document.querySelectorAll('.filter-pill').forEach(p=>p.classList.remove('active'));btn.classList.add('active');loadC();}
+function sCorpus(){cPage=0;loadC();}
+function loadC(){const q=(document.getElementById('cSearch')?.value||'').toLowerCase();let items=SC;if(curCat!=='all')items=items.filter(i=>i.c===curCat);if(q)items=items.filter(i=>i.d.toLowerCase().includes(q)||i.m.toLowerCase().includes(q));const end=(cPage+1)*20;const fh=document.getElementById('cFilter');if(fh&&!fh.innerHTML)fh.innerHTML=cats.map(c=>'<span class="filter-pill'+(c.k===curCat?' active':'')+'" onclick="fCat(\\''+c.k+'\\',this)">'+c.n+'</span>').join('');document.getElementById('cResults').innerHTML=items.slice(0,end).map(i=>'<div class="corpus-item"><div class="corpus-d">'+i.d+'</div><div class="corpus-m">'+i.m+'</div><div class="corpus-meta"><span class="corpus-tag">'+i.c+'</span><span class="corpus-tag">'+i.s+'</span></div></div>').join('');document.querySelector('.load-more').style.display=end>=items.length?'none':'block';}
+function lMore(){cPage++;loadC();}
+const DS={'人称代词':{'我们':'我俫','你们':'你俫','他们':'他俫','自己':'自家','这里':'咯块','那里':'嗰块','这个':'咯个','那个':'嗰个'},'疑问词':{'什么':'什的','怎么':'怎呃','哪里':'哪块','多少':'好多','谁':'哪个','为什么':'为什的'},'核心动词':{'知道':'晓得','看':'望','找':'寻','洗':'汏','玩':'白相','说':'讲','回家':'家去','聊天':'搭寡','睡觉':'困觉','走':'跑','拿':'捏','放':'囥','扔':'掼','想':'忖','喝':'吃','给':'把','丢':'厾','涂':'搨','帮':'帮衬'},'时间词':{'今天':'今朝','明天':'明朝','昨天':'昨日子','晚上':'侯告','早上':'早起','中午':'中昼','上午':'上昼','下午':'下昼','现在':'搿歇','以前':'老早','刚才':'头先','经常':'刻刻','休息':'歇歇','赶紧':'豪稍'},'称谓':{'爷爷':'嗲嗲','奶奶':'嫲嫲','爸爸':'爷','妈妈':'姆妈','哥哥':'锅锅','姐姐':'假假','丈夫':'男将','老婆':'女将','小孩':'霞子','邻居':'邻舍'},'身体部位':{'头':'头脑子','肚子':'肚皮','脸':'面孔','眼睛':'眼乌子','耳朵':'耳头','鼻子':'鼻头','脖子':'头颈','膝盖':'脚馒头'},'食物':{'早饭':'朝饭','午饭':'中饭','晚饭':'夜饭','黄鳝':'长鱼','螃蟹':'旁海','东西':'杲昃','勺子':'调羹','鸡蛋':'鸡子'},'家居':{'客厅':'堂屋','厨房':'灶间','衣服':'衣裳','火柴':'洋火','肥皂':'洋碱','毛巾':'手巾','椅子':'杌子','桌子':'台子','窗户':'窗门','院子':'天井'},'形容词':{'厉害':'结棍','差劲':'推板','能干':'刷刮','干净':'清爽','舒服':'适意','热闹':'闹忙','聪明':'灵光','笨':'木作','漂亮':'标致','马虎':'搭浆','便宜':'便当','讨厌':'犯嫌','不行':'勿来事','高兴':'忺','烦':'懊糟','累':'吃力'},'程度/否定':{'很':'蛮蛮','非常':'交关','太':'忒','没有':'没得','不要':'嫑','不':'弗'},'动物/自然':{'太阳':'日头','蜈蚣':'百脚','蟾蜍':'赖宝','蛇':'长虫','老鼠':'老虫','蚯蚓':'曲蟮','下雨':'落雨'}};
+function loadD(){const q=(document.getElementById('dSearch')?.value||'').toLowerCase();let h='';for(const[sec,items]of Object.entries(DS)){let fi=Object.entries(items);if(q)fi=fi.filter(([k,v])=>k.toLowerCase().includes(q)||v.toLowerCase().includes(q));if(!fi.length)continue;h+='<div class="dict-section"><div class="dict-title">'+sec+'</div><div class="dict-items">'+fi.map(([k,v])=>'<div class="dict-item"><span class="dict-from">'+k+'</span><span class="rule-arrow">→</span><span class="dict-to">'+v+'</span></div>').join('')+'</div></div>';}document.getElementById('dContent').innerHTML=h||'<div style="text-align:center;color:rgba(255,255,255,.2);padding:16px">未找到</div>';}
+function sDict(){loadD();}
+document.addEventListener('DOMContentLoaded',()=>{loadC();loadD();});
+</script>
+</body>
+</html>

@@ -6,7 +6,6 @@ Page({
     inputText: '',
     resultText: '',
     recording: false,
-    rtRecording: false,
     voiceText: '',
     voiceResult: '',
     history: [],
@@ -28,9 +27,32 @@ Page({
     ]
   },
 
-  onShow() {
-    // 页面显示时
+  onLoad() {
+    // Check and request record permission ONCE on load, not every time
+    this.checkRecordPermission();
   },
+
+  checkRecordPermission() {
+    const that = this;
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.record'] === false) {
+          // User previously denied - show one-time explanation
+          wx.showModal({
+            title: '语音翻译需要录音权限',
+            content: '东台方言翻译需要使用麦克风进行语音识别。说普通话时正常语速，说东台话时请放慢语速。',
+            confirmText: '去授权',
+            cancelText: '暂不',
+            success(r) {
+              if (r.confirm) wx.openSetting();
+            }
+          });
+        }
+      }
+    });
+  },
+
+  onShow() {},
 
   setModeD() {
     this.setData({ mode: 'd' });
@@ -55,7 +77,6 @@ Page({
     }
     const result = translate(inputText, mode);
     
-    // 保存到历史
     const history = this.data.history.slice(0, 19);
     history.unshift({
       from: inputText,
@@ -72,50 +93,114 @@ Page({
     this.doTranslate();
   },
 
+  // FIXED: Only authorize once, use RecorderManager after that
   toggleVoice() {
     const that = this;
+    
     if (this.data.recording) {
-      this.setData({ recording: false });
+      this.stopRecording();
       return;
     }
     
-    wx.authorize({
-      scope: 'scope.record',
-      success() {
-        that.setData({ recording: true });
-        const manager = wx.getRecorderManager();
+    // Check if we already have permission
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.record'] === false) {
+          // Previously denied
+          wx.showModal({
+            title: '需要录音权限',
+            content: '请在设置中开启录音权限以使用语音翻译。说东台话时请放慢语速。',
+            confirmText: '去设置',
+            success(r) {
+              if (r.confirm) wx.openSetting();
+            }
+          });
+          return;
+        }
         
-        manager.onStop((res) => {
-          that.setData({ recording: false });
-          // 使用微信同声传译插件或降级
-          wx.showToast({ title: '语音识别需配置同声传译插件', icon: 'none' });
-        });
-        
-        manager.onStart(() => {});
-        manager.start({ format: 'mp3', duration: 60000 });
-        
-        // 自动5秒后停止
-        setTimeout(() => {
-          if (that.data.recording) {
-            manager.stop();
-          }
-        }, 5000);
-      },
-      fail() {
-        wx.showModal({
-          title: '需要录音权限',
-          content: '请在设置中开启录音权限',
-          confirmText: '去设置',
-          success(res) {
-            if (res.confirm) wx.openSetting();
-          }
-        });
+        // Either granted or not yet asked - start recording
+        // wx.getRecorderManager doesn't need authorize again if already granted
+        that.startRecording();
       }
     });
   },
 
-  toggleRealtimeVoice() {
-    this.toggleVoice();
+  startRecording() {
+    const that = this;
+    const manager = wx.getRecorderManager();
+    
+    manager.onStart(() => {
+      that.setData({ 
+        recording: true,
+        voiceText: '正在录音...请说话',
+        voiceResult: '等待翻译...'
+      });
+    });
+    
+    manager.onStop((res) => {
+      that.setData({ 
+        recording: false,
+        voiceText: '识别中...'
+      });
+      
+      // Use WeChat speech recognition plugin or built-in
+      // For now, show the result of recording
+      that.recognizeVoice(res);
+    });
+    
+    manager.onError((err) => {
+      that.setData({ recording: false });
+      if (err.errMsg && err.errMsg.includes('auth deny')) {
+        wx.showModal({
+          title: '需要录音权限',
+          content: '请在设置中开启录音权限',
+          confirmText: '去设置',
+          success(r) {
+            if (r.confirm) wx.openSetting();
+          }
+        });
+      } else {
+        wx.showToast({ title: '录音失败，请重试', icon: 'none' });
+      }
+    });
+    
+    manager.start({ 
+      format: 'mp3', 
+      duration: 10000,  // 10 seconds max
+      sampleRate: 16000,
+      numberOfChannels: 1,
+      encodeBitRate: 96000
+    });
+    
+    // Auto-stop after 10s
+    setTimeout(() => {
+      if (that.data.recording) {
+        that.stopRecording();
+      }
+    }, 10000);
+  },
+
+  stopRecording() {
+    const manager = wx.getRecorderManager();
+    manager.stop();
+  },
+
+  recognizeVoice(res) {
+    // WeChat mini program speech recognition requires:
+    // 1. WeChat同声传译插件 (plugin: wx6e2a088ae8371c11) for speech-to-text
+    // 2. Or use server-side API
+    
+    // For now, prompt user to use input method voice
+    this.setData({
+      voiceText: '语音识别需配置同声传译插件',
+      voiceResult: '请使用输入法语音功能'
+    });
+    
+    wx.showToast({ 
+      title: '请使用输入法语音输入', 
+      icon: 'none',
+      duration: 2000
+    });
   },
 
   copyResult() {
@@ -130,7 +215,9 @@ Page({
   },
 
   speakResult() {
-    wx.showToast({ title: '朗读需TTS插件', icon: 'none' });
+    // TTS in WeChat mini program requires plugin or server API
+    // The WeChat同声传译插件 also supports TTS
+    wx.showToast({ title: '朗读需配置同声传译插件', icon: 'none' });
   },
 
   clearInput() {

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="card" style="text-align:center;padding:20rpx 16rpx">
+    <view class="gradient-text" style="font-size:36rpx;font-weight:700">🔤 东台话拼音指南</view>
+    <view style="font-size:22rpx;color:rgba(255,255,255,.4);margin-top:8rpx">用普通话拼音打出东台话</view>
+  </view>
+  
+  <view class="card">
+    <view style="font-size:13px;font-weight:600;color:#81c784;margin-bottom:12rpx">💡 语音识别提示</view>
+    <view style="font-size:24rpx;color:rgba(255,255,255,.5);line-height:1.6">
+      说东台话时请<b style="color:#ffc107">放慢语速</b>，系统会自动将识别的普通话转为东台话。
+      若识别不准，可手动编辑后翻译。
+    </view>
+  </view>
+  
+  <view class="card" wx:for="{{sections}}" wx:key="title">
+    <view style="font-size:13px;font-weight:600;color:#f093fb;margin-bottom:12rpx">{{item.title}}</view>
+    <view wx:for="{{item.items}}" wx:for-item="word" wx:key="dt" 
+          style="display:flex;gap:12rpx;padding:8rpx 0;border-bottom:1rpx solid rgba(255,255,255,.04)">
+      <view style="color:#f093fb;min-width:100rpx;font-size:28rpx">{{word.dt}}</view>
+      <view style="color:#81c784;min-width:140rpx;font-size:24rpx">{{word.py}}</view>
+      <view style="color:rgba(255,255,255,.4);font-size:24rpx">{{word.mn}}</view>
+    </view>
+  </view>
+</view>
