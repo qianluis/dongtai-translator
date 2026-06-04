@@ -1,0 +1,88 @@
+{
+  "results": [
+    {
+      "tag": "ask_meal",
+      "original": "侬吃过饭了没啊",
+      "final": "侬吃过饭了没啊",
+      "similarity": 1.0,
+      "model_used": "both",
+      "confidence": 0.95
+    },
+    {
+      "tag": "ask_where",
+      "original": "俫去哪里啊",
+      "final": "俫去哪里啊",
+      "similarity": 1.0,
+      "model_used": "wu_primary",
+      "confidence": 0.75
+    },
+    {
+      "tag": "comfort",
+      "original": "搿个事体勿要紧个",
+      "final": "搿个事体勿要紧格",
+      "similarity": 1.0,
+      "model_used": "wu_primary",
+      "confidence": 0.75
+    },
+    {
+      "tag": "dinner_plan",
+      "original": "今朝夜头吃点什呢",
+      "final": "今朝夜头吃点什呢",
+      "similarity": 1.0,
+      "model_used": "both",
+      "confidence": 0.95
+    },
+    {
+      "tag": "greeting",
+      "original": "侬好，今朝天气蛮好个",
+      "final": "侬好今朝天气蛮好个",
+      "similarity": 1.0,
+      "model_used": "both",
+      "confidence": 0.95
+    },
+    {
+      "tag": "meta",
+      "original": "我俫东台话蛮有味道个",
+      "final": "我俫东台话蛮有味道个",
+      "similarity": 1.0,
+      "model_used": "wu",
+      "confidence": 0.85
+    },
+    {
+      "tag": "praise",
+      "original": "伊搿人蛮扎实个",
+      "final": "一个人蛮扎实个",
+      "similarity": 0.71,
+      "model_used": "both",
+      "confidence": 0.95
+    },
+    {
+      "tag": "praise_child",
+      "original": "搿个小囡蛮刷刮个",
+      "final": "搿个小囡蛮刷刮个",
+      "similarity": 1.0,
+      "model_used": "wu_primary",
+      "confidence": 0.75
+    },
+    {
+      "tag": "thank",
+      "original": "搿个菜蛮好吃，难为你了",
+      "final": "搿个菜蛮好吃难为你啦",
+      "similarity": 0.9,
+      "model_used": "wu",
+      "confidence": 0.85
+    },
+    {
+      "tag": "visit",
+      "original": "老王俫屋里去下子",
+      "final": "老王俫屋里去下子",
+      "similarity": 1.0,
+      "model_used": "both",
+      "confidence": 0.95
+    }
+  ],
+  "avg_similarity": 0.961,
+  "good_count": 9,
+  "total": 10,
+  "correction_rules_count": 21
+}
