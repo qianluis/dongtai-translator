@@ -1,0 +1,128 @@
+{
+  "wu": [
+    {
+      "file": "dt_ask_meal.wav",
+      "original": "侬吃过饭了没啊",
+      "asr": "侬吃过饭了没啊",
+      "ratio": 1.0,
+      "infer_time": 0.12
+    },
+    {
+      "file": "dt_ask_where.wav",
+      "original": "俫去哪里啊",
+      "asr": "还去哪里啊",
+      "ratio": 0.8,
+      "infer_time": 0.11
+    },
+    {
+      "file": "dt_comfort.wav",
+      "original": "搿个事体勿要紧个",
+      "asr": "格个事体物药紧格",
+      "ratio": 0.57,
+      "infer_time": 0.11
+    },
+    {
+      "file": "dt_dinner_plan.wav",
+      "original": "今朝夜头吃点什呢",
+      "asr": "今朝夜头吃点神呢",
+      "ratio": 0.88,
+      "infer_time": 0.12
+    },
+    {
+      "file": "dt_greeting.wav",
+      "original": "侬好，今朝天气蛮好个",
+      "asr": "弄好今朝天气蛮好个",
+      "ratio": 0.88,
+      "infer_time": 0.14
+    },
+    {
+      "file": "dt_meta.wav",
+      "original": "我俫东台话蛮有味道个",
+      "asr": "我来东台话蛮有味道个",
+      "ratio": 0.9,
+      "infer_time": 0.11
+    },
+    {
+      "file": "dt_praise.wav",
+      "original": "伊搿人蛮扎实个",
+      "asr": "一个人蛮扎十个",
+      "ratio": 0.57,
+      "infer_time": 0.08
+    },
+    {
+      "file": "dt_praise_child.wav",
+      "original": "搿个小囡蛮刷刮个",
+      "asr": "隔个小囡蛮刷瓜个",
+      "ratio": 0.71,
+      "infer_time": 0.1
+    },
+    {
+      "file": "dt_thank.wav",
+      "original": "搿个菜蛮好吃，难为你了",
+      "asr": "隔的菜蛮好吃难为你啦",
+      "ratio": 0.7,
+      "infer_time": 0.12
+    },
+    {
+      "file": "dt_visit.wav",
+      "original": "老王俫屋里去下子",
+      "asr": "老王来屋里去下次",
+      "ratio": 0.75,
+      "infer_time": 0.12
+    }
+  ],
+  "sv": [
+    {
+      "file": "dt_ask_meal.wav",
+      "asr": "萌吃过饭了没啊",
+      "ratio": 0.86
+    },
+    {
+      "file": "dt_ask_where.wav",
+      "asr": "来去哪里啊",
+      "ratio": 0.8
+    },
+    {
+      "file": "dt_comfort.wav",
+      "asr": "格格尸体勿要紧个",
+      "ratio": 0.71
+    },
+    {
+      "file": "dt_dinner_plan.wav",
+      "asr": "今朝夜头吃点神呢",
+      "ratio": 0.88
+    },
+    {
+      "file": "dt_greeting.wav",
+      "asr": "侬好今朝天气蛮好个",
+      "ratio": 1.0
+    },
+    {
+      "file": "dt_meta.wav",
+      "asr": "我来东台话蛮有味道的",
+      "ratio": 0.8
+    },
+    {
+      "file": "dt_praise.wav",
+      "asr": "一个人蛮扎实个",
+      "ratio": 0.71
+    },
+    {
+      "file": "dt_praise_child.wav",
+      "asr": "格格小安蛮刷瓜葛",
+      "ratio": 0.43
+    },
+    {
+      "file": "dt_thank.wav",
+      "asr": "隔的菜蛮好吃难为你了",
+      "ratio": 0.8
+    },
+    {
+      "file": "dt_visit.wav",
+      "asr": "老王来屋里去吓他",
+      "ratio": 0.62
+    }
+  ],
+  "wu_avg": 0.776,
+  "sv_avg": 0.761
+}
