@@ -1,0 +1,57 @@
+{
+  "wu": [],
+  "sv": [
+    {
+      "file": "dt_ask_meal.wav",
+      "asr": "萌吃过饭了没啊",
+      "ratio": 0.86
+    },
+    {
+      "file": "dt_ask_where.wav",
+      "asr": "来去哪里啊",
+      "ratio": 0.8
+    },
+    {
+      "file": "dt_comfort.wav",
+      "asr": "格格尸体勿要紧个",
+      "ratio": 0.71
+    },
+    {
+      "file": "dt_dinner_plan.wav",
+      "asr": "今朝夜头吃点神呢",
+      "ratio": 0.88
+    },
+    {
+      "file": "dt_greeting.wav",
+      "asr": "侬好今朝天气蛮好个",
+      "ratio": 1.0
+    },
+    {
+      "file": "dt_meta.wav",
+      "asr": "我来东台话蛮有味道的",
+      "ratio": 0.8
+    },
+    {
+      "file": "dt_praise.wav",
+      "asr": "一个人蛮扎实个",
+      "ratio": 0.71
+    },
+    {
+      "file": "dt_praise_child.wav",
+      "asr": "格格小安蛮刷瓜葛",
+      "ratio": 0.43
+    },
+    {
+      "file": "dt_thank.wav",
+      "asr": "隔的菜蛮好吃难为你了",
+      "ratio": 0.8
+    },
+    {
+      "file": "dt_visit.wav",
+      "asr": "老王来屋里去吓他",
+      "ratio": 0.62
+    }
+  ],
+  "wu_avg": 0.0,
+  "sv_avg": 0.761
+}
