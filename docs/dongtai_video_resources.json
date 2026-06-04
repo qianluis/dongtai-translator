@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "title": "东台方言语料视频资源汇总",
+    "description": "搜索B站、抖音、YouTube等平台的东台方言视频资源，用于东台方言语料采集",
+    "search_date": "2026-06-04",
+    "dialect_info": {
+      "name": "东台话",
+      "classification": "江淮官话东通片（如泰方言）",
+      "sub_dialects": ["台城话", "堤东话", "堤西话", "街唐话"],
+      "region": "江苏省东台市"
+    }
+  },
+  "bilibili_resources": [
+    {
+      "platform": "bilibili",
+      "url": "https://www.bilibili.com/video/BV1Qo5z6qEXE/",
+      "title": "是挖金，还是握筋，还是嗗筋嘞？？？",
+      "description": "如泰方言区相关视频，标签含泰兴方言、泰兴话、方言学习，与东台话同属如泰方言片",
+      "tags": ["泰兴方言", "如泰方言", "方言学习"],
+      "publish_date": "2026-05-16",
+      "duration": null,
+      "corpus_value": "如泰方言区配音视频，可作对比语料",
+      "notes": "非东台本地但属于同一方言片，有参考价值"
+    },
+    {
+      "platform": "bilibili",
+      "url": "https://www.bilibili.com/video/BV1so5M6TEQW/",
+      "title": "中国最难懂江苏话！南京淮安话超好听，盐城扬州话一句都听不懂",
+      "description": "江苏各地方言对比视频，包含盐城地区方言（东台属盐城）",
+      "tags": ["江苏", "方言", "扬州", "盐城"],
+      "publish_date": "2026-05-12",
+      "duration": null,
+      "corpus_value": "含盐城方言对比，可识别是否有东台话片段",
+      "notes": "需要确认视频中是否包含东台方言片段"
+    },
+    {
+      "platform": "bilibili",
+      "url": "https://www.bilibili.com/blackboard/activity-r1Irp_uEm.html",
+      "title": "bilibili好乡音 方言活动",
+      "description": "B站方言主题视频征集活动，覆盖官话方言、吴语方言等各方言区，可能包含东台方言投稿",
+      "tags": ["方言", "好乡音", "官话方言"],
+      "publish_date": null,
+      "duration": null,
+      "corpus_value": "活动页面，可通过官话方言标签搜索更多东台方言相关投稿",
+      "notes": "建议在B站搜索'东台话''东台方言'标签进一步查找"
+    }
+  ],
+  "douyin_resources": [
+    {
+      "platform": "douyin",
+      "creator_name": "东台老王",
+      "real_name": "王振糠",
+      "douyin_id": "91879583739",
+      "profile_url": "https://www.douyin.com/user/MS4wLjABAAAA91879583739",
+      "feigua_url": "https://dsp.feigua.cn/bloggeropen/8842A3ECAB51F1AD0029163238EDAC2D",
+      "bio": "如泰方言配音小博主一名🙏🏻 希望作品能让大家开心快乐😄 所有作品均为本人真实配音🎙️ 创作不易 叩谢大家的支持🎊",
+      "followers": "~44.8万",
+      "total_likes": "627.8万",
+      "total_works": 571,
+      "avg_likes": "1.1万",
+      "max_single_play": "超3000万",
+      "content_type": "影视二创配音，用东台方言为经典影视片段重新配音",
+      "representative_characters": ["猪八戒", "阿甘", "卓别林"],
+      "signed_with_douyin": true,
+      "company": "东台映弛传媒有限公司",
+      "corpus_value": "极高 - 571个作品均为东台方言真实配音，是最核心的语料来源",
+      "notes": "好人角色声音憨厚，坏人角色声音狡黠，每句台词反复打磨贴合口型，是纯正东台话口语语料"
+    },
+    {
+      "platform": "douyin",
+      "creator_name": "东台分享（东吉）",
+      "douyin_id": null,
+      "feigua_rank": "盐城日榜第2",
+      "followers": "~64.4万",
+      "content_type": "东台本地内容分享",
+      "corpus_value": "中 - 可能包含部分东台方言内容",
+      "notes": "粉丝量大，需进一步确认是否包含方言内容"
+    },
+    {
+      "platform": "douyin",
+      "creator_name": "文化站长",
+      "douyin_id": null,
+      "followers": "~47.5万",
+      "content_type": "地方文化内容",
+      "corpus_value": "中 - 可能包含东台方言文化内容",
+      "notes": "东台本地文化博主"
+    }
+  ],
+  "shipinhao_wechat_resources": [
+    {
+      "platform": "微信视频号",
+      "creator_name": "施卫华",
+      "song_title": "《东台方言》",
+      "description": "施卫华创作的东台方言歌曲，歌词包含大量东台方言词汇：'爬爬凳儿、棉䙞子、拖鞋叫趿靸子……有空坐块来耍子，喝茶嗒呱儿嚼咀子'",
+      "content_type": "AI辅助创作的方言歌曲",
+      "popularity": "先在视频号发布被不断点赞转发，后被搬到抖音播放量过10万，500多位老乡争相拍同款",
+      "corpus_value": "高 - 歌词包含大量纯正东台方言词汇和表达",
+      "notes": "施卫华是'AI音乐达人'，退休后创作60多首家乡主题歌曲，专业作曲+AI辅助"
+    }
+  ],
+  "tencent_video_resources": [
+    {
+      "platform": "腾讯视频",
+      "url": "https://v.qq.com/x/page/k0553x6gg2i.html",
+      "title": "《筑梦月亮山》方言说唱",
+      "description": "以东台'中国好人'陈晓明山区支教为蓝本创作的方言说唱节目，获江苏省曲艺芦花奖节目奖、省文华奖",
+      "performer": "东台市文化馆、东台市锡剧团",
+      "awards": ["江苏省文华奖", "第七届江苏曲艺芦花奖·节目奖"],
+      "corpus_value": "高 - 专业文艺团体表演的东台方言说唱，语言规范性较好",
+      "notes": "官方文艺作品，方言使用较为标准"
+    },
+    {
+      "platform": "腾讯视频",
+      "url": "https://v.qq.com/x/page/o032435cbiz.html",
+      "title": "《筑梦月亮山》相关视频",
+      "description": "方言说唱《筑梦月亮山》的另一个视频版本",
+      "corpus_value": "高 - 同一节目的不同版本",
+      "notes": null
+    }
+  ],
+  "music_platform_resources": [
+    {
+      "platform": "酷狗5sing",
+      "url": "http://5sing.kugou.com/m/detail/yc-1433668-3.html",
+      "title": "哎呦喂，乖乖（江苏东台市哈哈周末主题曲）",
+      "artist": "东台组合",
+      "description": "东台市哈哈周末主题曲，包含东台方言元素",
+      "corpus_value": "中 - 东台方言歌曲，含当地方言词汇",
+      "notes": null
+    }
+  ],
+  "youtube_resources": [],
+  "youtube_search_notes": "YouTube上未找到专门关于东台方言的视频内容。'Dongtai dialect'关键词仅返回学术百科类页面（如dbpedia的通泰方言词条），无实际视频资源。建议后续在YouTube上搜索'东台话'、'东台方言'、'如泰方言'等中文关键词。",
+  "reference_articles": [
+    {
+      "title": "东台话百科",
+      "url": "https://m.baike.com/wiki/东台话/7435048",
+      "description": "东台话的百科词条，包含方言分类（台城话、堤东话、堤西话、街唐话）、与普通话对照词汇表、语音特点等",
+      "corpus_value": "文字语料参考，非视频"
+    },
+    {
+      "title": "东台方言考",
+      "url": "http://dtmuseum.cn/show.asp?id=806",
+      "source": "东台市博物馆",
+      "description": "东台方言考证文章",
+      "corpus_value": "文字语料参考"
+    },
+    {
+      "title": "章国荣：东台海滨方言文化初探",
+      "url": "https://jssdfz.jiangsu.gov.cn/n96/20250703/i42070.html",
+      "source": "江苏省地方志",
+      "publish_date": "2025-07-03",
+      "description": "系统研究东台海滨方言的学术论文，涵盖移民历史、煮盐词汇、渔业避讳、风土词汇等",
+      "corpus_value": "高 - 详细的方言文化研究资料"
+    },
+    {
+      "title": "水浒语言与东台方言",
+      "url": "https://bbs.dt123.net/thread-1685921-1-1.html",
+      "source": "东台123论坛",
+      "author": "马勇（东亭大马）",
+      "publish_date": "2023-03-26",
+      "description": "分析水浒传中的语言与东台方言的对应关系",
+      "corpus_value": "中 - 方言词汇对比参考"
+    },
+    {
+      "title": "网红'东台老王':搞笑我是认真的",
+      "url": "http://m.toutiao.com/group/7639616930621473289/",
+      "source": "东台日报/东台时空",
+      "publish_date": "2026-05-14",
+      "description": "东台日报记者班雪凡对东台老王（王振糠）的专访，详细介绍其创作历程和方法",
+      "corpus_value": "了解创作者背景和方言使用方式"
+    },
+    {
+      "title": "老有所'AI' - 施卫华的AI音乐创作",
+      "url": "http://xh.xhby.net/pad/con/202605/07/content_1551735.html",
+      "source": "新华日报",
+      "publish_date": "2026-05-07",
+      "description": "介绍施卫华使用AI创作东台方言歌曲的经历，《东台方言》歌曲的详细信息",
+      "corpus_value": "了解方言歌曲创作背景"
+    },
+    {
+      "title": "东台人请就位！东普挑战等你来",
+      "url": "http://m.toutiao.com/group/7424535264036389426/",
+      "source": "幸福东台（官方公众号）",
+      "publish_date": "2024-10-11",
+      "description": "东台方言互动教学文章，含音频原声（需点击听原声）、常用语、方言成语谚语等",
+      "corpus_value": "高 - 含原声音频，但需在微信公众号内收听"
+    }
+  ],
+  "search_keywords_used": [
+    "东台方言 bilibili 视频",
+    "东台话 bilibili 配音",
+    "东台老王 王振糠 抖音",
+    "Dongtai dialect youtube",
+    "东台方言歌曲 施卫华",
+    "东台方言 site:bilibili.com",
+    "东台话 朗读 bilibili",
+    "东台方言 youtube 视频",
+    "如泰方言 东台 配音 视频",
+    "东台方言 bilibili BV",
+    "东台方言 歌曲 视频 抖音",
+    "东台话 方言说唱 筑梦月亮山 视频"
+  ],
+  "recommended_next_steps": [
+    "1. 在抖音搜索'东台老王'（抖音号91879583739），系统采集其571个作品的音视频语料",
+    "2. 在微信视频号搜索'施卫华'或'《东台方言》'歌曲，采集方言歌曲音频",
+    "3. 在B站搜索'东台话'、'东台方言'、'如泰方言'关键词，查找更多投稿",
+    "4. 联系东台市文化馆获取《筑梦月亮山》等方言说唱节目的完整音视频",
+    "5. 关注'幸福东台'微信公众号，该号定期发布东台方言原声内容",
+    "6. 在YouTube上尝试搜索'东台话'、'东台方言'、'如泰方言'等中文关键词",
+    "7. 搜索'如泰方言'相关内容，东台话与如皋话、泰兴话同属如泰片，可互为补充语料",
+    "8. 联系东台市博物馆获取《东台方言考》相关研究资料"
+  ]
+}
