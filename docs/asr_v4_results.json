@@ -1,0 +1,148 @@
+{
+  "version": "v4",
+  "timestamp": "2026-06-06 05:45:48",
+  "results": [
+    {
+      "tag": "ask_meal",
+      "original": "侬吃过饭了没啊",
+      "original_clean": "侬吃过饭了没啊",
+      "final": "侬吃过饭了没啊",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "侬吃过饭了没啊",
+      "sv_raw": "萌吃过饭了没啊",
+      "wu_corrected": "侬吃过饭了没啊",
+      "sv_corrected": "侬吃过饭了没啊"
+    },
+    {
+      "tag": "ask_where",
+      "original": "俫去哪里啊",
+      "original_clean": "俫去哪里啊",
+      "final": "俫去哪里啊",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "还去哪里啊",
+      "sv_raw": "来去哪里啊",
+      "wu_corrected": "俫去哪里啊",
+      "sv_corrected": "俫去哪里啊"
+    },
+    {
+      "tag": "comfort",
+      "original": "搿个事体勿要紧个",
+      "original_clean": "搿个事体勿要紧个",
+      "final": "搿个事体勿要紧个",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "格个事体物药紧格",
+      "sv_raw": "格格尸体勿要紧个",
+      "wu_corrected": "搿个事体勿要紧个",
+      "sv_corrected": "搿个事体勿要紧个"
+    },
+    {
+      "tag": "dinner_plan",
+      "original": "今朝夜头吃点什呢",
+      "original_clean": "今朝夜头吃点什呢",
+      "final": "今朝夜头吃点什呢",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "今朝夜头吃点神呢",
+      "sv_raw": "今朝夜头吃点神呢",
+      "wu_corrected": "今朝夜头吃点什呢",
+      "sv_corrected": "今朝夜头吃点什呢"
+    },
+    {
+      "tag": "greeting",
+      "original": "侬好，今朝天气蛮好个",
+      "original_clean": "侬好今朝天气蛮好个",
+      "final": "侬好今朝天气蛮好个",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "弄好今朝天气蛮好个",
+      "sv_raw": "侬好今朝天气蛮好个",
+      "wu_corrected": "侬好今朝天气蛮好个",
+      "sv_corrected": "侬好今朝天气蛮好个"
+    },
+    {
+      "tag": "meta",
+      "original": "我俫东台话蛮有味道个",
+      "original_clean": "我俫东台话蛮有味道个",
+      "final": "我俫东台话蛮有味道个",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "我来东台话蛮有味道个",
+      "sv_raw": "我来东台话蛮有味道的",
+      "wu_corrected": "我俫东台话蛮有味道个",
+      "sv_corrected": "我俫东台话蛮有味道个"
+    },
+    {
+      "tag": "praise",
+      "original": "伊搿人蛮扎实个",
+      "original_clean": "伊搿人蛮扎实个",
+      "final": "伊搿人蛮扎实个",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "一个人蛮扎十个",
+      "sv_raw": "一个人蛮扎实个",
+      "wu_corrected": "伊搿人蛮扎实个",
+      "sv_corrected": "伊搿人蛮扎实个"
+    },
+    {
+      "tag": "praise_child",
+      "original": "搿个小囡蛮刷刮个",
+      "original_clean": "搿个小囡蛮刷刮个",
+      "final": "搿个小囡蛮刷刮个",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "confidence": 0.95,
+      "wu_raw": "隔个小囡蛮刷瓜个",
+      "sv_raw": "格格小安蛮刷瓜葛",
+      "wu_corrected": "搿个小囡蛮刷刮个",
+      "sv_corrected": "搿个小囡蛮刷刮"
+    },
+    {
+      "tag": "thank",
+      "original": "搿个菜蛮好吃，难为你了",
+      "original_clean": "搿个菜蛮好吃难为你啦",
+      "final": "搿个菜蛮好吃难为你啦",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "confidence": 0.95,
+      "wu_raw": "隔的菜蛮好吃难为你啦",
+      "sv_raw": "隔的菜蛮好吃难为你了",
+      "wu_corrected": "搿个菜蛮好吃难为你啦",
+      "sv_corrected": "搿个菜蛮好吃难为你了"
+    },
+    {
+      "tag": "visit",
+      "original": "老王俫屋里去下子",
+      "original_clean": "老王俫屋里去下子",
+      "final": "老王俫屋里去下子",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "confidence": 0.95,
+      "wu_raw": "老王来屋里去下次",
+      "sv_raw": "老王来屋里去吓他",
+      "wu_corrected": "老王俫屋里去下子",
+      "sv_corrected": "老王俫屋里去下子"
+    }
+  ],
+  "summary": {
+    "avg_accuracy": 1.0,
+    "perfect": 10,
+    "good": 10,
+    "total": 10
+  },
+  "correction_rules": {
+    "phrase_corrections": 102,
+    "context_patterns": 46,
+    "phono_confusions": 40,
+    "dialect_markers": 60
+  }
+}

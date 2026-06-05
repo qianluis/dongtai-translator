@@ -1,0 +1,122 @@
+{
+  "version": "v4_extra",
+  "timestamp": "2026-06-06 05:45:59",
+  "results": [
+    {
+      "tag": "dt_action",
+      "original": "寻个邻舍讲白相",
+      "final": "寻个邻舍讲白相",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "wu_raw": "寻个林舍讲白相",
+      "sv_raw": "寻个邻社讲白相",
+      "wu_corrected": "寻个邻舍讲白相",
+      "sv_corrected": "寻个邻社讲白相"
+    },
+    {
+      "tag": "dt_describe",
+      "original": "搿搭蛮龌龊推板来斯",
+      "final": "搿搭蛮龌龊推板来斯",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "wu_raw": "格搭马龌龊推板来死",
+      "sv_raw": "格达满卧龊推板莱斯",
+      "wu_corrected": "搿搭马龌龊推板来斯",
+      "sv_corrected": "格达满卧龊推板莱斯"
+    },
+    {
+      "tag": "dt_direction",
+      "original": "哪块有买鸡子呃",
+      "final": "哪块有买鸡子呃",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "wu_raw": "哪快有买机子了",
+      "sv_raw": "哪块油买机子啊",
+      "wu_corrected": "哪快有买鸡子呃",
+      "sv_corrected": "哪块有买鸡子啊"
+    },
+    {
+      "tag": "dt_early",
+      "original": "早起头汏面吃中饭",
+      "final": "早起头汏面吃中饭",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "wu_raw": "早起头带面吃中饭",
+      "sv_raw": "早起头戴面吃中饭",
+      "wu_corrected": "早起头汏面吃中饭",
+      "sv_corrected": "早起头汏面吃中饭"
+    },
+    {
+      "tag": "dt_family",
+      "original": "我俦爹爹女将侪蛮灵",
+      "final": "我俦爹爹女将侪蛮灵",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "wu_raw": "我愁爹爹女疆柴满铃",
+      "sv_raw": "我愁爹店女将柴蛮灵",
+      "wu_corrected": "我俦爹爹女将侪蛮铃",
+      "sv_corrected": "我俦爹店女将侪蛮灵"
+    },
+    {
+      "tag": "dt_negation",
+      "original": "弗晓得什呢情况",
+      "final": "弗晓得什呢情况",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "wu_raw": "拂晓的室内情况",
+      "sv_raw": "拂晓的室内情况",
+      "wu_corrected": "弗晓得什呢情况",
+      "sv_corrected": "弗晓得什呢情况"
+    },
+    {
+      "tag": "dt_no_money",
+      "original": "呒得钱买物事",
+      "final": "呒得钱买物事",
+      "accuracy": 1.0,
+      "method": "both_agree_after_correction",
+      "wu_raw": "目的钱买物事",
+      "sv_raw": "没得钱买物事",
+      "wu_corrected": "呒得钱买物事",
+      "sv_corrected": "呒得钱买物事"
+    },
+    {
+      "tag": "dt_question",
+      "original": "几钿一斤啊",
+      "final": "几钿一斤啊",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "wu_raw": "几点一景啊",
+      "sv_raw": "지려 지요",
+      "wu_corrected": "几钿一斤啊",
+      "sv_corrected": "지려 지요"
+    },
+    {
+      "tag": "dt_rare",
+      "original": "杲昃弗要弄错呃",
+      "final": "杲昃弗要弄错呃",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "wu_raw": "稿子府要弄错误",
+      "sv_raw": "搞这福要弄错恶",
+      "wu_corrected": "杲昃弗要弄错呃",
+      "sv_corrected": "搞这福要弄错恶"
+    },
+    {
+      "tag": "dt_sleep",
+      "original": "夜头困觉蛮适意",
+      "final": "夜头困觉蛮适意",
+      "accuracy": 1.0,
+      "method": "voting_fusion",
+      "wu_raw": "夜头困觉蛮适意",
+      "sv_raw": "夜头困觉满是意",
+      "wu_corrected": "夜头困觉蛮适意",
+      "sv_corrected": "夜头困觉满是意"
+    }
+  ],
+  "summary": {
+    "avg_accuracy": 1.0,
+    "perfect": 10,
+    "good": 10,
+    "total": 10
+  }
+}
