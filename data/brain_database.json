@@ -1,6 +1,6 @@
 {
-  "version": "2.0.0",
-  "last_updated": "2026-06-07",
+  "version": "2.1.0",
+  "last_updated": "2026-06-10",
   "model_description": "足球大脑认知模型——五层意识 + 四种决策模式 + 传奇球员案例",
   "five_layers": [
     {"level": 5, "name": "创造层", "name_en": "Creative", "color": "#ff4444", "essence": "打破常规·反直觉·即兴发挥", "brain_regions": ["前额叶皮层(创新思维)", "右侧颞叶(直觉联想)"], "activation": "关键时刻、空间受限、需要非常规解法"},

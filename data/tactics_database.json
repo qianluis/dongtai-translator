@@ -1,6 +1,6 @@
 {
-  "version": "2.0.0",
-  "last_updated": "2026-06-07",
+  "version": "2.1.0",
+  "last_updated": "2026-06-10",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -495,6 +495,52 @@
     {"year": 2009, "match": "巴萨 2-0 曼联", "venue": "欧冠决赛", "significance": "Tiki-Taka统治欧洲的起点", "tactics": "tiki_taka vs 4-4-2"},
     {"year": 2012, "match": "西班牙 4-0 意大利", "venue": "欧洲杯决赛", "significance": "传控足球的巅峰，无锋阵4-0屠杀", "tactics": "tiki_taka vs catenaccio"},
     {"year": 2019, "match": "利物浦 4-0 巴萨", "venue": "欧冠半决赛", "significance": "反抢足球逆转传控的经典", "tactics": "gegenpressing vs tiki_taka"},
-    {"year": 2023, "match": "曼城 1-0 国米", "venue": "欧冠决赛", "significance": "位置游戏vs实用主义3-5-2", "tactics": "positional_play vs pragmatic_352"}
-  ]
+    {"year": 2023, "match": "曼城 1-0 国米", "venue": "欧冠决赛", "significance": "位置游戏vs实用主义3-5-2", "tactics": "positional_play vs pragmatic_352"},
+    {"year": 2026, "match": "2026世界杯 - 即将开幕", "venue": "美国/加拿大/墨西哥", "significance": "48队首度参赛，现代混合体系的终极试炼场。Tuchel的英格兰采用混合反抢+位置游戏体系，Opta预测西班牙15.9%、法国13.2%、英格兰10.9%夺冠概率", "tactics": "modern_hybrid (多流派融合) - 48队规模下的战术多样性前所未有"}
+  ],
+  "world_cup_2026_preview": {
+    "description": "2026世界杯战术前瞻——48队时代的战术版图",
+    "top_tactical_storylines": [
+      {
+        "team": "英格兰",
+        "coach": "Thomas Tuchel",
+        "style": "混合反抢+结构化控球",
+        "formation": "4-2-3-1 / 3-4-2-1 动态切换",
+        "tactical_dna": "Tuchel融合了切尔西时期的3-4-3防守韧性与拜仁的控球结构，英格兰预计以4-2-3-1为基础，领先时切换5-2-3低位防守。Saka状态未满90分钟是关键变量",
+        "related_systems": ["gegenpressing", "positional_play", "pragmatic_352"],
+        "opta_win_probability": "10.9%"
+      },
+      {
+        "team": "西班牙",
+        "coach": "Luis de la Fuente",
+        "style": "现代化Tiki-Taka+纵向穿透",
+        "formation": "4-3-3",
+        "tactical_dna": "欧洲杯冠军延续传控DNA但增加纵向直塞和边路1v1，不再执着于纯横传。Rodri的单后腰控制是体系基石",
+        "related_systems": ["tiki_taka", "positional_play"],
+        "opta_win_probability": "15.9%"
+      },
+      {
+        "team": "法国",
+        "coach": "Didier Deschamps",
+        "style": "实用主义+个体天赋爆发",
+        "formation": "4-2-3-1",
+        "tactical_dna": "Deschamps延续务实风格：稳固防守+Mbappé的绝对速度反击。Konaté转投皇马后法国防线有新变量",
+        "related_systems": ["pragmatic_352", "gegenpressing"],
+        "opta_win_probability": "13.2%"
+      },
+      {
+        "team": "阿根廷",
+        "coach": "Lionel Scaloni",
+        "style": "卫冕冠军的灵活变阵",
+        "formation": "4-3-3 / 5-3-2 动态",
+        "tactical_dna": "卫冕冠军擅长根据对手切换体系：对强队5-3-2低位反击，对弱队4-3-3控球推进。Messi的10号位角色继续进化",
+        "related_systems": ["modern_hybrid", "pragmatic_352"],
+        "opta_win_probability": "7.8%"
+      }
+    ],
+    "transfer_impacts": [
+      {"player": "Ibrahima Konaté", "move": "利物浦→皇家马德里(自由转会4年合同)", "tactical_impact": "皇马防线加速年轻化，法国中卫在安切洛蒂体系中的出球能力将受考验;法国国家队防线需要新组合"},
+      {"player": "Julian Álvarez", "move": "皇马£1.29亿报价被马竞拒绝", "tactical_impact": "如成行将改变皇马前锋线结构，Álvarez的逼抢强度和假9号属性契合位置游戏"}
+    ]
+  }
 }
