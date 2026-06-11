@@ -1,13 +1,68 @@
 {
   "version": "2.1.0",
-  "last_updated": "2026-06-10",
+  "last_updated": "2026-06-11",
   "model_description": "足球大脑认知模型——五层意识 + 四种决策模式 + 传奇球员案例",
   "five_layers": [
-    {"level": 5, "name": "创造层", "name_en": "Creative", "color": "#ff4444", "essence": "打破常规·反直觉·即兴发挥", "brain_regions": ["前额叶皮层(创新思维)", "右侧颞叶(直觉联想)"], "activation": "关键时刻、空间受限、需要非常规解法"},
-    {"level": 4, "name": "预判层", "name_en": "Anticipation", "color": "#ff8c00", "essence": "阅读比赛·提前移动·预判走势", "brain_regions": ["前额叶皮层(决策规划)", "顶叶(空间推理)"], "activation": "无球状态下、对手持球时、攻防转换瞬间"},
-    {"level": 3, "name": "空间层", "name_en": "Spatial", "color": "#ffcc00", "essence": "空间感知·无球跑动·创造空当", "brain_regions": ["顶叶(空间处理)", "海马体(空间记忆)"], "activation": "寻找传球角度、拉开防线、制造宽度"},
-    {"level": 2, "name": "战术层", "name_en": "Tactical", "color": "#44cc88", "essence": "理解阵型·执行指令·体系配合", "brain_regions": ["前额叶(规则执行)", "基底节(程序性记忆)"], "activation": "执行定位球、保持阵型、战术纪律"},
-    {"level": 1, "name": "本能层", "name_en": "Instinct", "color": "#4488ff", "essence": "球感·肌肉记忆·条件反射", "brain_regions": ["小脑(运动协调)", "基底节(自动化动作)"], "activation": "停球、传球、射门等基础技术"}
+    {
+      "level": 5,
+      "name": "创造层",
+      "name_en": "Creative",
+      "color": "#ff4444",
+      "essence": "打破常规·反直觉·即兴发挥",
+      "brain_regions": [
+        "前额叶皮层(创新思维)",
+        "右侧颞叶(直觉联想)"
+      ],
+      "activation": "关键时刻、空间受限、需要非常规解法"
+    },
+    {
+      "level": 4,
+      "name": "预判层",
+      "name_en": "Anticipation",
+      "color": "#ff8c00",
+      "essence": "阅读比赛·提前移动·预判走势",
+      "brain_regions": [
+        "前额叶皮层(决策规划)",
+        "顶叶(空间推理)"
+      ],
+      "activation": "无球状态下、对手持球时、攻防转换瞬间"
+    },
+    {
+      "level": 3,
+      "name": "空间层",
+      "name_en": "Spatial",
+      "color": "#ffcc00",
+      "essence": "空间感知·无球跑动·创造空当",
+      "brain_regions": [
+        "顶叶(空间处理)",
+        "海马体(空间记忆)"
+      ],
+      "activation": "寻找传球角度、拉开防线、制造宽度"
+    },
+    {
+      "level": 2,
+      "name": "战术层",
+      "name_en": "Tactical",
+      "color": "#44cc88",
+      "essence": "理解阵型·执行指令·体系配合",
+      "brain_regions": [
+        "前额叶(规则执行)",
+        "基底节(程序性记忆)"
+      ],
+      "activation": "执行定位球、保持阵型、战术纪律"
+    },
+    {
+      "level": 1,
+      "name": "本能层",
+      "name_en": "Instinct",
+      "color": "#4488ff",
+      "essence": "球感·肌肉记忆·条件反射",
+      "brain_regions": [
+        "小脑(运动协调)",
+        "基底节(自动化动作)"
+      ],
+      "activation": "停球、传球、射门等基础技术"
+    }
   ],
   "four_modes": [
     {
@@ -19,7 +74,11 @@
       "essence": "获取信息·构建360°空间地图",
       "key_metric": "哈维一场扫描895次",
       "desc": "接球前3-5次头部转动观察，构建360度空间地图。在接球前就决定下一步。",
-      "examples": ["哈维接球前平均转头4.2次", "德布劳内'偷看'技术", "布斯克茨180°转身前扫描"]
+      "examples": [
+        "哈维接球前平均转头4.2次",
+        "德布劳内'偷看'技术",
+        "布斯克茨180°转身前扫描"
+      ]
     },
     {
       "id": "anticipation",
@@ -30,7 +89,11 @@
       "essence": "提前决策·阅读走势·提前半拍",
       "key_metric": "皮尔洛'时钟理论'：比赛有自己的节奏",
       "desc": "读出对手的下一步，提前移动到有利位置。对比赛走势的整体判断。",
-      "examples": ["皮尔洛提前2秒读出空位", "马尔蒂尼'我不铲球因为我不需要铲球'", "克鲁伊夫'你控球时对方无法进球'"]
+      "examples": [
+        "皮尔洛提前2秒读出空位",
+        "马尔蒂尼'我不铲球因为我不需要铲球'",
+        "克鲁伊夫'你控球时对方无法进球'"
+      ]
     },
     {
       "id": "creation",
@@ -41,7 +104,12 @@
       "essence": "打破常规·反直觉传球·即兴发挥",
       "key_metric": "梅西'慢→快'节奏：慢速接球→加速突破",
       "desc": "看到并执行常人看不到的传球角度，反直觉的跑位和配合。",
-      "examples": ["梅西外脚背直塞", "小罗不看人传球", "齐达内马赛回旋", "德布劳内盲传"]
+      "examples": [
+        "梅西外脚背直塞",
+        "小罗不看人传球",
+        "齐达内马赛回旋",
+        "德布劳内盲传"
+      ]
     },
     {
       "id": "control",
@@ -52,7 +120,12 @@
       "essence": "主导节奏·最省力最大影响·节拍器",
       "key_metric": "布斯克茨平均每90分钟仅跑8.5km（全队最少）",
       "desc": "最少的触球，最大的影响。控制比赛节奏，快慢自如。",
-      "examples": ["布斯克茨一脚出球控制节奏", "哈维rondo不败记录", "皮尔洛深位长传改变进攻方向", "莫德里奇攻防转换节拍"]
+      "examples": [
+        "布斯克茨一脚出球控制节奏",
+        "哈维rondo不败记录",
+        "皮尔洛深位长传改变进攻方向",
+        "莫德里奇攻防转换节拍"
+      ]
     }
   ],
   "legends": [
@@ -64,7 +137,14 @@
       "position": "中场",
       "nationality": "西班牙",
       "style": "Tiki-Taka",
-      "brain_profile": {"scanning": 10, "anticipation": 9, "creation": 7, "control": 10, "spatial": 9, "instinct": 7},
+      "brain_profile": {
+        "scanning": 10,
+        "anticipation": 9,
+        "creation": 7,
+        "control": 10,
+        "spatial": 9,
+        "instinct": 7
+      },
       "signature_brain_move": "360°扫描+三角传递控制节奏",
       "key_stat": "一场比赛扫描895次，传球成功率94%",
       "desc": "Tiki-Taka的大脑——哈维用无休止的扫描和精准的短传控制比赛节奏。接球前平均4.2次头部转动观察，构建完整的360°空间地图。他的rondo（抢圈）几乎不败，因为他总能在对手靠近前找到下一个传球点。哈维不是最快、最强壮的球员，但他是'最聪明'的——通过扫描+预判+控制的组合，永远领先对手一步。"
@@ -77,7 +157,14 @@
       "position": "中场(深位组织者)",
       "nationality": "意大利",
       "style": "控制+预判",
-      "brain_profile": {"scanning": 8, "anticipation": 10, "creation": 8, "control": 9, "spatial": 9, "instinct": 6},
+      "brain_profile": {
+        "scanning": 8,
+        "anticipation": 10,
+        "creation": 8,
+        "control": 9,
+        "spatial": 9,
+        "instinct": 6
+      },
       "signature_brain_move": "时钟理论+深位长传改变进攻方向",
       "key_stat": "2012欧洲杯场均传球112次，成功率93%",
       "desc": "足球的'时钟'——皮尔洛的'时钟理论'：比赛有自己的节奏，他能听到时钟的滴答声，提前半拍做出决策。作为深位组织者(Regista)，他用长传改变进攻方向，一记60米对角线转移球就能瓦解对手的防守部署。皮尔洛看似闲庭信步，实则大脑以10倍速运转——在对手做出动作之前，他已经完成了预判+决策+执行。"
@@ -90,7 +177,14 @@
       "position": "前锋/假9号",
       "nationality": "阿根廷",
       "style": "创造+扫描",
-      "brain_profile": {"scanning": 9, "anticipation": 8, "creation": 10, "control": 7, "spatial": 9, "instinct": 10},
+      "brain_profile": {
+        "scanning": 9,
+        "anticipation": 8,
+        "creation": 10,
+        "control": 7,
+        "spatial": 9,
+        "instinct": 10
+      },
       "signature_brain_move": "慢→快节奏+左脚不可能角度直塞",
       "key_stat": "8座金球奖，唯一一位扫描+创造双满级球员",
       "desc": "足球大脑的终极形态——梅西的大脑踢法核心是'慢→快'节奏：慢速接球时大脑高速扫描空间，在0.3秒内做出最优选择，然后突然加速突破。他的左脚能执行常人看不到的传球角度——外脚背直塞、弧线球绕过3名防守者。梅西的创造力不是随机的，而是扫描+预判+创造的完美组合——他先看到空间，然后精确地利用它。"
@@ -103,7 +197,14 @@
       "position": "后腰",
       "nationality": "西班牙",
       "style": "沉默控制",
-      "brain_profile": {"scanning": 9, "anticipation": 10, "creation": 5, "control": 10, "spatial": 8, "instinct": 6},
+      "brain_profile": {
+        "scanning": 9,
+        "anticipation": 10,
+        "creation": 5,
+        "control": 10,
+        "spatial": 8,
+        "instinct": 6
+      },
       "signature_brain_move": "沉默控制——最少触球，最大影响",
       "key_stat": "场均跑动8.5km（全队最少），但传球成功率92%",
       "desc": "沉默的控制者——布斯克茨看起来是场上最慢、最不显眼的球员，但他以最少触球控制最大节奏。他的'沉默控制'基于极致的预判：在对手接球前就判断出对方的传球方向，一步移动切断传球路线。布斯克茨从不追着球跑——球会来找他，因为他永远站在正确位置。瓜迪奥拉说：'没有布斯克茨，就没有Tiki-Taka。'"
@@ -116,7 +217,14 @@
       "position": "14号(自由人)",
       "nationality": "荷兰",
       "style": "全攻全守+创造",
-      "brain_profile": {"scanning": 8, "anticipation": 9, "creation": 10, "control": 8, "spatial": 10, "instinct": 8},
+      "brain_profile": {
+        "scanning": 8,
+        "anticipation": 9,
+        "creation": 10,
+        "control": 8,
+        "spatial": 10,
+        "instinct": 8
+      },
       "signature_brain_move": "克鲁伊夫转身+空间控制哲学",
       "key_stat": "3座金球奖，足球史上最伟大的战术思想家",
       "desc": "足球大脑的哲学家——克鲁伊夫不仅是球员，更是足球史上最伟大的战术思想家。作为球员，他的'克鲁伊夫转身'(用脚后跟将球从防守者身后拉过)是创造性思维在球场上的完美体现。作为思想家，他提出了'空间论'：足球场是有限的，控制空间=控制比赛。他的简洁论——'简单的传球永远比花哨的过人有效'——从全攻全守延续到Tiki-Taka，影响了此后50年的足球。克鲁伊夫说：'踢足球很简单，但踢简单的足球是最难的。'"
@@ -129,7 +237,14 @@
       "position": "中场/8号",
       "nationality": "比利时",
       "style": "位置游戏+创造",
-      "brain_profile": {"scanning": 9, "anticipation": 8, "creation": 10, "control": 7, "spatial": 9, "instinct": 8},
+      "brain_profile": {
+        "scanning": 9,
+        "anticipation": 8,
+        "creation": 10,
+        "control": 7,
+        "spatial": 9,
+        "instinct": 8
+      },
       "signature_brain_move": "'偷看'技术+盲传+纵向直塞",
       "key_stat": "英超历史助攻王，场均关键传球3.8次",
       "desc": "位置游戏的创造者——德布劳内的核心大脑技术是'偷看'(peeking)：假装看一侧，实际余光观察另一侧，然后突然向反方向传球。他的'盲传'(不看人传球)让对手完全无法预判。在瓜迪奥拉的位置游戏体系中，德布劳内是'8号'位——既要在正确的区域站位，又要在瞬间做出创造性传球。他是现代足球中扫描+创造结合最完美的球员。"
@@ -142,7 +257,14 @@
       "position": "中场",
       "nationality": "克罗地亚",
       "style": "控制+预判",
-      "brain_profile": {"scanning": 8, "anticipation": 9, "creation": 7, "control": 9, "spatial": 8, "instinct": 8},
+      "brain_profile": {
+        "scanning": 8,
+        "anticipation": 9,
+        "creation": 7,
+        "control": 9,
+        "spatial": 8,
+        "instinct": 8
+      },
       "signature_brain_move": "攻防转换节拍器+外脚背长传",
       "key_stat": "2018金球奖(打破梅罗10年垄断)，5座欧冠",
       "desc": "攻防转换的节拍器——莫德里奇的大脑踢法核心是'转换控制'：在球队由守转攻的瞬间，他是第一个拿球组织的人；由攻转守时，他是第一个回防的中场。他的外脚背长传是世界上最精准的——能在60米距离内精确找到前场队友。莫德里奇的身体在顶级中场中算矮小的，但他的大脑运转速度弥补了一切。安切洛蒂说：'莫德里奇用大脑踢球，他的腿只是执行大脑的命令。'"
@@ -155,7 +277,14 @@
       "position": "中卫/左后卫",
       "nationality": "意大利",
       "style": "链式防守→区域防守",
-      "brain_profile": {"scanning": 7, "anticipation": 10, "creation": 2, "control": 9, "spatial": 8, "instinct": 7},
+      "brain_profile": {
+        "scanning": 7,
+        "anticipation": 10,
+        "creation": 2,
+        "control": 9,
+        "spatial": 8,
+        "instinct": 7
+      },
       "signature_brain_move": "'我不铲球因为我不需要铲球'",
       "key_stat": "24年职业生涯，0红牌，意甲历史最佳后卫",
       "desc": "防守的哲学家——马尔蒂尼的名言'我不铲球因为我不需要铲球'完美概括了他的大脑踢法：通过极致的预判，在对手接球前就占据有利位置，让进攻者无处可去。他不靠身体对抗，而靠位置感——永远站在传球路线上，让对手自己犯错。马尔蒂尼从人盯人(链式防守)到区域防守的转变中，证明了一个道理：最好的防守不是抢回球权，而是让对手永远拿不到球。"
@@ -168,7 +297,14 @@
       "position": "前腰/10号",
       "nationality": "法国",
       "style": "创造+控制",
-      "brain_profile": {"scanning": 7, "anticipation": 7, "creation": 10, "control": 9, "spatial": 8, "instinct": 9},
+      "brain_profile": {
+        "scanning": 7,
+        "anticipation": 7,
+        "creation": 10,
+        "control": 9,
+        "spatial": 8,
+        "instinct": 9
+      },
       "signature_brain_move": "转身哲学——背身接球+180°转身=创造前向空间",
       "key_stat": "3次FIFA年度最佳，1998世界杯决赛2球",
       "desc": "优雅的创造者——齐达内的大脑踢法核心是'转身哲学'：背身接球时，他用马赛回旋(或简单转身)180°旋转，瞬间从面向本方球门转为面向对方球门，创造前向空间。这一动作的精髓不在技术，而在决策——他总能在最恰当的时机转身，因为他的大脑已经预判了转身后的空间。齐达内踢球如跳舞，但每一步都是精确计算的结果。"
@@ -181,7 +317,14 @@
       "position": "前腰/边锋",
       "nationality": "巴西",
       "style": "创造+本能",
-      "brain_profile": {"scanning": 6, "anticipation": 6, "creation": 10, "control": 5, "spatial": 7, "instinct": 10},
+      "brain_profile": {
+        "scanning": 6,
+        "anticipation": 6,
+        "creation": 10,
+        "control": 5,
+        "spatial": 7,
+        "instinct": 10
+      },
       "signature_brain_move": "'不可能传球'——看到并执行常人看不到的角度",
       "key_stat": "2次FIFA年度最佳，2002世界杯冠军",
       "desc": "快乐的魔法师——小罗的大脑踢法是纯粹的创造+本能组合。他不需要像哈维那样反复扫描——他的大脑天生能看到别人看不到的传球角度。'不可能传球'(no-look pass)不是花哨，而是他的大脑真的在同时处理多个空间信息。小罗的踢法是美丽足球精神的延续：快乐>结果，即兴>设计。虽然职业生涯巅峰期较短，但他的创造力永远改变了人们对'足球可以怎么踢'的认知。"
@@ -190,31 +333,178 @@
   "style_brain_mapping": {
     "description": "踢法流派→大脑模式的关联度矩阵(0-10)",
     "matrix": {
-      "cuju":            {"scanning": 4, "anticipation": 3, "creation": 8, "control": 3, "spatial": 4, "instinct": 6},
-      "pyramid":         {"scanning": 3, "anticipation": 3, "creation": 3, "control": 2, "spatial": 4, "instinct": 5},
-      "wm":              {"scanning": 4, "anticipation": 4, "creation": 3, "control": 4, "spatial": 5, "instinct": 5},
-      "catenaccio":      {"scanning": 3, "anticipation": 9, "creation": 1, "control": 9, "spatial": 4, "instinct": 5},
-      "magical_magyars": {"scanning": 6, "anticipation": 7, "creation": 9, "control": 5, "spatial": 8, "instinct": 6},
-      "jogo_bonito":     {"scanning": 5, "anticipation": 4, "creation": 9, "control": 3, "spatial": 6, "instinct": 9},
-      "total_football":  {"scanning": 7, "anticipation": 8, "creation": 7, "control": 7, "spatial": 10, "instinct": 5},
-      "libero":          {"scanning": 5, "anticipation": 8, "creation": 5, "control": 8, "spatial": 7, "instinct": 5},
-      "sacchi_zonal":    {"scanning": 6, "anticipation": 8, "creation": 3, "control": 8, "spatial": 7, "instinct": 4},
-      "tiki_taka":       {"scanning": 10, "anticipation": 8, "creation": 5, "control": 10, "spatial": 8, "instinct": 4},
-      "gegenpressing":   {"scanning": 6, "anticipation": 9, "creation": 4, "control": 5, "spatial": 5, "instinct": 9},
-      "positional_play": {"scanning": 10, "anticipation": 10, "creation": 6, "control": 9, "spatial": 10, "instinct": 4},
-      "pragmatic_352":   {"scanning": 4, "anticipation": 7, "creation": 2, "control": 7, "spatial": 5, "instinct": 6},
-      "modern_hybrid":   {"scanning": 8, "anticipation": 8, "creation": 6, "control": 7, "spatial": 8, "instinct": 6}
+      "cuju": {
+        "scanning": 4,
+        "anticipation": 3,
+        "creation": 8,
+        "control": 3,
+        "spatial": 4,
+        "instinct": 6
+      },
+      "pyramid": {
+        "scanning": 3,
+        "anticipation": 3,
+        "creation": 3,
+        "control": 2,
+        "spatial": 4,
+        "instinct": 5
+      },
+      "wm": {
+        "scanning": 4,
+        "anticipation": 4,
+        "creation": 3,
+        "control": 4,
+        "spatial": 5,
+        "instinct": 5
+      },
+      "catenaccio": {
+        "scanning": 3,
+        "anticipation": 9,
+        "creation": 1,
+        "control": 9,
+        "spatial": 4,
+        "instinct": 5
+      },
+      "magical_magyars": {
+        "scanning": 6,
+        "anticipation": 7,
+        "creation": 9,
+        "control": 5,
+        "spatial": 8,
+        "instinct": 6
+      },
+      "jogo_bonito": {
+        "scanning": 5,
+        "anticipation": 4,
+        "creation": 9,
+        "control": 3,
+        "spatial": 6,
+        "instinct": 9
+      },
+      "total_football": {
+        "scanning": 7,
+        "anticipation": 8,
+        "creation": 7,
+        "control": 7,
+        "spatial": 10,
+        "instinct": 5
+      },
+      "libero": {
+        "scanning": 5,
+        "anticipation": 8,
+        "creation": 5,
+        "control": 8,
+        "spatial": 7,
+        "instinct": 5
+      },
+      "sacchi_zonal": {
+        "scanning": 6,
+        "anticipation": 8,
+        "creation": 3,
+        "control": 8,
+        "spatial": 7,
+        "instinct": 4
+      },
+      "tiki_taka": {
+        "scanning": 10,
+        "anticipation": 8,
+        "creation": 5,
+        "control": 10,
+        "spatial": 8,
+        "instinct": 4
+      },
+      "gegenpressing": {
+        "scanning": 6,
+        "anticipation": 9,
+        "creation": 4,
+        "control": 5,
+        "spatial": 5,
+        "instinct": 9
+      },
+      "positional_play": {
+        "scanning": 10,
+        "anticipation": 10,
+        "creation": 6,
+        "control": 9,
+        "spatial": 10,
+        "instinct": 4
+      },
+      "pragmatic_352": {
+        "scanning": 4,
+        "anticipation": 7,
+        "creation": 2,
+        "control": 7,
+        "spatial": 5,
+        "instinct": 6
+      },
+      "modern_hybrid": {
+        "scanning": 8,
+        "anticipation": 8,
+        "creation": 6,
+        "control": 7,
+        "spatial": 8,
+        "instinct": 6
+      }
     }
   },
   "decision_flow": {
     "steps": [
-      {"step": 1, "name": "扫描环境", "name_en": "Scanning", "mode": "scanning", "time": "持续(895次/场)", "output": "360°空间地图"},
-      {"step": 2, "name": "模式识别", "name_en": "Pattern Recognition", "mode": "anticipation", "time": "0.1-0.3秒", "output": "情境分类(传/射/带/跑)"},
-      {"step": 3, "name": "决策分支", "name_en": "Decision Branch", "mode": "split", "time": "0.1秒", "output": "快速路径(<0.5s) vs 深度路径(>0.5s)"},
-      {"step": 4a, "name": "即兴发挥", "name_en": "Instinct Action", "mode": "creation", "time": "<0.5秒", "output": "本能反应+创造性动作"},
-      {"step": 4b, "name": "战术执行", "name_en": "Tactical Execute", "mode": "control", "time": ">0.5秒", "output": "精确设计的跑位/传球"},
-      {"step": 5, "name": "技术输出", "name_en": "Technical Output", "mode": "all", "time": "0.1-0.5秒", "output": "停球/传球/射门/盘带"},
-      {"step": 6, "name": "反馈循环", "name_en": "Feedback Loop", "mode": "scanning", "time": "持续", "output": "更新空间地图→回到步骤1"}
+      {
+        "step": 1,
+        "name": "扫描环境",
+        "name_en": "Scanning",
+        "mode": "scanning",
+        "time": "持续(895次/场)",
+        "output": "360°空间地图"
+      },
+      {
+        "step": 2,
+        "name": "模式识别",
+        "name_en": "Pattern Recognition",
+        "mode": "anticipation",
+        "time": "0.1-0.3秒",
+        "output": "情境分类(传/射/带/跑)"
+      },
+      {
+        "step": 3,
+        "name": "决策分支",
+        "name_en": "Decision Branch",
+        "mode": "split",
+        "time": "0.1秒",
+        "output": "快速路径(<0.5s) vs 深度路径(>0.5s)"
+      },
+      {
+        "step": "4a",
+        "name": "即兴发挥",
+        "name_en": "Instinct Action",
+        "mode": "creation",
+        "time": "<0.5秒",
+        "output": "本能反应+创造性动作"
+      },
+      {
+        "step": "4b",
+        "name": "战术执行",
+        "name_en": "Tactical Execute",
+        "mode": "control",
+        "time": ">0.5秒",
+        "output": "精确设计的跑位/传球"
+      },
+      {
+        "step": 5,
+        "name": "技术输出",
+        "name_en": "Technical Output",
+        "mode": "all",
+        "time": "0.1-0.5秒",
+        "output": "停球/传球/射门/盘带"
+      },
+      {
+        "step": 6,
+        "name": "反馈循环",
+        "name_en": "Feedback Loop",
+        "mode": "scanning",
+        "time": "持续",
+        "output": "更新空间地图→回到步骤1"
+      }
     ]
   }
 }
