@@ -1,6 +1,6 @@
 {
   "version": "2.1.0",
-  "last_updated": "2026-06-11",
+  "last_updated": "2026-06-12",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -2224,9 +2224,16 @@
     },
     {
       "year": 2026,
-      "match": "2026世界杯 - 6月17日开幕",
+      "match": "墨西哥 vs 南非 (世界杯开幕战)",
+      "venue": "墨西哥城(阿兹特克球场)",
+      "significance": "2026世界杯正式开幕！墨西哥主场取胜，但3张红牌使比赛充满争议。东道主利用主场优势和裁判判罚获利，南非虽败犹荣展示了非洲足球的身体对抗能力",
+      "tactics": "host_nation_pressure (墨西哥主场高位逼抢) vs african_physicality (南非身体对抗+快速反击)"
+    },
+    {
+      "year": 2026,
+      "match": "2026世界杯 - 6月11日开幕",
       "venue": "美国/加拿大/墨西哥",
-      "significance": "48队首度参赛，现代混合体系的终极试炼场。Opta预测: 西班牙15.9%、法国13.2%、英格兰10.9%夺冠概率。英格兰首战克罗地亚(Group L)",
+      "significance": "48队首度参赛，现代混合体系的终极试炼场。Opta预测: 西班牙15.9%、法国13.2%、英格兰10.9%夺冠概率。英格兰首战克罗地亚(Group L)。开幕战墨西哥胜南非(3红牌)",
       "tactics": "modern_hybrid (多流派融合) - 48队规模下的战术多样性前所未有"
     }
   ],
@@ -2297,15 +2304,28 @@
       },
       {
         "coach": "José Mourinho",
-        "move": "即将出任皇家马德里主教练",
-        "tactical_impact": "穆里尼奥重返皇马，目标签下Gvardiol(曼城)和Mateus Fernandes(西汉姆/曼联竞争)。预期带来实用主义3-5-2/4-2-3-1体系+低位防守+精准反击，与上一期皇马的控球风格形成对比",
-        "date": "2026-06-11"
+        "move": "皇家马德里正式确认重返执教",
+        "tactical_impact": "皇马官方确认穆里尼奥回归！将带来实用主义3-5-2/4-2-3-1体系+低位防守+精准反击。Bernardo Silva(曼城)接近加盟皇马，进一步改变皇马战术DNA。Mourinho+Bernardo的组合意味着控球+反击的混合战术",
+        "date": "2026-06-12",
+        "status": "confirmed"
       },
       {
         "coach": "Kieran McKenna",
         "move": "辞去伊普斯维奇主教练(合约至2028，休息陪伴家庭)",
         "tactical_impact": "英冠失去最具创新性的位置游戏倡导者之一。Ipswich约£7m补偿条款保护。O'Neil和Rosenior为接替候选人",
         "date": "2026-06-10"
+      },
+      {
+        "player": "Bernardo Silva",
+        "move": "曼城→皇家马德里(接近完成)",
+        "tactical_impact": "Bernardo在Mourinho体系中的角色将是关键——他的控球能力和战术智慧适合Mourinho的反击体系中的10号/8号位，为皇马提供中场创造力",
+        "date": "2026-06-12"
+      },
+      {
+        "coach": "Pascal Röhl",
+        "move": "RB萨尔茨堡→Rangers(谈判中)",
+        "tactical_impact": "年轻教练Röhl以高位逼抢和位置游戏著称，如加盟将给苏超带来新的战术风格",
+        "date": "2026-06-12"
       }
     ]
   }
