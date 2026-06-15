@@ -1,6 +1,6 @@
 {
-  "version": "2.1.0",
-  "last_updated": "2026-06-12",
+  "version": "2.2.0",
+  "last_updated": "2026-06-15",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -2328,5 +2328,86 @@
         "date": "2026-06-12"
       }
     ]
-  }
+  },
+  "world_cup_2026_matches": [
+    {
+      "date": "2026-06-14",
+      "group": "E",
+      "home": "Germany",
+      "away": "Curacao",
+      "score": "7-1",
+      "venue": "NRG Stadium",
+      "attendance": 68021,
+      "tactics": {
+        "germany_formation": "4-2-3-1",
+        "germany_key_players": [
+          "Kimmich",
+          "Musiala",
+          "Wirtz",
+          "Havertz"
+        ],
+        "germany_stats": {
+          "possession": 64.7,
+          "shots": 26,
+          "shots_on_target": 12,
+          "passes": 635,
+          "pass_accuracy": 86.8
+        },
+        "curacao_formation": "4-4-2",
+        "curacao_scorer": "Comenencia (21')",
+        "tactical_notes": "Germany dominated possession and created 63 touches in opposition box. Havertz scored twice including a penalty. Curacao's smallest nation ever at World Cup."
+      }
+    },
+    {
+      "date": "2026-06-14",
+      "group": "F",
+      "home": "Netherlands",
+      "away": "Japan",
+      "score": "2-2",
+      "venue": "Dallas Stadium",
+      "attendance": 69285,
+      "tactics": {
+        "netherlands_formation": "4-3-3",
+        "netherlands_key_players": [
+          "Van Dijk",
+          "Gakpo",
+          "Summerville",
+          "Gravenberch"
+        ],
+        "netherlands_stats": {
+          "possession": 59.8,
+          "shots": 10,
+          "shots_on_target": 6,
+          "passes": 523,
+          "pass_accuracy": 88.4
+        },
+        "japan_formation": "4-2-3-1",
+        "japan_key_players": [
+          "Kubo",
+          "Doan",
+          "Kamada",
+          "Nakamura"
+        ],
+        "japan_stats": {
+          "possession": 40.2,
+          "shots": 10,
+          "shots_on_target": 3,
+          "passes": 341,
+          "pass_accuracy": 83.9,
+          "tackle_success": 90.9
+        },
+        "scorers": {
+          "netherlands": [
+            "Van Dijk 51'",
+            "Summerville 61'"
+          ],
+          "japan": [
+            "Nakamura 57'",
+            "Kamada 89'"
+          ]
+        },
+        "tactical_notes": "Japan showed incredible defensive discipline with 90.9% tackle success rate. Kamada's 89th minute equalizer denied Netherlands. Japan's counter-attacking efficiency despite 40% possession."
+      }
+    }
+  ]
 }
