@@ -1,16 +1,14 @@
 {
-  "name": "瓯译 ŌuYì — 温州话翻译器",
+  "name": "瓯译 ŌuYì",
   "short_name": "瓯译",
-  "description": "温州话↔普通话双向翻译·5056+词条·离线可用",
-  "start_url": "./index.html",
+  "description": "温州话双向翻译器 V5",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#F5F7FA",
-  "theme_color": "#1565C0",
-  "orientation": "portrait",
-  "lang": "zh-CN",
+  "background_color": "#0f0c29",
+  "theme_color": "#0f0c29",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231565C0'/><text x='50' y='68' text-anchor='middle' font-size='52' fill='white'>瓯</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>瓯</text></svg>",
       "sizes": "any",
       "type": "image/svg+xml"
     }
