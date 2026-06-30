@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-升级版3D战术示意图 - 14种战术体系完整版
+升级版3D战术示意图 - 15种战术体系完整版
 """
 import matplotlib
 matplotlib.use('Agg')
@@ -22,7 +22,7 @@ systems = db['tactical_systems']
 
 # Create a 5x3 grid of 3D pitch diagrams
 fig = plt.figure(figsize=(30, 22), facecolor=BG_COLOR)
-fig.suptitle('⚽ 足球踢法3D战术全景 — 14种体系完整版\nFootball Tactical Systems 3D Panorama', 
+fig.suptitle('⚽ 足球踢法3D战术全景 — 15种体系完整版\nFootball Tactical Systems 3D Panorama', 
              color=TEXT_COLOR, fontsize=22, fontweight='bold', y=0.98)
 
 from mpl_toolkits.mplot3d import Axes3D
@@ -96,6 +96,6 @@ fig.text(0.5, 0.01,
          ha='center', color='#556677', fontsize=10)
 
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-plt.savefig('/root/.coze/agents/7646924251471020315/workspace/football-tactics-3d/assets/images/14体系3D全景.png', 
+plt.savefig('/root/.coze/agents/7646924251471020315/workspace/football-tactics-3d/assets/images/15体系3D全景.png', 
             dpi=150, bbox_inches='tight', facecolor=BG_COLOR)
-print("✅ 14体系3D全景图已生成")
+print("✅ 15体系3D全景图已生成")

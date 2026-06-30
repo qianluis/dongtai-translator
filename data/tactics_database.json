@@ -1,6 +1,6 @@
 {
-  "version": "2.2.0",
-  "last_updated": "2026-06-15",
+  "version": "3.1.0",
+  "last_updated": "2026-06-30",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -2103,6 +2103,173 @@
         "AI辅助战术「, 」多位置球员「, 」对手弱点精确针对「, 」情境化决策"
       ],
       "legacy": "足球的未来——灵活性>纯粹性"
+    },
+    {
+      "id": "relationism",
+      "name": "关系主义",
+      "name_en": "Relationism",
+      "era": "2024-至今",
+      "origin": "西班牙/德国 (Flick巴萨)",
+      "formation": "4-3-3 (流动型，无固定位置)",
+      "philosophy": "不依赖预设位置创造优势，而是通过球员间的动态关系（间距、跑位、配合默契）自发创造机会",
+      "key_innovation": "打破位置主义的位置束缚，以球员间「关系」为核心——距离感、默契度、即兴配合取代了18区域划分",
+      "desc_short": "后位置主义——巴萨Flick的174球进攻革命",
+      "desc_full": "关系主义（Relationism）是2024-2026年间兴起的新战术哲学，以弗里克（Hansi Flick）执教的巴塞罗那为代表。与位置主义（Juego de Posición）强调预设区域和结构化站位不同，关系主义认为进攻创造不应依赖教练设计的固定位置优势，而应依靠球员间的动态关系——短距离配合、第三人跑位的默契、即兴的空间创造。巴萨在2025-26赛季打入174球，成为欧洲进攻最强球队，其进攻模式不再基于经典位置，而是典型的「关系主义模式」。这一哲学与位置主义的核心分歧在于：位置主义认为空间应被预先结构化，关系主义认为空间应在球员互动中自然涌现。",
+      "tags": [
+        "关系主义",
+        "后位置主义",
+        "Flick",
+        "巴萨174球",
+        "动态关系",
+        "无固定位置",
+        "即兴创造"
+      ],
+      "stats": {
+        "possession": 7,
+        "defense": 4,
+        "pressing": 7,
+        "creativity": 10,
+        "speed": 8,
+        "organization": 6
+      },
+      "players_per_side": 11,
+      "field_type": "标准场(但区域划分模糊)",
+      "goal_type": "标准球门",
+      "players": [
+        {
+          "x": 0,
+          "z": -30,
+          "color": "#ffcc00",
+          "label": "GK",
+          "role": "门将"
+        },
+        {
+          "x": -20,
+          "z": -18,
+          "color": "#44cc88",
+          "label": "LB",
+          "role": "左后卫(内收)"
+        },
+        {
+          "x": -7,
+          "z": -20,
+          "color": "#44cc88",
+          "label": "CB1",
+          "role": "中卫"
+        },
+        {
+          "x": 7,
+          "z": -20,
+          "color": "#44cc88",
+          "label": "CB2",
+          "role": "中卫"
+        },
+        {
+          "x": 20,
+          "z": -18,
+          "color": "#44cc88",
+          "label": "RB",
+          "role": "右后卫(套边)"
+        },
+        {
+          "x": -15,
+          "z": -5,
+          "color": "#ff8c00",
+          "label": "CM1",
+          "role": "中前卫(自由移动)"
+        },
+        {
+          "x": 0,
+          "z": -3,
+          "color": "#ff8c00",
+          "label": "CM2",
+          "role": "中前卫(连接枢纽)"
+        },
+        {
+          "x": 15,
+          "z": -5,
+          "color": "#ff8c00",
+          "label": "CM3",
+          "role": "中前卫(自由移动)"
+        },
+        {
+          "x": -18,
+          "z": 15,
+          "color": "#ff4444",
+          "label": "LW",
+          "role": "左边锋(内切)"
+        },
+        {
+          "x": 0,
+          "z": 20,
+          "color": "#ff4444",
+          "label": "ST",
+          "role": "中锋(回撤串联)"
+        },
+        {
+          "x": 18,
+          "z": 15,
+          "color": "#ff4444",
+          "label": "RW",
+          "role": "右边锋(内切)"
+        }
+      ],
+      "passing_triangles": [
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          5,
+          8,
+          9
+        ],
+        [
+          7,
+          9,
+          10
+        ],
+        [
+          6,
+          8,
+          10
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "movement_paths": [
+        [
+          5,
+          8
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "signature_moves": [
+        "无位置进攻——球员不按区域站，按关系动",
+        "短距离快速配合——3-5米内的一脚传递",
+        "第三人跑位变体——不是预设而是即兴",
+        "高位反抢——丢球后关系网立即收紧"
+      ],
+      "legacy": "位置主义之后的下一个战术时代？——从「控制空间」到「创造关系」"
     }
   ],
   "countermatrix": {
@@ -2217,24 +2384,52 @@
     },
     {
       "year": 2026,
-      "match": "英格兰 3-0 哥斯达黎加",
-      "venue": "奥兰多(世界杯最终热身赛)",
-      "significance": "Tuchel体系成型: Rice-Gordon-O'Reilly流动轮换+高位逼抢，3球零封展示攻防两端实力",
-      "tactics": "modern_hybrid (Tuchel版: 反抢+控球混合) vs 中北美女班"
+      "match": "Argentina 2-0 Austria (WC Group J)",
+      "venue": "World Cup 2026",
+      "significance": "Messi scores 2 more to break Klose all-time WC goalscoring record (17+). Argentina system: midfield rotations + wide overloads + switch of play = organized chaos.",
+      "tactics": "modern_hybrid (Argentina: rotational movement + wide overloads + fast transitions)"
     },
     {
       "year": 2026,
-      "match": "墨西哥 vs 南非 (世界杯开幕战)",
-      "venue": "墨西哥城(阿兹特克球场)",
-      "significance": "2026世界杯正式开幕！墨西哥主场取胜，但3张红牌使比赛充满争议。东道主利用主场优势和裁判判罚获利，南非虽败犹荣展示了非洲足球的身体对抗能力",
-      "tactics": "host_nation_pressure (墨西哥主场高位逼抢) vs african_physicality (南非身体对抗+快速反击)"
+      "match": "Brazil 3-0 Haiti (WC Group C)",
+      "venue": "World Cup 2026",
+      "significance": "Casemiro tactical masterclass as single pivot. Brazil switched from 4-4-2 to 4-3-3 after Morocco draw. Gilberto Silva: \"He gives a masterclass in the pivot position.\"",
+      "tactics": "4-3-3 single pivot (Casemiro anchoring + Guimaraes/Paqueta freedom)"
     },
     {
       "year": 2026,
-      "match": "2026世界杯 - 6月11日开幕",
-      "venue": "美国/加拿大/墨西哥",
-      "significance": "48队首度参赛，现代混合体系的终极试炼场。Opta预测: 西班牙15.9%、法国13.2%、英格兰10.9%夺冠概率。英格兰首战克罗地亚(Group L)。开幕战墨西哥胜南非(3红牌)",
-      "tactics": "modern_hybrid (多流派融合) - 48队规模下的战术多样性前所未有"
+      "match": "England 4-2 Croatia (WC Group L)",
+      "venue": "World Cup 2026",
+      "significance": "Kane drops to defensive midfield in build-up - unprecedented tactic per Wanchope. 25% of Kane receptions in defensive third. England highest % time in low build-up (34.7%).",
+      "tactics": "4-2-3-1 with Kane deep-drop (low build-up overload innovation)"
+    },
+    {
+      "year": 2026,
+      "match": "Spain 0-0 Cabo Verde (WC Group H)",
+      "venue": "World Cup 2026",
+      "significance": "SHOCK result. Cabo Verde goalkeeper Vozinha heroic in organized low block. Proves low block + GK heroics can neutralize top possession teams.",
+      "tactics": "catenaccio (Cabo Verde low block) vs tiki_taka (Spain possession without penetration)"
+    },
+    {
+      "year": 2026,
+      "match": "Germany 7-1 Curacao (WC Group E)",
+      "venue": "NRG Stadium, World Cup 2026",
+      "significance": "Germany demolition. Undav hat-trick. Havertz 2 goals. 64.7% possession, 26 shots. Havertz: \"I make runs that look pointless but I am creating space.\"",
+      "tactics": "4-2-3-1 (Germany: positional play + Havertz space creation)"
+    },
+    {
+      "year": 2026,
+      "match": "Netherlands 5-1 Sweden (WC Group F)",
+      "venue": "World Cup 2026",
+      "significance": "Brobbey hat-trick. Netherlands showed attacking firepower. Van Dijk also scored.",
+      "tactics": "4-3-3 (Netherlands: attacking dominance)"
+    },
+    {
+      "year": 2026,
+      "match": "Ecuador 2-1 Germany (WC Group E)",
+      "venue": "World Cup 2026",
+      "significance": "UPSET. Ecuador beat Germany after Germany 7-1 Curacao. Shows tournament unpredictability.",
+      "tactics": "gegenpressing (Ecuador: high press upset dominant Germany)"
     }
   ],
   "world_cup_2026_preview": {
@@ -2332,30 +2527,356 @@
   "world_cup_2026_matches": [
     {
       "date": "2026-06-14",
+      "group": "A",
+      "home": "Mexico",
+      "away": "South Africa",
+      "score": "2-0",
+      "venue": "Mexico City",
+      "tactics": {
+        "home_formation": "4-3-3",
+        "away_formation": "4-4-2",
+        "tactical_notes": "Mexico dominated at home. South Africa physical but outclassed technically."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "A",
+      "home": "Korea Republic",
+      "away": "Czechia",
+      "score": "2-1",
+      "venue": "",
+      "tactics": {
+        "home_formation": "4-2-3-1",
+        "away_formation": "3-4-3",
+        "tactical_notes": "Korea came from behind. Hwang In-Beom key in midfield."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "A",
+      "home": "Czechia",
+      "away": "South Africa",
+      "score": "1-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Both teams shared points in a tight match."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "A",
+      "home": "Mexico",
+      "away": "Korea Republic",
+      "score": "1-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Mexico edged Korea in a close contest. Quinones scored."
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "group": "A",
+      "home": "Czechia",
+      "away": "Mexico",
+      "score": "0-3",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Mexico dominated Group A with 3 wins. Strong attacking display."
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "group": "A",
+      "home": "South Africa",
+      "away": "Korea Republic",
+      "score": "1-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "South Africa got a consolation win."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "B",
+      "home": "Canada",
+      "away": "Bosnia and Herzegovina",
+      "score": "1-1",
+      "venue": "",
+      "tactics": {
+        "home_formation": "4-3-3",
+        "away_formation": "3-5-2",
+        "tactical_notes": "Jonathan David scored for Canada. Bosnia defended deep and countered."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "B",
+      "home": "Qatar",
+      "away": "Switzerland",
+      "score": "1-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Qatar held Switzerland to a draw."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "B",
+      "home": "Switzerland",
+      "away": "Bosnia and Herzegovina",
+      "score": "4-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Switzerland unleashed with 4 goals. Manzambi scored hat-trick (3 goals)."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "B",
+      "home": "Canada",
+      "away": "Qatar",
+      "score": "6-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Canada demolished Qatar. Jonathan David hat-trick (3), Larin 2 goals. Dominant display."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "B",
+      "home": "Switzerland",
+      "away": "Canada",
+      "score": "2-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Switzerland topped Group B. Canada qualified second."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "B",
+      "home": "Bosnia and Herzegovina",
+      "away": "Qatar",
+      "score": "3-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Bosnia got a consolation win."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "C",
+      "home": "Haiti",
+      "away": "Scotland",
+      "score": "0-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Scotland edged Haiti in a tight opener."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "C",
+      "home": "Brazil",
+      "away": "Morocco",
+      "score": "1-1",
+      "venue": "MetLife Stadium, New York",
+      "tactics": {
+        "home_formation": "1-4-4-2",
+        "away_formation": "1-4-2-3-1",
+        "tactical_notes": "Brazil struggled in 4-4-2 flat midfield, overloaded by Morocco midfield 3. Casemiro-Guimaraes pair exposed. Saibari scored hat-trick (3) for Morocco overall group stage."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "C",
+      "home": "Brazil",
+      "away": "Haiti",
+      "score": "3-0",
+      "venue": "",
+      "tactics": {
+        "home_formation": "1-4-3-3",
+        "tactical_notes": "KEY TACTICAL SHIFT: Brazil switched to 4-3-3 with Casemiro as single pivot. Matheus Cunha (3 goals in group) dropped in to help press. Gilberto Silva called it a masterclass from Casemiro. More stability in and out of possession."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "C",
+      "home": "Scotland",
+      "away": "Morocco",
+      "score": "0-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Morocco continued impressive form."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "C",
+      "home": "Scotland",
+      "away": "Brazil",
+      "score": "0-3",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Brazil found their rhythm. Vinicius Jr (4 goals in group) dominant."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "C",
+      "home": "Morocco",
+      "away": "Haiti",
+      "score": "4-2",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Morocco scored 4 goals. Saibari 3 goals total in tournament."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "D",
+      "home": "USA",
+      "away": "Paraguay",
+      "score": "4-1",
+      "venue": "",
+      "tactics": {
+        "home_formation": "4-3-3",
+        "tactical_notes": "USA dominant at home. Balogun (2), Pulisic, Freeman scored. Strong pressing game."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "D",
+      "home": "Australia",
+      "away": "Turkiye",
+      "score": "2-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Australia surprised Turkiye with solid defensive display."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "D",
+      "home": "Turkiye",
+      "away": "Paraguay",
+      "score": "0-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Paraguay got a crucial win. Turkiye struggled."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "D",
+      "home": "USA",
+      "away": "Australia",
+      "score": "2-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "USA confirmed qualification with another clean sheet."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "D",
+      "home": "Turkiye",
+      "away": "USA",
+      "score": "3-2",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Turkiye fought back with 3 goals. Yilmaz and Guler scored. USA still topped group."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "D",
+      "home": "Paraguay",
+      "away": "Australia",
+      "score": "0-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Goalless draw. Both teams advanced."
+      }
+    },
+    {
+      "date": "2026-06-14",
+      "group": "E",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "score": "1-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Pepe scored for Ivory Coast."
+      }
+    },
+    {
+      "date": "2026-06-14",
       "group": "E",
       "home": "Germany",
       "away": "Curacao",
       "score": "7-1",
       "venue": "NRG Stadium",
-      "attendance": 68021,
       "tactics": {
-        "germany_formation": "4-2-3-1",
-        "germany_key_players": [
+        "home_formation": "4-2-3-1",
+        "home_key_players": [
           "Kimmich",
           "Musiala",
           "Wirtz",
           "Havertz"
         ],
-        "germany_stats": {
+        "home_stats": {
           "possession": 64.7,
           "shots": 26,
           "shots_on_target": 12,
           "passes": 635,
           "pass_accuracy": 86.8
         },
-        "curacao_formation": "4-4-2",
-        "curacao_scorer": "Comenencia (21')",
-        "tactical_notes": "Germany dominated possession and created 63 touches in opposition box. Havertz scored twice including a penalty. Curacao's smallest nation ever at World Cup."
+        "tactical_notes": "Germany demolished Curacao. Undav hat-trick (3). Havertz 2 goals. 64.7% possession, 26 shots. Havertz: I make runs that look pointless but creating space."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "E",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "score": "2-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Germany won but Ivory Coast made it competitive. Pepe scored again."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "E",
+      "home": "Ecuador",
+      "away": "Curacao",
+      "score": "0-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Goalless draw."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "E",
+      "home": "Curacao",
+      "away": "Ivory Coast",
+      "score": "0-2",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Ivory Coast advanced."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "E",
+      "home": "Ecuador",
+      "away": "Germany",
+      "score": "2-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "UPSET: Ecuador beat Germany 2-1. Germany may have rotated squad."
       }
     },
     {
@@ -2364,30 +2885,17 @@
       "home": "Netherlands",
       "away": "Japan",
       "score": "2-2",
-      "venue": "Dallas Stadium",
-      "attendance": 69285,
+      "venue": "Dallas",
       "tactics": {
-        "netherlands_formation": "4-3-3",
-        "netherlands_key_players": [
-          "Van Dijk",
-          "Gakpo",
-          "Summerville",
-          "Gravenberch"
-        ],
-        "netherlands_stats": {
+        "home_formation": "4-3-3",
+        "away_formation": "4-2-3-1",
+        "home_stats": {
           "possession": 59.8,
           "shots": 10,
           "shots_on_target": 6,
           "passes": 523,
           "pass_accuracy": 88.4
         },
-        "japan_formation": "4-2-3-1",
-        "japan_key_players": [
-          "Kubo",
-          "Doan",
-          "Kamada",
-          "Nakamura"
-        ],
         "japan_stats": {
           "possession": 40.2,
           "shots": 10,
@@ -2396,18 +2904,562 @@
           "pass_accuracy": 83.9,
           "tackle_success": 90.9
         },
-        "scorers": {
-          "netherlands": [
-            "Van Dijk 51'",
-            "Summerville 61'"
-          ],
-          "japan": [
-            "Nakamura 57'",
-            "Kamada 89'"
-          ]
-        },
-        "tactical_notes": "Japan showed incredible defensive discipline with 90.9% tackle success rate. Kamada's 89th minute equalizer denied Netherlands. Japan's counter-attacking efficiency despite 40% possession."
+        "tactical_notes": "Japan incredible 90.9% tackle success. Kamada 89min equalizer. Brobbey (3) led Netherlands scoring."
       }
+    },
+    {
+      "date": "2026-06-14",
+      "group": "F",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "score": "5-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Sweden demolished Tunisia. Elanga (2), Ayari, Isak, Gyoekeres scored."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "group": "F",
+      "home": "Netherlands",
+      "away": "Sweden",
+      "score": "5-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Netherlands 5-1 Sweden! Brobbey hat-trick. Gakpo and Summerville also scored. Van Dijk with a goal."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "F",
+      "home": "Tunisia",
+      "away": "Japan",
+      "score": "0-4",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Japan demolished Tunisia 4-0. Ueda (2) led the attack."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "F",
+      "home": "Japan",
+      "away": "Sweden",
+      "score": "1-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Japan drew Sweden. Both advanced."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "group": "F",
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "score": "1-3",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Netherlands won to top Group F."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "G",
+      "home": "Iran",
+      "away": "New Zealand",
+      "score": "2-2",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Iran drew NZ. Rezaeian scored."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "G",
+      "home": "Belgium",
+      "away": "Egypt",
+      "score": "1-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Belgium held by Egypt. Salah scored."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "G",
+      "home": "Belgium",
+      "away": "Iran",
+      "score": "0-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Goalless draw. Belgium struggling."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "G",
+      "home": "New Zealand",
+      "away": "Egypt",
+      "score": "1-3",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Egypt won. Salah (2 assists), Ziko scored."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "H",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "score": "1-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Saudi Arabia held Uruguay. Araujo (2) for Uruguay overall."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "H",
+      "home": "Spain",
+      "away": "Cabo Verde",
+      "score": "0-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "SHOCK: Spain drew 0-0 with Cabo Verde! Vozinha heroic in goal for Cabo Verde."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "H",
+      "home": "Uruguay",
+      "away": "Cabo Verde",
+      "score": "2-2",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Cabo Verde held Uruguay again! Incredible performance."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "H",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "score": "4-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Spain responded with 4-0. Oyarzabal (2), Yamal, Laporte scored."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "I",
+      "home": "France",
+      "away": "Senegal",
+      "score": "3-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "France won. Mbappe (4 in group), Dembele, Barcola scored."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "group": "I",
+      "home": "Iraq",
+      "away": "Norway",
+      "score": "1-4",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Norway dominant. Haaland (4 in group), Oedegaard, Holmgren Pedersen, Berg scored."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "I",
+      "home": "Norway",
+      "away": "Senegal",
+      "score": "3-2",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Norway won. Haaland continued scoring. Sarr scored for Senegal."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "I",
+      "home": "France",
+      "away": "Iraq",
+      "score": "3-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "France comfortable. Mbappe scoring freely."
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "group": "J",
+      "home": "Argentina",
+      "away": "Algeria",
+      "score": "3-0",
+      "venue": "",
+      "tactics": {
+        "home_formation": "4-3-3",
+        "tactical_notes": "Messi scored hat-trick in opener (3 goals). Argentina tactical system: midfield rotations create wide overloads, switch play to free Messi. Jon Dahl Tomasson analysis: organized chaos."
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "group": "J",
+      "home": "Austria",
+      "away": "Jordan",
+      "score": "3-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Austria won. Arnautovic scored."
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "group": "J",
+      "home": "Argentina",
+      "away": "Austria",
+      "score": "2-0",
+      "venue": "",
+      "tactics": {
+        "home_formation": "4-3-3",
+        "tactical_notes": "Messi scored 2 more (total 5 = World Cup record!). Argentina system: midfield rotations drag opponents out, wide overloads, switch of play to Messi in space, then fast forward movement. Messi broke Klose all-time WC goalscoring record."
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "group": "J",
+      "home": "Jordan",
+      "away": "Algeria",
+      "score": "1-2",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Algeria won. Gouiri and Benbouali scored."
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "group": "K",
+      "home": "Portugal",
+      "away": "Congo DR",
+      "score": "1-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Portugal held by Congo DR. Ronaldo (2) scored."
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "group": "K",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "score": "1-3",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Colombia won. Munoz (2), Diaz scored."
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "group": "K",
+      "home": "Portugal",
+      "away": "Uzbekistan",
+      "score": "5-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Portugal demolished Uzbekistan. Ronaldo scored."
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "group": "K",
+      "home": "Colombia",
+      "away": "Congo DR",
+      "score": "1-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Colombia narrow win."
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "group": "L",
+      "home": "Ghana",
+      "away": "Panama",
+      "score": "1-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Ghana edged Panama."
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "group": "L",
+      "home": "England",
+      "away": "Croatia",
+      "score": "4-2",
+      "venue": "",
+      "tactics": {
+        "home_formation": "4-2-3-1",
+        "tactical_notes": "KEY TACTICAL: Kane dropped deep into defensive midfield territory as extra man in low build-up. 25% of Kane receptions in defensive third. Rice and Anderson cleared central space. Gordon and Madueke stayed high and wide. Bellingham occupied half-spaces. Kane 2 goals, Rashford, Bellingham also scored. Paulo Wanchope analysis: unprecedented tactic."
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "group": "L",
+      "home": "England",
+      "away": "Ghana",
+      "score": "0-0",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "England held by Ghana. Kane scoreless but still influential in build-up."
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "group": "L",
+      "home": "Panama",
+      "away": "Croatia",
+      "score": "0-1",
+      "venue": "",
+      "tactics": {
+        "tactical_notes": "Croatia narrow win. Budimir scored."
+      }
+    }
+  ],
+  "world_cup_2026_tactical_analysis": {
+    "source": "FIFA Training Centre (fifatrainingcentre.com)",
+    "last_updated": "2026-06-27",
+    "articles": [
+      {
+        "title": "The Casemiro Tweak That Unleashed Brazil",
+        "date": "2026-06-23",
+        "expert": "Gilberto Silva (FIFA TSG)",
+        "summary": "Brazil switched from 4-4-2 to 4-3-3 after Morocco match. Casemiro moved from flat midfield two to single pivot/anchor. This gave Brazil central stability - he could orchestrate the game, protect the back four, and guide Guimaraes/Paqueta ahead. Cunha dropping in to help press ensured never outnumbered in midfield. Key insight: pivot position allows Casemiro to control area in front of defenders without needing to run - pure positioning mastery.",
+        "formations": [
+          "1-4-4-2 (v Morocco, struggled)",
+          "1-4-3-3 (v Haiti onwards, dominant)"
+        ],
+        "key_tactical_concept": "Single pivot anchoring - Casemiro as defensive shield + build-up orchestrator",
+        "related_systems": [
+          "positional_play",
+          "modern_hybrid"
+        ]
+      },
+      {
+        "title": "How Argentina Create Conditions for Messi to Thrive",
+        "date": "2026-06-25",
+        "expert": "Jon Dahl Tomasson (FIFA TSG)",
+        "summary": "Argentina use 4 key principles: (1) Rotational movement - midfielders move to unexpected places to disrupt opponent structure; (2) Wide overloads - draw opponents to one side then switch; (3) Switch of play - Messi attracts multiple defenders, teammates create out-balls; (4) Fast forward movement - once space accessed, explosive runs at speed with minimal touches. Messi scored 5 goals (broke Klose WC record). Tomasson: \"organized chaos\" - controlled 1-2 touch game then sudden acceleration.",
+        "formations": [
+          "4-3-3 (flexible)"
+        ],
+        "key_tactical_concept": "Midfield rotations + wide overloads + switch of play to free Messi",
+        "related_systems": [
+          "modern_hybrid",
+          "positional_play",
+          "tiki_taka"
+        ]
+      },
+      {
+        "title": "England's Low Build-up and Kane Dropping Deep",
+        "date": "2026-06-21",
+        "expert": "Paulo Wanchope (FIFA TSG)",
+        "summary": "England registered highest % time in low build-up phase (34.7%) after round 1. Kane dropped ALL the way to defensive midfield territory as extra man - unprecedented for a #9. Rice and Anderson pulled opposition midfielders away. Gordon/Madueke stayed high and wide to stretch play. Bellingham occupied half-spaces. Wanchope: \"As a coach and former striker, this really interested me. Not something I have seen before.\" 25% of Kane receptions in defensive third.",
+        "formations": [
+          "4-2-3-1 (with Kane dropping to DM zone)"
+        ],
+        "key_tactical_concept": "Centre-forward dropping to defensive third for build-up overload - unprecedented tactic",
+        "related_systems": [
+          "positional_play",
+          "modern_hybrid"
+        ]
+      },
+      {
+        "title": "Cabo Verde: Vozinha Heroic Display v Spain",
+        "date": "2026-06-18",
+        "summary": "Cabo Verde held Spain 0-0. Goalkeeper Vozinha inspired heroic defensive display. Spain dominated possession but could not break through organized low block.",
+        "key_tactical_concept": "Low block + heroic goalkeeping can neutralize even top possession teams",
+        "related_systems": [
+          "catenaccio",
+          "pragmatic_352"
+        ]
+      },
+      {
+        "title": "Round Review: Mid and Low Blocks and Attacking Transitions",
+        "date": "2026-06-26",
+        "summary": "Second round review highlighted prevalence of mid/low blocks and importance of attacking transitions in the tournament.",
+        "key_tactical_concept": "Mid/low blocks + fast transitions = key tournament pattern",
+        "related_systems": [
+          "pragmatic_352",
+          "gegenpressing"
+        ]
+      },
+      {
+        "title": "Back-Three Build-Up and Exploiting Inside Channels",
+        "date": "2026-06-23",
+        "summary": "Analysis of teams using back-three systems for build-up and targeting inside channels.",
+        "key_tactical_concept": "3CB build-up + inside channel exploitation",
+        "related_systems": [
+          "pragmatic_352",
+          "positional_play"
+        ]
+      },
+      {
+        "title": "Mexico: Dominating the Final Third",
+        "date": "2026-06-23",
+        "summary": "Mexico showed exceptional final third dominance in group stage.",
+        "key_tactical_concept": "Final third control and chance creation",
+        "related_systems": [
+          "modern_hybrid",
+          "positional_play"
+        ]
+      },
+      {
+        "title": "Canada v Bosnia: Clash of Defending Styles",
+        "date": "2026-06-23",
+        "summary": "Contrasting defensive approaches between Canada and Bosnia.",
+        "key_tactical_concept": "Different defensive philosophies at elite level",
+        "related_systems": [
+          "gegenpressing",
+          "pragmatic_352"
+        ]
+      }
+    ],
+    "tournament_trends": [
+      "Mid/low blocks prevalent - teams prioritize defensive solidity",
+      "Attacking transitions are key scoring method",
+      "Single pivot DM role critical (Casemiro masterclass)",
+      "Centre-forward dropping deep for build-up (Kane innovation)",
+      "Midfield rotations to create overloads (Argentina model)",
+      "Set pieces remain crucial in tight matches",
+      "48-team format creates more tactical diversity than ever",
+      "Heat management affecting substitutions and game plans"
+    ]
+  },
+  "world_cup_2026_top_scorers": {
+    "last_updated": "2026-06-27",
+    "note": "Group stage + partial knockout data",
+    "top_10": [
+      {
+        "player": "Lionel Messi",
+        "country": "Argentina",
+        "goals": 5,
+        "assists": 0,
+        "note": "Broke Klose all-time WC goalscoring record (17+ goals)"
+      },
+      {
+        "player": "Vinicius Junior",
+        "country": "Brazil",
+        "goals": 4,
+        "assists": 1
+      },
+      {
+        "player": "Erling Haaland",
+        "country": "Norway",
+        "goals": 4,
+        "assists": 0
+      },
+      {
+        "player": "Kylian Mbappe",
+        "country": "France",
+        "goals": 4,
+        "assists": 0
+      },
+      {
+        "player": "Deniz Undav",
+        "country": "Germany",
+        "goals": 3,
+        "assists": 2
+      },
+      {
+        "player": "Johan Manzambi",
+        "country": "Switzerland",
+        "goals": 3,
+        "assists": 1
+      },
+      {
+        "player": "Brian Brobbey",
+        "country": "Netherlands",
+        "goals": 3,
+        "assists": 0
+      },
+      {
+        "player": "Ismael Saibari",
+        "country": "Morocco",
+        "goals": 3,
+        "assists": 0
+      },
+      {
+        "player": "Jonathan David",
+        "country": "Canada",
+        "goals": 3,
+        "assists": 0
+      },
+      {
+        "player": "Matheus Cunha",
+        "country": "Brazil",
+        "goals": 3,
+        "assists": 0
+      }
+    ]
+  },
+  "tactical_trends": [
+    {
+      "date": "2026-06-01",
+      "source": "Spielverlagerung - Champions League Final Analysis",
+      "title": "Arsenal的「反位置主义」防守革命",
+      "content": "阿尔特塔将位置主义从防守角度重新诠释——低位防守+激进人盯人压迫的组合。系统性地消除对手的位置优势。瓜迪奥拉的前助手正在从防守端重新定义位置主义。",
+      "impact": "high",
+      "tags": [
+        "Arsenal",
+        "Arteta",
+        "低位防守",
+        "人盯人压迫",
+        "反位置主义"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "source": "Spielverlagerung - Champions League Final Analysis",
+      "title": "位置主义的衰落与关系主义的崛起",
+      "content": "15年来主导足球的位置主义正在被中和。大型分析团队在比赛中实时观察并消除对手的位置优势。巴萨在Flick手下展示典型的关系主义模式——不再基于经典位置，而是依靠球员间动态关系创造机会。174球的赛季纪录证明了这一哲学的威力。",
+      "impact": "critical",
+      "tags": [
+        "关系主义",
+        "位置主义衰落",
+        "Flick巴萨",
+        "分析团队",
+        "战术进化"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "source": "Spielverlagerung - Champions League Final Analysis",
+      "title": "欧洲最强进攻不再依赖教练设计的位置优势",
+      "content": "欧洲进攻最成功的球队（巴萨、拜仁、巴黎）不再通过教练控制的位置优势创造机会。阿森纳以定位球为主要得分手段（打破英超角球进球纪录）。趋势：从「设计式进攻」转向「关系式/即兴式进攻」+「定位球专精」。",
+      "impact": "high",
+      "tags": [
+        "进攻趋势",
+        "定位球",
+        "巴萨174球",
+        "拜仁",
+        "巴黎"
+      ]
+    }
+  ],
+  "changelog": [
+    {
+      "version": "3.1.0",
+      "date": "2026-06-30",
+      "changes": [
+        "新增第15种战术体系：关系主义（Relationism）— Flick巴萨的后位置主义革命",
+        "新增3条2026欧冠决赛战术趋势分析",
+        "记录位置主义衰落趋势与反位置主义防守革命"
+      ]
     }
   ]
 }
