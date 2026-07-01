@@ -1,6 +1,6 @@
 {
-  "version": "3.1.0",
-  "last_updated": "2026-06-30",
+  "version": "3.2.0",
+  "last_updated": "2026-07-01",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -3228,6 +3228,40 @@
       "tactics": {
         "tactical_notes": "Croatia narrow win. Budimir scored."
       }
+    },
+    {
+      "date": "2026-06-30",
+      "round": "Round of 32",
+      "home": "France",
+      "away": "Sweden",
+      "score": "3-0",
+      "venue": "",
+      "tactics": {
+        "home_formation": "4-2-3-1",
+        "tactical_notes": "France dominant. Mbappe 2 goals - Neville says France \"a level above\" other WC teams, Mbappe \"on verge of greatness\". Deschamps pragmatic approach working perfectly - solid defense + Mbappe individual brilliance. France face Paraguay in R16."
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "round": "Round of 32",
+      "home": "Ivory Coast",
+      "away": "Norway",
+      "score": "1-2",
+      "venue": "Dallas",
+      "tactics": {
+        "tactical_notes": "Haaland scores dramatic late winner! Norway first WC knockout victory. Antonio Nusa opened scoring, Amad Diallo equalized. Haaland winner in late stages. Norway face Brazil in R16 - key tactical battle: Haaland physical presence vs Brazil technical game."
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "round": "Round of 32",
+      "home": "England",
+      "away": "DR Congo",
+      "score": "TBD",
+      "venue": "Atlanta",
+      "tactics": {
+        "tactical_notes": "Tuchel prepared for difficult DR Congo clash despite right-back injury woes. Winner faces Mexico or Ecuador in R16. Tuchel tactical flexibility key - England showed Kane deep-drop innovation in group stage."
+      }
     }
   ],
   "world_cup_2026_tactical_analysis": {
@@ -3341,15 +3375,15 @@
     ]
   },
   "world_cup_2026_top_scorers": {
-    "last_updated": "2026-06-27",
-    "note": "Group stage + partial knockout data",
+    "last_updated": "2026-07-01",
+    "note": "Group stage + Round of 32 data",
     "top_10": [
       {
         "player": "Lionel Messi",
         "country": "Argentina",
         "goals": 5,
         "assists": 0,
-        "note": "Broke Klose all-time WC goalscoring record (17+ goals)"
+        "note": "5 goals (broke Klose all-time WC goalscoring record). Argentina in R16"
       },
       {
         "player": "Vinicius Junior",
@@ -3360,14 +3394,16 @@
       {
         "player": "Erling Haaland",
         "country": "Norway",
-        "goals": 4,
-        "assists": 0
+        "goals": 5,
+        "assists": 0,
+        "note": "4 group + 1 late winner vs Ivory Coast. R16 vs Brazil"
       },
       {
         "player": "Kylian Mbappe",
         "country": "France",
-        "goals": 4,
-        "assists": 0
+        "goals": 6,
+        "assists": 0,
+        "note": "4 group + 2 vs Sweden. R16 vs Paraguay"
       },
       {
         "player": "Deniz Undav",
@@ -3449,6 +3485,49 @@
         "拜仁",
         "巴黎"
       ]
+    },
+    {
+      "date": "2026-07-01",
+      "source": "Sky Sports - World Cup Round of 32 Analysis",
+      "title": "法国实用主义 perfected - Mbappe个人天赋+Deschamps体系",
+      "content": "France 3-0 Sweden展示了Deschamps实用主义的完美执行：稳固防守+Mbappe绝对速度。Neville称法国\"a level above\"其他球队。Mbappe小组赛4球+R32 2球=6球，追平Messi金靴竞争。战术启示：实用主义框架+超级个体天赋=世界杯最强组合",
+      "impact": "high",
+      "tags": [
+        "France",
+        "Mbappe",
+        "Deschamps",
+        "实用主义",
+        "个人天赋",
+        "世界杯R32"
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "source": "Sky Sports - Penalty Analysis",
+      "title": "点球stutter助跑技术的衰落 - 德国荷兰为此付出代价",
+      "content": "Sky Sports分析：stutter助跑在英超给球员10%提升，但2026世界杯成功率不到50%。德国和荷兰因stutter点球失误被淘汰/受挫。Kluivert的stutter点球失误直接导致荷兰出局。趋势：stutter助跑可能走到尽头？传统助跑更可靠？",
+      "impact": "medium",
+      "tags": [
+        "点球",
+        "stutter助跑",
+        "德国",
+        "荷兰",
+        "心理战术"
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "source": "Sky Sports - Transfer News",
+      "title": "Klopp可能执教德国 - 如果Nagelsmann被解雇",
+      "content": "Sky Sports报道：克洛普是德国国家队主帅的热门人选，如果纳格尔斯曼被解雇。这将是一个重大战术转变 - 克洛普的Gegenpressing哲学将为德国带来新的方向。结合德国7-1库拉索但1-2厄瓜多尔的表现，德国需要战术稳定性。",
+      "impact": "high",
+      "tags": [
+        "Klopp",
+        "Germany",
+        "Nagelsmann",
+        "Gegenpressing",
+        "教练变动"
+      ]
     }
   ],
   "changelog": [
@@ -3459,6 +3538,16 @@
         "新增第15种战术体系：关系主义（Relationism）— Flick巴萨的后位置主义革命",
         "新增3条2026欧冠决赛战术趋势分析",
         "记录位置主义衰落趋势与反位置主义防守革命"
+      ]
+    },
+    {
+      "version": "3.2.0",
+      "date": "2026-07-01",
+      "changes": [
+        "新增世界杯32强赛(R32)战术数据: France 3-0 Sweden, Ivory Coast 1-2 Norway",
+        "更新射手榜: Mbappe 6球追平Messi, Haaland 5球绝杀",
+        "新增3条战术趋势: 法国实用主义+个人天赋, 点球stutter衰落, Klopp可能执教德国",
+        "记录England vs DR Congo前瞻(R32)"
       ]
     }
   ]
