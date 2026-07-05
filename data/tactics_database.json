@@ -1,6 +1,6 @@
 {
-  "version": "3.2.0",
-  "last_updated": "2026-07-01",
+  "version": "3.3.0",
+  "last_updated": "2026-07-05",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -3262,11 +3262,47 @@
       "tactics": {
         "tactical_notes": "Tuchel prepared for difficult DR Congo clash despite right-back injury woes. Winner faces Mexico or Ecuador in R16. Tuchel tactical flexibility key - England showed Kane deep-drop innovation in group stage."
       }
+    },
+    {
+      "date": "2026-07-04",
+      "round": "Round of 16",
+      "home": "France",
+      "away": "Paraguay",
+      "score": "1-0",
+      "venue": "Philadelphia",
+      "tactics": {
+        "home_formation": "4-2-3-1",
+        "away_formation": "5-4-1 low block",
+        "tactical_notes": "France struggled against Paraguay's physical low block and tactical fouls. Mbappe penalty (70') after Doué won spot kick. Paraguay's defensive system frustrated France - no shots on target in first half. Deschamps' side showed resilience but lacked creativity against organized defense.",
+        "key_players": [
+          "Mbappé (penalty)",
+          "Doué (won penalty)",
+          "Maignan (8.2 rating)"
+        ],
+        "tactical_analysis": "Paraguay's 5-4-1 low block + tactical fouls disrupted France's rhythm. Classic defensive pragmatism vs attacking talent. France needed individual brilliance (Doué dribble) to break organized defense."
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "round": "Round of 16",
+      "home": "Morocco",
+      "away": "Canada",
+      "score": "3-0",
+      "venue": "Houston",
+      "tactics": {
+        "home_formation": "4-3-3",
+        "away_formation": "4-2-3-1",
+        "tactical_notes": "Morocco dominant performance, reached QF. Canada's historic WC run ends. Morocco's defensive solidity + clinical finishing. Jesse Marsch's Canada showed courage but overwhelmed by Morocco's quality.",
+        "key_players": [
+          "Morocco team performance"
+        ],
+        "tactical_analysis": "Morocco's tactical discipline and defensive organization (learned from 2022 WC run) combined with attacking efficiency. Canada's high-press system couldn't contain Morocco's technical superiority."
+      }
     }
   ],
   "world_cup_2026_tactical_analysis": {
     "source": "FIFA Training Centre (fifatrainingcentre.com)",
-    "last_updated": "2026-06-27",
+    "last_updated": "2026-07-05",
     "articles": [
       {
         "title": "The Casemiro Tweak That Unleashed Brazil",
@@ -3361,6 +3397,18 @@
           "gegenpressing",
           "pragmatic_352"
         ]
+      },
+      {
+        "date": "2026-07-05",
+        "source": "Sports Illustrated",
+        "title": "Klopp confirms Germany talks after Nagelsmann resignation",
+        "url": "https://www.si.com/soccer/jurgen-klopp-what-has-changed-since-liverpool-exit-stance-germany-job",
+        "summary": "Klopp declares himself 'more than recharged' and interested in Germany job. DFB confirmed talks after Nagelsmann stepped down following R32 penalty shootout loss to Paraguay. Germany hasn't won WC knockout match since 2014. Klopp demands 'intensive talks' about fundamental changes needed.",
+        "tactical_implications": [
+          "Klopp's gegenpressing philosophy could revitalize Germany",
+          "Germany's crisis: 12 years without WC knockout win",
+          "Potential return to high-intensity pressing system"
+        ]
       }
     ],
     "tournament_trends": [
@@ -3375,7 +3423,7 @@
     ]
   },
   "world_cup_2026_top_scorers": {
-    "last_updated": "2026-07-01",
+    "last_updated": "2026-07-05",
     "note": "Group stage + Round of 32 data",
     "top_10": [
       {
@@ -3401,9 +3449,9 @@
       {
         "player": "Kylian Mbappe",
         "country": "France",
-        "goals": 6,
+        "goals": 7,
         "assists": 0,
-        "note": "4 group + 2 vs Sweden. R16 vs Paraguay"
+        "note": "Tied with Messi for Golden Boot lead"
       },
       {
         "player": "Deniz Undav",
@@ -3528,9 +3576,44 @@
         "Gegenpressing",
         "教练变动"
       ]
+    },
+    {
+      "date": "2026-07-05",
+      "source": "2026 World Cup R16 Analysis",
+      "title": "Low Block Effectiveness: Paraguay vs France Case Study",
+      "content": "Paraguay's 5-4-1 low block + tactical fouls held France (tournament favorite) scoreless for 70 minutes. Demonstrates that organized defensive pragmatism can neutralize elite attacking talent. France needed individual brilliance (Doué dribble → penalty) to break through. Classic tactical battle: system vs individual quality.",
+      "tags": [
+        "low block",
+        "defensive organization",
+        "tactical fouls",
+        "individual brilliance"
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "source": "Managerial Changes",
+      "title": "Klopp-Germany: Gegenpressing Revolution 2.0?",
+      "content": "Klopp's potential Germany appointment signals possible return to high-intensity pressing after Nagelsmann's more possession-based approach failed. Germany's crisis (group stage exits 2018/2022, R32 exit 2026) may require fundamental philosophical shift. Klopp's Liverpool/ Dortmund success built on gegenpressing + verticality.",
+      "tags": [
+        "Klopp",
+        "Germany",
+        "gegenpressing",
+        "managerial change"
+      ]
     }
   ],
   "changelog": [
+    {
+      "version": "3.3.0",
+      "date": "2026-07-05",
+      "changes": [
+        "Added World Cup R16 results: France 1-0 Paraguay, Morocco 3-0 Canada",
+        "Updated top scorer: Mbappé 7 goals (tied with Messi)",
+        "Added Klopp-Germany managerial news and tactical implications",
+        "Added tactical analysis: Low block effectiveness vs elite attacks",
+        "Confirmed QF: France vs Morocco (July 9)"
+      ]
+    },
     {
       "version": "3.1.0",
       "date": "2026-06-30",
