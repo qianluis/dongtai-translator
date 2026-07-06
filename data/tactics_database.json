@@ -1,6 +1,6 @@
 {
-  "version": "3.3.0",
-  "last_updated": "2026-07-05",
+  "version": "3.4.0",
+  "last_updated": "2026-07-06",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -3298,11 +3298,38 @@
         ],
         "tactical_analysis": "Morocco's tactical discipline and defensive organization (learned from 2022 WC run) combined with attacking efficiency. Canada's high-press system couldn't contain Morocco's technical superiority."
       }
+    },
+    {
+      "date": "2026-07-05",
+      "round": "Round of 16",
+      "home": "Brazil",
+      "away": "Norway",
+      "score": "1-2 (AET)",
+      "venue": "MetLife Stadium",
+      "attendance": 80663,
+      "tactics": {
+        "home_formation": "4-2-3-1",
+        "away_formation": "4-4-2 / 5-3-2 defensive",
+        "tactical_notes": "Haaland masterclass knocks out 5-time winners! Norway sat deep in compact 5-3-2 block, absorbed Brazil pressure for 78 mins. Haaland broke deadlock 79' with towering header over Gabriel, then added superb 2nd with low drive. Brazil pushed forward, Bruno Guimaraes missed penalty, Neymar converted stoppage-time penalty but too late. Classic counter-attacking masterclass - Norway's defensive discipline + Haaland's clinical finishing proved decisive. Brazil's possession-based approach failed to break down organized low block.",
+        "key_players": [
+          "Haaland (2 goals)",
+          "Neymar (1 penalty)",
+          "Nusa (assist)"
+        ],
+        "tactical_themes": [
+          "counter-attacking",
+          "low block defense",
+          "set pieces",
+          "clinical finishing"
+        ]
+      },
+      "significance": "BRAZIL ELIMINATED! 5-time World Cup champions knocked out in R16. Norway reach QF for first time. Haaland now tied Golden Boot lead with 7 goals.",
+      "source": "Sky Sports"
     }
   ],
   "world_cup_2026_tactical_analysis": {
     "source": "FIFA Training Centre (fifatrainingcentre.com)",
-    "last_updated": "2026-07-05",
+    "last_updated": "2026-07-06",
     "articles": [
       {
         "title": "The Casemiro Tweak That Unleashed Brazil",
@@ -3409,6 +3436,19 @@
           "Germany's crisis: 12 years without WC knockout win",
           "Potential return to high-intensity pressing system"
         ]
+      },
+      {
+        "date": "2026-07-06",
+        "title": "Brazil 1-2 Norway: Counter-attacking masterclass eliminates 5-time champions",
+        "source": "Sky Sports",
+        "key_insights": [
+          "Norway's compact 5-3-2 defensive block neutralized Brazil's possession game for 78 minutes",
+          "Haaland's dual threat (aerial + low drive) proved unstoppable in crucial moments",
+          "Brazil's failure to convert chances (Bruno Guimaraes penalty miss) proved costly",
+          "Classic example of defensive organization + clinical finishing beating possession dominance",
+          "Neymar's international career ends with stoppage-time penalty - too late to save Brazil"
+        ],
+        "tactical_trend": "Low block + counter-attack remains effective against possession teams in knockout football"
       }
     ],
     "tournament_trends": [
@@ -3419,39 +3459,52 @@
       "Midfield rotations to create overloads (Argentina model)",
       "Set pieces remain crucial in tight matches",
       "48-team format creates more tactical diversity than ever",
-      "Heat management affecting substitutions and game plans"
+      "Heat management affecting substitutions and game plans",
+      {
+        "trend": "Brazil elimination - possession without penetration",
+        "observation": "Brazil's possession-based 4-2-3-1 failed to break down Norway's organized low block. Despite controlling the game, Brazil lacked the final ball quality. Norway's counter-attacking approach with Haaland as focal point proved devastating. This reinforces the tournament pattern: defensive discipline + clinical finishing > possession without purpose.",
+        "date": "2026-07-06"
+      }
     ]
   },
   "world_cup_2026_top_scorers": {
-    "last_updated": "2026-07-05",
-    "note": "Group stage + Round of 32 data",
+    "last_updated": "2026-07-06",
+    "note": "After R16 Brazil 1-2 Norway. Haaland scores double to tie lead.",
     "top_10": [
-      {
-        "player": "Lionel Messi",
-        "country": "Argentina",
-        "goals": 5,
-        "assists": 0,
-        "note": "5 goals (broke Klose all-time WC goalscoring record). Argentina in R16"
-      },
-      {
-        "player": "Vinicius Junior",
-        "country": "Brazil",
-        "goals": 4,
-        "assists": 1
-      },
-      {
-        "player": "Erling Haaland",
-        "country": "Norway",
-        "goals": 5,
-        "assists": 0,
-        "note": "4 group + 1 late winner vs Ivory Coast. R16 vs Brazil"
-      },
       {
         "player": "Kylian Mbappe",
         "country": "France",
         "goals": 7,
         "assists": 0,
-        "note": "Tied with Messi for Golden Boot lead"
+        "note": "Golden Boot co-leader. France in QF."
+      },
+      {
+        "player": "Lionel Messi",
+        "country": "Argentina",
+        "goals": 7,
+        "assists": 0,
+        "note": "Golden Boot co-leader. Broke Klose all-time WC record."
+      },
+      {
+        "player": "Erling Haaland",
+        "country": "Norway",
+        "goals": 7,
+        "assists": 0,
+        "note": "Golden Boot co-leader! 2 goals vs Brazil knocked out 5-time champions. Norway in QF."
+      },
+      {
+        "player": "Harry Kane",
+        "country": "England",
+        "goals": 5,
+        "assists": 0,
+        "note": "Next best. England in R16 vs Mexico."
+      },
+      {
+        "player": "Vinicius Junior",
+        "country": "Brazil",
+        "goals": 4,
+        "assists": 1,
+        "note": "Brazil eliminated in R16."
       },
       {
         "player": "Deniz Undav",
@@ -3480,12 +3533,6 @@
       {
         "player": "Jonathan David",
         "country": "Canada",
-        "goals": 3,
-        "assists": 0
-      },
-      {
-        "player": "Matheus Cunha",
-        "country": "Brazil",
         "goals": 3,
         "assists": 0
       }
@@ -3631,6 +3678,17 @@
         "更新射手榜: Mbappe 6球追平Messi, Haaland 5球绝杀",
         "新增3条战术趋势: 法国实用主义+个人天赋, 点球stutter衰落, Klopp可能执教德国",
         "记录England vs DR Congo前瞻(R32)"
+      ]
+    },
+    {
+      "version": "3.4.0",
+      "date": "2026-07-06",
+      "changes": [
+        "Added Brazil 1-2 Norway R16 match (Haaland double eliminates Brazil)",
+        "Updated top scorers: Mbappe/Messi/Haaland all tied at 7 goals",
+        "Added tactical analysis: counter-attacking masterclass by Norway",
+        "Neymar retires from international football (noted in match context)",
+        "Mexico vs England R16 in progress"
       ]
     }
   ]
