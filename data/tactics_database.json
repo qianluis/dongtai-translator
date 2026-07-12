@@ -1,6 +1,6 @@
 {
-  "version": "3.4.0",
-  "last_updated": "2026-07-06",
+  "version": "3.6.0",
+  "last_updated": "2026-07-12",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -3325,6 +3325,80 @@
       },
       "significance": "BRAZIL ELIMINATED! 5-time World Cup champions knocked out in R16. Norway reach QF for first time. Haaland now tied Golden Boot lead with 7 goals.",
       "source": "Sky Sports"
+    },
+    {
+      "date": "2026-07-09",
+      "round": "Quarter-Final",
+      "home": "France",
+      "away": "Morocco",
+      "score": "2-0",
+      "venue": "TBD",
+      "tactics": {
+        "home_formation": "4-3-3 / 4-2-3-1",
+        "away_formation": "4-1-4-1 / 5-4-1 low block",
+        "tactical_notes": "France controlled the match against Morocco's organized low block. Morocco had been impressive in earlier rounds but couldn't replicate their defensive solidity against France's quality. France's midfield control and attacking depth proved too much. Clean sheet demonstrates France's defensive improvement in knockout stages.",
+        "key_players": [
+          "Mbappé",
+          "France midfield"
+        ],
+        "tactical_themes": [
+          "possession control",
+          "breakdown of low block",
+          "defensive solidity"
+        ]
+      },
+      "significance": "France reach semi-finals. Morocco's impressive run ends. France look strongest they have all tournament.",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-07-10",
+      "round": "Quarter-Final",
+      "home": "Spain",
+      "away": "Belgium",
+      "score": "2-1",
+      "venue": "TBD",
+      "tactics": {
+        "home_formation": "4-3-3",
+        "away_formation": "3-4-3 / 5-4-1",
+        "tactical_notes": "Merino the hero again for Spain! The midfielder who went from 'mobility scooter to World Cup hero in six months' scores crucial goals. Spain's possession-based approach vs Belgium's counter-attacking threat. Tight match decided by individual brilliance. Spain book blockbuster semi-final with France.",
+        "key_players": [
+          "Merino (match-winner)",
+          "Spain midfield"
+        ],
+        "tactical_themes": [
+          "possession football",
+          "midfield creativity",
+          "individual brilliance in tight games"
+        ]
+      },
+      "significance": "Spain reach semi-finals to face France in blockbuster clash. Merino continues incredible story - from injury/mobility scooter to World Cup semi-final hero in 6 months.",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-07-11",
+      "round": "Quarter-Final",
+      "home": "Norway",
+      "away": "England",
+      "score": "1-2",
+      "venue": "Miami",
+      "tactics": {
+        "home_formation": "4-4-2 / 5-3-2",
+        "away_formation": "3-4-3 / 4-2-3-1",
+        "tactical_notes": "Bellingham masterclass sends England to semis! Norway sat deep in their familiar compact block (same approach that beat Brazil), but England found a way through. Bellingham scored twice - showing incredible composure and finishing. Tuchel NOT happy with overall England display despite the win, suggesting tactical discipline issues. Bellingham's response: 'Whatever' - showing his growing confidence and status as England's talisman. Norway's counter-attacking threat neutralized by England's defensive organization. Haaland contained - no repeat of Brazil heroics.",
+        "key_players": [
+          "Bellingham (2 goals - England hero)",
+          "Haaland (contained)",
+          "Tuchel (England manager)"
+        ],
+        "tactical_themes": [
+          "Bellingham as false 9/10 hybrid",
+          "England's defensive organization vs Norway counter",
+          "Tuchel's tactical demands",
+          "individual brilliance deciding tight games"
+        ]
+      },
+      "significance": "ENGLAND IN SEMI-FINALS! Bellingham's summer - compared to Gazza at Italia 90 by Redknapp. Norway's tournament ends after incredible run (beat Brazil in R16). Tuchel's England not at their best but winning - dangerous combination.",
+      "source": "Sky Sports"
     }
   ],
   "world_cup_2026_tactical_analysis": {
@@ -3468,36 +3542,50 @@
     ]
   },
   "world_cup_2026_top_scorers": {
-    "last_updated": "2026-07-06",
-    "note": "After R16 Brazil 1-2 Norway. Haaland scores double to tie lead.",
+    "last_updated": "2026-07-12",
+    "note": "After QFs. Haaland eliminated (Norway out). Bellingham surges with 2 goals vs Norway. Golden Boot race wide open in semis.",
     "top_10": [
       {
         "player": "Kylian Mbappe",
         "country": "France",
         "goals": 7,
         "assists": 0,
-        "note": "Golden Boot co-leader. France in QF."
+        "note": "Golden Boot co-leader. France in semis. Still in the race."
       },
       {
         "player": "Lionel Messi",
         "country": "Argentina",
         "goals": 7,
         "assists": 0,
-        "note": "Golden Boot co-leader. Broke Klose all-time WC record."
+        "note": "Golden Boot co-leader. Argentina in QF vs Switzerland."
+      },
+      {
+        "player": "Jude Bellingham",
+        "country": "England",
+        "goals": 7,
+        "assists": 0,
+        "note": "NOW TIED! 2 goals vs Norway send England to semis. 'Bellingham's summer' - compared to Gazza Italia 90. England's talisman."
       },
       {
         "player": "Erling Haaland",
         "country": "Norway",
         "goals": 7,
         "assists": 0,
-        "note": "Golden Boot co-leader! 2 goals vs Brazil knocked out 5-time champions. Norway in QF."
+        "note": "OUT of Golden Boot race - Norway eliminated in QF by England. Haaland contained."
       },
       {
         "player": "Harry Kane",
         "country": "England",
         "goals": 5,
         "assists": 0,
-        "note": "Next best. England in R16 vs Mexico."
+        "note": "Had an 'off day' per Sky Sports analysis vs Norway but England still won."
+      },
+      {
+        "player": "Mikel Merino",
+        "country": "Spain",
+        "goals": 4,
+        "assists": 0,
+        "note": "Match-winner vs Belgium! Incredible story - from mobility scooter to World Cup hero in 6 months."
       },
       {
         "player": "Vinicius Junior",
@@ -3519,20 +3607,8 @@
         "assists": 1
       },
       {
-        "player": "Brian Brobbey",
-        "country": "Netherlands",
-        "goals": 3,
-        "assists": 0
-      },
-      {
         "player": "Ismael Saibari",
         "country": "Morocco",
-        "goals": 3,
-        "assists": 0
-      },
-      {
-        "player": "Jonathan David",
-        "country": "Canada",
         "goals": 3,
         "assists": 0
       }
@@ -3690,6 +3766,115 @@
         "Neymar retires from international football (noted in match context)",
         "Mexico vs England R16 in progress"
       ]
+    },
+    {
+      "version": "3.6.0",
+      "date": "2026-07-12",
+      "changes": [
+        "Added World Cup QF results: France 2-0 Morocco, Spain 2-1 Belgium, Norway 1-2 England",
+        "Updated top scorer: Bellingham now tied at 7 goals (2 vs Norway)",
+        "Haaland eliminated from Golden Boot race (Norway out)",
+        "Added Merino highlight (mobility scooter to WC hero in 6 months)",
+        "Added Klopp confirms Germany deal",
+        "Added tactical analysis: Haaland contained by England's defensive organization",
+        "Semi-final matchups set: France vs Spain, England vs Argentina/Switzerland"
+      ]
+    }
+  ],
+  "world_cup_2026_updates": [
+    {
+      "date": "2026-07-10",
+      "stage": "世界杯间歇期(R16结束/QF即将开始)",
+      "key_events": [
+        {
+          "type": "injury",
+          "player": "Christian Pulisic",
+          "team": "USA",
+          "detail": "在对阵比利时的世界杯比赛中腿部骨折(fractured leg)",
+          "tactical_impact": "美国队失去核心创造者，Pulisic作为10号/边锋的盘带突破和创造力无人替代，美国进攻体系受到毁灭性打击"
+        },
+        {
+          "type": "suspension",
+          "player": "Jarell Quansah",
+          "team": "England",
+          "detail": "世界杯中被禁赛2场",
+          "tactical_impact": "英格兰中卫深度受损，Quansah作为年轻出球中卫的替补选择减少，可能迫使英格兰在QF调整后防配置"
+        }
+      ],
+      "tactical_trends": [
+        "世界杯进入间歇期，各队分析R16数据备战QF",
+        "高位压迫vs低位防守的博弈持续——R16多场比赛体现两种风格碰撞",
+        "核心球员伤病/停赛对战术体系的颠覆性影响(Pulisic/Quansah案例)",
+        "3中卫体系在多支球队的运用日趋成熟"
+      ],
+      "golden_boot_race": {
+        "leaders": [
+          "Mbappé (7球)",
+          "Haaland (7球)",
+          "其他并列者"
+        ],
+        "note": "金靴竞争白热化，R16后3人并列7球"
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "stage": "世界杯半决赛(SF阵容确定)",
+      "key_events": [
+        {
+          "type": "match_result",
+          "detail": "QF结果: France 2-0 Morocco / Spain 2-1 Belgium / Norway 1-2 England / Argentina vs Switzerland (进行中)",
+          "tactical_impact": "半决赛对阵: France vs Spain (经典对决!) / England vs Argentina或Switzerland"
+        },
+        {
+          "type": "player_highlight",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "detail": "QF vs Norway梅开二度! 被Redknapp比作Gazza在Italia 90的表现。'Bellingham的夏天' - 已成为英格兰绝对核心。Tuchel对整体表现不满但Bellingham回应: 'Whatever'",
+          "tactical_impact": "Bellingham作为false 9/10混合体的角色日益成熟，个人能力在关键时刻决定比赛"
+        },
+        {
+          "type": "player_highlight",
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "detail": "从轮椅/助行器到世界杯英雄仅用6个月! 对Belgium打入制胜球。西班牙足球的韧性体现。",
+          "tactical_impact": "西班牙中场深度和替补质量惊人，Merino的崛起为Spain提供了额外的进攻威胁"
+        },
+        {
+          "type": "tactical_trend",
+          "detail": "Haaland被英格兰成功限制(对比R16对巴西的统治表现)，说明针对性防守部署可以有效抑制超级球星。低位防守+快速反击仍是杯赛有效策略，但顶级球队正在学会破解。",
+          "tactical_impact": "杯赛战术博弈升级：球队需要同时具备破解低位防守和应对快速反击的能力"
+        },
+        {
+          "type": "manager_news",
+          "detail": "Klopp确认同意执教德国队! 在Nagelsmann因R32点球大战输给Paraguay后接手。要求'深入讨论'根本性变革。",
+          "tactical_impact": "Klopp的Gegenpressing哲学将注入德国队，但需解决德国12年世界杯淘汰赛不胜的魔咒"
+        },
+        {
+          "type": "transfer",
+          "detail": "Edwards离开FSG和Liverpool / Man City签下Leicester的Monga(£10m) / Chelsea想永久出售Garnacho",
+          "tactical_impact": "Liverpool进入新时代(Edwards离开+FSG重组)，Man City继续青年投资"
+        }
+      ],
+      "tactical_trends": [
+        "Bellingham作为England核心的战术价值无可替代 - 既能组织又能终结",
+        "France vs Spain半决赛将是tiki-taka vs 个人天赋的经典对决",
+        "Merino的故事证明：深度阵容和球员心理韧性在杯赛中至关重要",
+        "Haaland被限制案例：针对性防守部署可以抑制任何超级球星",
+        "Klopp接手德国：Gegenpressing能否解决德国长期问题？"
+      ],
+      "semi_final_matchups": {
+        "sf1": "France vs Spain - 经典足球哲学对决",
+        "sf2": "England vs Argentina/Switzerland winner",
+        "date": "2026-07-15 (预计)"
+      },
+      "golden_boot_race": {
+        "leaders": [
+          "Mbappé (7球)",
+          "Messi (7球)",
+          "Bellingham (7球)"
+        ],
+        "note": "金靴3人并列7球! Haaland已被淘汰。半决赛将是决定金靴归属的关键战场。"
+      }
     }
   ]
 }
