@@ -1,6 +1,6 @@
 {
-  "version": "3.6.0",
-  "last_updated": "2026-07-12",
+  "version": "3.8.0",
+  "last_updated": "2026-07-14",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -3399,6 +3399,44 @@
       },
       "significance": "ENGLAND IN SEMI-FINALS! Bellingham's summer - compared to Gazza at Italia 90 by Redknapp. Norway's tournament ends after incredible run (beat Brazil in R16). Tuchel's England not at their best but winning - dangerous combination.",
       "source": "Sky Sports"
+    },
+    {
+      "date": "2026-07-12",
+      "round": "Quarter-Final",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "score": "3-1 (AET)",
+      "key_events": [
+        "Alvarez scores extra-time stunner to send Argentina to semis",
+        "Argentina set up blockbuster semi-final vs England",
+        "Switzerland eliminated after strong tournament run"
+      ],
+      "tactical_notes": "Argentina's persistence paid off in extra time. Alvarez's individual brilliance broke down a resilient Swiss defense. Classic South American patience vs Swiss organization."
+    },
+    {
+      "date": "2026-07-14",
+      "round": "Semi-Final",
+      "home": "France",
+      "away": "Spain",
+      "score": "TBD",
+      "key_events": [
+        "Semi-final day",
+        "Mbappe vs Yamal generational clash",
+        "Golden Boot race: 3 players on 7 goals"
+      ],
+      "tactical_notes": "France: 3-4-2-1 under Deschamps, Mbappe left channel dominance, Kounde overlapping right. Spain: 4-3-3 Tiki-Taka, Rodri anchor, Yamal right wing magic, Pedri creative hub. Key battle: France counter-attack speed vs Spain possession control."
+    },
+    {
+      "date": "2026-07-15",
+      "round": "Semi-Final",
+      "home": "England",
+      "away": "Argentina",
+      "score": "TBD",
+      "key_events": [
+        "Bellingham vs Messi Golden Boot showdown",
+        "Tuchel system vs Argentina fluidity"
+      ],
+      "tactical_notes": "England: Tuchel 3-4-2-1, Bellingham false 9/10 hybrid, Saka right wing, Rice anchor. Argentina: 4-4-2 diamond, Messi free role, Alvarez striker, Enzo midfield control. Key battle: England press vs Argentina build-up play."
     }
   ],
   "world_cup_2026_tactical_analysis": {
@@ -3542,8 +3580,8 @@
     ]
   },
   "world_cup_2026_top_scorers": {
-    "last_updated": "2026-07-12",
-    "note": "After QFs. Haaland eliminated (Norway out). Bellingham surges with 2 goals vs Norway. Golden Boot race wide open in semis.",
+    "last_updated": "2026-07-14",
+    "note": "SEMI-FINAL DAY! Golden Boot decider: Mbappe/Messi/Bellingham all on 7. Semi-finals will determine the winner. Haaland eliminated in QF.",
     "top_10": [
       {
         "player": "Kylian Mbappe",
@@ -3779,6 +3817,26 @@
         "Added tactical analysis: Haaland contained by England's defensive organization",
         "Semi-final matchups set: France vs Spain, England vs Argentina/Switzerland"
       ]
+    },
+    {
+      "version": "3.7.0",
+      "date": "2026-07-13",
+      "changes": [
+        "Added Argentina 3-1 Switzerland (QF, AET, Alvarez stunner)",
+        "Semi-finals confirmed: France vs Spain / England vs Argentina",
+        "Updated top scorers note",
+        "Total matches: 70"
+      ]
+    },
+    {
+      "version": "3.8.0",
+      "date": "2026-07-14",
+      "changes": [
+        "Added Semi-Final preview: France vs Spain / England vs Argentina",
+        "Tactical analysis: Tiki-Taka vs Counter / System vs Fluidity",
+        "Golden Boot showdown: 3 players on 7 goals",
+        "Semi-final match entries added"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -3875,6 +3933,29 @@
         ],
         "note": "金靴3人并列7球! Haaland已被淘汰。半决赛将是决定金靴归属的关键战场。"
       }
+    },
+    {
+      "date": "2026-07-13",
+      "title": "QF Complete: Argentina beat Switzerland 3-1 AET",
+      "details": "Alvarez extra-time stunner sends Argentina to semis vs England. All 4 semi-finalists confirmed: France, Spain, England, Argentina. Semi-finals: France vs Spain (Jul 14), England vs Argentina (Jul 15).",
+      "tactical_highlights": [
+        "Argentina's patience in extra time vs organized Swiss defense",
+        "Alvarez individual brilliance - clinical finishing under pressure",
+        "Semi-final matchups: Tiki-taka vs天赋(France vs Spain), Individual talent vs team system(England vs Argentina)"
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "title": "SEMI-FINAL DAY! France vs Spain / England vs Argentina",
+      "details": "World Cup 2026 Semi-Finals. France vs Spain (Jul 14) - Tiki-Taka vs French counter-attacking prowess. Mbappe vs Yamal/Lamine. England vs Argentina (Jul 15) - Bellingham(7 goals) vs Messi(7 goals) Golden Boot showdown. Tactical clash: Tuchel structured system vs Argentina fluid attack.",
+      "tactical_highlights": [
+        "France vs Spain: Mbappe speed vs Spain possession control - classic counter vs Tiki-Taka",
+        "Spain Yamal(18) becoming youngest SF scorer in history - new generation vs old guard",
+        "England vs Argentina: Bellingham box-to-box dominance vs Argentina midfield creativity",
+        "Golden Boot decider: Mbappe/Messi/Bellingham all on 7 - SF goals will decide",
+        "Tuchel 3-4-2-1 vs Spain 4-3-3: tactical chess match in midfield",
+        "Argentina low block + transition vs England high press - Gegenpress vs Pragmatic"
+      ]
     }
   ]
 }
