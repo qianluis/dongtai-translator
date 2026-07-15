@@ -1,6 +1,6 @@
 {
-  "version": "3.8.0",
-  "last_updated": "2026-07-14",
+  "version": "3.9.0",
+  "last_updated": "2026-07-15T09:00:00+08:00",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -3418,13 +3418,38 @@
       "round": "Semi-Final",
       "home": "France",
       "away": "Spain",
-      "score": "TBD",
+      "score": "0-2",
       "key_events": [
-        "Semi-final day",
-        "Mbappe vs Yamal generational clash",
-        "Golden Boot race: 3 players on 7 goals"
+        "Spain dominate France 2-0 in semi-final",
+        "Mikel Oyarzabal penalty opens scoring",
+        "Pedro Porro finishes brilliant team goal (one-two with Dani Olmo)",
+        "France's attack completely neutralized - only 0.30 xG",
+        "Spain average 64% possession, 200+ more final-third passes than any other team",
+        "De La Fuente: 'We are the best team in the world'",
+        "Mbappe cut a forlorn figure - France's attacking firepower nullified",
+        "Spain reach World Cup final - collective triumph over superstars"
       ],
-      "tactical_notes": "France: 3-4-2-1 under Deschamps, Mbappe left channel dominance, Kounde overlapping right. Spain: 4-3-3 Tiki-Taka, Rodri anchor, Yamal right wing magic, Pedri creative hub. Key battle: France counter-attack speed vs Spain possession control."
+      "tactical_notes": "Spain's Juego de Posicion at its finest. De La Fuente's system completely dominated France. Key tactical elements: (1) Rodri as single pivot controlled tempo, allowing Pedri/Olmo freedom between lines. (2) France's 3-4-2-1 was bypassed through Spain's mid-block pressing and quick combinations. (3) Spain's defensive shape without ball was exceptional - France limited to 0.30 xG. (4) Porro's goal from deep build-up showed Spain's patience: started in own half, one-two with Olmo, clinical finish. (5) 'Best team in the world' per De La Fuente - 13th win in 14 major tournament games as coach. Tactical lesson: collective organization and positional play can overcome individual superstar talent.",
+      "scorers": [
+        {
+          "player": "Mikel Oyarzabal",
+          "type": "penalty",
+          "time": "N/A"
+        },
+        {
+          "player": "Pedro Porro",
+          "type": "open play",
+          "buildup": "one-two with Dani Olmo, started from deep"
+        }
+      ],
+      "xG": {
+        "France": 0.3,
+        "Spain": "dominant"
+      },
+      "possession": {
+        "Spain": "64%",
+        "France": "36%"
+      }
     },
     {
       "date": "2026-07-15",
@@ -3433,10 +3458,43 @@
       "away": "Argentina",
       "score": "TBD",
       "key_events": [
-        "Bellingham vs Messi Golden Boot showdown",
-        "Tuchel system vs Argentina fluidity"
+        "BLOCKBUSTER SEMI-FINAL: England vs Argentina",
+        "Bellingham (7 goals) vs Messi (7 goals) - Golden Boot decider",
+        "Tuchel's 3-4-2-1 system vs Argentina's 4-4-2 diamond",
+        "Opta: England 52.9% chance to reach final, coin-toss game",
+        "Tuchel insists 'no cracks' with Bellingham after clear-the-air talks",
+        "Merson: 'Teams win leagues, X-factor wins World Cups - Bellingham has it'",
+        "Messi (39) out to emulate Maradona vs England - first time facing them",
+        "Tuchel: 'Argentina and Messi will bring best out of England'",
+        "Man Utd complete £35m Tielemans deal (transfer news)"
       ],
-      "tactical_notes": "England: Tuchel 3-4-2-1, Bellingham false 9/10 hybrid, Saka right wing, Rice anchor. Argentina: 4-4-2 diamond, Messi free role, Alvarez striker, Enzo midfield control. Key battle: England press vs Argentina build-up play."
+      "tactical_notes": "Sky Sports tactical dossier analysis: (1) Bellingham as false 9/10 hybrid - all-action, scored twice in successive games, Real Madrid midfielder is England's most explosive force. (2) Messi at 39 still mesmerizing - shared Golden Boot lead with Mbappe (7 each), free role in Argentina's system. (3) Key tactical battles: width vs compactness, set-pieces could be decisive, midfield control through Rice vs Enzo, defensive discipline against Messi's movement, late goals potential. (4) Power Rankings: Messi #1 overall, Bellingham #2, Kane #3 among both squads. (5) England's approach: Tuchel's structured pressing vs Argentina's fluid attacking. (6) Historical context: 'Hand of God', Beckham's redemption - rivalry loaded with history. (7) Atlanta venue - air-conditioned cauldron, neutral atmosphere expected.",
+      "tactical_dossier": {
+        "source": "Sky Sports (Adam Smith, Football Data Editor)",
+        "date": "2026-07-14",
+        "key_factors": [
+          "Width exploitation - England must stretch Argentina diamond",
+          "Set-piece dominance - England aerial advantage",
+          "Midfield control - Rice vs Enzo battle",
+          "Defensive discipline - containing Messi free role",
+          "Late goals - both teams score in final 15 mins this tournament"
+        ],
+        "england_formation": "3-4-2-1 (Tuchel)",
+        "argentina_formation": "4-4-2 diamond",
+        "key_players": {
+          "england": [
+            "Jude Bellingham (false 9/10)",
+            "Harry Kane",
+            "Declan Rice",
+            "Bukayo Saka"
+          ],
+          "argentina": [
+            "Lionel Messi (free role)",
+            "Julian Alvarez",
+            "Enzo Fernandez"
+          ]
+        }
+      }
     }
   ],
   "world_cup_2026_tactical_analysis": {
@@ -3580,29 +3638,29 @@
     ]
   },
   "world_cup_2026_top_scorers": {
-    "last_updated": "2026-07-14",
-    "note": "SEMI-FINAL DAY! Golden Boot decider: Mbappe/Messi/Bellingham all on 7. Semi-finals will determine the winner. Haaland eliminated in QF.",
+    "last_updated": "2026-07-15",
+    "note": "SF1 DONE: Spain 2-0 France (Oyarzabal pen, Porro). Mbappe eliminated from Golden Boot! SF2 TODAY: England vs Argentina - Bellingham vs Messi decider. Both on 7 goals. Winner takes Golden Boot lead into final.",
     "top_10": [
       {
         "player": "Kylian Mbappe",
         "country": "France",
         "goals": 7,
         "assists": 0,
-        "note": "Golden Boot co-leader. France in semis. Still in the race."
+        "note": "ELIMINATED from tournament. France lost SF 0-2 to Spain. Finished with 7 goals."
       },
       {
         "player": "Lionel Messi",
         "country": "Argentina",
         "goals": 7,
         "assists": 0,
-        "note": "Golden Boot co-leader. Argentina in QF vs Switzerland."
+        "note": "7 goals. SF TODAY vs England. Aiming to emulate Maradona vs England. Still mesmerizing at 39."
       },
       {
         "player": "Jude Bellingham",
         "country": "England",
         "goals": 7,
         "assists": 0,
-        "note": "NOW TIED! 2 goals vs Norway send England to semis. 'Bellingham's summer' - compared to Gazza Italia 90. England's talisman."
+        "note": "7 goals. SF TODAY vs Argentina. Golden Boot decider with Messi. X-factor player per Merson."
       },
       {
         "player": "Erling Haaland",
@@ -3761,6 +3819,18 @@
         "gegenpressing",
         "managerial change"
       ]
+    },
+    {
+      "title": "Collective > Superstars (SF1 Evidence)",
+      "date": "2026-07-15",
+      "description": "Spain 2-0 France provides strongest evidence yet that collective organization beats individual talent. France had Mbappe (7 goals), Dembele, Olise, Barcola - all neutralized. Spain had no single superstar but dominated every metric: 64% possession, 200+ more final-third passes, France only 0.30 xG. De La Fuente 13W in 14 major tournament games. Pattern: systematic positional play > individual brilliance.",
+      "category": "tournament_trend",
+      "evidence": [
+        "Spain 2-0 France SF",
+        "64% possession",
+        "0.30 xG for France",
+        "13W/14 games under De La Fuente"
+      ]
     }
   ],
   "changelog": [
@@ -3837,6 +3907,11 @@
         "Golden Boot showdown: 3 players on 7 goals",
         "Semi-final match entries added"
       ]
+    },
+    {
+      "version": "3.9.0",
+      "date": "2026-07-15",
+      "changes": "SF1 result: France 0-2 Spain (Oyarzabal pen, Porro). Spain dominate - 64% possession, France 0.30 xG. Mbappe eliminated from tournament/Golden Boot. SF2 preview enhanced: England vs Argentina tactical dossier (Sky Sports analysis). Bellingham vs Messi Golden Boot decider (both 7 goals). New tactical trend: Collective > Superstars evidence."
     }
   ],
   "world_cup_2026_updates": [
