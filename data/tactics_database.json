@@ -1,6 +1,6 @@
 {
-  "version": "3.9.0",
-  "last_updated": "2026-07-15T09:00:00+08:00",
+  "version": "4.0.0",
+  "last_updated": "2026-07-19T09:00:00+08:00",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -3253,17 +3253,6 @@
       }
     },
     {
-      "date": "2026-07-01",
-      "round": "Round of 32",
-      "home": "England",
-      "away": "DR Congo",
-      "score": "TBD",
-      "venue": "Atlanta",
-      "tactics": {
-        "tactical_notes": "Tuchel prepared for difficult DR Congo clash despite right-back injury woes. Winner faces Mexico or Ecuador in R16. Tuchel tactical flexibility key - England showed Kane deep-drop innovation in group stage."
-      }
-    },
-    {
       "date": "2026-07-04",
       "round": "Round of 16",
       "home": "France",
@@ -3452,49 +3441,56 @@
       }
     },
     {
-      "date": "2026-07-15",
-      "round": "Semi-Final",
-      "home": "England",
-      "away": "Argentina",
-      "score": "TBD",
+      "stage": "Third Place Play-off",
+      "match": "France vs England",
+      "score": "4-6",
+      "date": "2026-07-18",
+      "venue": "Hard Rock Stadium",
+      "attendance": 64478,
       "key_events": [
-        "BLOCKBUSTER SEMI-FINAL: England vs Argentina",
-        "Bellingham (7 goals) vs Messi (7 goals) - Golden Boot decider",
-        "Tuchel's 3-4-2-1 system vs Argentina's 4-4-2 diamond",
-        "Opta: England 52.9% chance to reach final, coin-toss game",
-        "Tuchel insists 'no cracks' with Bellingham after clear-the-air talks",
-        "Merson: 'Teams win leagues, X-factor wins World Cups - Bellingham has it'",
-        "Messi (39) out to emulate Maradona vs England - first time facing them",
-        "Tuchel: 'Argentina and Messi will bring best out of England'",
-        "Man Utd complete £35m Tielemans deal (transfer news)"
+        "Bukayo Saka hat-trick (3 goals)",
+        "Declan Rice goal",
+        "Ezri Konsa goal",
+        "Jude Bellingham goal",
+        "Mbappe scores 2 - becomes World Cup all-time leading scorer (10 goals total)",
+        "England best World Cup finish since 1966 (3rd place, bronze medal)",
+        "Tuchel tactical call: started Morgan Rogers over Saka in SF, Saka unleashed in 3rd place match"
       ],
-      "tactical_notes": "Sky Sports tactical dossier analysis: (1) Bellingham as false 9/10 hybrid - all-action, scored twice in successive games, Real Madrid midfielder is England's most explosive force. (2) Messi at 39 still mesmerizing - shared Golden Boot lead with Mbappe (7 each), free role in Argentina's system. (3) Key tactical battles: width vs compactness, set-pieces could be decisive, midfield control through Rice vs Enzo, defensive discipline against Messi's movement, late goals potential. (4) Power Rankings: Messi #1 overall, Bellingham #2, Kane #3 among both squads. (5) England's approach: Tuchel's structured pressing vs Argentina's fluid attacking. (6) Historical context: 'Hand of God', Beckham's redemption - rivalry loaded with history. (7) Atlanta venue - air-conditioned cauldron, neutral atmosphere expected.",
-      "tactical_dossier": {
-        "source": "Sky Sports (Adam Smith, Football Data Editor)",
-        "date": "2026-07-14",
-        "key_factors": [
-          "Width exploitation - England must stretch Argentina diamond",
-          "Set-piece dominance - England aerial advantage",
-          "Midfield control - Rice vs Enzo battle",
-          "Defensive discipline - containing Messi free role",
-          "Late goals - both teams score in final 15 mins this tournament"
-        ],
-        "england_formation": "3-4-2-1 (Tuchel)",
-        "argentina_formation": "4-4-2 diamond",
-        "key_players": {
-          "england": [
-            "Jude Bellingham (false 9/10)",
-            "Harry Kane",
-            "Declan Rice",
-            "Bukayo Saka"
-          ],
-          "argentina": [
-            "Lionel Messi (free role)",
-            "Julian Alvarez",
-            "Enzo Fernandez"
-          ]
+      "stats": {
+        "possession": {
+          "France": 45.9,
+          "England": 54.1
+        },
+        "shots": {
+          "France": 19,
+          "England": 19
+        },
+        "shots_on_target": {
+          "France": 9,
+          "England": 11
+        },
+        "big_chances_missed": {
+          "France": 2,
+          "England": 5
+        },
+        "corners": {
+          "France": 3,
+          "England": 4
+        },
+        "passing_accuracy": {
+          "France": 90.8,
+          "England": 90.5
+        },
+        "tackles_attempted": {
+          "France": 16,
+          "England": 25
+        },
+        "interceptions": {
+          "France": 8,
+          "England": 11
         }
-      }
+      },
+      "tactical_notes": "England high-press system under Tuchel overwhelmed France. Saka hat-trick after being benched for SF. 10-goal thriller - highest-scoring 3rd place match in WC history. England 0 yellow cards - disciplined performance."
     }
   ],
   "world_cup_2026_tactical_analysis": {
@@ -3638,50 +3634,57 @@
     ]
   },
   "world_cup_2026_top_scorers": {
-    "last_updated": "2026-07-15",
-    "note": "SF1 DONE: Spain 2-0 France (Oyarzabal pen, Porro). Mbappe eliminated from Golden Boot! SF2 TODAY: England vs Argentina - Bellingham vs Messi decider. Both on 7 goals. Winner takes Golden Boot lead into final.",
+    "last_updated": "2026-07-19",
+    "note": "3rd Place DONE: France 4-6 England. Saka hat-trick. Mbappe scores 2 to reach 10 goals - World Cup all-time leading scorer! FINAL TODAY: Spain vs Argentina. Messi on 7 goals needs hat-trick+ to catch Mbappe.",
     "top_10": [
       {
         "player": "Kylian Mbappe",
         "country": "France",
-        "goals": 7,
+        "goals": 10,
         "assists": 0,
-        "note": "ELIMINATED from tournament. France lost SF 0-2 to Spain. Finished with 7 goals."
+        "note": "WORLD CUP ALL-TIME LEADING SCORER! 10 goals. Scored 2 in 3rd place match. France eliminated but Mbappe makes history."
       },
       {
         "player": "Lionel Messi",
         "country": "Argentina",
         "goals": 7,
         "assists": 0,
-        "note": "7 goals. SF TODAY vs England. Aiming to emulate Maradona vs England. Still mesmerizing at 39."
+        "note": "7 goals. FINAL TODAY vs Spain. Needs 3+ goals to catch Mbappe. Last dance at 39."
       },
       {
         "player": "Jude Bellingham",
         "country": "England",
-        "goals": 7,
+        "goals": 8,
         "assists": 0,
-        "note": "7 goals. SF TODAY vs Argentina. Golden Boot decider with Messi. X-factor player per Merson."
+        "note": "8 goals now (scored in 3rd place match). England eliminated with bronze. Breakout tournament."
+      },
+      {
+        "player": "Bukayo Saka",
+        "country": "England",
+        "goals": 6,
+        "assists": 0,
+        "note": "6 goals after hat-trick in 3rd place match. Came off bench in SF, started and destroyed in 3rd place."
       },
       {
         "player": "Erling Haaland",
         "country": "Norway",
         "goals": 7,
         "assists": 0,
-        "note": "OUT of Golden Boot race - Norway eliminated in QF by England. Haaland contained."
+        "note": "OUT - Norway eliminated in QF. Finished with 7 goals."
       },
       {
         "player": "Harry Kane",
         "country": "England",
         "goals": 5,
         "assists": 0,
-        "note": "Had an 'off day' per Sky Sports analysis vs Norway but England still won."
+        "note": "5 goals. Bronze medal with England."
       },
       {
         "player": "Mikel Merino",
         "country": "Spain",
         "goals": 4,
         "assists": 0,
-        "note": "Match-winner vs Belgium! Incredible story - from mobility scooter to World Cup hero in 6 months."
+        "note": "4 goals. In FINAL today vs Argentina. Incredible story - from mobility scooter to WC final."
       },
       {
         "player": "Vinicius Junior",
@@ -3695,12 +3698,6 @@
         "country": "Germany",
         "goals": 3,
         "assists": 2
-      },
-      {
-        "player": "Johan Manzambi",
-        "country": "Switzerland",
-        "goals": 3,
-        "assists": 1
       },
       {
         "player": "Ismael Saibari",
@@ -3912,6 +3909,17 @@
       "version": "3.9.0",
       "date": "2026-07-15",
       "changes": "SF1 result: France 0-2 Spain (Oyarzabal pen, Porro). Spain dominate - 64% possession, France 0.30 xG. Mbappe eliminated from tournament/Golden Boot. SF2 preview enhanced: England vs Argentina tactical dossier (Sky Sports analysis). Bellingham vs Messi Golden Boot decider (both 7 goals). New tactical trend: Collective > Superstars evidence."
+    },
+    {
+      "version": "4.0.0",
+      "date": "2026-07-19",
+      "changes": [
+        "Added 3rd Place Play-off: France 4-6 England (Saka hat-trick, 10-goal thriller)",
+        "Updated top scorers: Mbappe 10 goals (WC all-time record), Bellingham 8, Saka 6",
+        "England bronze medal - best WC finish since 1966",
+        "Final preview: Spain vs Argentina (Jul 19, MetLife Stadium)",
+        "Tactical note: Tuchel rotation masterclass - Saka benched SF, hat-trick 3rd place"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -4031,6 +4039,11 @@
         "Tuchel 3-4-2-1 vs Spain 4-3-3: tactical chess match in midfield",
         "Argentina low block + transition vs England high press - Gegenpress vs Pragmatic"
       ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "3RD PLACE: France 4-6 England + FINAL TODAY: Spain vs Argentina",
+      "details": "England win 10-goal thriller over France. Saka hat-trick, Bellingham scores (8 total). Mbappe 2 goals = 10 WC total (all-time record). England bronze - best since 1966. FINAL TODAY: Spain vs Argentina at MetLife Stadium. Messi (7) needs miracle vs Spain defense. Tuchel tactical masterclass in 3rd place - benched Saka for SF, unleashed him when it mattered."
     }
   ]
 }
