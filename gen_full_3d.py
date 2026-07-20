@@ -20,9 +20,12 @@ with open('/root/.coze/agents/7646924251471020315/workspace/football-tactics-3d/
 
 systems = db['tactical_systems']
 
-# Create a 5x3 grid of 3D pitch diagrams
-fig = plt.figure(figsize=(30, 22), facecolor=BG_COLOR)
-fig.suptitle('⚽ 足球踢法3D战术全景 — 15种体系完整版\nFootball Tactical Systems 3D Panorama', 
+# Create a 6x5 grid of 3D pitch diagrams (26 systems)
+import math
+n_cols = 5
+n_rows = math.ceil(len(systems) / n_cols)
+fig = plt.figure(figsize=(30, 8*n_rows), facecolor=BG_COLOR)
+fig.suptitle('⚽ 足球踢法3D战术全景 — 26种体系完整版\nFootball Tactical Systems 3D Panorama', 
              color=TEXT_COLOR, fontsize=22, fontweight='bold', y=0.98)
 
 from mpl_toolkits.mplot3d import Axes3D
@@ -49,9 +52,9 @@ def draw_pitch_3d(ax, title, subtitle=''):
     ax.axis('off')
 
 for idx, sys in enumerate(systems):
-    row = idx // 5
-    col = idx % 5
-    ax = fig.add_subplot(3, 5, row*5+col+1, projection='3d')
+    row = idx // n_cols
+    col = idx % n_cols
+    ax = fig.add_subplot(n_rows, n_cols, row*n_cols+col+1, projection='3d')
     
     title = f'{sys["name"]}\n{sys["name_en"]}'
     subtitle = f'{sys["era"]} · {sys["formation"]} · {sys["origin"]}'
@@ -72,17 +75,20 @@ for idx, sys in enumerate(systems):
         ax.text(x, z, 2.5, p['label'], color='white', fontsize=4, ha='center', va='bottom', fontweight='bold')
     
     # Draw passing triangles
+    n_players = len(sys['players'])
     for tri in sys.get('passing_triangles', []):
-        pts = [sys['players'][i] for i in tri]
-        tri_x = [p['x']+50 for p in pts] + [pts[0]['x']+50]
-        tri_z = [p['z']+35 for p in pts] + [pts[0]['z']+35]
-        ax.plot(tri_x, tri_z, [0.3]*4, color='#00ddff', linewidth=0.5, alpha=0.3)
+        if all(i < n_players for i in tri):
+            pts = [sys['players'][i] for i in tri]
+            tri_x = [p['x']+50 for p in pts] + [pts[0]['x']+50]
+            tri_z = [p['z']+35 for p in pts] + [pts[0]['z']+35]
+            ax.plot(tri_x, tri_z, [0.3]*4, color='#00ddff', linewidth=0.5, alpha=0.3)
     
     # Draw movement paths
     for path in sys.get('movement_paths', []):
-        p1, p2 = sys['players'][path[0]], sys['players'][path[1]]
-        ax.plot([p1['x']+50, p2['x']+50], [p1['z']+35, p2['z']+35], [0.5, 0.5], 
-                color='#cc44ff', linewidth=0.8, alpha=0.5, linestyle='--')
+        if path[0] < n_players and path[1] < n_players:
+            p1, p2 = sys['players'][path[0]], sys['players'][path[1]]
+            ax.plot([p1['x']+50, p2['x']+50], [p1['z']+35, p2['z']+35], [0.5, 0.5], 
+                    color='#cc44ff', linewidth=0.8, alpha=0.5, linestyle='--')
     
     # Stats bar at bottom
     stats = sys['stats']
@@ -97,5 +103,5 @@ fig.text(0.5, 0.01,
 
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.savefig('/root/.coze/agents/7646924251471020315/workspace/football-tactics-3d/assets/images/15体系3D全景.png', 
-            dpi=150, bbox_inches='tight', facecolor=BG_COLOR)
-print("✅ 15体系3D全景图已生成")
+            dpi=120, bbox_inches='tight', facecolor=BG_COLOR)
+print(f"✅ {len(systems)}体系3D全景图已生成")
