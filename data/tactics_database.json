@@ -1,6 +1,6 @@
 {
-  "version": "9.0.0",
-  "last_updated": "2026-07-20T09:00:00+08:00",
+  "version": "9.2.0",
+  "last_updated": "2026-07-23",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -5754,6 +5754,62 @@
           "Neymar's international career ends with stoppage-time penalty - too late to save Brazil"
         ],
         "tactical_trend": "Low block + counter-attack remains effective against possession teams in knockout football"
+      },
+      {
+        "title": "FIFA investigates Argentina's conduct after World Cup final defeat to Spain",
+        "date": "2026-07-21",
+        "source": "Sky Sports",
+        "summary": "FIFA launches investigation into Argentina's behavior after their 1-0 final loss to Spain. Leandro Paredes appeared to throw punches at Spain squad members, Nahuel Molina also involved in physical altercation. Enzo Fernandez praised Argentina's 'pride' and 'humility'.",
+        "tactical_relevance": "Post-match discipline and sportsmanship - reflects intensity of Spain's Tiki-Taka evolution finally breaking Argentina's resistance in extra time",
+        "category": "post_tournament"
+      },
+      {
+        "title": "Chelsea complete record-breaking £117m deal for Morgan Rogers from Aston Villa",
+        "date": "2026-07-21",
+        "source": "Sky Sports",
+        "summary": "Chelsea sign 23-year-old Morgan Rogers for £117m - most expensive British player ever, beating Elliot Anderson's £116m move to Man City. Rogers signs 7-year deal under Xabi Alonso at Stamford Bridge.",
+        "tactical_relevance": "Xabi Alonso's Chelsea project continues - record investment in young attacking talent. Rogers' versatility fits Alonso's possession-based system.",
+        "category": "transfer"
+      },
+      {
+        "title": "Post-World Cup tactical landscape: Spain's Tiki-Taka evolution crowned world champions",
+        "date": "2026-07-22",
+        "source": "Analysis",
+        "summary": "Spain win their 2nd World Cup with De La Fuente's evolved Tiki-Taka - patient possession (64% avg in SF) finally breaking down organized defenses. Ferran Torres' extra-time winner in final validates the approach. Key lesson: defensive discipline + clinical finishing > possession without purpose (see Brazil's elimination).",
+        "tactical_relevance": "Tournament-defining pattern confirmed: organized defensive blocks + efficient transitions beat possession-for-possession's-sake. Spain succeeded by combining possession with purpose.",
+        "category": "tournament_analysis"
+      },
+      {
+        "title": "Rodri pushing for Real Madrid move despite back surgery",
+        "date": "2026-07-23",
+        "source": "Sky Sports",
+        "summary": "Spain World Cup winner Rodri is reportedly pushing for a move to Real Madrid, despite being set to undergo back surgery. The Ballon d'Or contender's future at Manchester City is uncertain.",
+        "tactical_relevance": "Rodri is the archetype of the modern single pivot / deep-lying regista in a 4-3-3. His move (if completed) would signal Real Madrid's commitment to positional play (Juego de Posición). His absence from City would force Guardiola to rebuild the midfield base.",
+        "category": "transfer"
+      },
+      {
+        "title": "Casemiro joins Inter Miami on free transfer after World Cup",
+        "date": "2026-07-23",
+        "source": "Sky Sports",
+        "summary": "Former Manchester United and Real Madrid midfielder Casemiro joins Inter Miami on a free transfer following Brazil's World Cup campaign. The 34-year-old brings 5x Champions League experience to MLS.",
+        "tactical_relevance": "Casemiro's MLS move represents the continuing pipeline of elite defensive midfielders to American soccer. His positioning discipline and counter-press triggers made him the template for the modern #6.",
+        "category": "transfer"
+      },
+      {
+        "title": "Saliba out for extended period with back injury after World Cup",
+        "date": "2026-07-23",
+        "source": "Sky Sports",
+        "summary": "Arsenal and France centre-back William Saliba will miss an extended period due to a back injury sustained during the World Cup. France's tournament ended with a 4-6 semi-final loss to England.",
+        "tactical_relevance": "Saliba's injury is a major blow to Arsenal's defensive build-up play. His ability to carry the ball through midfield lines and break pressing structures is central to Arteta's positional system.",
+        "category": "injury"
+      },
+      {
+        "title": "Aston Villa agree deal for Garnacho; Xabi Alonso's Chelsea rebuild continues",
+        "date": "2026-07-23",
+        "source": "Sky Sports",
+        "summary": "Aston Villa agree a deal to sign Alejandro Garnacho from Chelsea. Chelsea's record £117m signing of Morgan Rogers (under Xabi Alonso) signals a new era of British talent investment.",
+        "tactical_relevance": "Xabi Alonso's Chelsea builds around possession-based attacking football with British talent (Rogers £117m British record). Garnacho to Villa represents direct, vertical wing play. Two contrasting tactical philosophies in the same window.",
+        "category": "transfer"
       }
     ],
     "tournament_trends": [
@@ -5769,6 +5825,16 @@
         "trend": "Brazil elimination - possession without penetration",
         "observation": "Brazil's possession-based 4-2-3-1 failed to break down Norway's organized low block. Despite controlling the game, Brazil lacked the final ball quality. Norway's counter-attacking approach with Haaland as focal point proved devastating. This reinforces the tournament pattern: defensive discipline + clinical finishing > possession without purpose.",
         "date": "2026-07-06"
+      },
+      {
+        "trend": "Post-WC tactical consensus: Spain's evolution validates purposeful possession",
+        "observation": "Spain's World Cup victory confirms that Tiki-Taka can work when combined with defensive solidity and clinical finishing. De La Fuente's Spain averaged 64% possession in the semi-final but crucially had the final-ball quality that Brazil lacked. The tournament pattern is clear: defensive organization + efficient transitions > aimless possession.",
+        "date": "2026-07-22"
+      },
+      {
+        "trend": "Post-WC transfer market: elite pivots and ball-playing CBs in highest demand",
+        "observation": "The July 2026 transfer window reveals tactical priorities: Rodri (single pivot) to Real Madrid, Saliba (ball-playing CB) injury, Casemiro (classic #6) to MLS. Clubs prioritize midfield control and defensive build-up - a direct legacy of the World Cup's tactical lessons.",
+        "date": "2026-07-23"
       }
     ]
   },
@@ -6058,6 +6124,16 @@
         "England bronze medal - best WC finish since 1966",
         "Final preview: Spain vs Argentina (Jul 19, MetLife Stadium)",
         "Tactical note: Tuchel rotation masterclass - Saka benched SF, hat-trick 3rd place"
+      ]
+    },
+    {
+      "version": "9.2.0",
+      "date": "2026-07-23",
+      "changes": [
+        "添加7月23日转会新闻: Rodri→皇马/Casemiro→Inter Miami/Saliba伤病/Garnacho→维拉",
+        "添加Xabi Alonso切尔西重建分析(Rogers £117m英国纪录)",
+        "添加赛后转会市场战术趋势分析",
+        "版本升级至v9.2.0"
       ]
     }
   ],
