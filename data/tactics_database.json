@@ -1,6 +1,6 @@
 {
-  "version": "9.2.0",
-  "last_updated": "2026-07-23",
+  "version": "9.3.0",
+  "last_updated": "2026-07-25",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -4632,6 +4632,20 @@
         "move": "RB萨尔茨堡→Rangers(谈判中)",
         "tactical_impact": "年轻教练Röhl以高位逼抢和位置游戏著称，如加盟将给苏超带来新的战术风格",
         "date": "2026-06-12"
+      },
+      {
+        "coach": "Enzo Maresca",
+        "move": "Chelsea → Manchester City (接替Guardiola)",
+        "tactical_impact": "Maresca声称不是'copy and paste'教练，将带来自己的战术身份。作为Guardiola的前助手(2022-23三冠王赛季)，他熟悉Positional Play但承诺加入个人理念。第三次回归City(之前担任青训教练)。首场比赛8月23日vs Bournemouth。关键问题：能否在Guardiola的6英超冠军+1欧冠遗产上继续进化？",
+        "date": "2026-07-24",
+        "status": "confirmed"
+      },
+      {
+        "coach/owner": "Jeff Bezos & Amit Bhatia",
+        "move": "战略少数股权收购Liverpool FC",
+        "tactical_impact": "FSG引入Bezos和Bhatia的战略少数股权投资。Edwards已离开FSG，Liverpool进入新时代。所有权结构变化可能影响转会策略和长期建队方向。Tuchel的战术体系在新所有权下如何发展值得关注。",
+        "date": "2026-07-25",
+        "status": "reported"
       }
     ]
   },
@@ -6033,9 +6047,32 @@
         "0.30 xG for France",
         "13W/14 games under De La Fuente"
       ]
+    },
+    {
+      "date": "2026-07-24",
+      "source": "Sky Sports Analysis",
+      "title": "Carrick's Man Utd: Pre-season Tactical Evolution",
+      "content": "Michael Carrick的曼联在季前赛5-0大胜Rosenborg，展示了战术风格的演变。年轻球员(如Shea Lacey, JJ Gabriel, Amass, Kamason)的融入体现了Carrington青训的影响力。Zirkzee的个人能力进球展示了前场创造力。战术特点：快速转换、边路进攻(Dorgu)、青训球员大量使用。与之前相比，Carrick的球队展现出更清晰的进攻组织。",
+      "impact": "曼联在Carrick手下找到了新的战术身份，青训融合+快速进攻成为标志。季前赛表现预示新赛季可能有突破性进展。",
+      "tags": [
+        "man-utd",
+        "pre-season",
+        "youth-development",
+        "carrick"
+      ]
     }
   ],
   "changelog": [
+    {
+      "version": "9.3.0",
+      "date": "2026-07-25",
+      "changes": [
+        "新增: Enzo Maresca接手Manchester City的战术影响分析",
+        "新增: Michael Carrick曼联季前赛战术演变观察",
+        "新增: 7月25日世界杯后间歇期动态(教练变动、季前赛、转会)",
+        "记录Rodri伤病对曼城防守体系的潜在影响"
+      ]
+    },
     {
       "version": "3.3.0",
       "date": "2026-07-05",
@@ -6259,6 +6296,43 @@
       "date": "2026-07-19",
       "title": "3RD PLACE: France 4-6 England + FINAL TODAY: Spain vs Argentina",
       "details": "England win 10-goal thriller over France. Saka hat-trick, Bellingham scores (8 total). Mbappe 2 goals = 10 WC total (all-time record). England bronze - best since 1966. FINAL TODAY: Spain vs Argentina at MetLife Stadium. Messi (7) needs miracle vs Spain defense. Tuchel tactical masterclass in 3rd place - benched Saka for SF, unleashed him when it mattered."
+    },
+    {
+      "date": "2026-07-25",
+      "stage": "世界杯后间歇期 - 教练变动与季前赛",
+      "key_events": [
+        {
+          "type": "manager_change",
+          "detail": "Enzo Maresca正式接手Manchester City，接替Guardiola。声称将带来自己的战术身份而非简单复制。",
+          "tactical_impact": "曼城进入后Guardiola时代，Maresca的Positional Play+个人理念混合将如何演变是关键看点"
+        },
+        {
+          "type": "pre_season",
+          "detail": "Michael Carrick的曼联5-0大胜Rosenborg，年轻球员大量出场，展示青训融合+快速进攻的战术方向",
+          "tactical_impact": "曼联在Carrick手下找到新的战术身份，Zirkzee、Lacey等球员表现出色"
+        },
+        {
+          "type": "transfer_rumor",
+          "detail": "Man Utd和Arsenal都在关注Ollie Watkins (Aston Villa)，英超前锋市场活跃",
+          "tactical_impact": "顶级前锋的转会可能改变多支球队的进攻体系"
+        },
+        {
+          "type": "injury",
+          "detail": "Rodri将接受背部手术，可能缺席英超开局。与Real Madrid转会传闻持续。",
+          "tactical_impact": "Rodri对曼城的防守体系至关重要，他的缺席将迫使Maresca重新设计中场结构"
+        },
+        {
+          "type": "ownership",
+          "detail": "Jeff Bezos和Amit Bhatia准备收购Liverpool FC战略少数股权，FSG重组",
+          "tactical_impact": "Liverpool进入新时代，所有权变化可能影响转会策略和建队方向"
+        }
+      ],
+      "tactical_trends": [
+        "后Guardiola时代的曼城：Maresca如何在继承与创新之间找到平衡",
+        "季前赛显示的趋势：青训球员融合+快速转换进攻",
+        "Rodri伤病对曼城防守体系的影响"
+      ],
+      "golden_boot_race": "世界杯已结束，关注英超新赛季射手榜竞争"
     }
   ],
   "national_styles": {
