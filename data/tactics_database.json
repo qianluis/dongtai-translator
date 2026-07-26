@@ -1,6 +1,6 @@
 {
-  "version": "9.3.0",
-  "last_updated": "2026-07-25",
+  "version": "9.4.0",
+  "last_updated": "2026-07-26",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6172,6 +6172,17 @@
         "添加赛后转会市场战术趋势分析",
         "版本升级至v9.2.0"
       ]
+    },
+    {
+      "version": "9.4.0",
+      "date": "2026-07-26",
+      "changes": [
+        "添加Iraola Liverpool首秀(4-2 Sunderland)战术分析",
+        "添加De Zerbi执教Tottenham + Robertson加盟",
+        "添加转会风暴: Arsenal探索Vinicius Jr / Real Madrid £85m Diomande / Rodri手术+转会",
+        "添加Maresca曼城继续改造(Neto目标)",
+        "版本升级至v9.4.0"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -6333,6 +6344,54 @@
         "Rodri伤病对曼城防守体系的影响"
       ],
       "golden_boot_race": "世界杯已结束，关注英超新赛季射手榜竞争"
+    },
+    {
+      "date": "2026-07-26",
+      "stage": "世界杯后间歇期 - 季前赛深入 + 转会风暴",
+      "key_events": [
+        {
+          "type": "manager_debut",
+          "detail": "Andoni Iraola正式以Liverpool主教练身份执教首场比赛，4-2击败Sunderland。从Bournemouth带来的高强度压迫+快速转换战术初现端倪。",
+          "tactical_impact": "Liverpool进入后Klopp-Iraola时代，Iraola的高位压迫+垂直进攻风格与Klopp的Gegenpressing有传承但也有差异——更注重结构化控球和边路进攻"
+        },
+        {
+          "type": "transfer_news",
+          "detail": "Arsenal正在探索签下Real Madrid的Vinicius Jr的交易。据报道Real Madrid可能考虑出售。",
+          "tactical_impact": "如果成行，这将是英超历史上最重磅的转会之一。Vinicius的速度和突破能力将极大改变Arsenal的进攻体系"
+        },
+        {
+          "type": "transfer_news",
+          "detail": "Real Madrid为Liverpool目标Diomande出价£85m被拒。Liverpool坚持要价。",
+          "tactical_impact": "Liverpool在新所有权下积极补强，Diomande的加盟将增强中场/后防实力"
+        },
+        {
+          "type": "manager_news",
+          "detail": "De Zerbi执教Tottenham，要求引进两名新前锋。Robertson已加盟Tottenham并开始融入。",
+          "tactical_impact": "De Zerbi的Positional Play+创造性进攻体系将在Tottenham落地，Robertson的左路进攻能力完美适配"
+        },
+        {
+          "type": "transfer_news",
+          "detail": "Real Madrid继续推进Rodri转会。Rodri将接受背部手术，可能缺席英超开局。",
+          "tactical_impact": "Rodri手术+转会双重不确定性，曼城后腰位置面临重建"
+        },
+        {
+          "type": "transfer_news",
+          "detail": "Chelsea的Neto成为Man City/Maresca和Arsenal的目标。Chelsea与Palace达成Lacroix交易。",
+          "tactical_impact": "Maresca继续按自己的战术理念改造曼城阵容"
+        },
+        {
+          "type": "pre_season",
+          "detail": "Man Utd五星表现大胜季前赛对手。Newcastle和Everton平局。Palace和Villa输球。",
+          "tactical_impact": "季前赛表现预示新赛季各队战术准备状态"
+        }
+      ],
+      "tactical_trends": [
+        "Iraola的Liverpool：Gegenpressing 2.0——更高结构化+更垂直的压迫体系",
+        "De Zerbi的Tottenham：Positional Play与北伦敦传统力量的结合",
+        "转会市场疯狂：Vinicius可能去Arsenal、Rodri去皇马、Diomande去Liverpool",
+        "后Guardiola曼城 vs 后Klopp利物浦：两大豪门同时进入新时代"
+      ],
+      "golden_boot_race": "世界杯结束，关注英超新赛季：Haaland vs Vinicius(如转会成行) vs Saka vs Bellingham"
     }
   ],
   "national_styles": {
