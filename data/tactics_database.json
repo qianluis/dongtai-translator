@@ -1,6 +1,6 @@
 {
-  "version": "9.4.0",
-  "last_updated": "2026-07-26",
+  "version": "9.5.0",
+  "last_updated": "2026-07-27",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6063,6 +6063,46 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-07-27",
+      "source": "Sky Sports",
+      "title": "Iraola's Liverpool: First Game Tactical Analysis",
+      "content": "Andoni Iraola在利物浦首秀4-2胜桑德兰。战术特点：高位逼抢+快速转换+边路进攻。Iraola从Bournemouth带来的标志性风格——激进的高位压迫和快速垂直进攻。利物浦进入后Klopp时代的新战术身份。季前赛在美国Nashville进行，显示全球化布局。",
+      "impact": "Liverpool正式进入Iraola时代——高位逼抢+快速转换的新战术DNA。与Klopp的Gegenpressing有相似之处但更注重结构性位置。",
+      "tags": [
+        "liverpool",
+        "iraola",
+        "high-press",
+        "post-klopp",
+        "pre-season"
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "source": "Sky Sports Transfer",
+      "title": "Post-WC Transfer Market: Elite Pivots & Ball-Playing CBs in Highest Demand",
+      "content": "世界杯后转会市场反映战术优先级：Rodri(单后腰)→皇马，Saliba(出球中卫)伤病，Casemiro(经典#6)→MLS。俱乐部优先投资中场控制和防守组织——世界杯战术遗产的直接体现。Barcola被PSG估值£145m，Liverpool和Arsenal有意。",
+      "impact": "转会市场直接反映世界杯战术教训：单后腰/出球中卫是最稀缺资源。",
+      "tags": [
+        "transfer",
+        "rodri",
+        "saliba",
+        "barcola",
+        "tactical-priorities"
+      ]
+    }
+  ],
+  "changelog": [
+    {
+      "version": "9.5.0",
+      "date": "2026-07-27",
+      "changes": [
+        "新增: Andoni Iraola利物浦首秀战术分析(4-2胜桑德兰)",
+        "新增: 世界杯后转会市场战术优先级分析",
+        "新增: Barcola £145m估值(Liverpool/Arsenal有意)",
+        "更新: 版本9.5.0 - 世界杯后间歇期第3天动态"
+      ]
+    },
     {
       "version": "9.3.0",
       "date": "2026-07-25",
