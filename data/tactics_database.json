@@ -1,6 +1,6 @@
 {
-  "version": "9.5.0",
-  "last_updated": "2026-07-27",
+  "version": "9.5.1",
+  "last_updated": "2026-07-28",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6064,36 +6064,6 @@
   ],
   "changelog": [
     {
-      "date": "2026-07-27",
-      "source": "Sky Sports",
-      "title": "Iraola's Liverpool: First Game Tactical Analysis",
-      "content": "Andoni Iraola在利物浦首秀4-2胜桑德兰。战术特点：高位逼抢+快速转换+边路进攻。Iraola从Bournemouth带来的标志性风格——激进的高位压迫和快速垂直进攻。利物浦进入后Klopp时代的新战术身份。季前赛在美国Nashville进行，显示全球化布局。",
-      "impact": "Liverpool正式进入Iraola时代——高位逼抢+快速转换的新战术DNA。与Klopp的Gegenpressing有相似之处但更注重结构性位置。",
-      "tags": [
-        "liverpool",
-        "iraola",
-        "high-press",
-        "post-klopp",
-        "pre-season"
-      ]
-    },
-    {
-      "date": "2026-07-27",
-      "source": "Sky Sports Transfer",
-      "title": "Post-WC Transfer Market: Elite Pivots & Ball-Playing CBs in Highest Demand",
-      "content": "世界杯后转会市场反映战术优先级：Rodri(单后腰)→皇马，Saliba(出球中卫)伤病，Casemiro(经典#6)→MLS。俱乐部优先投资中场控制和防守组织——世界杯战术遗产的直接体现。Barcola被PSG估值£145m，Liverpool和Arsenal有意。",
-      "impact": "转会市场直接反映世界杯战术教训：单后腰/出球中卫是最稀缺资源。",
-      "tags": [
-        "transfer",
-        "rodri",
-        "saliba",
-        "barcola",
-        "tactical-priorities"
-      ]
-    }
-  ],
-  "changelog": [
-    {
       "version": "9.5.0",
       "date": "2026-07-27",
       "changes": [
@@ -6222,6 +6192,15 @@
         "添加转会风暴: Arsenal探索Vinicius Jr / Real Madrid £85m Diomande / Rodri手术+转会",
         "添加Maresca曼城继续改造(Neto目标)",
         "版本升级至v9.4.0"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "version": "9.5.1",
+      "changes": [
+        "新增: 意大利FIGC教练风波(Maldini 16天辞职)",
+        "新增: 英格兰门将战术暂停试行规则",
+        "新增: Stones→Inter Milan转会动态"
       ]
     }
   ],
@@ -7108,5 +7087,31 @@
       "tactical_value": "5",
       "iconic_moment": "1988-1994年萨基的AC米兰，区域防守统治欧洲"
     }
-  }
+  },
+  "recent_trends": [
+    {
+      "date": "2026-07-28",
+      "title": "意大利足协教练风波: Maldini 16天辞职",
+      "title_en": "FIGC Coaching Chaos: Maldini Quits After 16 Days",
+      "summary": "世界杯后意大利足球陷入管理层危机。Paolo Maldini担任技术总监仅16天即辞职，起因是主教练人选争议——Andrea Pirlo因与俄罗斯博彩公司关联被排除，Guardiola和Ancelotti均被接触。这反映了后世界杯时代国家队建设的深层困境：名帅资源稀缺，教练与商业利益纠葛加深。",
+      "tactical_impact": "意大利可能继续依赖本土教练(如Gasperini/Italiano)，战术风格或回归务实防守反击",
+      "category": "coaching_change"
+    },
+    {
+      "date": "2026-07-28",
+      "title": "英格兰试行门将战术暂停规则",
+      "title_en": "England Trials Goalkeeper Tactical Timeout Rule",
+      "summary": "英超、EFL、WSL和FA达成协议，试行门将战术暂停新规：当门将需要治疗时，教练有10秒选择一名外场球员离场1分钟。这是对门将故意拖延时间战术的直接回应，旨在减少比赛中的时间浪费。",
+      "tactical_impact": "影响比赛末段战术——门将不再能利用\"受伤\"作为战术暂停工具，高位逼抢球队(如Liverpool/Arsenal)在比赛末段获益更大",
+      "category": "rule_change"
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Stones口头同意加盟Inter Milan",
+      "title_en": "Stones Verbally Agrees Inter Move",
+      "summary": "John Stones口头同意加盟国际米兰，同时Arsenal和Chelsea也有兴趣。这延续了世界杯后出球中卫的转会热潮——Rodri→皇马、Casemiro→MLS后，顶级出球型中卫/后腰继续被豪门瓜分。",
+      "tactical_impact": "Inter重建后防核心(可能3-5-2体系)，Man City后防深度削弱，Stones的出球能力适合Inzaghi的build-up体系",
+      "category": "transfer"
+    }
+  ]
 }
