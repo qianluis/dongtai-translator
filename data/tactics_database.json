@@ -1,6 +1,6 @@
 {
-  "version": "9.5.1",
-  "last_updated": "2026-07-28",
+  "version": "9.5.2",
+  "last_updated": "2026-08-03",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -4541,6 +4541,22 @@
       "venue": "World Cup 2026",
       "significance": "UPSET. Ecuador beat Germany after Germany 7-1 Curacao. Shows tournament unpredictability.",
       "tactics": "gegenpressing (Ecuador: high press upset dominant Germany)"
+    },
+    {
+      "year": 2026,
+      "match": "利物浦 2-4 利兹联",
+      "venue": "Soldier Field, Chicago (季前友谊赛)",
+      "significance": "Iraola利物浦美国巡回赛收官崩盘,2-0领先被逆转",
+      "tactics": "liverpool_433_highpress vs leeds_4231_counter",
+      "date": "2026-08-02",
+      "key_players": [
+        "Calvert-Lewin (2球)",
+        "Aaronson",
+        "Longstaff",
+        "Wirtz",
+        "Chambers"
+      ],
+      "tactical_note": "高位压迫体系体能瓶颈后的防守脱节典型案例"
     }
   ],
   "world_cup_2026_preview": {
@@ -6064,6 +6080,16 @@
   ],
   "changelog": [
     {
+      "version": "9.5.2",
+      "date": "2026-08-03",
+      "changes": [
+        "新增: 利物浦季前赛崩盘分析(2-4利兹联,Iraola高位压迫脆弱性)",
+        "新增: 利兹联Farke反击战术复盘(Calvert-Lewin梅开二度)",
+        "更新: 转会动态(Man Utd追Lewis Hall/Chelsea签Barco/Fulham签皇马双人组)",
+        "更新: 版本9.5.2 - 季前赛战术观察"
+      ]
+    },
+    {
       "version": "9.5.0",
       "date": "2026-07-27",
       "changes": [
@@ -7089,6 +7115,20 @@
     }
   },
   "recent_trends": [
+    {
+      "date": "2026-08-03",
+      "title": "利物浦季前赛崩盘: 2-0领先被利兹联4-2逆转",
+      "title_en": "Liverpool Pre-Season Collapse: 2-0 Lead Overturned by Leeds 4-2",
+      "summary": "Iraola的利物浦在美国巡回赛最后一场(芝加哥Soldier Field)中2-0领先利兹联,半场Chambers和Wirtz进球。下半场彻底崩盘:Brenden Aaronson、Dominic Calvert-Lewin梅开二度、Sean Longstaff连入4球。暴露了Iraola高位压迫体系在后防线的脆弱性——体能下降后中场与后卫线脱节,被利兹快速反击打穿。这是利物浦季前赛第3场失利,新赛季前防守组织令人担忧。",
+      "tactical_analysis": {
+        "liverpool_formation": "4-3-3 (Iraola高位压迫)",
+        "leeds_formation": "4-2-3-1 (Farke反击体系)",
+        "key_issue": "利物浦高位压迫在体能下降后失效,中场线与前场脱节,后防线暴露大面积空间",
+        "leeds_exploit": "Calvert-Lewin作为支点中锋牵制中卫,Aaronson和Longstaff前插肋部空间,典型反击战术",
+        "concern": "利物浦季前赛3场全败(Iraola体系适应期?),Wirtz融入仍需时间"
+      },
+      "source": "Sky Sports Match Report, 2026-08-02"
+    },
     {
       "date": "2026-07-28",
       "title": "意大利足协教练风波: Maldini 16天辞职",
