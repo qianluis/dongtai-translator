@@ -1,6 +1,6 @@
 {
-  "version": "9.5.2",
-  "last_updated": "2026-08-03",
+  "version": "9.5.3",
+  "last_updated": "2026-08-04",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6228,6 +6228,15 @@
         "新增: 英格兰门将战术暂停试行规则",
         "新增: Stones→Inter Milan转会动态"
       ]
+    },
+    {
+      "version": "9.5.3",
+      "date": "2026-08-04",
+      "changes": [
+        "新增: Chelsea签Henderson(Xabi Alonso阵容增添经验)",
+        "新增: Man Utd中场重建(Carrick+Mount核心)",
+        "新增: 转会动态(Rashford/Hall/Guimaraes/Vinicius)"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -6437,6 +6446,23 @@
         "后Guardiola曼城 vs 后Klopp利物浦：两大豪门同时进入新时代"
       ],
       "golden_boot_race": "世界杯结束，关注英超新赛季：Haaland vs Vinicius(如转会成行) vs Saka vs Bellingham"
+    },
+    {
+      "date": "2026-08-04",
+      "title": "转会市场: Chelsea签Henderson + Man Utd中场重建",
+      "title_en": "Transfer Market: Chelsea Sign Henderson + Man Utd Midfield Rebuild",
+      "summary": "Xabi Alonso的Chelsea签下36岁Jordan Henderson(自由转会自Brentford,2年合同),为年轻阵容增添经验。Michael Carrick的Man Utd进行中场大改造,Mason Mount季前赛表现出色可能成为核心。同时Man Utd追逐Newcastle的Lewis Hall,而Rashford未来不确定(土耳其Fenerbahce有意)。Arsenal继续追求Real Madrid的Vinicius Jr,但Newcastle拒绝了Arsenal对Guimaraes的报价。",
+      "tactical_impact": "Chelsea在Alonso手下进入新阶段,Henderson的领导力+Alonso的关系主义战术哲学可能创造独特混合。Man Utd在Carrick手下重建中场核心,Mount作为前腰/中前卫的角色定义将是关键。转会市场显示英超豪门继续强化阵容深度。",
+      "tags": [
+        "Chelsea",
+        "Henderson",
+        "Xabi Alonso",
+        "Man Utd",
+        "Carrick",
+        "Mount",
+        "转会",
+        "中场重建"
+      ]
     }
   ],
   "national_styles": {
