@@ -1,6 +1,6 @@
 {
-  "version": "9.5.3",
-  "last_updated": "2026-08-04",
+  "version": "9.5.4",
+  "last_updated": "2026-08-05",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6237,6 +6237,16 @@
         "新增: Man Utd中场重建(Carrick+Mount核心)",
         "新增: 转会动态(Rashford/Hall/Guimaraes/Vinicius)"
       ]
+    },
+    {
+      "version": "9.5.4",
+      "date": "2026-08-05",
+      "changes": [
+        "新增: Alonso的Chelsea重建哲学分析(借鉴Leverkusen经验,角色榜样策略)",
+        "新增: Arsenal追求Guimaraes战术分析(6号位vs8号位,中场体系重构)",
+        "新增: Liverpool右路危机(Carragher分析Salah替代>Barcola)",
+        "新增: Bournemouth 10-0 Genoa季前赛 + 其他转会动态"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -6462,6 +6472,40 @@
         "Mount",
         "转会",
         "中场重建"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "战术分析: Alonso的Chelsea重建哲学 + Arsenal中场重构 + Liverpool右路危机",
+      "title_en": "Tactical Analysis: Alonso's Chelsea Rebuild Philosophy + Arsenal Midfield Restructure + Liverpool Right-Wing Crisis",
+      "summary": "Sky Sports深度分析Xabi Alonso在Chelsea的重建策略:借鉴Leverkusen经验,引入Henderson/Welbeck等'角色榜样'带领年轻阵容。Arsenal追求Guimaraes的战术分析:他如何融入Rice/Zubimendi/Odegaard体系,打6号位还是8号位。Liverpool右路危机:Carragher指出球队更需要Salah替代者而非Barcola(左路),Trabzonspor正在谈判签Salah。Bournemouth季前赛10-0大胜Genoa,Kluivert帽子戏法。Barcelona创纪录签下Man City的Kerolin(WSL)。",
+      "tactical_impact": "1) Alonso的Chelsea重建模式:年轻核心+经验榜样的混合阵容构建,类似Leverkusen的Xhaka角色(Henderson); 2) Arsenal中场可能的4-3-3/4-2-3-1变体:Guimaraes作为8号位提供B2B能力,释放Odegaard前移; 3) Liverpool后Salah时代的右路规划:Iraola需要重新定义右边锋角色",
+      "key_events": [
+        {
+          "type": "tactical_analysis",
+          "detail": "Xabi Alonso的Chelsea重建:借鉴Leverkusen经验,签Henderson(36岁,2年)和Welbeck作为年轻阵容的'角色榜样'。Chelsea两年未用30+球员,这是战略大转向。Alonso需要领袖来指导Satpaev/Walsh/Kavuma-McQueen等青训新星。",
+          "tactical_impact": "Alonso的建队哲学:不是单纯堆砌年轻天才,而是用经验球员搭建骨架,让年轻球员在有指导的环境中成长。Henderson扮演类似Leverkusen中Xhaka的导师角色。"
+        },
+        {
+          "type": "tactical_analysis",
+          "detail": "Arsenal追求Bruno Guimaraes(£80m)战术分析:他可打6号位或8号位,更偏好8号位。若加盟,Arsenal中场将拥有Rice+Zubimendi+Guimaraes+Odegaard+Merino+Lewis-Skelly的豪华配置。关键问题:如何平衡这些中场球员的位置。",
+          "tactical_impact": "Guimaraes作为8号位可提供B2B能力+身体对抗+后上进攻,与Zubimendi的深位组织形成互补。Odegaard可进一步前移至10号位。Arsenal可能演变为4-3-3双8号体系或4-2-3-1。"
+        },
+        {
+          "type": "transfer_news",
+          "detail": "Liverpool右路危机:Carragher指出Liverpool更需要Salah替代者(右路)而非Barcola(左路,£128.5m)。已有Gakpo/Ngumoha/Munoz覆盖左路。同时Trabzonspor正在谈判签Salah。Spurs对Gakpo有兴趣。",
+          "tactical_impact": "Iraola面临战术难题:如果Salah离队,右路进攻需要重构。Barcola虽好但会造成长路拥挤。可能需要转向右路引援或内部改造(如让Soboszlai/Hernandez覆盖右路)。"
+        },
+        {
+          "type": "pre_season",
+          "detail": "Bournemouth季前赛10-0大胜Genoa,Kluivert帽子戏法。Iraola的Bournemouth血脉延续(虽然Iraola已去Liverpool,但Bournemouth的战术体系仍在产出)。",
+          "tactical_impact": "Bournemouth的高位压迫+快速进攻体系在季前赛继续展现威力,Kluivert状态火热。"
+        },
+        {
+          "type": "transfer_news",
+          "detail": "Man City:Neto转会谈判开始(替代Trafford)。Forest追逐Man City中场(£55m)。Barcelona创WSL转会纪录签Man City的Kerolin。",
+          "tactical_impact": "Man City阵容继续调整,Maresca重建进行中。"
+        }
       ]
     }
   ],
