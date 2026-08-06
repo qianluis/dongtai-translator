@@ -1,6 +1,6 @@
 {
-  "version": "9.5.4",
-  "last_updated": "2026-08-05",
+  "version": "9.5.5",
+  "last_updated": "2026-08-06",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6247,6 +6247,16 @@
         "新增: Liverpool右路危机(Carragher分析Salah替代>Barcola)",
         "新增: Bournemouth 10-0 Genoa季前赛 + 其他转会动态"
       ]
+    },
+    {
+      "version": "9.5.5",
+      "date": "2026-08-06",
+      "changes": [
+        "新增: Newcastle Jaissle任命(Red Bull系高位压迫)",
+        "新增: Arsenal季前赛1-3 Betis(中场创造力分析)",
+        "新增: Vinicius Jr续约皇马(Mourinho体系)",
+        "来源: Sky Sports 2026-08-05/06"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -6507,6 +6517,17 @@
           "tactical_impact": "Man City阵容继续调整,Maresca重建进行中。"
         }
       ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "教练变动: Newcastle任命Jaissle(Red Bull系高位压迫) + Arsenal季前赛暴露中场问题",
+      "content": "Newcastle任命Matthias Jaissle为主教练(Eddie Howe离任),Jaissle来自沙特Al Ahli,转会费£9.5m,签4年合同。Jaissle属于Red Bull教练体系,预计Newcastle将从Howe的有序控球转向高位压迫+快速转换。Arsenal季前赛1-3负于Real Betis(Dublin友谊赛),Kepa失误导致丢球,暴露出新门将与后防配合问题。Sky Sports分析'是否显示Arsenal需要Bruno?'——中场创造力不足。Vinicius Jr与皇马新帅Jose Mourinho关系良好,预计续约留队。",
+      "tactical_implications": [
+        "Newcastle: Howe有序控球→Jaissle Red Bull高位压迫+Gegenpressing",
+        "Arsenal: 季前赛暴露中场创造力不足,需Bruno式10号或Guimaraes前移",
+        "Real Madrid: Mourinho回归,Vinicius续约稳定左路进攻核心"
+      ],
+      "source": "Sky Sports"
     }
   ],
   "national_styles": {
@@ -7222,6 +7243,11 @@
       "summary": "John Stones口头同意加盟国际米兰，同时Arsenal和Chelsea也有兴趣。这延续了世界杯后出球中卫的转会热潮——Rodri→皇马、Casemiro→MLS后，顶级出球型中卫/后腰继续被豪门瓜分。",
       "tactical_impact": "Inter重建后防核心(可能3-5-2体系)，Man City后防深度削弱，Stones的出球能力适合Inzaghi的build-up体系",
       "category": "transfer"
+    },
+    {
+      "trend": "Red Bull教练扩散",
+      "detail": "Jaissle(前Red Bull/Salzburg体系)执教Newcastle,延续高位压迫从Leipzig/Salzburg→Chelsea(Maresca)→Newcastle的扩散路径",
+      "date": "2026-08-06"
     }
   ]
 }
