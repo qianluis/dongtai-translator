@@ -1,6 +1,6 @@
 {
-  "version": "9.5.5",
-  "last_updated": "2026-08-06",
+  "version": "9.5.6",
+  "last_updated": "2026-08-07",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6257,6 +6257,17 @@
         "新增: Vinicius Jr续约皇马(Mourinho体系)",
         "来源: Sky Sports 2026-08-05/06"
       ]
+    },
+    {
+      "version": "9.5.6",
+      "date": "2026-08-07",
+      "changes": [
+        "新增: Real Madrid £120m签Diomande(非洲球员纪录, Mourinho重建)",
+        "新增: Arsenal进攻引援困境(Vinicius续约+Rogers去Chelsea)",
+        "新增: Rodri争夺战(Barcelona加入 vs Real Madrid, £50m)",
+        "新增: Salah正式去Trabzonspor + Liverpool/Arsenal争Konsa",
+        "来源: Sky Sports 2026-08-06/07"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -6528,6 +6539,38 @@
         "Real Madrid: Mourinho回归,Vinicius续约稳定左路进攻核心"
       ],
       "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-07",
+      "category": "transfer_tactics",
+      "title": "Real Madrid £120m签Diomande - Mourinho重建计划",
+      "summary": "Real Madrid完成£120m签RB Leipzig的19岁科特迪瓦前锋Yan Diomande,创非洲球员转会费纪录。Mourinho夏窗已签Bernardo Silva/Konate/Dumfries/Cucurella/Diomande,打造全新攻击体系。Diomande速度快/不可预测/创造力强,适合皇马反击+个人突破战术。",
+      "tactical_impact": "皇马攻击线重组:Diomande(右路/前锋)+ Vinicius(左路)形成双翼快攻。Mourinho的防反体系+个人能力=欧冠级别威胁。",
+      "source": "Sky Sports 2026-08-06"
+    },
+    {
+      "date": "2026-08-07",
+      "category": "transfer_tactics",
+      "title": "Arsenal进攻引援困境 - Vinicius+Rogers双双落空",
+      "summary": "Arsenal未能签下Vinicius Jr(续约皇马)和Morgan Rogers(£117m去Chelsea)。Arteta需要新边锋,Tzolis已加盟但需顶级球员。Calafiori公开呼吁签顶级球员。左翼位置Trossard已卖至Besiktas,Martinelli未能站稳。",
+      "tactical_impact": "Arsenal 4-3-3体系左翼空缺严重,可能转向内部挖潜或寻找替代目标。卫冕英超冠军需要进攻端补强。",
+      "source": "Sky Sports 2026-08-06"
+    },
+    {
+      "date": "2026-08-07",
+      "category": "transfer_tactics",
+      "title": "Rodri争夺战: Barcelona加入 vs Real Madrid",
+      "summary": "Barcelona加入争夺Man City的Rodri(合同剩1年)。Real Madrid愿出£50m,Barcelona也积极推进。Rodri世界杯后成功接受背部手术正在恢复。Carragher呼吁City不要卖:他是该位置世界最佳。Maresca新帅希望Rodri领军新时代。",
+      "tactical_impact": "Rodri若离开将动摇Man City中场根基(新帅Maresca体系)。去皇马=加强西甲中场控制;去Barca=经典6号位传承。",
+      "source": "Sky Sports 2026-08-06"
+    },
+    {
+      "date": "2026-08-07",
+      "category": "transfer_tactics",
+      "title": "Salah正式加盟Trabzonspor + Liverpool/Arsenal争Konsa",
+      "summary": "Mo Salah正式签Trabzonspor两年合同(年薪£14.5m+20%球衣销售分成),创土超纪录。Liverpool因Iraola伤病危机欲签Aston Villa的Konsa,与Arsenal竞争。Man Utd的Zirkzee去Juventus/Bayindir去Celta Vigo。Arsenal的Nwaneri被RB Leipzig关注(上赛季租借Marseille)。",
+      "tactical_impact": "Salah离英超标志一个时代结束。Liverpool右路彻底重构。Konsa若去Liverpool将增强中路防守(配合Iraola高位压迫)。Nwaneri发展受阻反映Arsenal年轻球员使用策略问题。",
+      "source": "Sky Sports 2026-08-06/07"
     }
   ],
   "national_styles": {
@@ -7206,6 +7249,15 @@
     }
   },
   "recent_trends": [
+    {
+      "date": "2026-08-07",
+      "title": "夏窗重磅: Diomande £120m去皇马 + Salah去土超 + Rodri争夺战",
+      "title_en": "Summer Blockbusters: Diomande £120m to Real Madrid + Salah to Turkey + Rodri Battle",
+      "summary": "2026夏窗进入白热化: Real Madrid £120m签19岁科特迪瓦前锋Diomande(非洲球员纪录),Mourinho已完成5笔重磅签约(Bernardo/Konate/Dumfries/Cucurella/Diomande)。Arsenal连失Vinicius(续约皇马)和Rogers(£117m去Chelsea),进攻引援陷入困境。Barcelona加入争夺Man City的Rodri(合同剩1年,£50m)。Mo Salah正式签Trabzonspor两年(£14.5m/赛季),创土超纪录。Liverpool/Arsenal争Aston Villa的Konsa。",
+      "tactical_impact": "皇马攻击体系全面升级(Mourinho防反+Diomande/Vinicius双翼);Arsenal卫冕之路受阻(左翼空缺);Man City面临Rodri离队风险(Maresca新帅考验);英超格局因Salah离队+转会大战持续变化",
+      "category": "transfer_window",
+      "source": "Sky Sports 2026-08-06/07"
+    },
     {
       "date": "2026-08-03",
       "title": "利物浦季前赛崩盘: 2-0领先被利兹联4-2逆转",
