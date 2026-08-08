@@ -1,6 +1,6 @@
 {
-  "version": "9.5.6",
-  "last_updated": "2026-08-07",
+  "version": "9.5.7",
+  "last_updated": "2026-08-08",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6268,6 +6268,11 @@
         "新增: Salah正式去Trabzonspor + Liverpool/Arsenal争Konsa",
         "来源: Sky Sports 2026-08-06/07"
       ]
+    },
+    {
+      "date": "2026-08-08",
+      "version": "9.5.7",
+      "changes": "Liverpool租借Araujo补后防 + Rodri争夺战(Barca报价被拒/Fernandez替代) + Barcola转会困局(Liverpool/Arsenal) + Newcastle追Hojbjerg + 联赛杯Lankshear处子球"
     }
   ],
   "world_cup_2026_updates": [
@@ -6571,6 +6576,41 @@
       "summary": "Mo Salah正式签Trabzonspor两年合同(年薪£14.5m+20%球衣销售分成),创土超纪录。Liverpool因Iraola伤病危机欲签Aston Villa的Konsa,与Arsenal竞争。Man Utd的Zirkzee去Juventus/Bayindir去Celta Vigo。Arsenal的Nwaneri被RB Leipzig关注(上赛季租借Marseille)。",
       "tactical_impact": "Salah离英超标志一个时代结束。Liverpool右路彻底重构。Konsa若去Liverpool将增强中路防守(配合Iraola高位压迫)。Nwaneri发展受阻反映Arsenal年轻球员使用策略问题。",
       "source": "Sky Sports 2026-08-06/07"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Liverpool租借Araujo - 后防重建(Konate去皇马后的补强)",
+      "type": "transfer",
+      "tactical_impact": "Liverpool失去Konate后中卫深度不足,租借Araujo补强。Slot体系需要高大中卫,Araujo的身体对抗和出球能力适配。",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Man City拒绝Barcelona对Rodri的报价 - Maresca梦想签Fernandez替代",
+      "type": "transfer",
+      "tactical_impact": "Rodri争夺战升级: Barcelona出价被拒(太低)。若Rodri离队,Maresca视Chelsea的Enzo Fernandez为理想替代者。City的6号位体系面临重组风险。",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Liverpool追Barcola遇阻 + Arsenal可能截胡",
+      "type": "transfer",
+      "tactical_impact": "Liverpool与PSG谈判后Barcola转会困难。Arsenal在Vinicius+Rogers落空后可能转向Barcola。Slot需要边路爆点,Barcola的速度和1v1能力完美适配。",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Newcastle追Hojbjerg + 拒绝Man Utd对Hall的报价",
+      "type": "transfer",
+      "tactical_impact": "Newcastle中场补强:追前Spurs后腰Hojbjerg(防守型中场)。同时坚持不卖Hall给Man Utd,保持左路攻防平衡。",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "联赛杯: Lankshear处子球助Boro淘汰Wrexham; Wolves 3-0 Port Vale",
+      "type": "match",
+      "tactical_impact": "年轻球员杯赛表现: Lankshear(Middlesbrough)处子球,年轻前锋的即战力。Wolves大胜低级别球队,Edwards体系磨合中。",
+      "source": "Sky Sports"
     }
   ],
   "national_styles": {
