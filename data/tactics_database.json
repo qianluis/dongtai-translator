@@ -1,6 +1,6 @@
 {
-  "version": "9.5.7",
-  "last_updated": "2026-08-08",
+  "version": "9.5.8",
+  "last_updated": "2026-08-09",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6273,6 +6273,18 @@
       "date": "2026-08-08",
       "version": "9.5.7",
       "changes": "Liverpool租借Araujo补后防 + Rodri争夺战(Barca报价被拒/Fernandez替代) + Barcola转会困局(Liverpool/Arsenal) + Newcastle追Hojbjerg + 联赛杯Lankshear处子球"
+    },
+    {
+      "version": "9.5.8",
+      "date": "2026-08-09",
+      "changes": [
+        "重磅: Guimaraes £75m Newcastle→Arsenal (中场格局巨变)",
+        "新增: Romero愿去Arsenal但Spurs拒绝",
+        "新增: Jaissle执教Newcastle首胜(Wissa梅开二度)",
+        "新增: Man Utd平PSG(Mbeumo进球)",
+        "新增: Chelsea 3-1 AC Milan(Alonso体系深化)",
+        "来源: Sky Sports 2026-08-08/09"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -6611,6 +6623,48 @@
       "type": "match",
       "tactical_impact": "年轻球员杯赛表现: Lankshear(Middlesbrough)处子球,年轻前锋的即战力。Wolves大胜低级别球队,Edwards体系磨合中。",
       "source": "Sky Sports"
+    },
+    {
+      "title": "Guimaraes £75m从Newcastle转会Arsenal",
+      "content": "Bruno Guimaraes以£75m从Newcastle转会至Arsenal。Rice表示\"No more fights\"欢迎队友。战术分析: Guimaraes在Arsenal 4-3-3中的定位——与Rice组成双中场还是三人中场？Arteta的中场哲学将如何融合Guimaraes的持球推进能力。",
+      "category": "transfer",
+      "tactical_impact": "Arsenal中场从纯防守型(Rice+Partey)转向攻守兼备(Rice+Guimaraes)，提升6号位出球和前插能力",
+      "date": "2026-08-09"
+    },
+    {
+      "title": "Romero愿去Arsenal但Spurs拒绝",
+      "content": "Cristian Romero公开表示愿意加盟Arsenal，但Tottenham拒绝放人。这是北伦敦德比背景下的敏感转会。Spurs在Postecoglou体系下需要Romero的上抢能力。",
+      "category": "transfer",
+      "tactical_impact": "Spurs后防核心留队，维持高位防线体系稳定性",
+      "date": "2026-08-09"
+    },
+    {
+      "title": "Newcastle Jaissle执教首胜: Wissa梅开二度胜10人Valencia",
+      "content": "Newcastle在新帅Jaissle带领下季前赛首胜，Wissa梅开二度。Valencia被罚下一人。Jaissle的Red Bull系高位压迫体系开始显现效果。Elanga被担架抬下(伤情待确认)。",
+      "category": "tactics",
+      "tactical_impact": "Jaissle的Gegenpressing在Newcastle的早期实施——从Howe的控球体系转向Red Bull系垂直压迫",
+      "date": "2026-08-09"
+    },
+    {
+      "title": "Man Utd季前赛平PSG: Mbeumo进球+Carrick更新伤情",
+      "content": "Man Utd在季前赛中与PSG打成平局，Mbeumo取得进球。Carrick更新了Mount的伤情和Rashford的回归进展。\"Good signs\"暗示球队状态回升。",
+      "category": "match_analysis",
+      "tactical_impact": "Carrick临时执教下Man Utd的进攻组织——Mbeumo在右路的融入",
+      "date": "2026-08-09"
+    },
+    {
+      "title": "Chelsea 3-1 AC Milan: 季前赛大胜",
+      "content": "Chelsea在季前友谊赛中3-1击败AC Milan。Alonso的切尔西哲学继续深化——新援融入速度令人印象深刻。",
+      "category": "match_analysis",
+      "tactical_impact": "Chelsea在Alonso下的战术演进: 从Maresca的控球到Alonso的更直接打法",
+      "date": "2026-08-09"
+    },
+    {
+      "title": "联赛杯: West Ham/Burnley/Southampton晋级",
+      "content": "Carabao Cup早期轮次: West Ham, Burnley和Southampton晋级。Nuno承认West Ham不能再在转会中犯错。",
+      "category": "cup",
+      "tactical_impact": "Nuno的West Ham: 防守反击体系需要精准引援",
+      "date": "2026-08-09"
     }
   ],
   "national_styles": {
