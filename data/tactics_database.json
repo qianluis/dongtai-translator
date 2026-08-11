@@ -1,6 +1,6 @@
 {
-  "version": "9.5.9",
-  "last_updated": "2026-08-10",
+  "version": "9.5.10",
+  "last_updated": "2026-08-11",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -4570,6 +4570,21 @@
         "Semenyo"
       ],
       "tactical_note": "Maresca延续控球哲学,新援快速融入; Atletico在Simeone下仍依赖防守反击但季前赛状态不佳"
+    },
+    {
+      "date": "2026-08-11",
+      "title": "Araujo转会利物浦: 战术意义分析",
+      "title_en": "Araujo to Liverpool: Tactical Analysis",
+      "type": "transfer_analysis",
+      "summary": "Araujo从巴萨转会利物浦,是2026夏窗重磅交易。其身体素质(速度+力量+空中能力)完美适配高位防线,将解决利物浦长期存在的中卫回追速度问题。",
+      "tactical_context": "利物浦高位防线需要极快的中卫回追速度,Araujo的速度和对抗能力是理想人选。这笔交易可能改变利物浦未来3-5年的防守体系。",
+      "tags": [
+        "liverpool",
+        "barcelona",
+        "transfer",
+        "high-line",
+        "center-back"
+      ]
     }
   ],
   "world_cup_2026_preview": {
@@ -6309,6 +6324,17 @@
         "新增: Everton/Palace McNeil-Johnson交换交易谈判",
         "来源: Sky Sports 2026-08-09/10"
       ]
+    },
+    {
+      "version": "9.5.10",
+      "date": "2026-08-11",
+      "changes": [
+        "新增: 利物浦签Araujo转会分析 (战术意义)",
+        "新增: Bezos财团收购利物浦动态",
+        "新增: Arsenal季前赛弱点分析",
+        "新增: 多条夏窗转会动态",
+        "数据来源: Sky Sports 2026-08-11"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -6710,6 +6736,23 @@
       "category": "transfer",
       "tactical_impact": "英超球员持续流向其他联赛(Chalobah去意甲,Diomande可能去土超);PSG继续引援",
       "date": "2026-08-10"
+    },
+    {
+      "date": "2026-08-11",
+      "category": "transfer_news",
+      "headline": "利物浦签Araujo | Bezos收购 | Arsenal季前赛暴露弱点",
+      "headline_en": "Liverpool sign Araujo | Bezos takeover | Arsenal pre-season weakness",
+      "items": [
+        "利物浦从巴萨签下Araujo,后防线重大升级",
+        "Bezos财团收购利物浦,Q&A分析引发关注",
+        "Arsenal季前赛表现不佳,分析指出存在意外弱点",
+        "Man City与Bouaddi谈判中,Chelsea的Fernandez也是选项",
+        "Van de Ven与Tottenham续约,Romero接近离队",
+        "Solomon £7m从Spurs转会West Ham",
+        "Everton有意Crystal Palace的Munoz",
+        "Rashford回归Carrick执教的Man Utd阵容",
+        "Rodri去Barcelona的谈判目前不活跃"
+      ]
     }
   ],
   "national_styles": {
@@ -7453,6 +7496,20 @@
         "concern": "Iraola体系适应期过长? 季前赛多场失利,新赛季前景堪忧"
       },
       "source": "Sky Sports 2026-08-09/10"
+    },
+    {
+      "date": "2026-08-11",
+      "title": "利物浦签下Araujo + Bezos财团收购",
+      "title_en": "Liverpool sign Araujo + Bezos consortium takeover",
+      "summary": "利物浦从巴塞罗那签下Araujo,大幅增强后防线。同时Bezos财团收购利物浦的消息引发关注,俱乐部所有权可能发生重大变更。这两件事标志着利物浦进入新时代。",
+      "tactical_impact": "Araujo的加入将强化利物浦高位防线的回追能力,其出色的1v1防守和空中对抗能力完美适配高位防线体系。",
+      "tags": [
+        "transfer",
+        "ownership",
+        "liverpool",
+        "barcelona",
+        "high-line"
+      ]
     }
   ]
 }
