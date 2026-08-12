@@ -1,6 +1,6 @@
 {
   "version": "9.5.10",
-  "last_updated": "2026-08-11",
+  "last_updated": "2026-08-12",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -4584,6 +4584,126 @@
         "transfer",
         "high-line",
         "center-back"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "match": "Bodo/Glimt 3-2 Union Saint-Gilloise",
+      "venue": "UCL Qualifying Play-off",
+      "year": 2026,
+      "significance": "Bodo/Glimt主场强势,北欧球队在欧冠资格赛继续展现主场优势。高位压迫+快速转换的经典北欧战术。",
+      "tactics": "bodo_433_highpress vs usg_343_possession",
+      "tags": [
+        "ucl-qualifying",
+        "bodo-glimt",
+        "high-press",
+        "counter-attack"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "match": "NEC Nijmegen 2-1 Olympiakos",
+      "venue": "UCL Qualifying Play-off",
+      "year": 2026,
+      "significance": "荷甲NEC主场击败希腊豪门Olympiakos,荷兰足球新生力量。NEC的控球+位置进攻展现荷甲战术素养。",
+      "tactics": "nec_4231_positional vs olympiakos_433_direct",
+      "tags": [
+        "ucl-qualifying",
+        "nec-nijmegen",
+        "eredivisie",
+        "positional-play"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "match": "Crvena Zvezda 0-2 Hapoel Beer-Sheva",
+      "venue": "UCL Qualifying Play-off",
+      "year": 2026,
+      "significance": "Hapoel Beer-Sheva客场完胜贝尔格莱德红星,以色列球队战术纪律出色。红星主场0-2落后,次回合压力巨大。",
+      "tactics": "hbs_442_compact_defense vs zvezda_4231_possession",
+      "tags": [
+        "ucl-qualifying",
+        "hapoel-beer-sheva",
+        "defensive-organization",
+        "upset"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "match": "Sturm Graz 0-1 Fenerbahce",
+      "venue": "UCL Qualifying Play-off",
+      "year": 2026,
+      "significance": "Fenerbahce客场小胜,穆里尼奥的球队在资格赛展现经验与效率。Sturm Graz主场未能破门。",
+      "tactics": "fener_4231_mourinho_pragmatic vs sturm_433_attacking",
+      "tags": [
+        "ucl-qualifying",
+        "fenerbahce",
+        "mourinho",
+        "pragmatic-football"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "match": "Lyon 3-0 Sparta Prague",
+      "venue": "UCL Qualifying Play-off",
+      "year": 2026,
+      "significance": "里昂主场3-0大胜,法甲球队实力碾压。Lyon的进攻三叉戟配合流畅,展现重返欧洲赛场的决心。",
+      "tactics": "lyon_433_attacking_flair vs sparta_442_defensive",
+      "tags": [
+        "ucl-qualifying",
+        "lyon",
+        "ligue1",
+        "attacking-football"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "利物浦季前赛危机: Iraola的2-0领先崩盘症候群",
+      "title_en": "Liverpool Pre-season Crisis: Iraola's 2-0 Lead Collapse Syndrome",
+      "type": "tactical_analysis",
+      "summary": "利物浦在Iraola执教下季前赛连续两场2-0领先被逆转(利兹联2-4, 摩纳哥2-3)。Sky Sports分析指出球队防守深度和伤病隐患令人担忧,8月23日客场对Newcastle的揭幕战前景不明。",
+      "tactical_context": "高位压迫体系在季前赛体能不足时容易崩盘。Iraola的433需要极高强度的前场逼抢,当体能下降后中场与防线之间出现巨大空档,被对手快速转换利用。Araujo的加盟有望缓解中卫回追问题,但整体防守协调仍需磨合。",
+      "tags": [
+        "liverpool",
+        "iraola",
+        "pre-season",
+        "high-press",
+        "defensive-vulnerability",
+        "433"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "Rashford回归曼联: 战术整合难题",
+      "title_en": "Rashford Returns to Man Utd: Tactical Integration Challenge",
+      "type": "transfer_analysis",
+      "summary": "Rashford在巴萨和另一队租借后回归曼联,自2024年12月以来未为曼联出场英超。如何在Amorim体系中找到位置是核心问题。",
+      "tactical_context": "Amorim的343体系中,左边翼卫和前锋位置都需要特定类型的球员。Rashford更适合4231的左边锋或二前锋,但在343中可能被迫打翼卫(防守要求高)或顶替现有前锋。他的回归增加了前场选择但也带来战术平衡挑战。",
+      "tags": [
+        "man-utd",
+        "rashford",
+        "amorim",
+        "343",
+        "tactical-integration",
+        "return"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "转会市场动态: Chelsea求购Lewis-Skelly + Inter追Spence",
+      "title_en": "Transfer Market: Chelsea want Lewis-Skelly + Inter pursue Spence",
+      "type": "transfer_analysis",
+      "summary": "Chelsea向Arsenal询价Lewis-Skelly(同时Man Utd也有兴趣但被拒); Inter Milan与Spurs谈Spence转会; Liverpool对Barcola有兴趣(Enrique回应); Romero愿去Spurs但被拒。",
+      "tactical_context": "Lewis-Skelly是Arteta体系中的关键年轻球员,Chelsea的询价反映其对年轻边路球员的持续需求。Spence在Spurs打右翼卫表现出色,Inter的352体系需要这种类型的翼卫。转会窗最后阶段这些交易将影响多队战术布局。",
+      "tags": [
+        "transfers",
+        "chelsea",
+        "arsenal",
+        "lewis-skelly",
+        "inter",
+        "spence",
+        "barcola",
+        "liverpool"
       ]
     }
   ],
