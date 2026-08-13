@@ -1,6 +1,6 @@
 {
-  "version": "9.5.10",
-  "last_updated": "2026-08-12",
+  "version": "9.5.12",
+  "last_updated": "2026-08-13",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -7629,6 +7629,76 @@
         "liverpool",
         "barcelona",
         "high-line"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "PSG 2-1 Aston Villa 夺欧洲超级杯 + Doue崭露头角",
+      "title_en": "PSG 2-1 Aston Villa win Super Cup + Doue shines",
+      "summary": "PSG击败Aston Villa赢得欧洲超级杯。年轻球员Doue表现出色,压过了此前备受瞩目的Madjo。PSG在新赛季前展现出良好的竞技状态。",
+      "tactical_impact": "PSG的超级杯胜利证明其战术体系成熟,Doue的崛起为球队提供了新的进攻选择。Villa虽败但首次参加超级杯表现值得肯定。",
+      "tags": [
+        "super_cup",
+        "psg",
+        "aston_villa",
+        "doue",
+        "youth_development"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Atletico Madrid签下Tottenham队长Romero",
+      "title_en": "Atletico Madrid sign Spurs captain Romero",
+      "summary": "Atletico Madrid达成协议签下Tottenham队长Cristian Romero。这对Tottenham是重大损失,Romero是球队后防核心和领袖。",
+      "tactical_impact": "Romero的出球能力和侵略性防守适合Simeone的防守体系,同时其传球能力也能为Atletico的反击提供后场出球点。Tottenham需要寻找替代者。",
+      "tags": [
+        "transfer",
+        "atletico_madrid",
+        "tottenham",
+        "defender",
+        "simeone"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Chelsea向Man City设Fernandez报价最后期限",
+      "title_en": "Chelsea set Man City deadline for Fernandez bid",
+      "summary": "Chelsea向Manchester City发出最后通牒,要求在截止日期前对Enzo Fernandez做出回应。这场转会拉锯战持续数周,反映了顶级中场球员的市场价值。",
+      "tactical_impact": "Fernandez若离队,Man City需要重组中场(Maresca新帅面临考验)。Chelsea则获得顶级组织型中场,可增强控球体系。",
+      "tags": [
+        "transfer",
+        "chelsea",
+        "man_city",
+        "fernandez",
+        "midfield"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Arsenal 1-1 Como: Guimaraes首秀 + Lewis-Skelly进球",
+      "title_en": "Arsenal 1-1 Como: Guimaraes debut + Lewis-Skelly scores",
+      "summary": "Arsenal季前赛1-1平Como。新援Guimaraes完成首秀,Lewis-Skelly进球。Arteta表示转会窗还有更多目标。同时Arsenal继续与Villa谈Konsa转会。",
+      "tactical_impact": "Guimaraes的加入为Arsenal中场提供新的技术维度。Lewis-Skelly继续展现潜力。Arsenal在转会市场活跃,可能进一步补强。",
+      "tags": [
+        "friendly",
+        "arsenal",
+        "guimaraes",
+        "lewis-skelly",
+        "konsa"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Newcastle 1-3 Everton: 季前赛冷门",
+      "title_en": "Newcastle 1-3 Everton: Pre-season upset",
+      "summary": "Everton在季前赛中3-1击败Newcastle。Newcastle在Jaissle执教下仍在磨合新体系,而Everton展现出良好的季前状态。",
+      "tactical_impact": "Newcastle的Red Bull体系仍在适应期,Jaissle需要时间将高位压迫理念植入球队。Everton的表现暗示新赛季可能有更好发挥。",
+      "tags": [
+        "friendly",
+        "newcastle",
+        "everton",
+        "jaissle",
+        "red_bull_system"
       ]
     }
   ]
