@@ -1,6 +1,6 @@
 {
-  "version": "9.5.12",
-  "last_updated": "2026-08-13",
+  "version": "9.5.13",
+  "last_updated": "2026-08-14",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6455,6 +6455,15 @@
         "新增: 多条夏窗转会动态",
         "数据来源: Sky Sports 2026-08-11"
       ]
+    },
+    {
+      "date": "2026-08-14",
+      "version": "9.5.13",
+      "summary": "Man City中场重组(Rodri/Reijnders/Fernandez) + Man Utd Carrick £85m引援 + Chelsea Fernandez £120m deadline + Arsenal谈Osimhen + Rangers欧联出局",
+      "changes": [
+        "+4 recent_trends (City中场重建/Carrick引援/Fernandez deadline/Rangers出局)",
+        "数据更新至2026-08-14"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -7700,6 +7709,62 @@
         "jaissle",
         "red_bull_system"
       ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "Man City中场大重组: Rodri遭Barcelona两度报价(£55m被拒) + Reijnders售往沙特 + Fernandez为目标",
+      "summary": "Man City面临中场彻底重建。Rodri进入合同最后一年，Barcelona两度报价(£40m→£55m)均被拒，City要价£60m+。Reijnders已同意转投沙特Al Qadsiah。City转向Lille的Ayyoub Bouaddi，同时追逐Chelsea的Fernandez(£120m估值)。Guardiola的控球体系面临核心流失考验。",
+      "tags": [
+        "Rodri",
+        "Barcelona",
+        "Man City",
+        "Fernandez",
+        "Reijnders",
+        "中场重建",
+        "控球体系"
+      ],
+      "tactical_impact": "Guardiola的控球哲学依赖Rodri作为单锚点，若失去他+Reijnders，需彻底重构中场运转逻辑。Fernandez若加盟可带来组织创造力，但适应新体系需要时间。"
+    },
+    {
+      "date": "2026-08-14",
+      "title": "Man Utd的Carrick时代: 签Santos+Tielemans(£85m) + Casemiro离队 + 要求更多引援",
+      "summary": "Michael Carrick执教首个完整赛季，已投入£85m签Andrey Santos和Youri Tielemans重组中场(Casemiro离队后)。Carrick公开表示'想要且需要'更多签约。Rashford去留待定(Spurs有意)，Mainoo需从世界杯失望中恢复。",
+      "tags": [
+        "Man Utd",
+        "Carrick",
+        "Santos",
+        "Tielemans",
+        "Casemiro",
+        "中场重建"
+      ],
+      "tactical_impact": "Carrick作为球员时代是中场组织者，执教风格预计延续控球+中场控制理念。Santos(防守型)+Tielemans(组织型)组合提供平衡，但缺少Casemiro的防守覆盖需通过体系调整弥补。"
+    },
+    {
+      "date": "2026-08-14",
+      "title": "Chelsea设Fernandez £120m最后期限 + Arsenal谈Osimhen + Rashford去Spurs?",
+      "summary": "Chelsea给Man City设5pm Friday deadline报价Fernandez(£120m估值)，否则冬窗也不卖。Arsenal与Galatasaray谈Osimhen转会。Spurs名宿建议签Rashford配合De Zerbi进攻体系。",
+      "tags": [
+        "Fernandez",
+        "Chelsea",
+        "Osimhen",
+        "Arsenal",
+        "Rashford",
+        "Spurs",
+        "De Zerbi"
+      ],
+      "tactical_impact": "转会市场顶级中场价格持续飙升(Fernandez £120m)。Arsenal追求Osimhen显示Arteta希望增加直接攻击维度。De Zerbi的Spurs若得到Rashford，其高位压迫+快速进攻体系将获得理想前场武器。"
+    },
+    {
+      "date": "2026-08-14",
+      "title": "Rangers欧联出局 + McInnes承认'没准备好': 苏格兰足球困境",
+      "summary": "Rangers被Jagiellonia Bialystok淘汰出欧联杯，主场被球迷嘘。McInnes承认球队'还没准备好参加欧战'。连续不胜开局反映苏格兰顶级球队在欧洲竞争力下降的深层问题。",
+      "tags": [
+        "Rangers",
+        "欧联杯",
+        "苏格兰足球",
+        "McInnes"
+      ],
+      "tactical_impact": "苏格兰球队在欧洲赛场的持续低迷反映联赛竞争力和战术水平的结构性差距。与五大联赛在压迫强度、战术纪律、球员质量上的差距日益扩大。"
     }
   ]
 }
