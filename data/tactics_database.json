@@ -1,6 +1,6 @@
 {
-  "version": "9.5.13",
-  "last_updated": "2026-08-14",
+  "version": "9.5.15",
+  "last_updated": "2026-08-16",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6464,6 +6464,21 @@
         "+4 recent_trends (City中场重建/Carrick引援/Fernandez deadline/Rangers出局)",
         "数据更新至2026-08-14"
       ]
+    },
+    {
+      "date": "2026-08-15",
+      "version": "9.5.14",
+      "summary": "Liverpool Bezos财团入股 + Arteta续约Arsenal + Romero去Atletico + City错过Fernandez deadline"
+    },
+    {
+      "date": "2026-08-16",
+      "version": "9.5.15",
+      "changes": [
+        "Tottenham De Zerbi体系季前赛收官(3-0 Hoffenheim): 4新援首秀+Moore爆发+Gakpo即将加盟",
+        "Man City确认谈判Bouaddi(Lille): Ancelotti公开表态希望交易失败",
+        "Gakpo同意Tottenham个人条款, Liverpool降低Jones要价给Inter",
+        "FIFA俱乐部世界杯: 欧洲豪门威胁退出, Forward Enterprise计划被废"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -7561,15 +7576,6 @@
   },
   "recent_trends": [
     {
-      "date": "2026-08-07",
-      "title": "夏窗重磅: Diomande £120m去皇马 + Salah去土超 + Rodri争夺战",
-      "title_en": "Summer Blockbusters: Diomande £120m to Real Madrid + Salah to Turkey + Rodri Battle",
-      "summary": "2026夏窗进入白热化: Real Madrid £120m签19岁科特迪瓦前锋Diomande(非洲球员纪录),Mourinho已完成5笔重磅签约(Bernardo/Konate/Dumfries/Cucurella/Diomande)。Arsenal连失Vinicius(续约皇马)和Rogers(£117m去Chelsea),进攻引援陷入困境。Barcelona加入争夺Man City的Rodri(合同剩1年,£50m)。Mo Salah正式签Trabzonspor两年(£14.5m/赛季),创土超纪录。Liverpool/Arsenal争Aston Villa的Konsa。",
-      "tactical_impact": "皇马攻击体系全面升级(Mourinho防反+Diomande/Vinicius双翼);Arsenal卫冕之路受阻(左翼空缺);Man City面临Rodri离队风险(Maresca新帅考验);英超格局因Salah离队+转会大战持续变化",
-      "category": "transfer_window",
-      "source": "Sky Sports 2026-08-06/07"
-    },
-    {
       "date": "2026-08-03",
       "title": "利物浦季前赛崩盘: 2-0领先被利兹联4-2逆转",
       "title_en": "Liverpool Pre-Season Collapse: 2-0 Lead Overturned by Leeds 4-2",
@@ -7765,6 +7771,58 @@
         "McInnes"
       ],
       "tactical_impact": "苏格兰球队在欧洲赛场的持续低迷反映联赛竞争力和战术水平的结构性差距。与五大联赛在压迫强度、战术纪律、球员质量上的差距日益扩大。"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Liverpool所有权变更: FSG出售少数股权给Bezos支持财团",
+      "source": "Sky Sports",
+      "summary": "FSG出售Liverpool少数股权给Bezos支持的财团。这可能改变俱乐部转会策略和长期规划。Klopp时代后的新投资时代开启。",
+      "tactical_impact": "新投资可能带来转会预算增加，但FSG仍保持控制权。对Slot的战术体系支持度待观察。"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Arteta宣布将与Arsenal签新约: \"organic way\"",
+      "source": "Sky Sports",
+      "summary": "Mikel Arteta表示将以\"自然的方式\"与Arsenal签署新合同。长期承诺显示对项目的信心。",
+      "tactical_impact": "Arteta的控球+高位压迫体系获得长期稳定性保障。延续其从防守到进攻的渐进式改革。"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Romero宣布离开Spurs加盟Atletico Madrid",
+      "source": "Sky Sports",
+      "summary": "Cristian Romero确认将离开Tottenham前往Atletico Madrid。Spurs已在寻找替代者。",
+      "tactical_impact": "Spurs失去核心中卫，Postecoglou的高位防线需要重组。Atletico的Simeone体系将获得一名顶级防守者。"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Man City错过Chelsea的Fernandez报价deadline",
+      "source": "Sky Sports",
+      "summary": "Man City未能在规定时间内提交对Enzo Fernandez的报价。Chelsea设定的5pm Friday deadline已过。",
+      "tactical_impact": "Guardiola的中场重组计划受阻。Rodri未来仍不明朗，City需寻找其他目标或冬窗再行动。"
+    },
+    {
+      "date": "2026-08-16",
+      "topic": "Tottenham De Zerbi体系成型",
+      "detail": "季前赛3-0 Hoffenheim, 新援Robertson/Tonali/Van Hecke/Senesi全部主场首秀. Mikey Moore梅开二度(19岁), Richarlison进球. Gakpo同意个人条款即将加盟. De Zerbi的高位压迫+快速进攻体系逐渐成型, 下周六英超首轮客战Brentford.",
+      "tactical_impact": "De Zerbi的4-2-3-1体系: Tonali+Gallagher双中场提供控制力, Robertson左路插上+Tel右路配合Moore形成两翼攻击. Gakpo加盟将增加前场灵活性. 年轻球员Moore的爆发显示De Zerbi善于培养新人(类似Sarmiento在Brighton时期)."
+    },
+    {
+      "date": "2026-08-16",
+      "topic": "Man City追逐Bouaddi",
+      "detail": "Lille主帅Davide Ancelotti确认Man City正在谈判签Ayyoub Bouaddi, 但希望交易失败. City在Rodri可能离队+Reijnders售沙特的背景下急需中场补强.",
+      "tactical_impact": "Bouaddi(19岁Lille新星)若加盟将延续Guardiola培养年轻人的传统. City中场重建方向: 从单核Rodri体系转向多核轮换. Bouaddi的技术特点(控球+推进)适合Guardiola的位置游戏体系."
+    },
+    {
+      "date": "2026-08-16",
+      "topic": "Gakpo转会Tottenham",
+      "detail": "Liverpool的Cody Gakpo已同意Tottenham个人条款. Liverpool同时降低Curtis Jones要价给Inter Milan. 转会市场活跃.",
+      "tactical_impact": "Gakpo的加入为De Zerbi提供前场多面手: 可打左边锋/中锋/影锋. 与Richarlison+Moore+Tel形成攻击轮换. Liverpool方面, 失去Gakpo后需重新规划锋线, Jones去Inter意味着中场也在瘦身."
+    },
+    {
+      "date": "2026-08-16",
+      "topic": "FIFA俱乐部世界杯危机",
+      "detail": "欧洲顶级俱乐部威胁不参加未来俱乐部世界杯, 除非Infantino撤回FIFA Forward Enterprise计划. 数小时后该计划被废除.",
+      "tactical_impact": "俱乐部与FIFA的权力博弈持续. 若赛事取消/缩减, 将影响球员赛程负荷管理和转会策略. 豪门球队可能获得更多休息/备战时间, 影响国内联赛竞争格局."
     }
   ]
 }
