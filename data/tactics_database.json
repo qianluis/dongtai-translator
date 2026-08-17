@@ -1,6 +1,6 @@
 {
-  "version": "9.5.15",
-  "last_updated": "2026-08-16",
+  "version": "9.5.16",
+  "last_updated": "2026-08-17",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6479,6 +6479,16 @@
         "Gakpo同意Tottenham个人条款, Liverpool降低Jones要价给Inter",
         "FIFA俱乐部世界杯: 欧洲豪门威胁退出, Forward Enterprise计划被废"
       ]
+    },
+    {
+      "date": "2026-08-17",
+      "version": "9.5.16",
+      "changes": [
+        "苏格兰任命Pocognoli(比利时)为主教练: 比甲冠军教头, Van Gaal学派, 首次国家队执教",
+        "英超2026-27赛季今日开幕: 各队战术体系即将接受实战检验",
+        "转会动态: Delap/Neto接近离开Chelsea; Arsenal关注Kofane; Nuno要求West Ham补强攻击线",
+        "Burnley 2-2 West Ham: 英冠杯赛, West Ham两球领先被追平"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -7823,6 +7833,27 @@
       "topic": "FIFA俱乐部世界杯危机",
       "detail": "欧洲顶级俱乐部威胁不参加未来俱乐部世界杯, 除非Infantino撤回FIFA Forward Enterprise计划. 数小时后该计划被废除.",
       "tactical_impact": "俱乐部与FIFA的权力博弈持续. 若赛事取消/缩减, 将影响球员赛程负荷管理和转会策略. 豪门球队可能获得更多休息/备战时间, 影响国内联赛竞争格局."
+    },
+    {
+      "date": "2026-08-17",
+      "title": "苏格兰任命Pocognoli为主教练",
+      "summary": "39岁比利时教练Sebastien Pocognoli签约苏格兰国家队(2年合同), 替换Steve Clarke. Pocognoli去年率Union SG夺比甲冠军, 曾执教Monaco. 前比利时国脚左后卫, 师从Van Gaal(AZ). 首次国家队主教练职务.",
+      "tactical_impact": "Pocognoli代表比利时战术学派(高位压迫+灵活阵型), 曾受Van Gaal影响. 可能为苏格兰带来大陆式战术体系, 从Clarke的务实防守风格转向更主动的控球+压迫打法.",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-17",
+      "title": "英超赛季今日开幕 - 转会窗口关键动态",
+      "summary": "英超2026-27赛季今日开赛. 转会热点: Chelsea的Delap和Neto接近离队(Forest争夺Delap, City/Al Hilal争夺Neto); Arsenal关注Leverkusen前锋Kofane; Newcastle签Dedic; West Ham的Nuno要求引进攻击手; Liverpool的Iraola对Como热身赛胜利仍不满足; Arteta呼吁修改英超阵容规则.",
+      "tactical_impact": "赛季开幕意味着各队战术体系即将接受实战检验. De Zerbi的Tottenham/Arteta的Arsenal/Guardiola的City(中场重建中)的战术对决即将开始. 转会截止前的最后变动可能影响多队战术规划.",
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-17",
+      "title": "Burnley 2-2 West Ham - 英冠回归杯赛",
+      "summary": "West Ham在两球领先的情况下被Burnley追平(2-2). Nuno的West Ham在追求Piroe的同时, 球队攻击线仍需补强.",
+      "tactical_impact": "West Ham防守端在两球领先后被追平暴露问题, Nuno需要在进攻补强和防守稳定性之间找到平衡.",
+      "source": "Sky Sports"
     }
   ]
 }
