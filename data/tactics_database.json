@@ -1,6 +1,6 @@
 {
-  "version": "9.5.16",
-  "last_updated": "2026-08-17",
+  "version": "9.5.17",
+  "last_updated": "2026-08-18",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6489,6 +6489,11 @@
         "转会动态: Delap/Neto接近离开Chelsea; Arsenal关注Kofane; Nuno要求West Ham补强攻击线",
         "Burnley 2-2 West Ham: 英冠杯赛, West Ham两球领先被追平"
       ]
+    },
+    {
+      "date": "2026-08-18",
+      "version": "9.5.17",
+      "summary": "Arsenal 3-0 Man City社区盾杯战术复盘 + Rodri梦想去Barcelona + Man Utd Carrick体系分析 + Chelsea所有权变动 + Everton引援需求"
     }
   ],
   "world_cup_2026_updates": [
@@ -7854,6 +7859,71 @@
       "summary": "West Ham在两球领先的情况下被Burnley追平(2-2). Nuno的West Ham在追求Piroe的同时, 球队攻击线仍需补强.",
       "tactical_impact": "West Ham防守端在两球领先后被追平暴露问题, Nuno需要在进攻补强和防守稳定性之间找到平衡.",
       "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Arsenal 3-0 Man City (Community Shield) - Arteta体系完胜Maresca",
+      "category": "战术复盘",
+      "summary": "Arsenal在社区盾杯3-0大胜Man City, 暴露City中轴线严重问题: 防守组织混乱, 中场缺失, 缺乏领导力. Arteta的体系化足球完全压制Maresca的重建中的City.",
+      "tactical_points": [
+        "Arsenal高位压迫完全控制中场",
+        "City中轴线(防守-中场-进攻)全面崩溃",
+        "Maresca缺少关键中场引援, 体系无法运转",
+        "Arteta球队展现冠军级战术纪律"
+      ],
+      "significance": "high"
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Rodri前往巴塞罗那 - 梦想转会接近实现",
+      "category": "转会动态",
+      "summary": "Man City核心Rodri在巴塞罗那进行\"梦想转会\"谈判. 这将是英超中场格局的重大变动, 也加剧了Maresca的中场危机.",
+      "tactical_points": [
+        "Rodri是Guardiola体系的核心防守中场",
+        "离队将迫使City彻底重建中场",
+        "Barcelona获得世界级6号位",
+        "City此前£55m拒绝出售, 但球员意愿强烈"
+      ],
+      "significance": "high"
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Man Utd季前分析: Carrick首个完整赛季 + Zirkzee复苏 + Rashford回归",
+      "category": "球队分析",
+      "summary": "Man Utd在Carrick执教下进入首个完整赛季. Zirkzee状态复苏, Rashford重新归队. 但球队仍急需左后卫. Bruno Fernandes拒绝Galatasaray, 正谈新合同.",
+      "tactical_points": [
+        "Carrick的4-2-3-1体系逐渐成型",
+        "Zirkzee作为9号位的复苏是关键",
+        "Rashford回归增加左路攻击选择",
+        "左后卫仍是最大短板",
+        "Bruno续约稳定军心"
+      ],
+      "significance": "medium"
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Chelsea所有权变动: Boehly/Walter洽谈出售股份给Clearlake Capital",
+      "category": "俱乐部管理",
+      "summary": "Chelsea联合老板Boehly和Walter正与Clearlake Capital洽谈出售多数股权, 俱乐部估值£50亿. Xabi Alonso时代开启新篇章, Enzo Fernandez未来成焦点.",
+      "tactical_points": [
+        "所有权变动可能影响转会策略",
+        "Alonso的长期建队计划需新老板支持",
+        "Fernandez去留影响中场体系",
+        "£50亿估值反映英超商业价值巅峰"
+      ],
+      "significance": "medium"
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Moyes承认Everton需要\"相当多\"引援",
+      "category": "球队分析",
+      "summary": "Everton主教练Moyes坦承球队需要大量新援, 暗示球队阵容深度不足以应对英超竞争. 太妃糖转会窗口仍有大动作.",
+      "tactical_points": [
+        "Moyes回归后重建仍在进行",
+        "阵容深度不足限制战术选择",
+        "保级压力下的务实引援策略"
+      ],
+      "significance": "low"
     }
   ]
 }
