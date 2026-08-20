@@ -1,6 +1,6 @@
 {
-  "version": "9.5.17",
-  "last_updated": "2026-08-18",
+  "version": "9.5.18",
+  "last_updated": "2026-08-20",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6494,6 +6494,11 @@
       "date": "2026-08-18",
       "version": "9.5.17",
       "summary": "Arsenal 3-0 Man City社区盾杯战术复盘 + Rodri梦想去Barcelona + Man Utd Carrick体系分析 + Chelsea所有权变动 + Everton引援需求"
+    },
+    {
+      "date": "2026-08-20",
+      "version": "9.5.18",
+      "summary": "英超2026-27赛季前夕: Arsenal £51m签Konsa(后防危机) + Man Utd接近签Baleba(Carrick中场重建) + Spurs追City双星 + Celtic 3-0 LASK(Duran爆发) + Bodo/Glimt客场3-1 NEC + 20队战术全景评估"
     }
   ],
   "world_cup_2026_updates": [
@@ -7924,6 +7929,84 @@
         "保级压力下的务实引援策略"
       ],
       "significance": "low"
+    },
+    {
+      "date": "2026-08-20",
+      "title": "Arsenal £51m签Konsa: 卫冕冠军后防危机应对",
+      "category": "转会/战术调整",
+      "summary": "Arsenal以£51m从Aston Villa签下Ezri Konsa, 因Saliba长期伤缺+Timber腹股沟伤. 这是Arteta作为卫冕冠军的关键防守补强. 此前还关注了Bayer Leverkusen的Quansah.",
+      "tactical_points": [
+        "Saliba+Timber同时受伤迫使Arteta改变防守体系",
+        "Konsa是英格兰国脚, 可打中卫/右后卫, 增加体系灵活性",
+        "£51m价格反映顶级中卫的市场价值",
+        "Arteta的防守体系依赖Saliba, 缺少他需调整"
+      ],
+      "significance": "high"
+    },
+    {
+      "date": "2026-08-20",
+      "title": "Man Utd接近签下Brighton的Baleba: Carrick中场重建",
+      "category": "转会/战术调整",
+      "summary": "Man Utd与Brighton就Carlos Baleba转会接近达成全面协议. Baleba被称为'game-changing signing', 是Carrick 4-2-3-1体系的关键中场补强.",
+      "tactical_points": [
+        "Baleba的B2B能力适配Carrick的4-2-3-1双后腰体系",
+        "Brighton培养体系再次输出顶级中场人才",
+        "Man Utd中场重组进入关键阶段",
+        "Carrick的建队思路逐渐清晰"
+      ],
+      "significance": "high"
+    },
+    {
+      "date": "2026-08-20",
+      "title": "Spurs追求Man City双星Savinho+Marmoush: De Zerbi攻击线升级",
+      "category": "转会/战术调整",
+      "summary": "Tottenham正与Man City洽谈同时签下Savinho和Marmoush, 作为寻找三名新前锋计划的一部分. De Zerbi继续升级攻击线.",
+      "tactical_points": [
+        "De Zerbi的3-4-3/4-3体系需要高质量边锋",
+        "同时追求两名City球员显示Spurs的雄心",
+        "Man City愿意放人暗示Pep的中场/边路重组",
+        "Gakpo加盟后Spurs攻击线焕然一新"
+      ],
+      "significance": "medium"
+    },
+    {
+      "date": "2026-08-20",
+      "title": "Man City计划报价Enzo Fernandez: 错过Chelsea截止日后仍不放弃",
+      "category": "转会/战术调整",
+      "summary": "Man City准备再次报价Chelsea的Enzo Fernandez, 尽管错过了转会截止日. 同时关注Crystal Palace的Wharton.",
+      "tactical_points": [
+        "Pep的中场重建仍在进行",
+        "Fernandez的控球能力适配位置打法体系",
+        "City可能在中窗期完成交易",
+        "反映顶级中场球员的稀缺性"
+      ],
+      "significance": "medium"
+    },
+    {
+      "date": "2026-08-20",
+      "title": "UCL资格赛: Celtic 3-0 LASK, Duran爆发; Bodo/Glimt客场3-1 NEC",
+      "category": "比赛战报",
+      "summary": "Celtic在UCL附加赛首回合3-0大胜LASK. Camilo Duran梅开二度(被评为stunning), Nygren首开记录. Bodo/Glimt客场3-1击败NEC Nijmegen, 延续北欧足球的欧战竞争力.",
+      "tactical_points": [
+        "Celtic的Duran成为新核心攻击手",
+        "Bodo/Glimt继续证明北欧高压体系的欧战竞争力",
+        "Celtic距欧冠正赛一步之遥",
+        "LASK两球被取消, 客场翻盘希望渺茫"
+      ],
+      "significance": "medium"
+    },
+    {
+      "date": "2026-08-20",
+      "title": "英超2026-27赛季明日开幕: 20队战术体系全景评估",
+      "category": "赛季前瞻",
+      "summary": "Sky Sports发布英超20队季前准备全景分析. Arsenal卫冕冠军, Tzolis(£34m)可能成为超值签约. 英超周五晚Arsenal vs Coventry开幕.",
+      "tactical_points": [
+        "Arsenal的Tzolis(£34m from Club Brugge)季前表现出色",
+        "各队战术体系即将接受实战检验",
+        "新赛季规则变更已公布",
+        "Pep纪录片揭示更衣室管理细节"
+      ],
+      "significance": "high"
     }
   ]
 }
