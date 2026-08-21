@@ -1,6 +1,6 @@
 {
-  "version": "9.5.18",
-  "last_updated": "2026-08-20",
+  "version": "9.5.19",
+  "last_updated": "2026-08-21",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6499,6 +6499,17 @@
       "date": "2026-08-20",
       "version": "9.5.18",
       "summary": "英超2026-27赛季前夕: Arsenal £51m签Konsa(后防危机) + Man Utd接近签Baleba(Carrick中场重建) + Spurs追City双星 + Celtic 3-0 LASK(Duran爆发) + Bodo/Glimt客场3-1 NEC + 20队战术全景评估"
+    },
+    {
+      "date": "2026-08-21",
+      "version": "9.5.19",
+      "summary": "英超开幕日前瞻: Glasner Forest战术蓝图 + Conference League赛报(Brighton闷平/Rangers险胜) + Liverpool求购Minteh被拒 + Arsenal vs Coventry开幕战战术看点",
+      "changes": [
+        "Glasner的Forest计划: 3-4-2-1体系从Palace移植, 稳定中求成功",
+        "Conference League: Brighton 0-0 Tromso(进攻乏力), Rangers 1-0 Jablonec(Devlin红牌)",
+        "Liverpool求购Minteh被Brighton拒绝",
+        "英超今晚开幕: Arsenal vs Coventry, 周六Brentford vs Spurs(De Zerbi首秀)"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -8007,6 +8018,59 @@
         "Pep纪录片揭示更衣室管理细节"
       ],
       "significance": "high"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "Glasner的Forest计划: '稳定中求成功'的战术蓝图",
+      "category": "教练/战术体系",
+      "summary": "Oliver Glasner离开Crystal Palace(上赛季欧战奖杯)转投Nottingham Forest, 首季目标复制成功. Forest周六主场vs Leeds开幕. Glasner的3-4-2-1体系强调中场控制和快速转换, 在Palace证明能打造有竞争力的中游球队. Forest的Ewood Park风格转型值得关注.",
+      "tactical_significance": "高",
+      "teams": [
+        "Nottingham Forest",
+        "Crystal Palace"
+      ],
+      "source": "Sky Sports Exclusive"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "Conference League: Brighton被Tromso逼平; Rangers险胜(Devlin红牌)",
+      "category": "欧战赛报",
+      "summary": "Brighton主场0-0被挪威队Tromso逼平, 进攻端缺乏锐度(Hurzeler要求次回合提升). Rangers客场1-0胜Jablonec但Devlin红牌给次回合蒙阴影, Naderi进球拯救. 北欧球队继续展现组织性防守能力.",
+      "tactical_significance": "中",
+      "teams": [
+        "Brighton",
+        "Rangers",
+        "Tromso"
+      ],
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "Liverpool求购Brighton的Minteh被拒; Arsenal考虑Kroupi",
+      "category": "转会/战术调整",
+      "summary": "Liverpool正式报价Brighton的Yankuba Minteh但遭拒绝. Arsenal方面考虑签下Eli Junior Kroupi, 同时Everton和Ipswich对Gabriel Jesus有兴趣. 转会窗最后阶段的战术补强仍在进行.",
+      "tactical_significance": "中",
+      "teams": [
+        "Liverpool",
+        "Brighton",
+        "Arsenal"
+      ],
+      "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "英超2026-27赛季今晚开幕: Arsenal vs Coventry(周五20:00 UK)",
+      "category": "赛季前瞻",
+      "summary": "卫冕冠军Arsenal主场迎战Coventry开启新赛季. Arteta的Konsa首秀受关注(后防伤病危机). 周六焦点: Brentford vs Tottenham(De Zerbi新体系首秀), Hull vs Man Utd(Carrick体系客场首考). 各队战术体系即将接受实战检验.",
+      "tactical_significance": "高",
+      "teams": [
+        "Arsenal",
+        "Coventry City",
+        "Tottenham",
+        "Brentford",
+        "Man Utd"
+      ],
+      "source": "Sky Sports"
     }
   ]
 }
