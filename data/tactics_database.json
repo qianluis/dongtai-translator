@@ -1,6 +1,6 @@
 {
-  "version": "9.5.19",
-  "last_updated": "2026-08-21",
+  "version": "9.5.20",
+  "last_updated": "2026-08-22",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6510,6 +6510,17 @@
         "Liverpool求购Minteh被Brighton拒绝",
         "英超今晚开幕: Arsenal vs Coventry, 周六Brentford vs Spurs(De Zerbi首秀)"
       ]
+    },
+    {
+      "date": "2026-08-22",
+      "version": "9.5.20",
+      "summary": "英超开幕战复盘: Arsenal 3-0 Coventry(完美卫冕首战) + Man Utd £70m签Baleba(中场重建完成) + Inter签Jones + De Zerbi Spurs首秀看点",
+      "changes": [
+        "Arsenal 3-0 Coventry: 64%控球/xG 1.88 vs 0.2, Tzolis首秀2助攻, Coventry创2007年以来耻辱纪录",
+        "Man Utd £70m签Baleba: Carrick中场三引援完成(Santos+Tielemans+Baleba)",
+        "Inter £30m签Curtis Jones from Liverpool; Atletico愿卖Alvarez给Arsenal",
+        "周六看点: De Zerbi Spurs首秀, Hull vs Man Utd, Dortmund vs Bayern"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -8071,6 +8082,56 @@
         "Man Utd"
       ],
       "source": "Sky Sports"
+    },
+    {
+      "date": "2026-08-22",
+      "category": "match_analysis",
+      "title": "英超开幕战: Arsenal 3-0 Coventry 战术复盘",
+      "summary": "Arsenal卫冕首战完美碾压. 64%控球率, xG 1.88 vs 0.2, 20射vs4射, 91.7%传球准确率. Havertz/Saka/Odegaard各入一球. Tzolis首秀2助攻. Coventry创耻辱纪录: 2007年以来首支英超上半场0禁区内触球+0铲球的球队.",
+      "tactical_significance": "高",
+      "key_points": [
+        "Arteta体系成熟: 社区盾3-0 City + 联赛3-0 Coventry, 两场零封6球",
+        "Tzolis左翼首秀惊艳: 卡拉格赞叹\"What a left-winger Arsenal have got\"",
+        "Konsa后防首秀稳健, 与Saliba搭档默契",
+        "Coventry完全被压制: 69分钟才做出第一次铲球, 全场仅3次禁区内触球"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "category": "transfer",
+      "title": "Man Utd £70m签Baleba: Carrick中场重建第三步",
+      "summary": "Manchester United与Brighton达成£70m(£65m固定+£5m浮动)协议签Carlos Baleba, 5年合同. 继Andrey Santos和Youri Tielemans后, 成为Carrick今夏第三名中场引援.",
+      "tactical_significance": "高",
+      "key_points": [
+        "Carrick中场重建: Santos(防守型)+Tielemans(组织型)+Baleba(全能型)三人组合",
+        "£70m创Brighton卖出纪录, 含sell-on条款",
+        "Man Utd周六客场Hull: Carrick体系客场首考"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "category": "transfer",
+      "title": "Inter Milan £30m签Curtis Jones; Atletico愿卖Alvarez给Arsenal",
+      "summary": "Inter Milan从Liverpool签下Curtis Jones(£30m+sell-on). Atletico Madrid愿意将Julian Alvarez卖给Arsenal. Neville建议Arsenal在截止日前签Alvarez(\"会推动Arsenal过欧冠线\").",
+      "tactical_significance": "中",
+      "key_points": [
+        "Jones转战Serie A: 技术型中场在意大利战术体系中寻求新角色",
+        "Alvarez→Arsenal: 如果成行, Arteta的锋线将升级为世界级",
+        "Neville评价: \"Arteta has gone from apprentice to master\""
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "category": "preview",
+      "title": "周六战术看点: De Zerbi的Spurs首秀 + Dortmund vs Bayern",
+      "summary": "今日英超焦点: Brentford vs Tottenham(De Zerbi新体系首秀), Hull vs Man Utd(Carrick三中场首考), Newcastle vs Liverpool(周日). 德甲: Dortmund vs Bayern(Der Klassiker). 西甲: Espanyol vs Real Madrid.",
+      "tactical_significance": "高",
+      "key_points": [
+        "De Zerbi在Spurs: 从Brighton的传控哲学到北伦敦的战术升级",
+        "Hull vs Man Utd: Carrick的3中场新体系客场检验",
+        "Dortmund vs Bayern: 德国国家德比, 新赛季战术基调之战",
+        "Newcastle vs Liverpool(周日): Slot的Liverpool vs Iraola的Bournemouth式高压"
+      ]
     }
   ]
 }
