@@ -1,6 +1,6 @@
 {
-  "version": "9.5.20",
-  "last_updated": "2026-08-22",
+  "version": "9.5.21",
+  "last_updated": "2026-08-23",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6228,6 +6228,18 @@
   ],
   "changelog": [
     {
+      "date": "2026-08-23",
+      "version": "9.5.21",
+      "summary": "英超开幕战周末复盘: De Zerbi Spurs首秀0-3惨败Brentford + Carrick Man Utd 0-2负升班马Hull + Bayern超级杯2-1胜Dortmund(Olise闪耀) + Leeds绝杀Glasner Forest + Arsenal追Alvarez",
+      "changes": [
+        "新增6条recent_trends(英超开幕战周末战术复盘)",
+        "De Zerbi传控哲学移植困境分析",
+        "Carrick中场重建首考失败",
+        "Bayern超级杯Olise战术价值",
+        "转会动态: Alvarez→Arsenal, Rodri离队传闻"
+      ]
+    },
+    {
       "version": "9.5.2",
       "date": "2026-08-03",
       "changes": [
@@ -7618,6 +7630,77 @@
   },
   "recent_trends": [
     {
+      "date": "2026-08-23",
+      "title": "De Zerbi Spurs首秀灾难: Brentford 3-0 Tottenham",
+      "summary": "De Zerbi从Brighton传控哲学转战北伦敦, 但5名新援首秀表现灾难。Jamie Redknapp称球队为'strangers'(陌生人), De Zerbi赛后承认'we're not a team yet'。上半场0射正, Lewis-Potter和Janelt各入一球, Kayode锦上添花。传控哲学需要时间但英超不等人。",
+      "tactical_significance": "high",
+      "tags": [
+        "De Zerbi",
+        "Spurs",
+        "传控移植困境",
+        "新援磨合"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "title": "Hull 2-0 Man Utd: Carrick新体系遭升班马暴击",
+      "summary": "Michael Carrick的Man Utd在英超开幕战被升班马Hull City 2-0击败。Semi Ajayi和Nobel Mendy上半场各入一球。尽管£70m签Baleba完成中场重建, 但新体系客场首考完全失败。Sky Sports称'lack guts and fight'。",
+      "tactical_significance": "high",
+      "tags": [
+        "Carrick",
+        "Man Utd",
+        "升班马爆冷",
+        "中场重建"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "title": "Leeds客场绝杀Forest: Stach 88分钟任意球",
+      "summary": "Anton Stach第88分钟任意球直接破门(门将Sels站位失误), Leeds 1-0客胜Glasner的Nottingham Forest。Igor Jesus和Chris Wood错失良机。Glasner的Forest主场首战失利, 战术执行力受质疑。",
+      "tactical_significance": "medium",
+      "tags": [
+        "Glasner",
+        "Forest",
+        "Leeds",
+        "定位球"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "title": "Bayern 2-1 Dortmund: Olise闪耀德国超级杯",
+      "summary": "Michael Olise在Der Klassiker中表现抢眼, Bayern慕尼黑2-1客胜Dortmund赢得Franz Beckenbauer超级杯。Nathaniel Brown和Olise进球, Fabio Silva为Dortmund扳回一球, Bensebaini红牌。Kane赢得加盟后首座奖杯。",
+      "tactical_significance": "medium",
+      "tags": [
+        "Bayern",
+        "Olise",
+        "Der Klassiker",
+        "超级杯"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "title": "Everton 2-0 Palace: Sage执教首秀失利",
+      "summary": "Dewsbury-Hall和Thierno Barry各入一球, Everton 2-0完胜Crystal Palace。Pierre Sage的Palace执教首秀以失败告终, 而Everton取得5年来首个开幕战胜利。",
+      "tactical_significance": "low",
+      "tags": [
+        "Everton",
+        "Palace",
+        "新教练首秀"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "title": "转会: Arsenal接触Alvarez + Man City需'找新Rodri'",
+      "summary": "Arteta和Berta与Atletico Madrid的Alvarez保持'频繁接触', 可能推动截止日前转会。Maresca公开表示Man City需要'找到新的Rodri'(暗示Rodri可能离队)。Bellingham在Real Madrid进球, John Stones在Inter首秀获胜。",
+      "tactical_significance": "high",
+      "tags": [
+        "转会",
+        "Alvarez→Arsenal",
+        "Rodri未来",
+        "Maresca"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "title": "利物浦季前赛崩盘: 2-0领先被利兹联4-2逆转",
       "title_en": "Liverpool Pre-Season Collapse: 2-0 Lead Overturned by Leeds 4-2",
@@ -8106,31 +8189,6 @@
         "Carrick中场重建: Santos(防守型)+Tielemans(组织型)+Baleba(全能型)三人组合",
         "£70m创Brighton卖出纪录, 含sell-on条款",
         "Man Utd周六客场Hull: Carrick体系客场首考"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "category": "transfer",
-      "title": "Inter Milan £30m签Curtis Jones; Atletico愿卖Alvarez给Arsenal",
-      "summary": "Inter Milan从Liverpool签下Curtis Jones(£30m+sell-on). Atletico Madrid愿意将Julian Alvarez卖给Arsenal. Neville建议Arsenal在截止日前签Alvarez(\"会推动Arsenal过欧冠线\").",
-      "tactical_significance": "中",
-      "key_points": [
-        "Jones转战Serie A: 技术型中场在意大利战术体系中寻求新角色",
-        "Alvarez→Arsenal: 如果成行, Arteta的锋线将升级为世界级",
-        "Neville评价: \"Arteta has gone from apprentice to master\""
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "category": "preview",
-      "title": "周六战术看点: De Zerbi的Spurs首秀 + Dortmund vs Bayern",
-      "summary": "今日英超焦点: Brentford vs Tottenham(De Zerbi新体系首秀), Hull vs Man Utd(Carrick三中场首考), Newcastle vs Liverpool(周日). 德甲: Dortmund vs Bayern(Der Klassiker). 西甲: Espanyol vs Real Madrid.",
-      "tactical_significance": "高",
-      "key_points": [
-        "De Zerbi在Spurs: 从Brighton的传控哲学到北伦敦的战术升级",
-        "Hull vs Man Utd: Carrick的3中场新体系客场检验",
-        "Dortmund vs Bayern: 德国国家德比, 新赛季战术基调之战",
-        "Newcastle vs Liverpool(周日): Slot的Liverpool vs Iraola的Bournemouth式高压"
       ]
     }
   ]
