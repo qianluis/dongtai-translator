@@ -1,6 +1,6 @@
 {
-  "version": "9.5.21",
-  "last_updated": "2026-08-23",
+  "version": "9.5.22",
+  "last_updated": "2026-08-25",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6228,6 +6228,15 @@
   ],
   "changelog": [
     {
+      "version": "9.5.22",
+      "date": "2026-08-25",
+      "changes": [
+        "新增4条recent_trends(英超MNF战术复盘: Chelsea/Alonso, Liverpool/Wirtz, Arbeloa/Fulham)",
+        "转会动态: Arsenal £130m Alvarez, Man City Gakpo, Martinelli→沙特",
+        "更新last_updated至2026-08-25"
+      ]
+    },
+    {
       "date": "2026-08-23",
       "version": "9.5.21",
       "summary": "英超开幕战周末复盘: De Zerbi Spurs首秀0-3惨败Brentford + Carrick Man Utd 0-2负升班马Hull + Bayern超级杯2-1胜Dortmund(Olise闪耀) + Leeds绝杀Glasner Forest + Arsenal追Alvarez",
@@ -7629,6 +7638,76 @@
     }
   },
   "recent_trends": [
+    {
+      "date": "2026-08-25",
+      "title": "Chelsea 3-2 Fulham: Alonso时代开门红, Palmer闪耀但门将危机犹存",
+      "title_en": "Chelsea 3-2 Fulham: Alonso Era Begins with Win, Palmer Electric but GK Crisis Remains",
+      "summary": "Cole Palmer、Joao Pedro和Morgan Rogers各入一球, Chelsea客场3-2击败Fulham。Palmer表现杰出, 但门将Robert Sanchez遭Gary Neville和Jamie Carragher批评, 后者称以Sanchez守门'不可能'夺冠。Alonso的进攻体系展现威力(Palmer-Pedro-Rogers三叉戟), 但防守端门将位置是致命弱点。",
+      "tactical_significance": "high",
+      "tactical_analysis": {
+        "chelsea_system": "Alonso进攻体系: Palmer前场自由人+Pedro中锋+Rogers边路",
+        "key_issue": "进攻三叉戟火力十足(3球), 但门将Sanchez是争冠短板",
+        "fulham_response": "Arbeloa的Fulham主场虽败但打入2球, 新体系有亮点",
+        "concern": "Chelsea争冠需解决门将问题, 否则进攻火力被浪费"
+      },
+      "tags": [
+        "Alonso",
+        "Chelsea",
+        "Palmer",
+        "门将危机",
+        "进攻三叉戟"
+      ],
+      "source": "Sky Sports, 2026-08-25"
+    },
+    {
+      "date": "2026-08-25",
+      "title": "Liverpool 2-2 Newcastle: Wirtz低迷, Carragher炮轰转会窗",
+      "title_en": "Liverpool 2-2 Newcastle: Wirtz Underwhelming, Carragher Slams Transfer Window",
+      "summary": "Iraola的利物浦客场2-2平Newcastle, 开幕战未能取胜。Florian Wirtz表现令人失望, Carragher称这可能是利物浦'史上最差转会窗之一', 中场问题暴露无遗。Carragher呼吁引进中场替代者, 认为Wirtz尚未展现预期影响力。",
+      "tactical_significance": "high",
+      "tactical_analysis": {
+        "liverpool_system": "Iraola 4-3-3高位压迫",
+        "key_issue": "Wirtz融入困难, 中场缺乏创造力和控制力",
+        "carragher_verdict": "称利物浦转会窗可能是'worst ever', 中场补强是刚需",
+        "newcastle_performance": "主场逼平利物浦, 防守组织出色"
+      },
+      "tags": [
+        "Iraola",
+        "Liverpool",
+        "Wirtz",
+        "中场危机",
+        "Carragher"
+      ],
+      "source": "Sky Sports, 2026-08-25"
+    },
+    {
+      "date": "2026-08-25",
+      "title": "转会动态: Arsenal £130m追Alvarez, Man City有意Gakpo",
+      "title_en": "Transfers: Arsenal £130m Alvarez Push, Man City Eye Gakpo",
+      "summary": "Arsenal准备£130m报价Atletico Madrid的Julian Alvarez, Arteta和Berta持续接触。Man City对Liverpool的Cody Gakpo感兴趣(但Liverpool不愿出售)。Martinelli接近转投沙特联赛。转会窗截止日临近, 多队加速操作。",
+      "tactical_significance": "high",
+      "tags": [
+        "转会",
+        "Alvarez→Arsenal",
+        "Gakpo→ManCity",
+        "Martinelli→沙特"
+      ],
+      "source": "Sky Sports Transfer Centre, 2026-08-25"
+    },
+    {
+      "date": "2026-08-25",
+      "title": "Arbeloa执教Fulham首秀: 2-3惜败Chelsea但战术有亮点",
+      "title_en": "Arbeloa Fulham Debut: 2-3 Loss to Chelsea but Tactical Promise",
+      "summary": "Alvaro Arbeloa作为Fulham主教练的首秀, 虽然2-3不敌Chelsea, 但球队展现了一定的战术组织。面对Chelsea的Palmer-Pedro-Rogers三叉戟, Fulham打入2球, 进攻端有所作为。Arbeloa赛后表示'This is how I want us to play', 显示其战术理念正在植入。",
+      "tactical_significance": "medium",
+      "tags": [
+        "Arbeloa",
+        "Fulham",
+        "新教练",
+        "战术理念"
+      ],
+      "source": "Sky Sports, 2026-08-25"
+    },
     {
       "date": "2026-08-23",
       "title": "De Zerbi Spurs首秀灾难: Brentford 3-0 Tottenham",
