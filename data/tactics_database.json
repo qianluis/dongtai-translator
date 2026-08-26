@@ -1,6 +1,6 @@
 {
-  "version": "9.5.22",
-  "last_updated": "2026-08-25",
+  "version": "9.5.23",
+  "last_updated": "2026-08-26",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6542,6 +6542,17 @@
         "Inter £30m签Curtis Jones from Liverpool; Atletico愿卖Alvarez给Arsenal",
         "周六看点: De Zerbi Spurs首秀, Hull vs Man Utd, Dortmund vs Bayern"
       ]
+    },
+    {
+      "date": "2026-08-26",
+      "version": "9.5.23",
+      "summary": "Celtic欧冠史诗崩盘(LASK 5-1, 总比分5-4被逆转) + PFA大奖(Bruno年度最佳/O'Reilly最佳年轻) + 转会窗压哨动态(Man City追Fernandez/Forest £50m Delap/Villa追Jackson/Liverpool谈Barcola) + 联赛杯62球狂潮",
+      "changes": [
+        "Celtic欧冠崩盘: 首回合3-0领先被LASK加时5-1逆转, 总比分5-4淘汰, 跌入欧联",
+        "PFA年度大奖: Bruno Fernandes获球员票选最佳, O'Reilly获最佳年轻球员, Bunny Shaw二度获女子最佳",
+        "转会窗: Man City压哨追Enzo Fernandez; Forest £50m俱乐部纪录签Delap; Villa £65m谈Jackson; Liverpool再谈Barcola; Arsenal成Alvarez唯一出路",
+        "联赛杯R2: 62球, Brentford进6球, Southampton 1-4 West Ham, Ipswich 3-1 Leicester"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -8269,6 +8280,38 @@
         "£70m创Brighton卖出纪录, 含sell-on条款",
         "Man Utd周六客场Hull: Carrick体系客场首考"
       ]
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Celtic欧冠史诗级崩盘: LASK 5-1 Celtic(总比分5-4), 4球领先被逆转",
+      "category": "match_analysis",
+      "importance": "high",
+      "summary": "Celtic在欧冠附加赛次回合客场0-4落后首回合3-0领先的情况下, 被LASK拖入加时并5-1逆转, 总比分5-4被淘汰。这是欧冠历史上最惊人的崩盘之一, Celtic跌入欧联杯。McGregor为Celtic打入唯一进球但无力回天。",
+      "tactical_note": "防守心理崩溃案例: 4球领先被翻盘说明高位防线在客场压力下的脆弱性, 以及加时赛体能/精神管理的重要性"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "PFA年度大奖: Bruno Fernandes获PFA足球先生, O'Reilly获最佳年轻球员",
+      "category": "awards",
+      "importance": "medium",
+      "summary": "Bruno Fernandes获2025-26赛季PFA球员票选年度最佳, Bunny Shaw第二次获女子年度最佳, Man City的Nico O'Reilly获男子年度最佳年轻球员, Arsenal的Olivia Smith获女子年度最佳年轻球员, Kenny Dalglish获荣誉奖。",
+      "tactical_note": "Bruno获奖印证其作为10号位/8号位 hybrid playmaker的战术价值; O'Reilly崛起代表Man City新一代中场创造力"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "转会窗截止日临近: Man City追Enzo Fernandez, Forest £50m签Delap, Villa追Jackson",
+      "category": "transfer",
+      "importance": "high",
+      "summary": "转会窗9月1日关闭前重磅动态: Man City计划压哨求购Chelsea的Enzo Fernandez; Nottingham Forest £50m俱乐部纪录签入Chelsea前锋Delap(上赛季41场2球); Aston Villa与Chelsea谈£65m Nicolas Jackson; Liverpool与PSG再谈Barcola; Arsenal成为Alvarez唯一出路(Atletico拒绝Barca); Newcastle £35m报价Lille边锋Fernandez-Pardo; Ollie Watkins可能转投Al Hilal(年薪£12m)。",
+      "tactical_note": "Chelsea大清洗继续(Fernandez/Delap/Jackson三人可能离队); Man City若获Fernandez将重塑中场组织核心; Forest投资Delap体现英式中锋战术回归; Villa追Jackson说明英超对速度型前锋需求持续"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "联赛杯第二轮: 62球狂潮, Brentford灌6球, Leeds/West Ham/Ipswich晋级",
+      "category": "cup_competition",
+      "importance": "low",
+      "summary": "Carabao Cup第二轮战罢, 共62球入账。Brentford大胜(进6球), Leeds/West Ham/Ipswich等队晋级。Southampton 1-4 West Ham, Ipswich 3-1 Leicester, Birmingham 1-6 Brentford。",
+      "tactical_note": "低级别球队通过杯赛展示进攻实力, Brentford的进攻深度令人印象深刻"
     }
   ]
 }
