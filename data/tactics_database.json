@@ -1,6 +1,6 @@
 {
-  "version": "9.5.23",
-  "last_updated": "2026-08-26",
+  "version": "9.5.24",
+  "last_updated": "2026-08-29",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6553,6 +6553,18 @@
         "转会窗: Man City压哨追Enzo Fernandez; Forest £50m俱乐部纪录签Delap; Villa £65m谈Jackson; Liverpool再谈Barcola; Arsenal成Alvarez唯一出路",
         "联赛杯R2: 62球, Brentford进6球, Southampton 1-4 West Ham, Ipswich 3-1 Leicester"
       ]
+    },
+    {
+      "date": "2026-08-29",
+      "version": "9.5.24",
+      "summary": "Man City 4-1 Palace(Cherki天才级+Haaland双响, Maresca两连胜) + Villa £65m纪录签Jackson(Watkins替代) + 转会窗压哨: Alvarez/Endrick/Fernandez/Grealish动态 + Sage Palace两连败",
+      "changes": [
+        "Crystal Palace 1-4 Man City: Cherki天才表演(Redknapp称genius) + Haaland双响, Maresca开局两连胜展现体系威力",
+        "Palace新帅Sage两连败, 防守体系问题严重, Glasner时代遗产快速消退",
+        "Aston Villa £65m创纪录签Nicolas Jackson(Chelsea)替代Watkins(£50m→Al Hilal), 还谈妥PSG的Mbaye",
+        "转会窗动态: Atletico为Alvarez设deadline(Arsenal有意), Arsenal谈Endrick(Real Madrid), Chelsea愿卖Fernandez给Man City",
+        "Maresca确认Grealish去留将在截止日前决定"
+      ]
     }
   ],
   "world_cup_2026_updates": [
@@ -7650,135 +7662,6 @@
   },
   "recent_trends": [
     {
-      "date": "2026-08-25",
-      "title": "Chelsea 3-2 Fulham: Alonso时代开门红, Palmer闪耀但门将危机犹存",
-      "title_en": "Chelsea 3-2 Fulham: Alonso Era Begins with Win, Palmer Electric but GK Crisis Remains",
-      "summary": "Cole Palmer、Joao Pedro和Morgan Rogers各入一球, Chelsea客场3-2击败Fulham。Palmer表现杰出, 但门将Robert Sanchez遭Gary Neville和Jamie Carragher批评, 后者称以Sanchez守门'不可能'夺冠。Alonso的进攻体系展现威力(Palmer-Pedro-Rogers三叉戟), 但防守端门将位置是致命弱点。",
-      "tactical_significance": "high",
-      "tactical_analysis": {
-        "chelsea_system": "Alonso进攻体系: Palmer前场自由人+Pedro中锋+Rogers边路",
-        "key_issue": "进攻三叉戟火力十足(3球), 但门将Sanchez是争冠短板",
-        "fulham_response": "Arbeloa的Fulham主场虽败但打入2球, 新体系有亮点",
-        "concern": "Chelsea争冠需解决门将问题, 否则进攻火力被浪费"
-      },
-      "tags": [
-        "Alonso",
-        "Chelsea",
-        "Palmer",
-        "门将危机",
-        "进攻三叉戟"
-      ],
-      "source": "Sky Sports, 2026-08-25"
-    },
-    {
-      "date": "2026-08-25",
-      "title": "Liverpool 2-2 Newcastle: Wirtz低迷, Carragher炮轰转会窗",
-      "title_en": "Liverpool 2-2 Newcastle: Wirtz Underwhelming, Carragher Slams Transfer Window",
-      "summary": "Iraola的利物浦客场2-2平Newcastle, 开幕战未能取胜。Florian Wirtz表现令人失望, Carragher称这可能是利物浦'史上最差转会窗之一', 中场问题暴露无遗。Carragher呼吁引进中场替代者, 认为Wirtz尚未展现预期影响力。",
-      "tactical_significance": "high",
-      "tactical_analysis": {
-        "liverpool_system": "Iraola 4-3-3高位压迫",
-        "key_issue": "Wirtz融入困难, 中场缺乏创造力和控制力",
-        "carragher_verdict": "称利物浦转会窗可能是'worst ever', 中场补强是刚需",
-        "newcastle_performance": "主场逼平利物浦, 防守组织出色"
-      },
-      "tags": [
-        "Iraola",
-        "Liverpool",
-        "Wirtz",
-        "中场危机",
-        "Carragher"
-      ],
-      "source": "Sky Sports, 2026-08-25"
-    },
-    {
-      "date": "2026-08-25",
-      "title": "转会动态: Arsenal £130m追Alvarez, Man City有意Gakpo",
-      "title_en": "Transfers: Arsenal £130m Alvarez Push, Man City Eye Gakpo",
-      "summary": "Arsenal准备£130m报价Atletico Madrid的Julian Alvarez, Arteta和Berta持续接触。Man City对Liverpool的Cody Gakpo感兴趣(但Liverpool不愿出售)。Martinelli接近转投沙特联赛。转会窗截止日临近, 多队加速操作。",
-      "tactical_significance": "high",
-      "tags": [
-        "转会",
-        "Alvarez→Arsenal",
-        "Gakpo→ManCity",
-        "Martinelli→沙特"
-      ],
-      "source": "Sky Sports Transfer Centre, 2026-08-25"
-    },
-    {
-      "date": "2026-08-25",
-      "title": "Arbeloa执教Fulham首秀: 2-3惜败Chelsea但战术有亮点",
-      "title_en": "Arbeloa Fulham Debut: 2-3 Loss to Chelsea but Tactical Promise",
-      "summary": "Alvaro Arbeloa作为Fulham主教练的首秀, 虽然2-3不敌Chelsea, 但球队展现了一定的战术组织。面对Chelsea的Palmer-Pedro-Rogers三叉戟, Fulham打入2球, 进攻端有所作为。Arbeloa赛后表示'This is how I want us to play', 显示其战术理念正在植入。",
-      "tactical_significance": "medium",
-      "tags": [
-        "Arbeloa",
-        "Fulham",
-        "新教练",
-        "战术理念"
-      ],
-      "source": "Sky Sports, 2026-08-25"
-    },
-    {
-      "date": "2026-08-23",
-      "title": "De Zerbi Spurs首秀灾难: Brentford 3-0 Tottenham",
-      "summary": "De Zerbi从Brighton传控哲学转战北伦敦, 但5名新援首秀表现灾难。Jamie Redknapp称球队为'strangers'(陌生人), De Zerbi赛后承认'we're not a team yet'。上半场0射正, Lewis-Potter和Janelt各入一球, Kayode锦上添花。传控哲学需要时间但英超不等人。",
-      "tactical_significance": "high",
-      "tags": [
-        "De Zerbi",
-        "Spurs",
-        "传控移植困境",
-        "新援磨合"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "title": "Hull 2-0 Man Utd: Carrick新体系遭升班马暴击",
-      "summary": "Michael Carrick的Man Utd在英超开幕战被升班马Hull City 2-0击败。Semi Ajayi和Nobel Mendy上半场各入一球。尽管£70m签Baleba完成中场重建, 但新体系客场首考完全失败。Sky Sports称'lack guts and fight'。",
-      "tactical_significance": "high",
-      "tags": [
-        "Carrick",
-        "Man Utd",
-        "升班马爆冷",
-        "中场重建"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "title": "Leeds客场绝杀Forest: Stach 88分钟任意球",
-      "summary": "Anton Stach第88分钟任意球直接破门(门将Sels站位失误), Leeds 1-0客胜Glasner的Nottingham Forest。Igor Jesus和Chris Wood错失良机。Glasner的Forest主场首战失利, 战术执行力受质疑。",
-      "tactical_significance": "medium",
-      "tags": [
-        "Glasner",
-        "Forest",
-        "Leeds",
-        "定位球"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "title": "Bayern 2-1 Dortmund: Olise闪耀德国超级杯",
-      "summary": "Michael Olise在Der Klassiker中表现抢眼, Bayern慕尼黑2-1客胜Dortmund赢得Franz Beckenbauer超级杯。Nathaniel Brown和Olise进球, Fabio Silva为Dortmund扳回一球, Bensebaini红牌。Kane赢得加盟后首座奖杯。",
-      "tactical_significance": "medium",
-      "tags": [
-        "Bayern",
-        "Olise",
-        "Der Klassiker",
-        "超级杯"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "title": "Everton 2-0 Palace: Sage执教首秀失利",
-      "summary": "Dewsbury-Hall和Thierno Barry各入一球, Everton 2-0完胜Crystal Palace。Pierre Sage的Palace执教首秀以失败告终, 而Everton取得5年来首个开幕战胜利。",
-      "tactical_significance": "low",
-      "tags": [
-        "Everton",
-        "Palace",
-        "新教练首秀"
-      ]
-    },
-    {
       "date": "2026-08-23",
       "title": "转会: Arsenal接触Alvarez + Man City需'找新Rodri'",
       "summary": "Arteta和Berta与Atletico Madrid的Alvarez保持'频繁接触', 可能推动截止日前转会。Maresca公开表示Man City需要'找到新的Rodri'(暗示Rodri可能离队)。Bellingham在Real Madrid进球, John Stones在Inter首秀获胜。",
@@ -8312,6 +8195,33 @@
       "importance": "low",
       "summary": "Carabao Cup第二轮战罢, 共62球入账。Brentford大胜(进6球), Leeds/West Ham/Ipswich等队晋级。Southampton 1-4 West Ham, Ipswich 3-1 Leicester, Birmingham 1-6 Brentford。",
       "tactical_note": "低级别球队通过杯赛展示进攻实力, Brentford的进攻深度令人印象深刻"
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Crystal Palace 1-4 Man City: Cherki天才级表演+Haaland双响, Maresca体系两连胜",
+      "title_en": "C Palace 1-4 Man City: Cherki genius display + Haaland double, Maresca's system two wins in two",
+      "summary": "Man City客场4-1大胜Crystal Palace。Rayan Cherki上演天才级表现(Redknapp称之为'genius'), Haaland梅开二度。Maresca执教取得开局两连胜, 进攻体系展现恐怖火力。Palace新帅Pierre Sage开局两连败, 球队防守问题严重。",
+      "tactical_significance": "high",
+      "tactical_analysis": {
+        "man_city": {
+          "formation": "灵活4-2-3-1/4-3-3",
+          "key_player": "Rayan Cherki (天才10号位创造力)",
+          "tactical_note": "Cherki作为进攻核心完美融入Maresca体系, 与Haaland的化学反应极佳。Maresca延续Post-Pep新进化路线, 进攻端更加自由灵活",
+          "attack_style": "中路渗透+边路创造, 前场四人组高度流动"
+        },
+        "crystal_palace": {
+          "formation": "Sage体系(可能4-2-3-1)",
+          "issue": "防守端漏洞百出, 两连败仅1场积分",
+          "tactical_note": "Sage接替Glasner后, 球队防守组织明显下滑, 需要时间磨合新体系"
+        }
+      },
+      "transfer_impact": {
+        "villa_jackson": "Aston Villa £65m创俱乐部纪录签Nicolas Jackson(Chelsea), 作为Watkins替代(Watkins £50m去Al Hilal)。战术意义: Villa从传统英式中锋转向更灵活的锋线组合",
+        "alvarez_atletico": "Atletico为Alvarez设定去留deadline, Arsenal有意。若Alvarez离队, Atletico需重建锋线",
+        "fernandez_chelsea": "Chelsea准备以合适价格出售Fernandez给Man City, Monaco的Camara被视为替代者。中场架构可能大改",
+        "grealish_city": "Maresca确认Grealish未来将在转会截止日前决定",
+        "endrick_arsenal": "Arsenal与Real Madrid就Endrick进行谈判"
+      }
     }
   ]
 }
