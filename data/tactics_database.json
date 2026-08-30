@@ -1,6 +1,6 @@
 {
-  "version": "9.5.24",
-  "last_updated": "2026-08-29",
+  "version": "9.5.25",
+  "last_updated": "2026-08-30",
   "tactical_systems": [
     {
       "id": "cuju",
@@ -6228,6 +6228,15 @@
   ],
   "changelog": [
     {
+      "version": "9.5.25",
+      "date": "2026-08-30",
+      "changes": [
+        "新增4条recent_trends (8/30: De Zerbi危机, Jaissle激活Newcastle, Gakpo转会, Liverpool 2-2 Forest)",
+        "战术焦点: Spurs £320m投入后垫底 + Newcastle双星复活 + 边锋转会潮",
+        "更新last_updated至2026-08-30"
+      ]
+    },
+    {
       "version": "9.5.22",
       "date": "2026-08-25",
       "changes": [
@@ -7661,6 +7670,57 @@
     }
   },
   "recent_trends": [
+    {
+      "date": "2026-08-30",
+      "title": "De Zerbi危机: Spurs £320m投入后2连败0进球垫底",
+      "summary": "Roberto De Zerbi承认改变Tottenham心态是最大挑战。英超开局2连败且未进一球, 尽管夏窗投入£320m。Jamie Carragher称之为'couldn't have gone any worse'。De Zerbi透露三名球员想离队。0-2负Newcastle (Elanga+Wissa进球)。",
+      "tactical_significance": "high",
+      "tags": [
+        "De Zerbi",
+        "Spurs危机",
+        "心态问题",
+        "£320m投入",
+        "垫底"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "title": "Jaissle激活Newcastle双星: Elanga+Wissa '像两个新球员'",
+      "summary": "Matthias Jaissle做到了Eddie Howe做不到的事 - 激活去年£110m签下的Elanga和Wissa。Carragher: '像两个新球员!' Elanga赛季第2球, Wissa赛季首球。Newcastle客场2-0胜Spurs, 开局表现积极。",
+      "tactical_significance": "high",
+      "tags": [
+        "Jaissle",
+        "Newcastle",
+        "Elanga复活",
+        "Wissa复活",
+        "Howe对比"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "title": "转会: Man City谈判签Gakpo + Liverpool £106-123m签Barcola",
+      "summary": "Man City开启与Liverpool的Cody Gakpo转会谈判。City放走Savio和Marmoush去Spurs, Grealish可能去Everton/Sunderland。Liverpool即将£106m(涨至£123m)签PSG边锋Bradley Barcola, 加上夏窗已签Victor Munoz。",
+      "tactical_significance": "medium",
+      "tags": [
+        "Gakpo→Man City",
+        "Barcola→Liverpool",
+        "£106-123m",
+        "边锋重组"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "title": "Liverpool 2-2 Forest: Munoz处子球救主 + Iraola安菲尔德首战",
+      "summary": "Andoni Iraola执教Liverpool的安菲尔德首场英超以2-2平局收场。Forest的Ndoye首开纪录, Isak扳平, Gibbs-White点球再超, Victor Munozdeflected扳平。Iraola对电子换人牌问题导致 Forest点球前换人延迟表示愤怒。",
+      "tactical_significance": "medium",
+      "tags": [
+        "Iraola",
+        "Liverpool",
+        "Munoz处子球",
+        "Forest点球",
+        "安菲尔德首战"
+      ]
+    },
     {
       "date": "2026-08-23",
       "title": "转会: Arsenal接触Alvarez + Man City需'找新Rodri'",
